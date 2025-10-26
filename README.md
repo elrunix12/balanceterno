@@ -2,7 +2,7 @@
 
 Um projeto de código aberto para centralizar e facilitar o estudo para o Exame de Suficiência Contábil (CFC), focado inicialmente em Contabilidade Societária e expandindo para outras áreas.
 
-**[Link para o site no GitHub Pages]** ## ✨ Funcionalidades
+**[Link para o site no GitHub Pages](https://elrunix12.github.io/balanceterno/)** ## ✨ Funcionalidades
 
 * Banco de questões separadas por disciplina (arquivos JSON).
 * Filtros cumulativos por:
