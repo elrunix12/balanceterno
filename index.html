@@ -412,7 +412,7 @@
                     <div class="form-group" style="margin-bottom: 20px; border-top: 1px solid #eee; padding-top: 20px;">
                         <label style="margin-bottom: 8px;">
                             Mostrar questões obsoletas? 
-                            <span title="Questões obsoletas são aquelas cujo gabarito pode ter sido alterado por novas normas ou revogações. Elas são úteis para entender a evolução da banca, mas não para fixar o conteúdo atual." style="font-weight: normal; font-size: 0.9em; cursor: help; color: #004a91; border: 1px solid #004a91; border-radius: 50%; padding: 0px 5px;">?</span>
+                            <span id="obsoleta-tooltip-trigger" title="Questões obsoletas são aquelas cujo gabarito pode ter sido alterado por novas normas ou revogações. Elas são úteis para entender a evolução da banca, mas não para fixar o conteúdo atual." style="font-weight: normal; font-size: 0.9em; cursor: help; color: #004a91; border: 1px solid #004a91; border-radius: 50%; padding: 0px 5px;">?</span>
                         </label>
                         <div id="obsoleta-radio-container">
                             <label for="obsoleta-sim" style="font-weight: normal; margin: 0; cursor: pointer;">
@@ -655,7 +655,7 @@
         
         <footer class="site-footer">
             <p>
-                &copy; 2025 Balanceterno | Versão 0.10-1 |
+                &copy; 2025 Balanceterno | Versão 0.10-2 |
                 <a href="https://github.com/elrunix12/balanceterno" target="_blank" rel="noopener noreferrer">
                     Código-fonte no GitHub
                 </a>
@@ -856,7 +856,22 @@ qualquer vínculo ou afiliação com o Conselho Federal de Contabilidade.
             
             // --- FIM: LÓGICA DE OCULTAR E FILTRAR EMENTAS ---
 
-
+            // --- (NOVO) LÓGICA PARA TOOLTIP DE QUESTÕES OBSOLETAS (MOBILE) ---
+            const obsoletaTooltip = document.getElementById('obsoleta-tooltip-trigger');
+            if (obsoletaTooltip) {
+                obsoletaTooltip.addEventListener('click', (e) => {
+                    // Impede que o clique no "?" ative o <label> e mude o radio button
+                    e.preventDefault(); 
+                    e.stopPropagation(); 
+                    
+                    const message = obsoletaTooltip.getAttribute('title');
+                    if (message) {
+                        alert(message); // Mostra o texto do 'title' em um alerta
+                    }
+                });
+            }
+            // --- FIM: LÓGICA DO TOOLTIP ---
+            
             // --- LÓGICA DE CARREGAMENTO E FILTROS ---
             
             // (MODIFICADO) Função para carregar TODOS os JSONs das disciplinas
