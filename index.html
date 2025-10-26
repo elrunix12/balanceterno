@@ -102,6 +102,12 @@
             justify-content: space-between;
             align-items: center;
         }
+        /* (NOVO) Estilo para agrupar botões no h3 */
+        .filter-container h3 > span {
+            display: flex;
+            gap: 8px; 
+            align-items: center;
+        }
         .filter-container h3 button {
             font-size: 0.8em;
             font-weight: normal;
@@ -171,19 +177,49 @@
             border-radius: 5px; background-color: #fff; box-sizing: border-box; 
         }
 
+        /* --- (NOVO) Estilo para o campo de busca de ementas --- */
+        .ementa-search-container {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        #search-ementas-input {
+            width: 100%;
+            padding: 8px 12px;
+            font-size: 0.95em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box; 
+        }
+
         /* --- (MODIFICADO) Filtro de Ementa --- */
         #checkbox-container {
+            display: flex; /* Alterado de grid para flex */
+            flex-direction: column; /* Para empilhar os grupos */
+            gap: 20px; /* Espaço ENTRE os grupos de disciplina */
+            margin-bottom: 15px;
+        }
+        
+        /* (NOVO) Estilos para os grupos de ementa */
+        .ementa-group-label {
+            font-size: 1.1em;
+            font-weight: 600;
+            color: #004a91; /* Cor dos títulos de filtro */
+            margin: 0 0 10px 0;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #ddd;
+        }
+        .ementa-group-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 10px;
-            margin-bottom: 15px;
         }
-        #checkbox-container label {
+        .ementa-group-grid label {
             display: flex; align-items: center; background-color: #f0f2f5; padding: 8px 12px;
             border-radius: 5px; font-size: 0.9em; cursor: pointer; transition: background-color 0.2s;
         }
-        #checkbox-container label:hover { background-color: #e4e6eb; }
-        #checkbox-container input { margin-right: 8px; }
+        .ementa-group-grid label:hover { background-color: #e4e6eb; }
+        .ementa-group-grid input { margin-right: 8px; }
         
         #btn-clear-filters {
             background-color: #6c757d; color: white; border: none; padding: 10px 15px;
@@ -397,11 +433,21 @@
 
                     <h3>
                         Filtrar por Ementa (Tópico):
-                        <button id="btn-check-all-ementas" data-checked="false">Marcar Todas</button>
+                        <span> <button id="btn-toggle-ementas" data-visible="true" title="Ocultar/Exibir Ementas">[ Ocultar ]</button>
+                            <button id="btn-check-all-ementas" data-checked="false">Marcar Todas</button>
+                        </span>
                     </h3>
-                    <div id="checkbox-container">
+                    
+                    <div id="ementas-toggle-wrapper"> 
+                    
+                        <div class="ementa-search-container">
+                            <input type="text" id="search-ementas-input" placeholder="Buscar ementa específica...">
                         </div>
-
+                    
+                        <div id="checkbox-container">
+                            </div>
+                        
+                    </div>
                     <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
 
                     <button id="btn-clear-filters">Limpar Todos os Filtros</button>
@@ -609,7 +655,7 @@
         
         <footer class="site-footer">
             <p>
-                &copy; 2025 Balanceterno | Versão 0.10 |
+                &copy; 2025 Balanceterno | Versão 0.10-1 |
                 <a href="https://github.com/elrunix12/balanceterno" target="_blank" rel="noopener noreferrer">
                     Código-fonte no GitHub
                 </a>
@@ -676,7 +722,12 @@ qualquer vínculo ou afiliação com o Conselho Federal de Contabilidade.
                 questoes: [],
                 allTags: new Set()
             },
-            
+            "Contabilidade de Custos": {
+                arquivo: 'contabilidade-custos.json', // O arquivo que você forneceu
+                questoes: [],
+                allTags: new Set()
+            },
+
             /*
             // Exemplo de como adicionar mais disciplinas no futuro:
             ,
@@ -760,6 +811,12 @@ qualquer vínculo ou afiliação com o Conselho Federal de Contabilidade.
                 });
             });
             // --- FIM: LÓGICA PARA LINKS INTERNOS DAS TABS ---
+
+            // (NOVO) Referência ao botão de ocultar ementas
+            const btnToggleEmentas = document.getElementById('btn-toggle-ementas');
+            
+            // (NOVO) Referência à busca de ementas
+            const searchEmentasInput = document.getElementById('search-ementas-input');
             
 
             // --- LÓGICA BOTÃO VOLTAR AO TOPO ---
@@ -774,6 +831,30 @@ qualquer vínculo ou afiliação com o Conselho Federal de Contabilidade.
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             });
             // --- FIM: LÓGICA BOTÃO VOLTAR AO TOPO ---
+
+            // --- (NOVO/MODIFICADO) LÓGICA DE OCULTAR E FILTRAR EMENTAS ---
+            
+            // Lógica do botão [ Ocultar / Exibir ]
+            btnToggleEmentas.addEventListener('click', () => {
+                // (MODIFICADO) Alvo agora é o WRAPPER
+                const wrapper = document.getElementById('ementas-toggle-wrapper');
+                const isVisible = btnToggleEmentas.dataset.visible === 'true';
+                
+                if (isVisible) {
+                    wrapper.style.display = 'none';
+                    btnToggleEmentas.dataset.visible = 'false';
+                    btnToggleEmentas.textContent = '[ Exibir ]';
+                } else {
+                    wrapper.style.display = 'block'; // Restaura o 'block' do wrapper
+                    btnToggleEmentas.dataset.visible = 'true';
+                    btnToggleEmentas.textContent = '[ Ocultar ]';
+                }
+            });
+            
+            // (NOVO) Lógica do campo de busca de ementas
+            searchEmentasInput.addEventListener('input', filtrarEmentasPorTexto);
+            
+            // --- FIM: LÓGICA DE OCULTAR E FILTRAR EMENTAS ---
 
 
             // --- LÓGICA DE CARREGAMENTO E FILTROS ---
@@ -845,6 +926,16 @@ qualquer vínculo ou afiliação com o Conselho Federal de Contabilidade.
                 // e mostrar o prompt inicial.
                 renderizarFiltrosDeEmenta(); // Limpa as ementas
                 renderizarQuestoes();
+
+                // --- (MODIFICADO) ---
+                // Garante que o WRAPPER de ementas reapareça
+                document.getElementById('ementas-toggle-wrapper').style.display = 'block';
+                btnToggleEmentas.dataset.visible = 'true';
+                btnToggleEmentas.textContent = '[ Ocultar ]';
+                
+                // (NOVO) Limpa a busca de ementas
+                searchEmentasInput.value = '';
+                // --- FIM DA MODIFICAÇÃO ---
             });
 
             // (NOVO) Listeners dos botões "Marcar Todos"
@@ -863,10 +954,18 @@ qualquer vínculo ou afiliação com o Conselho Federal de Contabilidade.
 
             btnCheckAllEmentas.addEventListener('click', () => {
                 const newState = btnCheckAllEmentas.dataset.checked === 'false';
-                // (MODIFICADO) Só mexe nos checkboxes de ementa VISÍVEIS
-                checkContainer.querySelectorAll('input[type="checkbox"]').forEach(check => {
-                    check.checked = newState;
+                
+                // (MODIFICADO) Itera nos labels, e não nos inputs
+                checkContainer.querySelectorAll('.ementa-group-grid label').forEach(label => {
+                    // Só afeta labels que estão visíveis (não filtrados pela busca)
+                    if (label.style.display !== 'none') {
+                        const check = label.querySelector('input[type="checkbox"]');
+                        if (check) {
+                            check.checked = newState;
+                        }
+                    }
                 });
+                
                 btnCheckAllEmentas.dataset.checked = newState;
                 btnCheckAllEmentas.textContent = newState ? "Desmarcar Todas" : "Marcar Todas";
 
@@ -885,6 +984,7 @@ qualquer vínculo ou afiliação com o Conselho Federal de Contabilidade.
 
         // 0. Função Helper para remover acentos
         function normalizeText(text) {
+            if (typeof text !== 'string') return '';
             return text.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
         }
 
@@ -893,7 +993,7 @@ qualquer vínculo ou afiliação com o Conselho Federal de Contabilidade.
             let filterHTML = '';
             
             // Ordena os nomes das disciplinas alfabeticamente
-            const nomesDisciplinas = Object.keys(configDisciplinas).sort();
+            const nomesDisciplinas = Object.keys(configDisciplinas).sort((a, b) => a.localeCompare(b, 'pt-BR'));
             
             nomesDisciplinas.forEach(nome => {
                 const count = configDisciplinas[nome].questoes.length;
@@ -917,56 +1017,96 @@ qualquer vínculo ou afiliação com o Conselho Federal de Contabilidade.
             });
         }
 
-        // 2. (MODIFICADO) Função para criar os checkboxes de EMENTA (agora dinâmico)
+        // 2. (MODIFICADO) Função para criar os checkboxes de EMENTA (agora dinâmico e agrupado)
         function renderizarFiltrosDeEmenta() {
-            // 1. Pega as disciplinas selecionadas
+            
+            // (ETAPA 1) Armazena quais ementas JÁ ESTAVAM MARCADAS
+            const ementasMarcadasAnteriormente = new Set(
+                Array.from(checkContainer.querySelectorAll('.filter-check:checked'))
+                     .map(check => check.value)
+            );
+
+            // (ETAPA 2) Pega as disciplinas selecionadas
             const disciplinasSelecionadas = Array.from(
                 disciplinaCheckContainer.querySelectorAll('.disciplina-filter-check:checked')
             ).map(check => check.value);
 
-            const masterTagSet = new Set();
-            
-            // 2. Coleta todas as tags (ementas) APENAS das disciplinas selecionadas
-            disciplinasSelecionadas.forEach(nome => {
-                configDisciplinas[nome].allTags.forEach(tag => {
-                    masterTagSet.add(tag);
-                });
-            });
-
-            // 3. Converte o Set para Array e ordena
-            const tagsOrdenadas = Array.from(masterTagSet).sort();
-
-            let filterHTML = '';
-            
-            // 4. Se não houver tags (nenhuma disciplina marcada), mostra aviso
-            if (tagsOrdenadas.length === 0) {
+            // (ETAPA 3) Se não houver disciplinas, mostra aviso
+            if (disciplinasSelecionadas.length === 0) {
                 checkContainer.innerHTML = '<p style="font-size: 0.9em; color: #777; margin: 0;">(Selecione uma disciplina para ver as ementas)</p>';
-                btnCheckAllEmentas.style.display = 'none'; // Esconde o botão "Marcar Todas"
+                btnCheckAllEmentas.style.display = 'none';
+
+                // --- (MODIFICADO) ---
+                // Força a exibição do WRAPPER para mostrar o aviso
+                document.getElementById('ementas-toggle-wrapper').style.display = 'block';
+                // (NOVO) Oculta o campo de busca, pois não há o que buscar
+                document.getElementById('search-ementas-input').parentElement.style.display = 'none'; 
+                
+                const btnToggleEmentas = document.getElementById('btn-toggle-ementas');
+                if (btnToggleEmentas) {
+                    btnToggleEmentas.dataset.visible = 'true';
+                    btnToggleEmentas.textContent = '[ Ocultar ]';
+                }
+                // --- FIM DA MODIFICAÇÃO ---
+
                 return;
             }
 
-            // 5. Cria o HTML dos checkboxes
-            btnCheckAllEmentas.style.display = 'inline-block'; // Mostra o botão
-            tagsOrdenadas.forEach(tag => {
-                // (Nota: a contagem de questões por tag foi removida 
-                // por ser complexa e lenta com a lógica "OU")
-                filterHTML += `
-                    <label>
-                        <input type="checkbox" class="filter-check" value="${tag}">
-                        ${tag}
-                    </label>
+            // (ETAPA 4 - NOVA LÓGICA) Constrói o HTML agrupado
+            btnCheckAllEmentas.style.display = 'inline-block';
+            
+            // (NOVO) Mostra o campo de busca
+            document.getElementById('search-ementas-input').parentElement.style.display = 'block';
+
+            let finalHTML = ''; // O HTML final para o checkContainer
+
+            // Ordena as disciplinas selecionadas para que os grupos apareçam em ordem
+            disciplinasSelecionadas.sort((a, b) => a.localeCompare(b, 'pt-BR'));
+
+            disciplinasSelecionadas.forEach(nomeDisciplina => {
+                // Pega as tags *desta* disciplina
+                const tagsDaDisciplina = Array.from(configDisciplinas[nomeDisciplina].allTags).sort();
+                
+                // Se a disciplina não tiver tags, pula para a próxima
+                if (tagsDaDisciplina.length === 0) return;
+
+                let groupCheckboxHTML = ''; // HTML para os checkboxes <label>
+                tagsDaDisciplina.forEach(tag => {
+                    // Verifica se esta tag estava marcada anteriormente
+                    const isChecked = ementasMarcadasAnteriormente.has(tag) ? 'checked' : '';
+                    groupCheckboxHTML += `
+                        <label>
+                            <input type="checkbox" class="filter-check" value="${tag}" ${isChecked}>
+                            ${tag}
+                        </label>
+                    `;
+                });
+
+                // Adiciona o grupo completo (label + grid de checkboxes) ao HTML final
+                finalHTML += `
+                    <div class="ementa-group">
+                        <p class="ementa-group-label">${nomeDisciplina}</p>
+                        <div class="ementa-group-grid">
+                            ${groupCheckboxHTML}
+                        </div>
+                    </div>
                 `;
             });
-            checkContainer.innerHTML = filterHTML;
+            
+            // (ETAPA 5) Renderiza o HTML final no container
+            checkContainer.innerHTML = finalHTML;
 
-            // 6. Adiciona os listeners
+            // (ETAPA 6) Adiciona os listeners
             checkContainer.querySelectorAll('.filter-check').forEach(check => {
                 check.addEventListener('change', renderizarQuestoes);
             });
             
-            // Reseta o botão "Marcar Todas"
+            // (ETAPA 7) Reseta o botão "Marcar Todas"
             btnCheckAllEmentas.dataset.checked = 'false';
             btnCheckAllEmentas.textContent = 'Marcar Todas';
+            
+            // (NOVO - ETAPA 8) Re-aplica o filtro de texto
+            filtrarEmentasPorTexto();
         }
 
 
@@ -1243,6 +1383,35 @@ qualquer vínculo ou afiliação com o Conselho Federal de Contabilidade.
                         }
                     }
                 });
+            });
+        }
+        
+        // (NOVA FUNÇÃO) Filtra as ementas visíveis baseado no input
+        function filtrarEmentasPorTexto() {
+            const searchTerm = normalizeText(document.getElementById('search-ementas-input').value.toLowerCase());
+            const grupos = document.querySelectorAll('#checkbox-container .ementa-group');
+
+            grupos.forEach(grupo => {
+                let visiveisNoGrupo = 0;
+                const labels = grupo.querySelectorAll('.ementa-group-grid label');
+
+                labels.forEach(label => {
+                    const labelText = normalizeText(label.textContent.toLowerCase());
+                    
+                    if (labelText.includes(searchTerm)) {
+                        label.style.display = 'flex'; // Mostra o label
+                        visiveisNoGrupo++;
+                    } else {
+                        label.style.display = 'none'; // Esconde o label
+                    }
+                });
+
+                // Agora, verifica o grupo
+                if (visiveisNoGrupo > 0) {
+                    grupo.style.display = 'block'; // Mostra o grupo (e seu título)
+                } else {
+                    grupo.style.display = 'none'; // Esconde o grupo (e seu título)
+                }
             });
         }
 
