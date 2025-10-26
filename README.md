@@ -68,6 +68,7 @@ Você pode facilmente adaptar este site para carregar suas próprias questões. 
 
 Contribuições são muito bem-vindas! Você pode ajudar de várias formas:
 
+* **Através do Microsoft Forms (preferencial):** [Feedback e Contribuição de Conteúdo - Balanceterno](https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAYAAF_bnDZUODNHWlVVRFNBNlgwUDlXTUU1VEQ2MEJNRS4u)
 * **Reportando Erros (Bugs):** Abra uma [Issue](https://github.com/elrunix12/balanceterno/issues).
 * **Sugerindo Melhorias:** Abra uma [Issue](https://github.com/elrunix12/balanceterno/issues).
 * **Adicionando Questões:** Siga o formato JSON descrito acima e crie um [Pull Request](https://github.com/elrunix12/balanceterno/pulls).
