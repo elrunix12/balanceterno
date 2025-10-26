@@ -17,8 +17,8 @@ Um projeto de código aberto para centralizar e facilitar o estudo para o Exame 
 
 ## 🚀 Como Rodar Localmente
 
-1.  Clone este repositório: `git clone https://github.com/elrunix12/Balanceterno.git`
-2.  Navegue até a pasta do projeto: `cd Balanceterno`
+1.  Clone este repositório: `git clone https://github.com/elrunix12/balanceterno.git`
+2.  Navegue até a pasta do projeto: `cd balanceterno`
 3.  **Importante:** Você precisa de um servidor web local para que o carregamento dos arquivos `.json` funcione. A forma mais fácil é usar a extensão **Live Server** no VS Code:
     * Instale a extensão "Live Server".
     * Clique com o botão direito no arquivo `index.html`.
@@ -68,10 +68,10 @@ Você pode facilmente adaptar este site para carregar suas próprias questões. 
 
 Contribuições são muito bem-vindas! Você pode ajudar de várias formas:
 
-* **Reportando Erros (Bugs):** Abra uma [Issue](https://github.com/elrunix12/Balanceterno/issues).
-* **Sugerindo Melhorias:** Abra uma [Issue](https://github.com/elrunix12/Balanceterno/issues).
-* **Adicionando Questões:** Siga o formato JSON descrito acima e crie um [Pull Request](https://github.com/elrunix12/Balanceterno/pulls).
-* **Melhorando o Código:** Crie um [Pull Request](https://github.com/elrunix12/Balanceterno/pulls).
+* **Reportando Erros (Bugs):** Abra uma [Issue](https://github.com/elrunix12/balanceterno/issues).
+* **Sugerindo Melhorias:** Abra uma [Issue](https://github.com/elrunix12/balanceterno/issues).
+* **Adicionando Questões:** Siga o formato JSON descrito acima e crie um [Pull Request](https://github.com/elrunix12/balanceterno/pulls).
+* **Melhorando o Código:** Crie um [Pull Request](https://github.com/elrunix12/balanceterno/pulls).
 
 Por favor, leia nossos [Termos de Uso](link/para/termos-de-uso.html) antes de contribuir com conteúdo.
 
