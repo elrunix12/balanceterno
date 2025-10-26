@@ -74,7 +74,7 @@ Contribuições são muito bem-vindas! Você pode ajudar de várias formas:
 * **Adicionando Questões:** Siga o formato JSON descrito acima e crie um [Pull Request](https://github.com/elrunix12/balanceterno/pulls).
 * **Melhorando o Código:** Crie um [Pull Request](https://github.com/elrunix12/balanceterno/pulls).
 
-Por favor, leia nossos [Termos de Uso](link/para/termos-de-uso.html) antes de contribuir com conteúdo.
+Por favor, leia nossos [Termos de Uso](https://elrunix12.github.io/balanceterno/) antes de contribuir com conteúdo.
 
 ## 📄 Licença
 
