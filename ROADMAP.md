@@ -10,6 +10,7 @@ Mudanças já concluídas são movidas para o [`CHANGELOG.md`](CHANGELOG.md).
 ## Em andamento v0.10-3
 - [ ] Adição de novas questões de **Contabilidade Societária**
 - [ ] Adição de questões de **Contabilidade Gerencial**
+- [ ] Correção de bugs relatados por usuários
 
 ## Ideias Futuras
 - [ ] Melhoria de usabilidade para pessoas com deficiência
