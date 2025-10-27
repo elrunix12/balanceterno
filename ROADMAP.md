@@ -12,5 +12,8 @@ Mudanças já concluídas são movidas para o [`CHANGELOG.md`](CHANGELOG.md).
 - [ ] Adição de questões de **Contabilidade Gerencial**
 - [ ] Correção de bugs relatados por usuários
 
+## Ideias para a v0.10-4
+- [ ] Definir uma cor padrão para cada disciplina 
+
 ## Ideias Futuras
 - [ ] Melhoria de usabilidade para pessoas com deficiência
