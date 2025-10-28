@@ -3,6 +3,13 @@
 Todas as mudanças notáveis neste projeto serão documentadas neste arquivo.
 O formato é baseado em [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [0.10-3] - 2025-10-28
+
+## Adicionado (Added)
+- Adição de novas questões de Contabilidade Societária
+- Adição de questões de Contabilidade Gerencial
+- Correção de bugs relatados por usuários
+
 ## [0.10-2] - 2025-10-26
 
 ### Corrigido (Fixed)
