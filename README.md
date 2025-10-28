@@ -41,6 +41,7 @@ Você pode facilmente adaptar este site para carregar suas próprias questões. 
         * `gabarito`: A letra correta (string, ex: "B").
         * `gabarito_texto`: O texto completo da opção correta (string).
         * `resolucao`: O texto da resolução comentada (string, pode ser vazia `""`).
+        * `autor_resolucao`: Quem contribui com a questão (string, pode ser vazia `""`).
         * `obsoleta`: `true` ou `false` (booleano).
     * Coloque esses arquivos `.json` na mesma pasta que o `index.html`.
     * Consulte o arquivo contabilidade-societária para obter um exemplo de estrutura.
@@ -60,6 +61,7 @@ Você pode facilmente adaptar este site para carregar suas próprias questões. 
       ```
 
     * Abaixo dessa linha, você terá exemplos de como adicionar suas questões.
+    * Você também pode simplesmente editar o nome do arquivo e o nome da disciplina caso não queira o banco já disponível.
 
 
 3.  **Execute:** Rode o `index.html` usando o Live Server (ou suba para seu GitHub Pages) e o site carregará as questões dos seus arquivos.
