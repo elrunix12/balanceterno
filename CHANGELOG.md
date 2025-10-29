@@ -7,8 +7,6 @@ O formato é baseado em [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 
 ### Adicionado (Added)
 - **Filtro por Resolução:** Adicionado um novo filtro "Mostrar apenas questões com resolução comentada" na página de Questões. O botão "Limpar Filtros" foi atualizado para incluir esta nova opção.
-
-### Adicionado (Added)
 - **Aba "Novidades":** Uma nova aba foi adicionada para exibir dinamicamente o conteúdo do arquivo `CHANGELOG.md` da raiz do projeto, facilitando a visualização do histórico de versões.
 - **Rodapé Dinâmico:** O conteúdo do rodapé (ano, versão, links) agora é carregado a partir de um arquivo `footer-data.json`, simplificando futuras atualizações.
 - **Autor da Resolução:** Abaixo da resolução comentada de cada questão, agora existe um menu suspenso (oculto por padrão) que revela o nome do autor da resolução, se disponível no arquivo JSON.
@@ -17,7 +15,6 @@ O formato é baseado em [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 ### Modificado (Changed)
 - **Refatoração de Código:** O CSS e JavaScript que estavam embutidos nos arquivos HTML foram completamente separados para arquivos externos (`.css` e `.js`), melhorando drasticamente a organização e manutenção do projeto.
 - **Performance e Cache:** O projeto agora utiliza arquivos compartilhados (`css/style.css` e `js/shared.js`). Isso permite que o navegador do usuário armazene esses arquivos em cache, tornando a navegação entre as páginas "Início" e "Status" muito mais rápida.
-
 
 ## [0.10-3] - 2025-10-28
 
