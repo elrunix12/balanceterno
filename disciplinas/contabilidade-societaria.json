@@ -1073,7 +1073,7 @@
         "gabarito": "B",
         "gabarito_texto": "R$175.000.",
         "resolucao": "Teste de Recuperabilidade (Impairment - NBC TG 01):\n1. Valor Contábil: R$ 180.000 (terreno não deprecia)\n2. Valor Recuperável: É o *maior* entre o Valor em Uso e o Valor Justo Líquido.\n   - Valor em Uso: R$ 170.000\n   - Valor Justo Líquido: R$ 190.000 (Valor Justo) - R$ 15.000 (Desp. Venda) = R$ 175.000\n   - Valor Recuperável = R$ 175.000\n3. Comparação: O Valor Contábil (R$ 180.000) está *maior* que o Valor Recuperável (R$ 175.000). Deve-se reconhecer uma perda por impairment.\n4. Lançamento da Perda: R$ 180.000 - R$ 175.000 = R$ 5.000\n5. Novo Valor Contábil: R$ 180.000 - R$ 5.000 = R$ 175.000.",
-        "autor_resolucao": "",
+        "autor_resolucao": "elrunix12",
         "obsoleta": false
     },
     {
