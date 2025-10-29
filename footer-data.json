@@ -1,0 +1,15 @@
+{
+  "projectName": "Balanceterno",
+  "currentYear": 2025,
+  "version": "0.10.5-27-dev",
+  "github": {
+    "text": "Código-fonte no GitHub",
+    "url": "https://github.com/elrunix12/balanceterno"
+  },
+  "disclaimer": "Este é um projeto educacional independente, desenvolvido para ajudar estudantes e profissionais da contabilidade. Não possuímos qualquer vínculo ou afiliação com o Conselho Federal de Contabilidade.",
+  "license": {
+    "prefix": "Distribuído sob a",
+    "text": "Licença AGPL-3.0",
+    "url": "https_//www.gnu.org/licenses/agpl-3.0.html"
+  }
+}
