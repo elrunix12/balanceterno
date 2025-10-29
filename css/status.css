@@ -1,0 +1,125 @@
+/* Cole isto em: css/status.css */
+
+main {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 20px; 
+}
+
+/* --- Estilos da Barra de Progresso --- */
+#progress-section {
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+#progress-label {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #004a91;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; 
+}
+#progress-label .percentage {
+    font-size: 1.2em;
+}
+.progress-bar-background {
+    width: 100%;
+    height: 24px;
+    background-color: #e9ecef;
+    border-radius: 5px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+}
+#progress-bar-fill {
+    height: 100%;
+    width: 0%; 
+    background-color: #28a745;
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+    background-size: 1rem 1rem;
+    transition: width 0.6s ease;
+}
+#progress-sublabel {
+    text-align: right; 
+    font-size: 0.9em; 
+    margin-top: 5px; 
+    color: #555;
+}
+
+#loading-message {
+    text-align: center;
+    font-size: 1.2em;
+    color: #004a91;
+    padding: 30px;
+}
+
+#status-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+#status-table th, 
+#status-table td {
+    border: 1px solid #ddd;
+    padding: 10px 12px; 
+    text-align: left;
+    font-size: 0.95em; 
+}
+
+#status-table th:nth-child(3),
+#status-table td:nth-child(3) {
+    text-align: center;
+}
+
+#status-table th {
+    background-color: #f0f2f5;
+    color: #004a91;
+}
+#status-table th[data-sort] {
+    cursor: pointer;
+    user-select: none;
+}
+#status-table th[data-sort]::after {
+    content: ' \25B2\25BC'; 
+    color: #ccc;
+    font-size: 0.8em;
+}
+#status-table th[data-sort].sort-asc::after {
+    content: ' \25B2'; 
+    color: #004a91;
+}
+#status-table th[data-sort].sort-desc::after {
+    content: ' \25BC'; 
+    color: #004a91;
+}
+
+.status-sim {
+    color: #218838;
+    font-weight: 600;
+}
+.status-nao {
+    color: #d9534f;
+    font-weight: 600;
+}
+
+@media (max-width: 700px) {
+    main {
+        padding: 15px; 
+    }
+    #progress-label {
+        font-size: 1em; 
+    }
+    #progress-sublabel {
+        font-size: 0.85em;
+    }
+
+    #status-table th, 
+    #status-table td {
+        padding: 8px 6px; 
+        font-size: 0.85em; 
+    }
+}
