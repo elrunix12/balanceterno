@@ -10,6 +10,7 @@ Um projeto de código aberto para centralizar e facilitar o estudo para o Exame 
     * Subtópico/Ementa (dinâmico, baseado nas disciplinas selecionadas)
     * Ano/Exame
     * Palavra-chave (busca no enunciado, opções e resolução)
+    * Resolução comentada
 * Opção para ocultar questões marcadas como obsoletas.
 * Modo de estudo interativo: Clique na opção para ver se acertou e exibir o gabarito/resolução.
 * Botões "Marcar/Desmarcar Todas" para filtros de Disciplina e Subtópico.
