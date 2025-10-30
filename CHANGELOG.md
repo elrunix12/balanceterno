@@ -3,7 +3,7 @@
 Todas as mudanças notáveis neste projeto serão documentadas neste arquivo.
 O formato é baseado em [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
-## [0.10.5-27] - 2025-10-28
+## [0.10.6] - 2025-10-29
 
 ### Adicionado (Added)
 - **Filtro por Resolução:** Adicionado um novo filtro "Mostrar apenas questões com resolução comentada" na página de Questões. O botão "Limpar Filtros" foi atualizado para incluir esta nova opção.
@@ -11,6 +11,12 @@ O formato é baseado em [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 - **Rodapé Dinâmico:** O conteúdo do rodapé (ano, versão, links) agora é carregado a partir de um arquivo `footer-data.json`, simplificando futuras atualizações.
 - **Autor da Resolução:** Abaixo da resolução comentada de cada questão, agora existe um menu suspenso (oculto por padrão) que revela o nome do autor da resolução, se disponível no arquivo JSON.
 - **Cores por Disciplina:** Implementado um sistema de cores distintas para as disciplinas (Azul para Societária, Verde para Gerencial) nos filtros e nas tags das questões, com estrutura para fácil adição de novas cores.
+- Adição de novas questões de **Contabilidade Societária**
+- Adição de questões de **Contabilidade Gerencial**
+- Correção de bugs relatados por usuários
+
+### Corrigido (Fixed)
+- Corrigido a questão 3 CFC 2022/2 onde faltava o valor na conta "Fornecedores" na resolução comentada 
 
 ### Modificado (Changed)
 - **Refatoração de Código:** O CSS e JavaScript que estavam embutidos nos arquivos HTML foram completamente separados para arquivos externos (`.css` e `.js`), melhorando drasticamente a organização e manutenção do projeto.
