@@ -1,0 +1,418 @@
+/* --- (MODIFICADO) Cores das Disciplinas --- */
+:root {
+    --cor-societaria-bg: #e6f7ff;
+    --cor-societaria-border: #b3e0ff;
+    --cor-societaria-text: #004a91;
+    
+    --cor-gerencial-bg: #e6ffed;
+    --cor-gerencial-border: #b3f0c8;
+    --cor-gerencial-text: #218838;
+    
+    /* Cor padrão (se novas disciplinas forem adicionadas sem cor) */
+    --cor-default-bg: #f0f2f5;
+    --cor-default-border: #ddd;
+    --cor-default-text: #333;
+}
+
+/* --- Estilos das Tabs --- */
+.tab-nav {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ddd;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.tab-button {
+    padding: 10px 5px;
+    font-size: 1.1em;
+    font-weight: 500;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    color: #555;
+    border-bottom: 3px solid transparent;
+    transition: border-color 0.2s, color 0.2s;
+}
+.tab-button:hover { color: #004a91; }
+.tab-button.active {
+    color: #004a91;
+    font-weight: 600;
+    border-bottom: 3px solid #004a91;
+}
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
+
+/* Estilo genérico para abas de texto */
+#tab-sobre, #tab-termos, #tab-privacidade, #tab-changelog {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+#tab-sobre h3, #tab-termos h3, #tab-privacidade h3, #tab-changelog h3 {
+    margin-top: 0; color: #004a91; border-bottom: 1px solid #ddd; padding-bottom: 10px;
+}
+
+.inline-tab-link {
+    color: #004a91;
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight: 500;
+}
+.inline-tab-link:hover {
+    color: #003366;
+}
+
+/* Estilos para o conteúdo do Changelog */
+#changelog-content {
+    line-height: 1.7;
+}
+#changelog-content h2 {
+    font-size: 1.4em;
+    color: #004a91;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+    margin-top: 25px;
+}
+#changelog-content h3 {
+    font-size: 1.2em;
+    color: #333;
+    margin-top: 20px;
+    border: none;
+}
+#changelog-content ul, #changelog-content li {
+    margin-bottom: 8px;
+}
+#changelog-content code {
+    background-color: #e4e6eb;
+    padding: 2px 5px;
+    border-radius: 4px;
+    font-family: monospace;
+}
+
+
+/* --- Área de Filtros --- */
+.filter-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+.filter-container h3 {
+    margin-top: 0;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    color: #004a91;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.filter-container h3 > span {
+    display: flex;
+    gap: 8px; 
+    align-items: center;
+}
+.filter-container h3 button {
+    font-size: 0.8em;
+    font-weight: normal;
+    padding: 4px 8px;
+    border: 1px solid #004a91;
+    background-color: #f0f2f5;
+    color: #004a91;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.filter-container h3 button:hover { background-color: #e4e6eb; }
+
+
+/* --- (MODIFICADO) Filtro de Disciplina (com Cores) --- */
+#disciplina-checkbox-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 10px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+/* Estilo base do label (sem cor) */
+#disciplina-checkbox-container label {
+    display: flex;
+    align-items: center;
+    padding: 10px 14px;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    background-color: var(--cor-default-bg);
+    border: 1px solid var(--cor-default-border);
+}
+#disciplina-checkbox-container label:hover { 
+    background-color: #e4e6eb; /* Hover genérico */
+}
+#disciplina-checkbox-container input { 
+    margin-right: 10px; 
+}
+
+/* Aplica as cores por classe */
+#disciplina-checkbox-container label.disciplina-societaria {
+    background-color: var(--cor-societaria-bg);
+    border-color: var(--cor-societaria-border);
+}
+#disciplina-checkbox-container label.disciplina-societaria:hover {
+    background-color: #d0ebff;
+}
+
+#disciplina-checkbox-container label.disciplina-gerencial {
+    background-color: var(--cor-gerencial-bg);
+    border-color: var(--cor-gerencial-border);
+}
+#disciplina-checkbox-container label.disciplina-gerencial:hover {
+    background-color: #d0f5d9;
+}
+
+
+/* --- Filtro de Exame/Ano --- */
+.ano-filter-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+    align-items: start;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+}
+.form-group { display: flex; flex-direction: column; }
+.form-group label { font-weight: 600; margin-bottom: 5px; font-size: 0.9em; }
+.form-group select {
+    padding: 10px; font-size: 0.95em; border: 1px solid #ccc; border-radius: 5px; background-color: #fff;
+}
+#exame-checkbox-container {
+    display: flex; flex-wrap: wrap; gap: 10px; align-items: center;
+}
+#exame-checkbox-container label {
+    display: flex; align-items: center; background-color: #f0f2f5; padding: 8px 12px;
+    border-radius: 5px; font-size: 0.9em; cursor: pointer; transition: background-color 0.2s; margin: 0;
+}
+#exame-checkbox-container label:hover { background-color: #e4e6eb; }
+#exame-checkbox-container input { margin-right: 8px; }
+
+/* Campo de pesquisa */
+#search-input {
+    width: 100%; padding: 10px; font-size: 0.95em; border: 1px solid #ccc;
+    border-radius: 5px; background-color: #fff; box-sizing: border-box; 
+}
+
+/* --- Estilo para o campo de busca de ementas --- */
+.ementa-search-container {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+#search-ementas-input {
+    width: 100%;
+    padding: 8px 12px;
+    font-size: 0.95em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; 
+}
+
+/* --- Filtro de Ementa --- */
+#checkbox-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.ementa-group-label {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #004a91;
+    margin: 0 0 10px 0;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #ddd;
+}
+.ementa-group-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 10px;
+}
+.ementa-group-grid label {
+    display: flex; align-items: center; background-color: #f0f2f5; padding: 8px 12px;
+    border-radius: 5px; font-size: 0.9em; cursor: pointer; transition: background-color 0.2s;
+}
+.ementa-group-grid label:hover { background-color: #e4e6eb; }
+.ementa-group-grid input { margin-right: 8px; }
+
+#btn-clear-filters {
+    background-color: #6c757d; color: white; border: none; padding: 10px 15px;
+    border-radius: 5px; cursor: pointer; font-size: 0.9em; margin-right: 10px;
+}
+#btn-clear-filters:hover { background-color: #5a6268; }
+
+#filter-info {
+    display: inline-block; font-size: 0.9em; color: #555; font-style: italic;
+}
+
+/* --- Aviso inicial --- */
+#initial-prompt {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+#initial-prompt p {
+    font-size: 1.2em;
+    color: #004a91;
+    margin: 0;
+    font-weight: 500;
+}
+
+/* --- Área das Questões --- */
+.questao-card {
+    background-color: #ffffff; border: 1px solid #ddd; border-radius: 8px;
+    padding: 25px; margin-bottom: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.questao-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.questao-header h4 {
+    font-size: 1.1em;
+    color: #004a91;
+    margin: 0;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.questao-meta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 8px;
+    align-items: center;
+}
+
+.questao-disciplina-container {
+    margin-top: -10px;
+    margin-bottom: 15px;
+}
+
+/* --- (MODIFICADO) Tags de Disciplina (com Cores) --- */
+.disciplina {
+    font-size: 0.9em;
+    font-weight: bold;
+    padding: 3px 8px;
+    border-radius: 4px;
+    /* Estilo Padrão */
+    background-color: var(--cor-default-bg);
+    color: var(--cor-default-text);
+}
+/* Aplica cores por classe */
+.disciplina.disciplina-societaria {
+    background-color: var(--cor-societaria-bg);
+    color: var(--cor-societaria-text);
+}
+.disciplina.disciplina-gerencial {
+    background-color: var(--cor-gerencial-bg);
+    color: var(--cor-gerencial-text);
+}
+
+.questao-header span {
+    font-size: 0.9em; font-weight: bold; color: #444; white-space: nowrap;
+}
+.questao-header .banca {
+    font-size: 0.85em; font-weight: normal; color: #667; background-color: #eee;
+    padding: 2px 6px; border-radius: 4px; 
+}
+.questao-header .tag-obsoleta {
+    font-size: 0.8em; font-weight: bold; color: #d9534f; background-color: #fcf8e3;
+    border: 1px solid #d9534f; padding: 2px 6px; border-radius: 4px; 
+    white-space: nowrap;
+}
+
+.enunciado { white-space: pre-wrap; font-size: 1.1em; margin-bottom: 20px; }
+.opcoes ul { list-style-type: none; padding: 0; margin: 0; }
+
+.opcoes li {
+    padding: 12px; border: 1px solid #eee; margin-bottom: 8px; border-radius: 5px;
+    white-space: pre-wrap; cursor: pointer; transition: background-color 0.2s, border-color 0.2s;
+}
+.opcoes-lista .opcao-clicavel:hover { background-color: #f0f2f5; border-color: #004a91; }
+.opcao-incorreta {
+    background-color: #fff0f0; border-color: #d9534f; color: #d9534f; font-weight: bold;
+}
+.opcao-correta {
+    background-color: #e6ffed; border-color: #28a745; color: #218838; font-weight: bold;
+}
+.quiz-hint {
+    display: block; font-style: italic; color: #555; font-size: 0.9em;
+    margin-top: 15px; text-align: center;
+}
+
+.resposta-correta {
+    display: none; margin-top: 15px; padding: 15px; background-color: #e6ffed;
+    border: 1px solid #28a745; border-radius: 5px;
+}
+.resposta-correta .gabarito-texto {
+     white-space: pre-wrap; font-weight: bold; color: #218838;
+}
+.resposta-correta .resolucao-texto {
+    margin-top: 15px; padding-top: 15px; border-top: 1px dashed #aaa;
+    font-weight: normal; color: #333; white-space: pre-wrap;
+}
+.resposta-correta .sem-resolucao {
+    margin-top: 15px; padding-top: 15px; border-top: 1px dashed #aaa;
+    font-weight: normal; font-style: italic; color: #555;
+}
+
+/* --- (NOVO) Estilo para Autor da Resolução --- */
+details.autor-resolucao {
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px dashed #aaa;
+    font-size: 0.9em;
+    color: #333;
+}
+details.autor-resolucao summary {
+    cursor: pointer;
+    font-weight: bold;
+    color: #555;
+    list-style: none; /* Remove a seta padrão em alguns navegadores */
+}
+/* Adiciona um marcador '+' e '-' */
+details.autor-resolucao summary::before {
+    content: '+';
+    margin-right: 8px;
+    font-weight: bold;
+    display: inline-block;
+    width: 10px;
+}
+details[open].autor-resolucao summary::before {
+    content: '−';
+}
+details.autor-resolucao p {
+    margin: 8px 0 0 0;
+    padding-left: 18px; /* Alinha com o texto do summary */
+}
+/* --- Fim: Estilo do Autor --- */
+
+
+/* Ajustes Responsivos */
+@media (max-width: 700px) {
+    .ano-filter-grid { grid-template-columns: 1fr; }
+    #exame-checkbox-container { border-top: 1px solid #eee; padding-top: 15px; }
+}
