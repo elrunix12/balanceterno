@@ -48,13 +48,13 @@ Você pode facilmente adaptar este site para carregar suas próprias questões. 
     * Consulte o arquivo contabilidade-societária para obter um exemplo de estrutura.
 
 2.  **Modifique o `index.html`:**
-    * Abra o arquivo `index.html` em um editor de texto.
+    * Abra o arquivo `js/index.js` em um editor de texto.
     * Encontre a seção `<script>` no final do arquivo.
 
       ```script
       const configDisciplinas = {
             "Contabilidade Societária": {
-                arquivo: 'contabilidade-societaria.json', // O arquivo que você forneceu
+                arquivo: 'disciplinas/contabilidade-societaria.json', // O arquivo que você forneceu
                 questoes: [],
                 allTags: new Set()
             },
@@ -63,6 +63,8 @@ Você pode facilmente adaptar este site para carregar suas próprias questões. 
 
     * Abaixo dessa linha, você terá exemplos de como adicionar suas questões.
     * Você também pode simplesmente editar o nome do arquivo e o nome da disciplina caso não queira o banco já disponível.
+    * 'disciplinas/contabilidade-societaria.json', onde disciplinas é o nome da pasta onde estão suas disciplinas em json e contabilidade-societária é o nome do arquivo.
+    * Você também usar os arquivos .json em uma IA generativa (como, por exemplo, o Chatgpt) para criar simulados.
 
 
 3.  **Execute:** Rode o `index.html` usando o Live Server (ou suba para seu GitHub Pages) e o site carregará as questões dos seus arquivos.
