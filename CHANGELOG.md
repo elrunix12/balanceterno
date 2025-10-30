@@ -22,13 +22,6 @@ O formato é baseado em [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 - **Refatoração de Código:** O CSS e JavaScript que estavam embutidos nos arquivos HTML foram completamente separados para arquivos externos (`.css` e `.js`), melhorando drasticamente a organização e manutenção do projeto.
 - **Performance e Cache:** O projeto agora utiliza arquivos compartilhados (`css/style.css` e `js/shared.js`). Isso permite que o navegador do usuário armazene esses arquivos em cache, tornando a navegação entre as páginas "Início" e "Status" muito mais rápida.
 
-## [0.10-3] - 2025-10-28
-
-## Adicionado (Added)
-- Adição de novas questões de Contabilidade Societária
-- Adição de questões de Contabilidade Gerencial
-- Correção de bugs relatados por usuários
-
 ## [0.10-2] - 2025-10-26
 
 ### Corrigido (Fixed)
