@@ -35,13 +35,27 @@ async function carregarRodape() {
         }
 
         const data = await response.json();
-
+        
+        // (NOVO) Cria o HTML do link admin, se ele existir
+        let adminLinkHTML = '';
+        if (data.adminLink && data.adminLink.url && data.adminLink.text) {
+            // Cria o link no mesmo formato dos outros, com o separador "|"
+            adminLinkHTML = `
+                |
+                <a href="${data.adminLink.url}">
+                    ${data.adminLink.text}
+                </a>
+            `;
+        }
+        
+        // (MODIFICADO) Adiciona a variável adminLinkHTML DENTRO do primeiro <p>
         footerElement.innerHTML = `
             <p>
                 &copy; ${data.currentYear} ${data.projectName} | Versão ${data.version} |
                 <a href="${data.github.url}" target="_blank" rel="noopener noreferrer">
                     ${data.github.text}
                 </a>
+                ${adminLinkHTML}
             </p>
             <p>
                 ${data.disclaimer}

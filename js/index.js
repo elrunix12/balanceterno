@@ -59,6 +59,7 @@
     const initialPrompt = document.getElementById('initial-prompt');
     const btnCheckAllDisciplinas = document.getElementById('btn-check-all-disciplinas');
     const btnCheckAllEmentas = document.getElementById('btn-check-all-ementas');
+    let cpcData = {};
 
 
     // Roda tudo quando a página carrega
@@ -171,6 +172,19 @@
             });
 
             await Promise.all(promessas);
+
+            // --- (NOVO) Carregar dados dos CPCs ---
+            try {
+                const response = await fetch('normas/cpcs.json'); // Ajuste o caminho se necessário
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status} para cpcs.json`);
+                }
+                cpcData = await response.json();
+            } catch (error) {
+                console.error('Erro ao carregar cpcs.json:', error);
+                cpcData = {}; // Garante que cpcData é um objeto e não falha
+            }
+            // --- Fim da nova seção ---
 
             renderizarFiltrosDeDisciplina();
             renderizarFiltrosDeExame(); 
@@ -397,6 +411,84 @@
     }
 
 
+        /**
+     * (NOVO) Helper para renderizar enunciados estruturados (com tabelas)
+     * Mantém compatibilidade com enunciados antigos (string)
+     * @param {object} questao - O objeto da questão
+     * @returns {string} - O HTML final para o enunciado
+     */
+    /**
+     * (ATUALIZADO) Helper para renderizar enunciados estruturados (com tabelas)
+     * Agora com suporte a tabelas complexas (colspan/rowspan)
+     * Mantém compatibilidade com enunciados antigos (string)
+     * @param {object} questao - O objeto da questão
+     * @returns {string} - O HTML final para o enunciado
+     */
+    function renderizarEnunciado(questao) {
+        // Se 'enunciado_blocos' existir, use o novo renderizador
+        if (questao.enunciado_blocos && Array.isArray(questao.enunciado_blocos)) {
+            let html = '';
+            questao.enunciado_blocos.forEach(bloco => {
+                
+                if (bloco.type === 'p') {
+                    // Adiciona um parágrafo
+                    html += `<p>${bloco.content}</p>`;
+                
+                } else if (bloco.type === 'table') {
+                    
+                    // Adiciona o wrapper para rolagem mobile
+                    html += '<div class="table-wrapper">';
+                    html += '<table class="enunciado-table">';
+                    
+                    // (NOVO) Renderiza o cabeçalho complexo (thead)
+                    if (bloco.headerRows && bloco.headerRows.length > 0) {
+                        html += '<thead>';
+                        bloco.headerRows.forEach(rowArray => {
+                            html += '<tr>';
+                            rowArray.forEach(cellObj => {
+                                // Pula a renderização de 'th' se for uma célula vazia (para rowspan)
+                                if (cellObj.isEmpty) {
+                                    // Não renderiza nada
+                                } else {
+                                    const colspan = cellObj.colspan ? ` colspan="${cellObj.colspan}"` : '';
+                                    const rowspan = cellObj.rowspan ? ` rowspan="${cellObj.rowspan}"` : '';
+                                    html += `<th${colspan}${rowspan}>${cellObj.content}</th>`;
+                                }
+                            });
+                            html += '</tr>';
+                        });
+                        html += '</thead>';
+                    }
+                    
+                    // (NOVO) Renderiza o corpo da tabela (tbody)
+                    html += '<tbody>';
+                    if (bloco.bodyRows && bloco.bodyRows.length > 0) {
+                        bloco.bodyRows.forEach(rowArray => {
+                            html += '<tr>';
+                            rowArray.forEach(cellContent => {
+                                html += `<td>${cellContent}</td>`;
+                            });
+                            html += '</tr>';
+                        });
+                    }
+                    html += '</tbody></table>';
+                    
+                    // Fecha o wrapper
+                    html += '</div>';
+                }
+            });
+            // Retorna o conteúdo estruturado dentro de um DIV
+            return `<div class="enunciado">${html}</div>`;
+        }
+    
+        // Fallback: Se 'enunciado_blocos' não existir, use o 'enunciado' antigo
+        if (questao.enunciado) {
+            return `<p class="enunciado">${questao.enunciado}</p>`;
+        }
+        
+        return '<p class="enunciado" style="color:red;">Erro: Enunciado não encontrado.</p>';
+    }
+    
     // 4. (MODIFICADO) Função principal para filtrar e mostrar as questões (com Cores e Autor)
     function renderizarQuestoes() {
         const filtrosDisciplina = Array.from(
@@ -539,6 +631,32 @@
                     </details>
                 `;
             }
+
+            // --- (NOVO) HTML das Referências CPC ---
+            let cpcHTML = '';
+            let cpcLinks = '';
+            
+            // Verifica se a questão tem tags E se o cpcData foi carregado
+            if (questao.tags && cpcData) {
+                questao.tags.forEach(tag => {
+                    const cpcInfo = cpcData[tag]; // Procura a tag no JSON dos CPCs
+                    if (cpcInfo) {
+                        // Se achar, cria um item de lista com o link
+                        cpcLinks += `<li><a href="${cpcInfo.url}" target="_blank" rel="noopener noreferrer">${cpcInfo.cpc} - ${tag}</a></li>`;
+                    }
+                });
+            }
+            
+            // Se foi encontrado algum link, cria o menu suspenso
+            if (cpcLinks) {
+                cpcHTML = `
+                    <details class="cpc-referencia">
+                        <summary>Normas (CPCs) Relacionadas</summary>
+                        <ul>${cpcLinks}</ul>
+                    </details>
+                `;
+            }
+            // --- Fim da nova seção ---
             
             const cardHTML = `
                 <div class="questao-card" data-gabarito="${questao.gabarito}">
@@ -553,7 +671,7 @@
                     <div class="questao-disciplina-container">
                         ${disciplinaTagHTML}
                     </div>
-                    <p class="enunciado">${questao.enunciado}</p>
+                    ${renderizarEnunciado(questao)}
                     <div class="opcoes">
                         <ul class="opcoes-lista" data-target-id="${uniqueID}">
                             ${opcoesHTML}
@@ -566,6 +684,7 @@
                         </div>
                         ${resolucaoHTML} 
                         ${autorHTML} 
+                        ${cpcHTML}
                     </div>
                 </div>
             `;
