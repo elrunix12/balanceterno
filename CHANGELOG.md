@@ -3,6 +3,29 @@
 Todas as mudanças notáveis neste projeto serão documentadas neste arquivo.
 O formato é baseado em [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [0.10.8] - 2025-10-31
+
+### Adicionado (Added)
+
+* **Links de Normas (CPCs/NBCs):** Adicionado um novo menu suspenso "Normas (CPCs) Relacionadas" abaixo da resolução de cada questão. O sistema agora cruza as `tags` da questão (ex: "Ativo Imobilizado") com um novo banco de dados (`cpcs.json`) para exibir links relevantes para as normas oficiais.
+* **Suporte a Tabelas nos Enunciados:** Implementada a capacidade de renderizar tabelas formatadas dentro dos enunciados das questões.
+* **Suporte a Tabelas Complexas:** O sistema agora renderiza tabelas com múltiplos níveis de cabeçalho (subcabeçalhos), processando automaticamente os atributos `colspan` e `rowspan` definidos no JSON.
+* **Banco de Dados de Normas (`cpcs.json`):** Adicionado o arquivo `cpcs.json` à pasta normas do projeto. Ele contém uma lista abrangente de CPCs e seus respectivos nomes de tags para o cruzamento de dados.
+* **Ferramenta de Geração (`generator.html`):** Criado um novo arquivo `generator.html` (ferramenta de desenvolvimento) para facilitar a criação de novos arquivos JSON de questões. O gerador possui uma interface gráfica para criar enunciados simples (texto) ou estruturados (com parágrafos e tabelas complexas).
+
+### Modificado (Changed)
+
+* **Renderização de Enunciados:** A lógica de renderização no `index.js` foi refatorada. O script agora suporta um novo campo `enunciado_blocos` no JSON para enunciados estruturados. O sistema mantém 100% de compatibilidade com o campo `enunciado` antigo, garantindo que nenhuma questão anterior seja quebrada.
+* **Estilo das Tabelas (`index.css`):** As tabelas agora são totalmente responsivas. Elas rolam horizontalmente em telas pequenas (`.table-wrapper`) e são compactas (com `width` automático e `font-size` reduzido) em telas maiores.
+### Corrigido (fixed)
+
+* **Ajuste de tabelas**: Nas seguintes questões de contabilidade gerencial:
+    - 39 CFC 2024/2
+    - 40 CFC 2024/1
+    - 37 CFC 2024/1
+
+    Foi adicionado tabelas para melhorar a visualização das informações.
+
 ## [0.10.6] - 2025-10-29
 
 ### Adicionado (Added)
