@@ -17,8 +17,6 @@ O formato é baseado em [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 
 * **Renderização de Enunciados:** A lógica de renderização no `index.js` foi refatorada. O script agora suporta um novo campo `enunciado_blocos` no JSON para enunciados estruturados. O sistema mantém 100% de compatibilidade com o campo `enunciado` antigo, garantindo que nenhuma questão anterior seja quebrada.
 * **Estilo das Tabelas (`index.css`):** As tabelas agora são totalmente responsivas. Elas rolam horizontalmente em telas pequenas (`.table-wrapper`) e são compactas (com `width` automático e `font-size` reduzido) em telas maiores.
-### Corrigido (fixed)
-
 * **Ajuste de tabelas**: Nas seguintes questões de contabilidade gerencial:
     - 39 CFC 2024/2
     - 40 CFC 2024/1
