@@ -1,1 +1,584 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de JSON - Banco de Questões</title>
+    <style>
+        :root {
+            --cor-principal: #004a91;
+            --cor-borda: #ccc;
+            --cor-fundo: #f9f9f9;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f0f2f5;
+            color: #1c1e21;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: var(--cor-principal);
+            text-align: center;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 15px;
+        }
+        form { display: flex; flex-direction: column; gap: 20px; }
+        fieldset {
+            border: 1px solid var(--cor-borda);
+            border-radius: 6px;
+            padding: 20px;
+            margin: 0;
+        }
+        legend {
+            font-size: 1.2em;
+            font-weight: 600;
+            color: var(--cor-principal);
+            padding: 0 10px;
+        }
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+        .grid-4 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+        }
+        label { font-weight: 500; color: #333; }
+        input[type="text"],
+        input[type="number"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 0.95em;
+            border: 1px solid var(--cor-borda);
+            border-radius: 5px;
+            background-color: #fff;
+            box-sizing: border-box; 
+        }
+        textarea { min-height: 100px; resize: vertical; }
+        .radio-group { display: flex; gap: 20px; margin-bottom: 15px; }
+        .btn, button {
+            padding: 10px 15px;
+            font-size: 1em;
+            font-weight: 600;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        button[type="submit"] { background-color: var(--cor-principal); color: white; }
+        button[type="submit"]:hover { background-color: #003366; }
+        button[type="reset"] { background-color: #6c757d; color: white; }
+        button[type="reset"]:hover { background-color: #5a6268; }
+        
+        /* --- Estilos do Bloco Estruturado --- */
+        #enunciado-estruturado-container { display: none; }
+        #blocos-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        .bloco {
+            border: 1px dashed var(--cor-borda);
+            background-color: var(--cor-fundo);
+            padding: 15px;
+            border-radius: 5px;
+            position: relative;
+        }
+        .bloco-header {
+            font-weight: bold;
+            color: #555;
+            margin-bottom: 10px;
+        }
+        .btn-remover-bloco {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #e0e0e0;
+            color: #333;
+            border-radius: 50%;
+            font-weight: bold;
+            width: 24px;
+            height: 24px;
+            line-height: 24px;
+            text-align: center;
+            font-size: 0.9em;
+            padding: 0;
+        }
+        .btn-remover-bloco:hover { background: #d9534f; color: white; }
+        .botoes-bloco { display: flex; gap: 10px; margin-top: 15px; }
+        .btn-add { background-color: #e6f7ff; color: var(--cor-principal); border: 1px solid #b3e0ff; }
+        .btn-add:hover { background-color: #d0ebff; }
+        .btn-add-small {
+            font-size: 0.9em;
+            padding: 8px 12px;
+            font-weight: 500;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            color: #333;
+        }
+        .btn-add-small:hover { background-color: #f4f4f4; }
+        .btn-remover-small {
+            background: #e0e0e0; color: #333; border-radius: 50%;
+            font-weight: bold; width: 28px; height: 28px; padding: 0;
+            font-size: 1.1em; line-height: 28px;
+        }
+        .btn-remover-small:hover { background: #d9534f; color: white; }
 
+        /* --- (NOVO) Estilos para Bloco de Tabela v5.0 --- */
+        .bloco small { font-size: 0.85em; color: #555; }
+        .bloco textarea { font-family: Consolas, 'Courier New', monospace; }
+        
+        .header-rows-builder {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            background: #fff;
+            border: 1px solid #ccc;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+        .header-row {
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 10px;
+        }
+        .header-row-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .header-row-header strong { color: #333; }
+        .header-cells-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .header-cell {
+            display: grid;
+            grid-template-columns: 1fr 80px 80px 30px;
+            gap: 10px;
+            align-items: center;
+            background: #fff;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .header-cell input { padding: 8px; }
+        .header-cell input[type="number"] { -moz-appearance: textfield; }
+        .header-cell input::-webkit-outer-spin-button,
+        .header-cell input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        
+        /* Output */
+        #output-container {
+            margin-top: 25px;
+            display: none;
+        }
+        #json-output {
+            background-color: #f4f4f4;
+            border: 1px solid var(--cor-borda);
+            border-radius: 5px;
+            padding: 15px;
+            white-space: pre-wrap;
+            overflow-x: auto;
+            max-height: 500px;
+            font-family: Consolas, 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        #btn-copy {
+            background-color: #28a745;
+            color: white;
+            margin-top: 10px;
+        }
+        #btn-copy:hover { background-color: #218838; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Gerador de JSON para Questões</h1>
+        <form id="questao-form">
+
+            <fieldset>
+                <legend>Metadados</legend>
+                <div class="grid-4">
+                    <div class="form-group">
+                        <label for="id">ID (Número)</label>
+                        <input type="number" id="id" name="id" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="ano">Ano (Número)</label>
+                        <input type="number" id="ano" name="ano" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="exame">Exame (ex: CFC 2025/2)</label>
+                        <input type="text" id="exame" name="exame" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="banca">Banca (ex: FGV)</label>
+                        <input type="text" id="banca" name="banca" required>
+                    </div>
+                </div>
+                <div class="form-group" style="margin-top: 15px;">
+                    <label for="tags">Ementas (separadas por vírgula)</label>
+                    <input type="text" id="tags" name="tags" placeholder="Impairment, Ativo Imobilizado, ...">
+                </div>
+                <div class="form-group" style="margin-top: 15px;">
+                    <input type="checkbox" id="obsoleta" name="obsoleta" style="width: auto;">
+                    <label for="obsoleta" style="display: inline; font-weight: normal;"> Marcar como Obsoleta</label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Enunciado</legend>
+                <div class="radio-group">
+                    <label><input type="radio" name="enunciado-tipo" value="simples" checked> Texto Simples</label>
+                    <label><input type="radio" name="enunciado-tipo" value="estruturado"> Estruturado (com tabelas)</label>
+                </div>
+
+                <div id="enunciado-simples-container">
+                    <div class="form-group">
+                        <label for="enunciado">Texto do Enunciado</label>
+                        <textarea id="enunciado" name="enunciado"></textarea>
+                    </div>
+                </div>
+
+                <div id="enunciado-estruturado-container">
+                    <div id="blocos-container">
+                        </div>
+                    <div class="botoes-bloco">
+                        <button id="btn-add-paragrafo" class="btn btn-add">+ Adicionar Parágrafo</button>
+                        <button id="btn-add-tabela" class="btn btn-add">+ Adicionar Tabela</button>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Opções</legend>
+                <div class="form-group">
+                    <label for="opcao_a">Opção A</label>
+                    <input type="text" id="opcao_a" name="opcao_a">
+                </div>
+                <div class="form-group">
+                    <label for="opcao_b">Opção B</label>
+                    <input type="text" id="opcao_b" name="opcao_b">
+                </div>
+                <div class="form-group">
+                    <label for="opcao_c">Opção C</label>
+                    <input type="text" id="opcao_c" name="opcao_c">
+                </div>
+                <div class="form-group">
+                    <label for="opcao_d">Opção D</label>
+                    <input type="text" id="opcao_d" name="opcao_d">
+                </div>
+                <div class="form-group" style="margin-top: 15px;">
+                    <label for="gabarito">Gabarito Correto</label>
+                    <select id="gabarito" name="gabarito">
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="D">D</option>
+                    </select>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Resolução</legend>
+                <div class="form-group">
+                    <label for="resolucao">Resolução Comentada (Opcional)</label>
+                    <textarea id="resolucao" name="resolucao"></textarea>
+                </div>
+                <div class="form-group" style="margin-top: 15px;">
+                    <label for="autor_resolucao">Autor da Resolução (Opcional)</label>
+                    <input type="text" id="autor_resolucao" name="autor_resolucao">
+                </div>
+            </fieldset>
+
+            <div style="display: flex; gap: 10px;">
+                <button type="submit">Gerar JSON</button>
+                <button type="reset" id="reset-btn">Limpar Formulário</button>
+            </div>
+        </form>
+
+        <div id="output-container">
+            <h2>JSON Gerado:</h2>
+            <pre><code id="json-output"></code></pre>
+            <button id="btn-copy" class="btn">Copiar JSON</button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- Cache de Elementos ---
+            const form = document.getElementById('questao-form');
+            const radioTipoEnunciado = document.querySelectorAll('input[name="enunciado-tipo"]');
+            const containerSimples = document.getElementById('enunciado-simples-container');
+            const containerEstruturado = document.getElementById('enunciado-estruturado-container');
+            const blocosContainer = document.getElementById('blocos-container');
+            const btnAddParagrafo = document.getElementById('btn-add-paragrafo');
+            const btnAddTabela = document.getElementById('btn-add-tabela');
+            const outputContainer = document.getElementById('output-container');
+            const jsonOutput = document.getElementById('json-output');
+            const btnCopy = document.getElementById('btn-copy');
+            const resetBtn = document.getElementById('reset-btn');
+
+            // --- Lógica de Troca de Editor (Simples/Estruturado) ---
+            radioTipoEnunciado.forEach(radio => {
+                radio.addEventListener('change', (e) => {
+                    if (e.target.value === 'simples') {
+                        containerSimples.style.display = 'block';
+                        containerEstruturado.style.display = 'none';
+                    } else {
+                        containerSimples.style.display = 'none';
+                        containerEstruturado.style.display = 'block';
+                    }
+                });
+            });
+
+            // --- Adicionar Bloco de Parágrafo ---
+            btnAddParagrafo.addEventListener('click', (e) => {
+                e.preventDefault();
+                const novoBloco = document.createElement('div');
+                novoBloco.className = 'bloco';
+                novoBloco.setAttribute('data-type', 'p');
+                novoBloco.innerHTML = `
+                    <button type="button" class="btn-remover-bloco" title="Remover Bloco">&times;</button>
+                    <div class="bloco-header">Bloco de Parágrafo</div>
+                    <div class="form-group">
+                        <textarea class="bloco-conteudo" placeholder="Digite o texto do parágrafo..."></textarea>
+                    </div>
+                `;
+                blocosContainer.appendChild(novoBloco);
+            });
+
+            // --- (ATUALIZADO) Adicionar Bloco de Tabela (v5.0) ---
+            btnAddTabela.addEventListener('click', (e) => {
+                e.preventDefault();
+                const novoBloco = document.createElement('div');
+                novoBloco.className = 'bloco';
+                novoBloco.setAttribute('data-type', 'table');
+                novoBloco.innerHTML = `
+                    <button type="button" class="btn-remover-bloco" title="Remover Bloco">&times;</button>
+                    <div class="bloco-header">Bloco de Tabela</div>
+                    
+                    <label>Construtor de Cabeçalho</label>
+                    <div class="header-rows-builder">
+                        </div>
+                    <button type="button" class="btn-add-small btn-add-header-row" style="margin-bottom: 15px;">+ Adicionar Linha de Cabeçalho</button>
+
+                    <div class="form-group">
+                        <label>Linhas de Corpo (colunas separadas por ';')</label>
+                        <small>Use Enter para novas linhas.</small>
+                        <textarea class="bloco-tabela-corpo" rows="4" placeholder="Tecido Jeans;1,50;45,00;..."></textarea>
+                    </div>
+                `;
+                blocosContainer.appendChild(novoBloco);
+            });
+            
+            // --- (NOVO) Lógica do Construtor de Tabela (delegação) ---
+            let rowCounter = 0;
+            blocosContainer.addEventListener('click', (e) => {
+                e.preventDefault();
+                const target = e.target;
+                
+                // Botão de Remover Bloco
+                if (target.classList.contains('btn-remover-bloco')) {
+                    target.closest('.bloco').remove();
+                    return;
+                }
+
+                // (NOVO) Adicionar Linha de Cabeçalho
+                if (target.classList.contains('btn-add-header-row')) {
+                    rowCounter++;
+                    const builder = target.closest('.bloco').querySelector('.header-rows-builder');
+                    const row = document.createElement('div');
+                    row.className = 'header-row';
+                    row.innerHTML = `
+                        <div class="header-row-header">
+                            <strong>Linha ${rowCounter}</strong>
+                            <button type="button" class="btn-remover-small btn-remove-header-row" title="Remover Linha">&times;</button>
+                        </div>
+                        <div class="header-cells-list">
+                            </div>
+                        <button type="button" class="btn-add-small btn-add-header-cell">+ Adicionar Célula</button>
+                    `;
+                    builder.appendChild(row);
+                    return;
+                }
+                
+                // (NOVO) Remover Linha de Cabeçalho
+                if (target.classList.contains('btn-remove-header-row')) {
+                    target.closest('.header-row').remove();
+                    // Reinicializa a contagem se todas as linhas forem removidas
+                    if (document.querySelectorAll('.header-row').length === 0) {
+                        rowCounter = 0;
+                    }
+                    return;
+                }
+                
+                // (NOVO) Adicionar Célula
+                if (target.classList.contains('btn-add-header-cell')) {
+                    const cellList = target.closest('.header-row').querySelector('.header-cells-list');
+                    const cell = document.createElement('div');
+                    cell.className = 'header-cell';
+                    cell.innerHTML = `
+                        <input type="text" class="cell-content" placeholder="Texto da Célula">
+                        <input type="number" class="cell-colspan" placeholder="Colspan" min="1" value="1" title="Colspan">
+                        <input type="number" class="cell-rowspan" placeholder="Rowspan" min="1" value="1" title="Rowspan">
+                        <button type="button" class="btn-remover-small btn-remove-header-cell">&times;</button>
+                    `;
+                    cellList.appendChild(cell);
+                    return;
+                }
+
+                // (NOVO) Remover Célula
+                if (target.classList.contains('btn-remove-header-cell')) {
+                    target.closest('.header-cell').remove();
+                    return;
+                }
+            });
+
+
+            // --- Limpar Formulário ---
+            resetBtn.addEventListener('click', () => {
+                blocosContainer.innerHTML = ''; 
+                outputContainer.style.display = 'none';
+                jsonOutput.textContent = '';
+                containerSimples.style.display = 'block';
+                containerEstruturado.style.display = 'none';
+                rowCounter = 0; // Reseta o contador de linhas
+            });
+
+            // --- (ATUALIZADO) Gerar o JSON (Submit do Formulário) ---
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                
+                const formData = new FormData(form);
+                const questaoJSON = {};
+
+                // 1. Metadados (Igual)
+                questaoJSON.id = parseInt(formData.get('id')) || null;
+                questaoJSON.ano = parseInt(formData.get('ano')) || null;
+                questaoJSON.exame = formData.get('exame');
+                questaoJSON.banca = formData.get('banca');
+                questaoJSON.tags = formData.get('tags').split(',')
+                                     .map(tag => tag.trim())
+                                     .filter(Boolean);
+                
+                // 2. Enunciado (Lógica Híbrida)
+                const tipoEnunciado = formData.get('enunciado-tipo');
+                if (tipoEnunciado === 'estruturado') {
+                    questaoJSON.enunciado = ""; 
+                    questaoJSON.enunciado_blocos = [];
+                    
+                    document.querySelectorAll('#blocos-container .bloco').forEach(blocoEl => {
+                        const tipo = blocoEl.dataset.type;
+                        if (tipo === 'p') {
+                            const content = blocoEl.querySelector('.bloco-conteudo').value;
+                            questaoJSON.enunciado_blocos.push({ type: 'p', content: content });
+                        } 
+                        else if (tipo === 'table') {
+                            
+                            // (NOVO) Processa o cabeçalho pelo construtor visual v5.0
+                            let headerRows = [];
+                            blocoEl.querySelectorAll('.header-row').forEach(rowEl => {
+                                let rowArray = [];
+                                rowEl.querySelectorAll('.header-cell').forEach(cellEl => {
+                                    const content = cellEl.querySelector('.cell-content').value.trim();
+                                    const colspan = parseInt(cellEl.querySelector('.cell-colspan').value) || 1;
+                                    const rowspan = parseInt(cellEl.querySelector('.cell-rowspan').value) || 1;
+                                    
+                                    const cellObj = { content: content };
+                                    if (colspan > 1) cellObj.colspan = colspan;
+                                    if (rowspan > 1) cellObj.rowspan = rowspan;
+                                    if (content === "") cellObj.isEmpty = true;
+                                    
+                                    rowArray.push(cellObj);
+                                });
+                                headerRows.push(rowArray);
+                            });
+
+                            // Processa o corpo (simples)
+                            const bodyText = blocoEl.querySelector('.bloco-tabela-corpo').value;
+                            const bodyRows = bodyText.split('\n')
+                                .map(line => line.split(';').map(cellText => cellText.trim()))
+                                .filter(row => row.length > 0 && row[0] !== "");
+
+                            questaoJSON.enunciado_blocos.push({
+                                type: 'table',
+                                headerRows: headerRows,
+                                bodyRows: bodyRows
+                            });
+                        }
+                    });
+
+                } else {
+                    questaoJSON.enunciado = formData.get('enunciado');
+                }
+
+                // 3. Opções (Igual)
+                questaoJSON.opcoes = [];
+                const letras = ['a', 'b', 'c', 'd'];
+                letras.forEach(letra => {
+                    const texto = formData.get(`opcao_${letra}`);
+                    if (texto) {
+                        questaoJSON.opcoes.push({
+                            letra: letra.toUpperCase(),
+                            texto: texto
+                        });
+                    }
+                });
+
+                // 4. Gabarito (Igual)
+                questaoJSON.gabarito = formData.get('gabarito');
+                const gabaritoObj = questaoJSON.opcoes.find(op => op.letra === questaoJSON.gabarito);
+                questaoJSON.gabarito_texto = gabaritoObj ? gabaritoObj.texto : "";
+
+                // 5. Resolução (Igual)
+                questaoJSON.resolucao = formData.get('resolucao');
+                questaoJSON.autor_resolucao = formData.get('autor_resolucao');
+                
+                // 6. Obsoleta (Igual)
+                questaoJSON.obsoleta = formData.get('obsoleta') === 'on';
+
+                // Exibir JSON (Igual)
+                jsonOutput.textContent = JSON.stringify(questaoJSON, null, 4);
+                outputContainer.style.display = 'block';
+            });
+            
+            // --- Botão de Copiar (Igual) ---
+            btnCopy.addEventListener('click', () => {
+                navigator.clipboard.writeText(jsonOutput.textContent).then(() => {
+                    btnCopy.textContent = 'Copiado!';
+                    setTimeout(() => {
+                        btnCopy.textContent = 'Copiar JSON';
+                    }, 2000);
+                }).catch(err => {
+                    console.error('Erro ao copiar JSON: ', err);
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
