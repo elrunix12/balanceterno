@@ -1,1 +1,214 @@
-
+{
+  "Estrutura Conceitual para Relatório Financeiro": {
+    "cpc": "CPC 00",
+    "url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=80"
+  },
+  "Impairment": {
+    "cpc": "CPC 01",
+    "url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=2"
+  },
+  "Efeitos das mudanças nas taxas de câmbio e conversão de demonstrações contábeis": {
+    "cpc": "CPC 02",
+    "url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=9"
+  },
+  "Demonstração dos Fluxos de Caixa": {
+    "cpc": "CPC 03",
+    "url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=34"
+  },
+  "Ativo Intangível": {
+    "cpc": "CPC 04",
+    "url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=35"
+  },
+  "Divulgação sobre Partes Relacionadas": {
+    "cpc": "CPC 05",
+    "url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=36"
+  },
+  "Arrendamentos": {
+    "cpc": "CPC 06",
+    "url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=37"
+  },
+  "Subvenção e Assistência Governamentais": {
+    "cpc": "CPC 07",
+    "url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=38"
+  },
+  "Custos de Transação e Prêmios na Emissão de Títulos e Valores Mobiliários (REVOGADO)": {
+    "cpc": "CPC 08",
+    "url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=39"
+  },
+  "Demonstração do Valor Adicionado (DVA)": {
+    "cpc": "CPC 09",
+    "url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=40"
+  },
+  "Pagamento Baseado em Ações": {
+    "cpc": "CPC 10",
+    "url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=41"
+  },
+  "Contratos de Seguro": {
+    "cpc": "CPC 11",
+    "url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=42"
+  },
+  "Ajuste a Valor Presente": {
+    "cpc": "CPC 12",
+    "url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=43"
+  },
+  "Adoção Inicial da Lei nº. 11.638/07 e da Medida Provisória nº. 449/08 (REVOGADO)": {
+    "cpc": "CPC 13",
+    "url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=44"
+  },
+  "Instrumentos Financeiros: Reconhecimento, Mensuração e Evidenciação (Fase I) - Transformado em OCPC 03": {
+    "cpc": "CPC 14",
+    "url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=45"
+  },
+  "Combinação de Negócios": {
+    "cpc": "CPC 15",
+    "url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=46"
+  },
+  "Estoques": {
+    "cpc": "CPC 16",
+    "url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=47"
+  },
+  "Contratos de Construção (revogado a partir de 1º/01/2018)": {
+    "cpc": "CPC 17",
+    "url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=48"
+  },
+  "Investimento em Coligada e em Empreendimento Controlado em Conjunto": {
+    "cpc": "CPC 18",
+    "url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=49"
+  },
+  "Negócios em Conjunto": {
+    "cpc": "CPC 19",
+    "url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=50"
+  },
+  "Custos de Empréstimos": {
+    "cpc": "CPC 20",
+    "url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=51"
+  },
+  "Demonstração Intermediária": {
+    "cpc": "CPC 21",
+    "url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=52"
+  },
+  "Informações por Segmento": {
+    "cpc": "CPC 22",
+    "url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=53"
+  },
+  "Políticas Contábeis, Mudança de Estimativa e Retificação de Erro": {
+    "cpc": "CPC 23",
+    "url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=54"
+  },
+  "Evento Subsequente": {
+    "cpc": "CPC 24",
+    "url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=55"
+  },
+  "Provisões, Passivos Contingentes e Ativos Contingentes": {
+    "cpc": "CPC 25",
+    "url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=56"
+  },
+  "Apresentação das Demonstrações Contábeis": {
+    "cpc": "CPC 26",
+    "url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=57"
+  },
+  "Ativo Imobilizado": {
+    "cpc": "CPC 27",
+    "url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=58"
+  },
+  "Propriedade para Investimento": {
+    "cpc": "CPC 28",
+    "url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=59"
+  },
+  "Ativo Biológico e Produto Agrícola": {
+    "cpc": "CPC 29",
+    "url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=60"
+  },
+  "Receitas (revogado a partir de 1º/01/2018)": {
+    "cpc": "CPC 30",
+    "url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=61"
+  },
+  "Ativo Não Circulante Mantido para Venda": {
+    "cpc": "CPC 31",
+    "url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=62"
+  },
+  "Tributos sobre o Lucro": {
+    "cpc": "CPC 32",
+    "url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=63"
+  },
+  "Benefícios a Empregados": {
+    "cpc": "CPC 33",
+    "url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=64"
+  },
+  "Exploração e Avaliação de Recursos Minerais (Não editado)": {
+    "cpc": "CPC 34",
+    "url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=65"
+  },
+  "Demonstrações Separadas": {
+    "cpc": "CPC 35",
+    "url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=66"
+  },
+  "Demonstrações Consolidadas": {
+    "cpc": "CPC 36",
+    "url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=67"
+  },
+  "Adoção Inicial das Normas Internacionais de Contabilidade": {
+    "cpc": "CPC 37",
+    "url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=68"
+  },
+  "Instrumentos Financeiros: Reconhecimento e Mensuração (revogado a partir de 1º/01/2018)": {
+    "cpc": "CPC 38",
+    "url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=69"
+  },
+  "Instrumentos Financeiros: Apresentação": {
+    "cpc": "CPC 39",
+    "url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=70"
+  },
+  "Instrumentos Financeiros: Evidenciação": {
+    "cpc": "CPC 40",
+    "url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=71"
+  },
+  "Resultado por Ação": {
+    "cpc": "CPC 41",
+    "url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=72"
+  },
+  "Contabilidade em Economia Hiperinflacionária": {
+    "cpc": "CPC 42",
+    "url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=73"
+  },
+  "Adoção Inicial dos Pronunciamentos Técnicos CPCs 15 a 41": {
+    "cpc": "CPC 43",
+    "url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=74"
+  },
+  "Demonstrações Combinadas": {
+    "cpc": "CPC 44",
+    "url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=76"
+  },
+  "Divulgação de Participações em outras Entidades": {
+    "cpc": "CPC 45",
+    "url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=75"
+  },
+  "Valor Justo": {
+    "cpc": "CPC 46",
+    "url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=78"
+  },
+  "Receita de Contrato com Cliente": {
+    "cpc": "CPC 47",
+    "url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=105"
+  },
+  "Instrumentos Financeiros": {
+    "cpc": "CPC 48",
+    "url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=106"
+  },
+  "Contabilização e Relatório Contábil de Planos de Benefícios de Aposentadoria": {
+    "cpc": "CPC 49",
+    "url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=111"
+  },
+  "Contratos de Seguro": {
+    "cpc": "CPC 50",
+    "url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=127"
+  },
+  "Entidades em Liquidação": {
+    "cpc": "CPC LIQUIDAÇÃO",
+    "url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=125"
+  },
+  "Contabilidade para Pequenas e Médias Empresas com Glossário de Termos": {
+    "cpc": "CPC PME",
+    "url": "https://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=79"
+  }
+}
