@@ -306,9 +306,14 @@
     align-items: center;
 }
 
+/* --- (MODIFICADO) Container de Tags (Disciplina + Ementas) --- */
 .questao-disciplina-container {
     margin-top: -10px;
     margin-bottom: 15px;
+    display: flex; /* <-- NOVO */
+    flex-wrap: wrap; /* <-- NOVO (para telas pequenas) */
+    gap: 6px; /* <-- NOVO (espaçamento entre as tags) */
+    align-items: center; /* <-- NOVO (alinha as tags) */
 }
 
 /* --- (MODIFICADO) Tags de Disciplina (com Cores) --- */
@@ -320,6 +325,17 @@
     /* Estilo Padrão */
     background-color: var(--cor-default-bg);
     color: var(--cor-default-text);
+}
+/* --- (NOVO) Estilo para Tags de Ementa no Card --- */
+.ementa-tag {
+    font-size: 0.8em; /* <-- Mais compacto */
+    font-weight: 500;
+    padding: 2px 6px; /* <-- Mais compacto */
+    border-radius: 4px;
+    background-color: #f0f2f5; /* <-- Cor neutra (fundo do body) */
+    color: #555; /* <-- Cor de texto neutra */
+    border: 1px solid #ddd; /* <-- Borda sutil */
+    white-space: nowrap; /* Evita que tags longas quebrem a linha no meio */
 }
 /* Aplica cores por classe */
 .disciplina.disciplina-societaria {
@@ -344,7 +360,22 @@
     white-space: nowrap;
 }
 
-.enunciado { white-space: pre-wrap; font-size: 1.1em; margin-bottom: 20px; }
+/* Estilo base para ambos os tipos de enunciado */
+.enunciado {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+/* Mantém o pre-wrap APENAS para enunciados antigos (em <p>) */
+p.enunciado {
+    white-space: pre-wrap;
+}
+
+/* Ajusta parágrafos dentro de um enunciado estruturado (em <div>) */
+div.enunciado p {
+    margin-top: 0;
+    margin-bottom: 1em;
+}
 .opcoes ul { list-style-type: none; padding: 0; margin: 0; }
 
 .opcoes li {
@@ -415,4 +446,86 @@ details.autor-resolucao p {
 @media (max-width: 700px) {
     .ano-filter-grid { grid-template-columns: 1fr; }
     #exame-checkbox-container { border-top: 1px solid #eee; padding-top: 15px; }
+}
+
+/* --- (ATUALIZADO) Estilo para Tabelas no Enunciado --- */
+.enunciado-table {
+    /* width: 100%; (REMOVIDO para auto-ajuste de conteúdo) */
+    border-collapse: collapse;
+    margin: 0;
+    font-size: 0.9em; /* <-- Fonte levemente reduzida */
+    background-color: #fdfdfd;
+    border: 1px solid #ddd;
+}
+
+.enunciado-table th, 
+.enunciado-table td {
+    border: 1px solid #ddd;
+    padding: 6px 8px; /* <-- Padding reduzido para compactar */
+    text-align: left;
+    vertical-align: top;
+}
+
+/* As regras anteriores para ".enunciado-table td:first-child" 
+   e ".enunciado-table td:nth-child(2)" foram REMOVIDAS 
+   para permitir o auto-ajuste das colunas.
+*/
+/* --- (ATUALIZADO) Wrapper para Tabela Responsiva --- */
+.table-wrapper {
+    overflow-x: auto; /* Permite rolagem horizontal */
+    margin: 1em 0;
+    padding-bottom: 5px; /* Adiciona espaço para a barra de rolagem */
+}
+
+/* (NOVO) Aplica o "fade" APENAS em telas pequenas */
+@media (max-width: 768px) {
+    .table-wrapper {
+        /* Um pequeno "fade" na direita para indicar que há mais conteúdo */
+        -webkit-mask-image: linear-gradient(to right, black 95%, transparent 100%);
+        mask-image: linear-gradient(to right, black 95%, transparent 100%);
+    }
+}
+
+/* --- (NOVO) Estilo para Referências CPC --- */
+/* (Este estilo é uma cópia do .autor-resolucao, 
+   adaptado para uma lista <ul>) 
+*/
+details.cpc-referencia {
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px dashed #aaa;
+    font-size: 0.9em;
+    color: #333;
+}
+details.cpc-referencia summary {
+    cursor: pointer;
+    font-weight: bold;
+    color: #555;
+    list-style: none; /* Remove a seta padrão */
+}
+/* Adiciona um marcador '+' e '-' */
+details.cpc-referencia summary::before {
+    content: '+';
+    margin-right: 8px;
+    font-weight: bold;
+    display: inline-block;
+    width: 10px;
+}
+details[open].cpc-referencia summary::before {
+    content: '−';
+}
+/* Estiliza a lista de links */
+details.cpc-referencia ul {
+    margin: 8px 0 0 0;
+    padding-left: 30px; /* Alinha com o texto do summary + ícone */
+}
+details.cpc-referencia li {
+    margin-bottom: 5px;
+}
+details.cpc-referencia a {
+    color: var(--cor-societaria-text, #004a91); /* Usa a cor principal */
+    text-decoration: none;
+}
+details.cpc-referencia a:hover {
+    text-decoration: underline;
 }
