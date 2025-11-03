@@ -1,0 +1,15 @@
+[
+  {
+    "name": "elrunix12",
+    "roles": ["Criador e mantenedor", "Autor de Resolução", "Desenvolvimento"],
+    "link": {
+      "text": "GitHub",
+      "url": "https://github.com/elrunix12/balanceterno"
+    }
+  },
+  {
+    "name": "Seu nome/apelido",
+    "roles": ["pode aparecer aqui se você contribuir!"],
+    "link": null
+  }
+]

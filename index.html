@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minhas Questões do Exame de Suficiência</title>
+    <title>Balanceterno | Questões do Exame de Suficiência</title>
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧮</text></svg>">
+    
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/index.css">
     
@@ -113,8 +116,15 @@
             <div id="tab-sobre" class="tab-panel">
                 <h3>Sobre o Projeto</h3>
                 <p>
-                    Este é um projeto educacional independente, desenvolvido com o objetivo de centralizar
+                    O Balanceterno é um projeto educacional independente, criado para centralizar
                     e facilitar o estudo para o Exame de Suficiência (CFC).
+                </p>
+
+                <p style="font-weight: 500; background-color: #f0f2f5; padding: 10px 15px; border-radius: 5px; border-left: 4px solid #004a91;">
+                    <strong>Aviso Importante:</strong> Este é um projeto 
+                    <strong>independente</strong>, mantido pela comunidade, e 
+                    <strong>não possui nenhum vínculo oficial</strong> 
+                    com o Conselho Federal de Contabilidade (CFC) ou qualquer banca organizadora.
                 </p>
                 <p>
                     Todo o conteúdo é disponibilizado de forma gratuita e o projeto é mantido
@@ -127,17 +137,36 @@
                 <p>
                     Obrigado a todos que ajudaram a construir e revisar este banco de questões!
                 </p>
-                <ul>
-                    <li><strong>elrunix12</strong> (Desenvolvimento inicial e manutenção)</li>
-                    <li>Seu nome/apelido pode aparecer aqui se você contribuir!</li>
-                </ul>
+                <ul id="contributors-list">
+                    </ul>
 
                 <h4>Como Contribuir?</h4>
                 <p>
-                    Encontrou um erro, tem uma sugestão ou quer adicionar questões de provas
-                    mais recentes? Use o nosso método preferencial:
+                    Sua ajuda é muito bem-vinda! Encontrou um erro, tem uma sugestão de melhoria
+                    ou quer adicionar uma resolução comentada? Siga estes passos:
                 </p>
-                <ul>
+                
+                <p style="font-weight: 600; margin-bottom: 5px; margin-top: 20px;">Passo 1: Verifique o que já sabemos</p>
+                <ul style="margin-top: 0;">
+                    <li>
+                        <strong>Para Sugestões ou Bugs:</strong> 
+                        Por favor, 
+                        <a href="https://github.com/elrunix12/balanceterno/blob/main/ROADMAP.md" target="_blank" rel="noopener noreferrer">
+                            <strong>confira nosso Roadmap</strong>
+                        </a>
+                        para ver se sua ideia ou o bug já foi reportado.
+                    </li>
+                    <li>
+                        <strong>Para adicionar nova resolução em uma questão:</strong> 
+                        <a href="status.html" target="_blank" rel="noopener noreferrer">
+                            <strong>Veja o Status das Questões</strong>
+                        </a>
+                        para conferir quais exames e resoluções estão faltando.
+                    </li>
+                </ul>
+
+                <p style="font-weight: 600; margin-bottom: 5px; margin-top: 20px;">Passo 2: Envie sua contribuição</p>
+                <ul style="margin-top: 0;">
                     <li>
                         <strong>(Preferencial)</strong> 
                         <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAYAAF_bnDZUODNHWlVVRFNBNlgwUDlXTUU1VEQ2MEJNRS4u" target="_blank" rel="noopener noreferrer">
@@ -145,22 +174,16 @@
                         </a>
                     </li>
                     <li>
-                        Para contribuições técnicas (código), visite o 
+                        <strong>(Técnico)</strong> Para contribuições de código, visite o 
                         <a href="https://github.com/elrunix12/balanceterno" target="_blank" rel="noopener noreferrer">
                             repositório do projeto no GitHub
                         </a>.
                     </li>
                     <li>
-                        Antes de enviar sua contribuição, por favor, leia nossos 
-                        <a href="#" class="inline-tab-link" data-target-tab="tab-termos">Termos de Uso</a> (especialmente a seção 5)
+                        <strong>(Importante)</strong> Antes de enviar, por favor, leia nossos 
+                        <a href="#" class="inline-tab-link" data-target-tab="tab-termos">Termos de Uso</a> (seção 5)
                         e nossa 
                         <a href="#" class="inline-tab-link" data-target-tab="tab-privacidade">Política de Privacidade</a>.
-                    </li>
-                    <li style="margin-bottom: 8px;">
-                        <strong>
-                            <a href="status.html" target="_blank">Veja o Status das Questões</a>
-                        </strong>
-                        (Confira quais exames e resoluções estão faltando).
                     </li>
                 </ul>
 
@@ -180,7 +203,7 @@
             
             <div id="tab-termos" class="tab-panel">
                 <h3>Termos de Uso</h3>
-                <p>Última atualização: 31 de outubro de 2025</p>
+                <p>Última atualização: 02 de novembro de 2025</p>
 
                 <p style="font-style: italic; background-color: #f0f2f5; padding: 15px; border-radius: 5px;">
                 Bem-vindo(a) ao Balanceterno! Estes são os Termos de Uso que regem sua utilização 
@@ -223,9 +246,12 @@
                 <h4>5. Contribuições do Usuário (Feedback)</h4>
                 <p>Nós incentivamos o envio de feedback, correções e sugestões através dos nossos formulários (Google Forms, Microsoft Forms).</p>
                 <ul>
-                    <li><strong>Licença de Contribuição:</strong> Ao nos enviar feedback ou sugestões, você nos concede uma licença perpétua, irrevogável e gratuita para usar, modificar e incorporar essa informação ao projeto sem qualquer obrigação de crédito ou compensação para você.</li>
-                    <li><strong>Créditos Públicos (Opcional):</strong> Se você optar por fornecer seu nome ou apelido no formulário para ser incluído na lista de "Contribuidores", você nos dá consentimento explícito para <strong>exibir publicamente</strong> esse nome em nosso site. Você pode solicitar a remoção do seu nome a qualquer momento.</li>
-                    <li><strong>Nomes e Apelidos Inadequados:</strong> Reservamo-nos o direito de recusar ou remover nomes de contribuidores que contenham linguagem ofensiva, discriminatória, difamatória, promocional, política ou qualquer conteúdo considerado inapropriado. A lista de contribuidores destina-se apenas a reconhecer colaborações de forma respeitosa e positiva.</li>
+                    <li><strong>Licença de Contribuição:</strong> Ao nos enviar feedback ou sugestões, você nos concede uma licença perpétua, irrevogável e gratuita para usar, modificar e incorporar essa informação ao projeto sem obrigação de compensação financeira, exceto pelo crédito opcional conforme descrito abaixo.</li>
+                    
+                    <li><strong>Créditos Públicos (Opcional):</strong> Se você optar por fornecer seu <strong>nome/apelido e/ou um link profissional</strong> (ex: Lattes, LinkedIn) no formulário, você nos dá consentimento explícito para <strong>exibir publicamente</strong> essa informação em nosso site (na lista de "Contribuidores" e/ou junto ao conteúdo que você forneceu). Você pode solicitar a remoção de suas informações a qualquer momento.</li>
+                    
+                    <li><strong>Nomes ou Links Inadequados:</strong> Reservamo-nos o direito de recusar ou remover <strong>nomes e/ou links</strong> de contribuidores que contenham linguagem ofensiva, discriminatória, difamatória, promocional, política ou qualquer conteúdo considerado inapropriado. A lista de contribuidores destina-se apenas a reconhecer colaborações de forma respeitosa e positiva.</li>
+                    
                     <li><strong>Originalidade e Responsabilidade pelo Conteúdo Enviado:</strong> O contribuidor declara que todo o material enviado (como comentários, resoluções, explicações ou sugestões) é de sua <strong>autoria original</strong> e <strong>não infringe direitos autorais de terceiros</strong>. Você <strong>não deve copiar</strong> textos, imagens ou resoluções de outros sites, livros, apostilas ou cursos pagos sem autorização expressa dos respectivos detentores de direitos. Ao enviar uma contribuição, o usuário:</li>
                         <ul>
                             <li>Garante que possui os direitos necessários sobre o conteúdo enviado;</li>
@@ -236,7 +262,12 @@
                 </ul>
 
                 <h4>6. Links de Terceiros</h4>
-                <p>O site contém links para serviços de terceiros (como Google Forms ou Microsoft Forms) que não são de nossa propriedade ou controle. Não somos responsáveis pelo conteúdo ou pelas práticas de privacidade desses sites.</p>
+                <p>O site contém links para serviços de terceiros que não são de nossa propriedade ou controle. Isso inclui, mas não se limita a:</p>
+                <ul>
+                    <li>Formulários de feedback (como Google Forms ou Microsoft Forms);</li>
+                    <li>Links de referência para normas e pronunciamentos (como o site cpc.org.br).</li>
+                </ul>
+                <p>Não somos responsáveis pelo conteúdo, pelas práticas de privacidade ou pela disponibilidade desses sites de terceiros. Recomendamos que você leia os termos e políticas de privacidade de qualquer site que visitar.</p>
 
                 <h4>7. Alterações nos Termos</h4>
                 <p>Reservamo-nos o direito de modificar estes Termos a qualquer momento. A data da "Última atualização" no topo desta página indicará a versão mais recente.</p>
@@ -251,7 +282,7 @@
             
             <div id="tab-privacidade" class="tab-panel">
                 <h3>Política de Privacidade</h3>
-                <p>Última atualização: 28 de outubro de 2025</p>
+                <p>Última atualização: 02 de novembro de 2025</p>
 
                 <p>Esta Política de Privacidade explica quais informações são (ou não são) coletadas quando você utiliza este site (Balanceterno).</p>
                 <p>Nosso princípio fundamental é a privacidade. O uso da ferramenta de estudo (filtrar questões, responder ao quiz, ler as resoluções) é 100% privado e não é rastreado ou armazenado.</p>
@@ -270,11 +301,11 @@
 
                 <h5>B) Informações para Contribuidores (Opcional)</h5>
                 <ul>
-                    <li>Em nosso formulário de feedback, você terá a <strong>opção</strong> de fornecer um nome ou apelido.</li>
-                    <li><strong>Propósito:</strong> O propósito de pedir seu nome é para dar o devido crédito público a você na nossa página "Sobre" como um contribuidor do projeto, <strong>e também para associar seu nome ou apelido diretamente às contribuições específicas que você fornecer (como resoluções comentadas de questões).</strong></li>
-                    <li><strong>Uso:</strong> Ao fornecer seu nome, você consente que ele seja exibido publicamente em nosso site, <strong>tanto na página "Sobre" quanto junto ao conteúdo específico que você contribuiu.</strong></li>
-                    <li>O nome fornecido deve ser adequado e respeitoso. Nomes com linguagem ofensiva, discriminatória, política, comercial ou inapropriada poderão ser recusados ou removidos a qualquer momento.</li>
-                    <li>Se você não preencher este campo, seu feedback será enviado de forma anônima.</li>
+                    <li>Em nosso formulário de feedback, você terá a <strong>opção</strong> de fornecer um nome/apelido e, também opcionalmente, um <strong>link público</strong> (ex: seu Lattes, LinkedIn, GitHub, etc.).</li>
+                    <li><strong>Propósito:</strong> O propósito de pedir seu nome e/ou link é para dar o devido crédito público a você na nossa página "Sobre" como um contribuidor do projeto, <strong>e também para associar seu nome/apelido diretamente às contribuições específicas que você fornecer (como resoluções comentadas de questões).</strong></li>
+                    <li><strong>Uso (Consentimento):</strong> Ao fornecer seu nome e/ou seu link, você <strong>consente explicitamente</strong> que eles sejam exibidos publicamente em nosso site (na página "Sobre" e/ou junto ao conteúdo que você contribuiu).</li>
+                    <li>O nome e o link fornecidos devem ser adequados e respeitosos. Nomes ou links com linguagem ofensiva, discriminatória, política, comercial ou inapropriada poderão ser recusados ou removidos a qualquer momento.</li>
+                    <li>Se você não preencher estes campos, seu feedback será enviado de forma anônima.</li>
                 </ul>
 
                 <h4>2. O que NÃO Coletamos (Sua Atividade de Estudo)</h4>

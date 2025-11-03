@@ -38,6 +38,7 @@ Você pode facilmente adaptar este site para carregar suas próprias questões. 
         * `banca`: A banca examinadora (string, ex: "FGV").
         * `tags`: Um *array* de strings contendo os subtópicos/ementas (ex: `["Ativo Imobilizado", "Depreciação"]`). Mesmo que seja um só, use array.
         * `enunciado`: O texto da questão (string).
+        * `enunciado_blocos`: Adicionar caso a questão possua tabelas, caso não, use o `enunciado`. 
         * `opcoes`: Um *array* de objetos, onde cada objeto tem `letra` (string, ex: "A") e `texto` (string).
         * `gabarito`: A letra correta (string, ex: "B").
         * `gabarito_texto`: O texto completo da opção correta (string).
