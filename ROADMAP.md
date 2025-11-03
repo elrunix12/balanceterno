@@ -1,13 +1,18 @@
 # 🗺️ Roadmap - Balanceterno
 
 ## 📅 Atualização do Roadmap
-Última revisão: **01 de outubro de 2025**
+Última revisão: **03 de outubro de 2025**
 
 Este documento apresenta o **planejamento futuro** do projeto.  
 As tarefas aqui descritas representam objetivos de curto e médio prazo.  
 Mudanças já concluídas são movidas para o [`CHANGELOG.md`](CHANGELOG.md).
 
 ---
+
+## Próxima versão [0.11]:
+- Criação da disciplina ´Contabilidade Geral`
+- Criação da disciplina ´Teoria da Contabilidade`
+- Correção de bugs
 
 ## 💡 Ideias Futuras
 
@@ -24,13 +29,14 @@ Mudanças já concluídas são movidas para o [`CHANGELOG.md`](CHANGELOG.md).
 | ⬜ | 26 CFC 2022/1 | Contabilidade Societária | Controladoria | Aguardando criação da disciplina | 🟠 Baixa | — |
 | ⬜ | 45 CFC 2022/1 | Contabilidade Societária | Auditoria | Aguardando criação da disciplina | 🟠 Baixa | — |
 | ⬜ | 11 CFC 2022/2 | Contabilidade Societária | Contabilidade Geral | Aguardando criação da disciplina | 🟡 Média | — |
-| ⬜ | 25 CFC 2022/2 | Contabilidade Societária | Contabilidade de Custos | Aguardando criação da disciplina | 🟡 Média | — |
+| ⬜ | 25 CFC 2022/2 | Contabilidade Societária | Contabilidade de Custos | Aguardando criação da disciplina | 🟠 Baixa | — |
 | ⬜ | 04 CFC 2023/1 | Contabilidade Societária | Contabilidade Geral | Aguardando criação da disciplina | 🟡 Média | — |
 | ⬜ | 13 CFC 2023/1 | Contabilidade Societária | Contabilidade Geral | Aguardando criação da disciplina | 🟡 Média | — |
 | ⬜ | 13 CFC 2023/2 | Contabilidade Societária | Contabilidade Geral | Aguardando criação da disciplina | 🟡 Média | — |
 | ⬜ | 17 CFC 2023/2 | Contabilidade Societária | Contabilidade Geral | Aguardando criação da disciplina | 🟡 Média | — |
 | ⬜ | 36 CFC 2024/1 | Contabilidade Societária | Contabilidade Geral | Aguardando criação da disciplina | 🟡 Média | — |
 | ⬜ | 28 CFC 2025/1 | Contabilidade Societária | Contabilidade Geral | Aguardando criação da disciplina | 🟡 Média | — |
+| ⬜ | 44 CFC 2025/2 | Contabilidade Societária | Contabilidade Pública | Aguardando criação da disciplina | 🟠 Baixa | — |
 | ⬜ | 47 CFC 2025/2 | Contabilidade Societária | Auditoria | Aguardando criação da disciplina | 🟠 Baixa | — |
 
 ---
