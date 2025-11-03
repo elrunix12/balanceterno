@@ -3,7 +3,7 @@
 Todas as mudanças notáveis neste projeto serão documentadas neste arquivo.
 O formato é baseado em [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
-## [0.10.8] - 2025-10-02
+## [0.10.8] - 2025-10-03
 
 ### Adicionado (Added)
 
