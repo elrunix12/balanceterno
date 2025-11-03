@@ -135,12 +135,65 @@
     {
         "id": 39,
         "ano": 2024,
-        "exame": "CFC 2024/2",
+        "exame": "2024/2",
         "banca": "FGV",
         "tags": [
             "Custos-Padrão e Variações"
         ],
-        "enunciado": "A empresa Montes Altos S.A., que planeja e controla seus custos utilizando o custo padrão, levantou as informações abaixo referentes ao mês de junho de 2024:\n\n**Custo Padrão**\nMatéria prima: 20 kg a R$ 10,00/kg\nMão de obra direta: 2 h a R$ 20,00/h\nEmbalagem: 10 folhas a R$ 1,00/folha\nCustos indiretos: R$ 30.000,00\nUnidades produzidas: 15.000\n\n**Custo Real**\nMatéria prima: 19 kg a R$ 11,00/kg\nMão de obra direta: 3h a R$ 18,00/h\nEmbalagem: 10 folhas a R$ 0,90/folha\nCustos indiretos: R$ 32.000,00\nUnidades produzidas: 14.900\n\nConsiderando apenas as informações apresentadas, a variação de preço unitária da matéria prima foi, em reais, de",
+        "enunciado": "",
+        "enunciado_blocos": [
+            {
+                "type": "p",
+                "content": "A empresa Montes Altos S.A., que planeja e controla seus custos utilizando o custo padrão, levantou as informações abaixo referentes ao mês de junho de 2024:"
+            },
+            {
+                "type": "table",
+                "headerRows": [
+                    [
+                        {
+                            "content": "Itens"
+                        },
+                        {
+                            "content": "Custo-padrão"
+                        },
+                        {
+                            "content": "Custo Real"
+                        }
+                    ]
+                ],
+                "bodyRows": [
+                    [
+                        "Matéria prima",
+                        "20 kg a R$ 10,00/kg",
+                        "19 kg a R$ 11,00/kg"
+                    ],
+                    [
+                        "Mão de obra direta",
+                        "2 h a R$ 20,00/h",
+                        "3h a R$ 18,00/h"
+                    ],
+                    [
+                        "Embalagem",
+                        "10 folhas a R$ 1,00/folha",
+                        "10 folhas a R$ 0,90/folha"
+                    ],
+                    [
+                        "Custos indiretos",
+                        "R$ 30.000,00",
+                        "R$ 32.000,00"
+                    ],
+                    [
+                        "Unidades produzidas",
+                        "15.000",
+                        "14.900"
+                    ]
+                ]
+            },
+            {
+                "type": "p",
+                "content": "Considerando apenas as informações apresentadas, a variação de preço unitária da matéria prima foi, em reais, de"
+            }
+        ],
         "opcoes": [
             {
                 "letra": "A",
@@ -300,12 +353,95 @@
     {
         "id": 37,
         "ano": 2024,
-        "exame": "CFC 2024/1",
+        "exame": "2024/1",
         "banca": "FGV",
         "tags": [
             "Custos-Padrão e Variações"
         ],
-        "enunciado": "A Euza Batista Modas é uma indústria têxtil que confecciona apenas calças. No mês de maio de 2024, apresentou os seguintes dados a respeito da sua produção:\n\n<b>Custo Padrão</b>\n<b>Tecido Jeans</b>\nQuantidade: 1,50\nCusto Unitário: 45,00\nCusto Total: 67,50\n<b>Botão</b>\nQuantidade: 3,00\nCusto Unitário: 6,55\nCusto Total: 19,65\n<b>Linha</b>\nQuantidade: 220,00\nCusto Unitário: 0,15\nCusto Total: 33,00\n\n<b>Custo Real</b>\n<b>Tecido Jeans</b>\nQuantidade: 2,00\nCusto Unitário: 55,00\nCusto Total: 110,00\n<b>Botão</b>\nQuantidade: 6,00\nCusto Unitário: 5,47\nCusto Total: 32,82\n<b>Linha</b>\nQuantidade: 290,00\nCusto Unitário: 0,11\nCusto Total: 31,90\n\nA gestora da companhia tem por costume utilizar o método de custo padrão para tomar suas decisões. A partir dos dados apresentados, assinale a principal conclusão a respeito da variação dos insumos de produção.",
+        "enunciado": "",
+        "enunciado_blocos": [
+            {
+                "type": "p",
+                "content": "A Euza Batista Modas é uma indústria têxtil que confecciona apenas calças. No mês de maio de 2024, apresentou os seguintes dados a respeito da sua produção:\n"
+            },
+            {
+                "type": "table",
+                "headerRows": [
+                    [
+                        {
+                            "content": "Descrição",
+                            "colspan": 1,
+                            "rowspan": 2
+                        },
+                        {
+                            "content": "Custo Padrão",
+                            "colspan": 3
+                        },
+                        {
+                            "content": "Custo Real",
+                            "colspan": 3
+                        }
+                    ],
+                    [
+                        {
+                            "content": "",
+                            "isEmpty": true
+                        },
+                        {
+                            "content": "Quantidade"
+                        },
+                        {
+                            "content": "Custo Unitário"
+                        },
+                        {
+                            "content": "Custo Total"
+                        },
+                        {
+                            "content": "Quantidade"
+                        },
+                        {
+                            "content": "Custo Unitário"
+                        },
+                        {
+                            "content": "Custo Total"
+                        }
+                    ]
+                ],
+                "bodyRows": [
+                    [
+                        "Tecido Jeans",
+                        "1,50",
+                        "45,00",
+                        "67,50",
+                        "2,00",
+                        "55,00",
+                        "110,00"
+                    ],
+                    [
+                        "Botão",
+                        "3,00",
+                        "6,55",
+                        "19,65",
+                        "6,00",
+                        "5,47",
+                        "32,82"
+                    ],
+                    [
+                        "Linha",
+                        "220,00",
+                        "0,15",
+                        "33,00",
+                        "290,00",
+                        "0,11",
+                        "31,90"
+                    ]
+                ]
+            },
+            {
+                "type": "p",
+                "content": "A gestora da companhia tem por costume utilizar o método de custo padrão para tomar suas decisões. A partir dos dados apresentados, assinale a principal conclusão a respeito da variação dos insumos de produção."
+            }
+        ],
         "opcoes": [
             {
                 "letra": "A",
@@ -313,7 +449,7 @@
             },
             {
                 "letra": "B",
-                "texto": "Todas as variações de quantidade foram desfavoráveis."
+                "texto": " Todas as variações de quantidade foram desfavoráveis."
             },
             {
                 "letra": "C",
@@ -325,7 +461,7 @@
             }
         ],
         "gabarito": "B",
-        "gabarito_texto": "Todas as variações de quantidade foram desfavoráveis.",
+        "gabarito_texto": " Todas as variações de quantidade foram desfavoráveis.",
         "resolucao": "",
         "autor_resolucao": "",
         "obsoleta": false
@@ -366,13 +502,51 @@
     {
         "id": 40,
         "ano": 2024,
-        "exame": "CFC 2024/1",
+        "exame": "2024/1",
         "banca": "FGV",
         "tags": [
             "Margem de Contribuição",
             "Custos Relevantes para Decisão"
         ],
-        "enunciado": "Uma fábrica de brinquedos produz dois tipos de carrinhos: com quatro portas e com duas portas. A demanda mensal de cada tipo de carrinho é de 200 e de 250 unidades, respectivamente. Além disso, o preço de venda e o custo variável unitário de cada tipo de carrinho são os seguintes:\n\n<b>Carrinho Quatro portas</b>\nPreço de venda: 100\nCusto variável: 40\n\n<b>Carrinho Duas portas</b>\nPreço de venda: 70\nCusto variável: 30\n\nEm janeiro de 2024, a fábrica tinha 900 portas para a produção dos carrinhos que seriam vendidos em fevereiro e não era possível realizar compras adicionais. Com o objetivo de maximização do resultado, assinale a opção que indica, respectivamente, o número de carrinhos de quatro e de duas portas que devem ser produzidos.",
+        "enunciado": "",
+        "enunciado_blocos": [
+            {
+                "type": "p",
+                "content": "Uma fábrica de brinquedos produz dois tipos de carrinhos: com quatro portas e com duas portas. A demanda mensal de cada\ntipo de carrinho é de 200 e de 250 unidades, respectivamente. Além disso, o preço de venda e o custo variável unitário de cada\ntipo de carrinho são os seguintes:"
+            },
+            {
+                "type": "table",
+                "headerRows": [
+                    [
+                        {
+                            "content": "Tipo de carrinho"
+                        },
+                        {
+                            "content": "Preço de venda"
+                        },
+                        {
+                            "content": "Custo variável"
+                        }
+                    ]
+                ],
+                "bodyRows": [
+                    [
+                        "Quatro portas",
+                        "100",
+                        "40"
+                    ],
+                    [
+                        "Duas portas",
+                        "70",
+                        "30"
+                    ]
+                ]
+            },
+            {
+                "type": "p",
+                "content": "Em janeiro de 2024, a fábrica tinha 900 portas para a produção dos carrinhos que seriam vendidos em fevereiro e não era\npossível realizar compras adicionais.\nCom o objetivo de maximização do resultado, assinale a opção que indica, respectivamente, o número de carrinhos de quatro\ne de duas portas que devem ser produzidos."
+            }
+        ],
         "opcoes": [
             {
                 "letra": "A",
@@ -396,5 +570,5 @@
         "resolucao": "",
         "autor_resolucao": "",
         "obsoleta": false
-    }
+    }   
 ]
