@@ -6,10 +6,20 @@
 | |_) |  / ____ \  | |____   / ____ \  | |\  | | |____  | |____     | |    | |____  | | \ \  | |\  | | |__| |
 |____/  /_/    \_\ |______| /_/    \_\ |_| \_|  \_____| |______|    |_|    |______| |_|  \_\ |_| \_|  \____/ 
                                                                                              
-*/
-    // Copyright (C) 2025 Balanceterno
-    // ... (Comentários da licença AGPL) ...
-    
+/*
+ * Balanceterno - Plataforma de Estudos para o Exame de Suficiência
+ * Copyright (C) 2025  elrunix12 (Balanceterno)
+ *
+ * Este programa é um software livre: você pode redistribuí-lo e/ou modificá-lo
+ * sob os termos da GNU Affero General Public License, versão 3 (AGPLv3),
+ * conforme publicada pela Free Software Foundation.
+ *
+ * Este programa é distribuído na esperança de que seja útil,
+ * mas SEM NENHUMA GARANTIA; sem mesmo a garantia implícita de
+ * COMERCIALIZAÇÃO ou ADEQUAÇÃO A UM DETERMINADO PROPÓSITO.
+ *
+ * Veja o arquivo LICENSE para mais detalhes.
+ */
     
     // -------------------------------------------------------------------
     //   LÓGICA DA PÁGINA (Refatorada para Múltiplas Disciplinas)
