@@ -10,9 +10,9 @@ Mudanças já concluídas são movidas para o [`CHANGELOG.md`](CHANGELOG.md).
 ---
 
 ## Próxima versão [0.11]:
-[ ] Criação da disciplina ´Contabilidade Geral`
-[ ] Criação da disciplina ´Teoria da Contabilidade`
-[ ] Correção de bugs
+- [ ] Criação da disciplina ´Contabilidade Geral`
+- [ ] Criação da disciplina ´Teoria da Contabilidade`
+- [ ] Correção de bugs
 
 ## 🐞 Bugs Conhecidos
 Esta seção lista problemas identificados que serão corrigidos nas próximas versões.
