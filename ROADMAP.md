@@ -1,7 +1,7 @@
 # 🗺️ Roadmap - Balanceterno
 
 ## 📅 Atualização do Roadmap
-Última revisão: **03 de outubro de 2025**
+Última revisão: **04 de outubro de 2025**
 
 Este documento apresenta o **planejamento futuro** do projeto.  
 As tarefas aqui descritas representam objetivos de curto e médio prazo.  
@@ -19,7 +19,7 @@ Esta seção lista problemas identificados que serão corrigidos nas próximas v
 
 Status | Descrição | Impacto | Prioridade | Correção prevista | Observações
 :--:|--|--:|:--:|--:|--
-⬜ | Questão 24 CFC 2024/1 - Problema na visualização das opções: aparece um código nos lançamentos | Baixo | 🟠 Baixa | Sem previsão | Não interfere na questão, apenas na visualização
+⬜ | Questão 24 CFC 2022/1 - Problema na visualização das opções: aparece um código nos lançamentos | Baixo | 🟠 Baixa | Sem previsão | Não interfere na questão, apenas na visualização
 
 ## 💡 Ideias Futuras
 
