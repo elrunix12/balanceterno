@@ -24,6 +24,7 @@ O formato é baseado em [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 * **Performance (Lazy Loading):** Implementado *lazy loading* (scroll infinito) para o container de questões. O site agora carrega apenas as 20 primeiras questões filtradas e carrega as demais sob demanda, conforme o usuário rola a página, resultando em um ganho massivo de performance.
 * **Tag de Status:** Adicionada a tag "Questão Anulada". Ela é lida do JSON (campo `anulada: true`) e renderizada no cabeçalho do card, com estilo próprio (vermelho).
 * **Paleta de Cores Completa:** O `index.css` agora tem uma paleta de cores única e acessível para todas as 15 disciplinas.
+* **Adição de questões:** Agora o projeto conta com todas as questões do Exame CFC 2025/2.
 
 ### Alterado (Changed)
 * **Migração de Questões:** Iniciado o processo de recatalogação de questões para as novas disciplinas. Questões que estavam em `Contabilidade Societária` por falta de uma categoria específica foram migradas. Por exemplo:
