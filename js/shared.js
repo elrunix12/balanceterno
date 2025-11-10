@@ -15,15 +15,19 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    // --- (CORRIGIDO) LÓGICA BOTÃO VOLTAR AO TOPO ---
+    // --- (CORRIGIDO v2) LÓGICA BOTÃO VOLTAR AO TOPO ---
     const btnBackToTop = document.getElementById('btn-back-to-top');
     
     if(btnBackToTop) {
         
         // Esta é a função que checa o scroll
         const checkScroll = () => {
-            // Usamos os dois (body e documentElement) para garantir compatibilidade
-            const scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+            
+            // --- MUDANÇA AQUI ---
+            // 'window.scrollY' é a forma moderna e universal de
+            // obter a posição do scroll, substituindo o 
+            // 'document.body.scrollTop || document.documentElement.scrollTop'
+            const scrollTop = window.scrollY;
             
             if (scrollTop > 100) {
                 btnBackToTop.style.display = "block";
@@ -32,8 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         };
 
-        // 1. Usamos 'addEventListener' em vez de '.onscroll'
-        // Isso permite que o lazy-loading também ouça o scroll sem conflitos.
+        // 1. Usamos 'addEventListener' (correto)
         window.addEventListener('scroll', checkScroll);
 
         // 2. Adicionamos o listener de clique
@@ -41,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
         
-        // 3. Checamos o scroll uma vez no início (caso a página carregue no meio)
+        // 3. Checamos o scroll uma vez no início
         checkScroll();
     }
     // --- FIM: LÓGICA BOTÃO VOLTAR AO TOPO ---
