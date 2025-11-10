@@ -56,4 +56,3 @@ Status | Descrição | Impacto | Prioridade | Correção prevista | Observaçõe
 ---
 
 ### 🧭 Próximos Passos
-🟠 Baixa
