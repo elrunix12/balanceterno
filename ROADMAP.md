@@ -25,7 +25,7 @@ Status | Descrição | Impacto | Prioridade | Correção prevista | Observaçõe
 | Status | Ideia | Detalhamento | Prioridade | Observações |
 |:------:|:------|:-------------|:------------|:-------------|
 | ⬜ | Melhoria de usabilidade para pessoas com deficiência | Ajustes de contraste, navegação por teclado, leitores de tela, legendas, etc. | 🟠 Baixa | Aguardando definição de requisitos de acessibilidade |
-| ⬜ | Adicionar conteúdos além das normas para servirem de material de apoio | Ex.: Normas de auditoria, material de acesso aberto relacionado ao tema da quesão | 🟠 Baixa | Aguardando base de dados dos materiais |
+| ⬜ | Adicionar conteúdos além das normas para servirem de material de apoio | Ex.: Normas de auditoria, material de acesso aberto relacionado ao tema da questão | 🟠 Baixa | Aguardando base de dados dos materiais |
 
 ---
 
