@@ -3,6 +3,44 @@
 Todas as mudanças notáveis neste projeto serão documentadas neste arquivo.
 O formato é baseado em [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [0.20] - 2025-11-10
+
+### Adicionado (Added)
+* **Expansão de Disciplinas:** O projeto foi expandido de 2 para 15 disciplinas. As novas disciplinas adicionadas são:
+    * Contabilidade Geral e Teoria
+    * Língua Portuguesa
+    * Matemática e Estatística
+    * Elaborações das Demonstrações Contábeis
+    * Ética Geral e Profissional
+    * Noções de Direito e Legislação Aplicada
+    * Contabilidade de Custos
+    * Análise das demonstrações Contábeis
+    * Contabilidade Pública
+    * Auditoria Contábil
+    * Controladoria
+    * Perícia Contábil
+    * Contabilidade Tributária
+* **Padronização de Ementas:** Definidas todas as ementas (tags) base para todas as disciplinas. Elas estão disponíveis na pasta `tags` e servirão como padrão para a catalogação de novas questões.
+* **Performance (Lazy Loading):** Implementado *lazy loading* (scroll infinito) para o container de questões. O site agora carrega apenas as 20 primeiras questões filtradas e carrega as demais sob demanda, conforme o usuário rola a página, resultando em um ganho massivo de performance.
+* **Tag de Status:** Adicionada a tag "Questão Anulada". Ela é lida do JSON (campo `anulada: true`) e renderizada no cabeçalho do card, com estilo próprio (vermelho).
+* **Paleta de Cores Completa:** O `index.css` agora tem uma paleta de cores única e acessível para todas as 15 disciplinas.
+
+### Alterado (Changed)
+* **Migração de Questões:** Iniciado o processo de recatalogação de questões para as novas disciplinas. Questões que estavam em `Contabilidade Societária` por falta de uma categoria específica foram migradas. Por exemplo:
+    * A questão `44 CFC 2025/2` (sobre DFC pública) foi migrada de `Contabilidade Societária` para `Contabilidade Pública`.
+    * A questão `47 CFC 2025/2` (sobre evidência de auditoria) foi migrada de `Contabilidade Societária` para `Auditoria Contábil`.
+* **Lógica de Renderização:** A função `renderizarQuestoes` foi refatorada para apenas filtrar/ordenar a lista. A renderização do HTML foi movida para a nova função `renderizarLoteDeQuestoes`, que processa a exibição em lotes.
+* **Lógica de Eventos (Quiz):** Otimizada a função `adicionarEventosQuiz` para usar `data-listener-added`, garantindo que os *event listeners* de clique sejam adicionados apenas uma vez em cada card, mesmo com o *lazy loading*.
+* **Paleta de Cores (Acessibilidade):** Cores de disciplinas alteradas para ficarem em um padrão mais acessível.
+
+### Corrigido (Fixed)
+* **Ordenação "Mais Recentes":** Corrigido o bug crítico na lógica de `sort` que fazia com que exames (ex: 2025/1) aparecessem antes de exames mais novos (ex: 2025/2) ao ordenar por "Mais Recentes".
+* **Botão "Marcar Todas":** Corrigido um bug de UX onde o botão "Marcar Todas (Disciplinas)" não atualizava seu texto para "Desmarcar Todas" se o usuário clicasse em todos os checkboxes individualmente.
+* **Duplicação de edição de exames:** Corrigido o bug em que aparece duas datas de um mesmo exame (ex.: CFC 2024/1 e 2024/1).
+
+### Removido (Removed)
+* **Código Redundante:** Removido um *listener* `DOMContentLoaded` duplicado de dentro do `index.js`, simplificando a inicialização do script.
+
 ## [0.10.8] - 2025-11-03
 
 ### Adicionado (Added)

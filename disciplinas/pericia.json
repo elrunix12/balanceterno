@@ -1,0 +1,77 @@
+[
+  {
+    "id": 49,
+    "ano": 2025,
+    "exame": "CFC 2025/2",
+    "banca": "FGV",
+    "tags": [
+      "Perícia Contábil",
+      "Laudo Pericial Contábil",
+      "Parecer Pericial Contábil",
+      "Planejamento Pericial",
+      "Normas de Perícia (NBC TP, NBC PP)"
+    ],
+    "enunciado": "Considerando as disposições da NBC TP 01 (R1) - PERÍCIA CONTÁBIL, avalie as assertivas a seguir. \nI. A perícia contábil é o conjunto de procedimentos técnico-científicos destinados a levar à instância decisória elementos de prova necessários a subsidiar a justa solução do litígio ou constatação de fato, mediante laudo pericial contábil e/ou parecer pericial contábil, em conformidade com as normas jurídicas e profissionais e com a legislação específica no que for pertinente. \nII. O laudo pericial contábil e o parecer pericial contábil não têm por limite o objeto da perícia deferida ou contratada. \nIII. A perícia contábil é de competência do contador em situação regular em Conselho Regional de Contabilidade ou de profissional equivalente, desde que seja detentor de notório conhecimento sobre a matéria. \nIV. O planejamento da perícia é a etapa do trabalho pericial na qual o perito estabelece as diretrizes e a metodologia a serem aplicadas. \nEstão corretas apenas as assertivas ",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "l e II. "
+      },
+      {
+        "letra": "B",
+        "texto": "I e III. "
+      },
+      {
+        "letra": "C",
+        "texto": "II e III. "
+      },
+      {
+        "letra": "D",
+        "texto": "I e IV. "
+      }
+    ],
+    "gabarito": "*",
+    "gabarito_texto": "",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": true
+  },
+  {
+    "id": 50,
+    "ano": 2025,
+    "exame": "CFC 2025/2",
+    "banca": "FGV",
+    "tags": [
+      "Perícia Contábil",
+      "Parecer Pericial Contábil",
+      "Laudo Pericial Contábil",
+      "Normas de Perícia (NBC TP, NBC PP)"
+    ],
+    "enunciado": "O Parecer Pericial Contábil é um documento elaborado pelo perito-contador assistente, destinado a analisar, comentar ou contestar o Laudo Pericial Contábil elaborado pelo perito-contador nomeado pelo juízo. \nO parecer deve ser redigido de forma clara, objetiva e técnica, seguindo rigorosamente as normas contábeis. \nSegundo a NBC TP 01 - PERÍCIA CONTÁBIL, uma condição para a emissão do Parecer Pericial Contábil é que o Parecer Pericial Contábil deve ",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "ser emitido, independentemente de concordância ou discordância com o Laudo Pericial Contábil. "
+      },
+      {
+        "letra": "B",
+        "texto": "ser emitido apenas quando houver concordância total com o Laudo Pericial Contábil. "
+      },
+      {
+        "letra": "C",
+        "texto": "ser emitido somente se houver divergência parcial ou total em relação ao Laudo Pericial Contábil. "
+      },
+      {
+        "letra": "D",
+        "texto": "ser emitido contendo uma análise sobre a conduta do perito-contador responsável pelo Laudo Pericial Contábil. "
+      }
+    ],
+    "gabarito": "*",
+    "gabarito_texto": "",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": true
+  }
+]

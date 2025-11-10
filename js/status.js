@@ -20,10 +20,49 @@ const configDisciplinas = {
         // (MODIFICADO) Caminho relativo à raiz
         arquivo: 'disciplinas/contabilidade-societaria.json' 
     },
-     "Contabilidade Gerencial": {
+    "Contabilidade Gerencial": {
         // (MODIFICADO) Caminho relativo à raiz
         arquivo: 'disciplinas/contabilidade-gerencial.json'
-    }
+    },
+    "Contabilidade Geral e Teoria": {
+        arquivo: 'disciplinas/contabilidade-geral.json' 
+    },
+    "Língua Portuguesa": {
+        arquivo: 'disciplinas/lingua-portuguesa.json' 
+    },
+    "Matemática e Estatística": {
+        arquivo: 'disciplinas/mat-financeira-estatistica.json', 
+    },
+    "Elaborações das Demonstrações Contábeis": {
+        arquivo: 'disciplinas/elaboracoes-dc.json'        
+    },
+    "Ética Geral e Profissional": {
+        arquivo: 'disciplinas/etica.json', 
+    },
+    "Noções de Direito e Legislação Aplicada": {
+        arquivo: 'disciplinas/direito.json',       
+    },
+    "Contabilidade de Custos": {
+        arquivo: 'disciplinas/contabilidade-custos.json' 
+    },
+    "Análise das demonstrações Contábeis": {
+        arquivo: 'disciplinas/analise-dc.json'
+    },
+    "Contabilidade Pública": {
+        arquivo: 'disciplinas/contabilidade-publica.json'
+    },
+    "Auditoria Contábil": {
+        arquivo: 'disciplinas/auditoria.json',
+    },
+    "Controladoria": {
+        arquivo: 'disciplinas/controladoria.json',
+    },
+    "Perícia Contábil": {
+        arquivo: 'disciplinas/pericia.json',
+    },
+    "Contabilidade Tributária": {
+        arquivo: 'disciplinas/cont-tributaria.json',
+    },
     /*
     ,
     "Contabilidade de Custos": {

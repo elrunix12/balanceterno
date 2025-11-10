@@ -1,0 +1,72 @@
+[
+    {
+    "id": 8,
+    "ano": 2025,
+    "exame": "CFC 2025/2",
+    "banca": "FGV",
+    "tags": [
+        "ÉTICA GERAL E PROFISSIONAL",
+        "LEGISLAÇÃO SOBRE A ÉTICA PROFISSIONAL"
+    ],
+    "enunciado": "Um escritório contábil quer expandir sua clientela com campanha de marketing, mas tem dúvidas sobre publicidade e preços conforme o Código de Ética. \nCom base na NBC PG 01 CÓDIGO DE ÉTICA PROFISSIONAL DO CONTADOR, uma prática de divulgação e precificação eticamente correta é ",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "prometer redução garantida de tributos sem embasamento técnico. "
+      },
+      {
+        "letra": "B",
+        "texto": "comparar preços e criticar concorrentes. "
+      },
+      {
+        "letra": "C",
+        "texto": "divulgar clientes e faturamento sem autorização. "
+      },
+      {
+        "letra": "D",
+        "texto": "expor conhecimento técnico com artigos e estudos de caso. "
+      }
+    ],
+    "gabarito": "D",
+    "gabarito_texto": "expor conhecimento técnico com artigos e estudos de caso. ",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false
+  },
+  {
+    "id": 9,
+    "ano": 2025,
+    "exame": "CFC 2025/2",
+    "banca": "FGV",
+    "tags": [
+        "ÉTICA GERAL E PROFISSIONAL",
+        "LEGISLAÇÃO SOBRE A ÉTICA PROFISSIONAL"
+    ],
+    "enunciado": "Durante uma reunião com a diretoria de uma empresa cliente, o contador responsável apresentou os impactos financeiros de um novo contrato. \nEmbora os dados estivessem tecnicamente corretos, os gestores demonstraram dúvidas e certa dificuldade em compreender a apresentação. \nNesse cenário, a habilidade profissional que contribuiria para que o contador fosse mais eficaz, de acordo com a NBC PG 100 (R1) - CUMPRIMENTO DO CÓDIGO, DOS PRINCÍPIOS FUNDAMENTAIS E DA ESTRUTURA CONCEITUAL, seria ",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "realizar escuta ativa. "
+      },
+      {
+        "letra": "B",
+        "texto": "demonstrar clareza na exposição de dados. "
+      },
+      {
+        "letra": "C",
+        "texto": "revisar a legislação aplicável. "
+      },
+      {
+        "letra": "D",
+        "texto": "ignorar as dúvidas do cliente. "
+      }
+    ],
+    "gabarito": "B",
+    "gabarito_texto": "demonstrar clareza na exposição de dados. ",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false
+  }
+]

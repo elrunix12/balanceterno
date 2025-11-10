@@ -1,0 +1,73 @@
+[
+  {
+    "id": 43,
+    "ano": 2025,
+    "exame": "CFC 2025/2",
+    "banca": "FGV",
+    "tags": [
+      "Demonstração dos Fluxos de Caixa (DFC)",
+      "Procedimentos Contábeis Orçamentários"
+    ],
+    "enunciado": "Uma escola do setor público serve, diariamente, café da manhã e almoço a seus alunos. \nPara as refeições, a escola adquire, semanalmente, frutas e verduras, e trimestralmente, alimentos não perecíveis. \nTodas as compras são pagas à vista. \nEm julho, a escola gastou R$ 4.000,00 com frutas e verduras e R$ 20.000,00 com os produtos não perecíveis, para serem estocados e utilizados até setembro. \nOs caixas consumidos, respectivamente, pela Atividade Operacional e pela Atividade de Investimento, na Demonstração dos Fluxos de Caixa da escola, foram ",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "zero e R$ 24.000,00. "
+      },
+      {
+        "letra": "B",
+        "texto": "R$ 4.000,00 e R$ 20.000,00. "
+      },
+      {
+        "letra": "C",
+        "texto": "R$ 20.000,00 e R$ 4.000,00. "
+      },
+      {
+        "letra": "D",
+        "texto": "R$ 24.000,00 e zero. "
+      }
+    ],
+    "gabarito": "D",
+    "gabarito_texto": "R$ 24.000,00 e zero. ",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false
+  },
+  {
+    "id": 44,
+    "ano": 2025,
+    "exame": "CFC 2025/2",
+    "banca": "FGV",
+    "tags": [
+      "Normas Brasileiras de Contabilidade (NBC TSP)",
+      "Receita de Transação sem Contraprestação",
+      "Mensuração de Ativos"
+    ],
+    "enunciado": "De acordo com a NBC TSP - RECEITA DE TRANSAÇÃO SEM CONTRAPRESTAÇÃO, quando uma entidade do setor público adquire um ativo por meio de uma transação sem contraprestação, esse ativo deve ser mensurado inicialmente ",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "pelo valor de ativo similar adquirido nos último três anos pela entidade pública. "
+      },
+      {
+        "letra": "B",
+        "texto": "pelo valor simbólico de R$ 1,00. "
+      },
+      {
+        "letra": "C",
+        "texto": "pelo valor justo do ativo na data de aquisição. "
+      },
+      {
+        "letra": "D",
+        "texto": "por valor nenhum, considerando que não houve pagamento na transação. "
+      }
+    ],
+    "gabarito": "C",
+    "gabarito_texto": "pelo valor justo do ativo na data de aquisição. ",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false
+  }
+]

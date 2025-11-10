@@ -1,0 +1,390 @@
+[
+    {
+    "id": 10,
+    "ano": 2025,
+    "exame": "CFC 2025/2",
+    "banca": "FGV",
+    "tags": [
+      "Fundamentos e Patrimônio",
+      "Estrutura Conceitual para Relatório Financeiro"
+    ],
+    "enunciado": "De acordo com a NBC TG ESTRUTURA CONCEITUAL - ESTRUTURA CONCEITUAL PARA RELATÓRIO FINANCEIRO, as características qualitativas fundamentais são relevância e representação fidedigna, sendo que, para ser representação fidedigna, a representação deve ser completa, neutra e isenta de erros. \nUma informação neutra pode ",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "ser parcial. "
+      },
+      {
+        "letra": "B",
+        "texto": "ser prudente. "
+      },
+      {
+        "letra": "C",
+        "texto": "possuir inclinações. "
+      },
+      {
+        "letra": "D",
+        "texto": "ser tendenciosa na seleção de informações financeiras. "
+      }
+    ],
+    "gabarito": "B",
+    "gabarito_texto": "ser prudente. ",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false
+  },
+  {
+    "id": 11,
+    "ano": 2025,
+    "exame": "CFC 2025/2",
+    "banca": "FGV",
+    "tags": [
+      "Fundamentos e Patrimônio",
+      "Estrutura Conceitual para Relatório Financeiro"
+    ],
+    "enunciado": "De acordo com a NBC TG ESTRUTURA CONCEITUAL - ESTRUTURA CONCEITUAL PARA RELATÓRIO FINANCEIRO, para ajudar os usuários das demonstrações contábeis a identificar e avaliar mudanças e tendências, as demonstrações contábeis ",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "são elaboradas com base na forma jurídica, em detrimento da essência das transações. "
+      },
+      {
+        "letra": "B",
+        "texto": "restringem a utilização de estimativas a casos em que poderá haver perdas financeiras do usuário. "
+      },
+      {
+        "letra": "C",
+        "texto": "incluem, apenas, informações que podem ser compreendidas, também, por usuários com pouco conhecimento das atividades comerciais e econômicas, sem auxílio de consultores. "
+      },
+      {
+        "letra": "D",
+        "texto": "fornecem informações comparativas de, pelo menos, um período de relatório anterior. "
+      }
+    ],
+    "gabarito": "D",
+    "gabarito_texto": "fornecem informações comparativas de, pelo menos, um período de relatório anterior. ",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false
+  },
+  {
+    "id": 12,
+    "ano": 2025,
+    "exame": "CFC 2025/2",
+    "banca": "FGV",
+    "tags": [
+      "Escrituração Contábil",
+      "Teoria das Contas",
+      "Fundamentos e Patrimônio"
+    ],
+    "enunciado": "Uma sociedade empresária presta services de perícia a terceiros. \nEm junho de 2024, aconteceram os seguintes fatos: \nCompra de material de escritório para pagamento em 60 dias: R$ 5.000,00; \nRecebimento antecipado pelos serviços que serão prestados no segundo semestre: R$ 10.000,00; \nReconhecimento do salário de seus empregados, para pagamento em 5 de julho: R$ 12.000,00. \nEm junho de 2024, o passivo da sociedade empresária aumentou em ",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "R$ 15.000,00. "
+      },
+      {
+        "letra": "B",
+        "texto": "R$ 17.000,00. "
+      },
+      {
+        "letra": "C",
+        "texto": "R$ 22.000,00. "
+      },
+      {
+        "letra": "D",
+        "texto": "R$ 27.000,00. "
+      }
+    ],
+    "gabarito": "D",
+    "gabarito_texto": "R$ 27.000,00. ",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false
+  },
+  {
+    "id": 13,
+    "ano": 2025,
+    "exame": "CFC 2025/2",
+    "banca": "FGV",
+    "tags": [
+      "Fundamentos e Patrimônio",
+      "Estrutura Conceitual para Relatório Financeiro"
+    ],
+    "enunciado": "De acordo com a NBC TG ESTRUTURA CONCEITUAL - ESTRUTURA CONCEITUAL PARA RELATÓRIO FINANCEIRO, com relação às implicações das características qualitativas para a escolha da base de mensuração, avalie as afirmativas a seguir e assinale (V) para a verdadeira e (F) para a falsa. \n( ) Utilizar consistentemente as mesmas bases de mensuração para os mesmos itens, seja de período a período, na entidade que reporta ou em um único período para diferentes entidades, prejudica a comparabilidade das demonstrações. \n( ) A mudança na base de mensuração pode tornar as demonstrações contábeis menos compreensíveis. Contudo, a mudança pode ser justificada se outros fatores compensarem a redução na compreensibilidade, por exemplo, se a mudança resulta em informações mais relevantes.\n( ) A verificação é melhorada utilizando-se bases de mensuração que resultam em avaliações que podem ser independentemente corroboradas diretamente, por exemplo, observando os preços, ou indiretamente, por exemplo, verificando dados de entrada de modelo. \nAs afirmativas são, respectively, ",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "V-V-V. "
+      },
+      {
+        "letra": "B",
+        "texto": "V-V-F. "
+      },
+      {
+        "letra": "C",
+        "texto": "V-F-V. "
+      },
+      {
+        "letra": "D",
+        "texto": "F-V-V. "
+      }
+    ],
+    "gabarito": "D",
+    "gabarito_texto": "F-V-V. ",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false
+  },
+  {
+    "id": 20,
+    "ano": 2025,
+    "exame": "CFC 2025/2",
+    "banca": "FGV",
+    "tags": [
+      "Fundamentos e Patrimônio",
+      "Teoria das Contas",
+      "Estrutura Conceitual para Relatório Financeiro"
+    ],
+    "enunciado": "A NBC TG ESTRUTURA CONCEITUAL estabelece os conceitos dos elementos das demonstrações contábeis. \nCom base nessa norma, avalie as afirmativas a seguir e assinale (V) para a verdadeira e (F) para a falsa. \n( ) Ativo é um recurso econômico presente de propriedade da entidade como resultado de eventos passados. \n( ) Passivo é uma obrigação futura da entidade de transferir um recurso econômico como resultado de eventos passados. \n( ) Receitas são aumentos nos ativos, ou reduções nos passivos, que resultam em aumento no patrimônio líquido, exceto aqueles referentes a contribuições de detentores de direitos sobre o patrimônio. \n( ) Despesas são reduções nos ativos, ou aumentos nos passivos, que resultam em reduções no patrimônio líquido, exceto aqueles referentes a distribuições aos detentores de direitos sobre o patrimônio. \nAs afirmativas são, respectivamente, ",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "F-F-V-V. "
+      },
+      {
+        "letra": "B",
+        "texto": "F-V-F-V. "
+      },
+      {
+        "letra": "C",
+        "texto": "V-F-V-F. "
+      },
+      {
+        "letra": "D",
+        "texto": "V-V-F-F. "
+      }
+    ],
+    "gabarito": "A",
+    "gabarito_texto": "F-F-V-V. ",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false
+  },
+  {
+    "id": 23,
+    "ano": 2025,
+    "exame": "CFC 2025/2",
+    "banca": "FGV",
+    "tags": [
+      "Custo e Avaliação de Estoques",
+      "Operações com Mercadorias"
+    ],
+    "enunciado": "A empresa ABCDE possui os seguintes registros referentes às movimentações em determinado período: \nCompras: R$ 5.000,00.\nEstoque inicial: R$ 3.000,00.\nEstoque final: R$ 2.000,00.\nVendas: R$ 30.000,00.\nDespesas gerais: R$ 1.000,00.\nDevolução de compras: R$ 500,00.\nCom base nesses registros, é possível afirmar que a empresa obteve o Custo das Mercadorias Vendidas (CMV) de ",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "R$ 6.000,00. "
+      },
+      {
+        "letra": "B",
+        "texto": "R$ 7.500,00. "
+      },
+      {
+        "letra": "C",
+        "texto": "R$ 8.000,00. "
+      },
+      {
+        "letra": "D",
+        "texto": "R$ 5.500,00. "
+      }
+    ],
+    "gabarito": "D",
+    "gabarito_texto": "R$ 5.500,00. ",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false
+  },
+  {
+    "id": 25,
+    "ano": 2025,
+    "exame": "CFC 2025/2",
+    "banca": "FGV",
+    "tags": [
+      "Regimes Contábeis",
+      "Apuração do Resultado",
+      "Escrituração Contábil"
+    ],
+    "enunciado": "A empresa Serviços S.A. encerrou seu exercício em 31/12/2024, deixando de efetuar o lançamento referente à receita de serviços prestados a um cliente em dezembro e ainda não recebidos, deixando de obedecer, assim, ao regime de competência. \nComo consequência do erro cometido pela ausência desse registro, ",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "o saldo da conta clientes ficou superavaliado. "
+      },
+      {
+        "letra": "B",
+        "texto": "o saldo do disponível ficou subavaliado. "
+      },
+      {
+        "letra": "C",
+        "texto": "a receita do exercício ficou superavaliada. "
+      },
+      {
+        "letra": "D",
+        "texto": "o lucro do exercício ficou subavaliado. "
+      }
+    ],
+    "gabarito": "D",
+    "gabarito_texto": "o lucro do exercício ficou subavaliado. ",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false
+  },
+  {
+    "id": 26,
+    "ano": 2025,
+    "exame": "CFC 2025/2",
+    "banca": "FGV",
+    "tags": [
+      "Custo e Avaliação de Estoques",
+      "Operações com Mercadorias"
+    ],
+    "enunciado": "A Cia. Gold vende pulseiras. \nEm 31/12/2024, não havia estoque inicial de pulseiras. \nNo primeiro trimestre de 2025 aconteceram os seguintes fatos: \n05/01: compra de 20 pulseiras por R$ 10.000,00; 25/01: venda de 10 pulseiras por R$ 1.200,00 cada; \n05/02: compra de 12 pulseiras por R$ 7.200,00; 20/02: venda de 11 pulseiras por R$ 1.200,00 cada; \n10/03: compra de 8 pulseiras por R$ 5.200,00; \n27/03: venda de 5 pulseiras por R$ 1.400,00 cada. \nAssinale a opção que indica o valor aproximado do estoque final de pulseiras da Cia. Gold em 31/03/2025, considerando que a empresa utiliza o método do Custo Médio Ponderado Móvel em base diária. ",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "R$ 7.840,00. "
+      },
+      {
+        "letra": "B",
+        "texto": "R$ 8.326,00. "
+      },
+      {
+        "letra": "C",
+        "texto": "R$ 9.100,00. "
+      },
+      {
+        "letra": "D",
+        "texto": "R$ 10.905,00. "
+      }
+    ],
+    "gabarito": "B",
+    "gabarito_texto": "R$ 8.326,00. ",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false
+  },
+  {
+    "id": 30,
+    "ano": 2025,
+    "exame": "CFC 2025/2",
+    "banca": "FGV",
+    "tags": [
+      "Custo e Avaliação de Estoques",
+      "Operações com Mercadorias"
+    ],
+    "enunciado": "Em 01/01/2025, uma livraria tinha em estoque 20 livros \"Estatística Simples\". \nCada livro tinha sido adquirido por R$ 80,00 e era vendido por R$ 140,00. \nNo primeiro trimestre desse ano, a movimentação do livro foi a seguinte: \n• 28/01: venda de 10 livros por R$ 140,00. \n• 05/02: compra de 15 livros por R$ 90,00. \n• 25/02: venda de 18 livros por R$ 150,00. \n• 05/03: compra de 20 livros por R$ 95,00. \n• 28/03: venda de 25 livros por R$ 150,00. \nO custo das mercadorias vendidas no primeiro trimestre de 2025, considerando que a livraria utiliza o método PEPS para avaliação de estoque, foi de ",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "R$ 3.860,00. "
+      },
+      {
+        "letra": "B",
+        "texto": "R$ 4.220,00. "
+      },
+      {
+        "letra": "C",
+        "texto": "R$ 4.660,00. "
+      },
+      {
+        "letra": "D",
+        "texto": "R$ 5.035,00. "
+      }
+    ],
+    "gabarito": "C",
+    "gabarito_texto": "R$ 4.660,00. ",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false
+  },
+  {
+    "id": 36,
+    "ano": 2025,
+    "exame": "CFC 2025/2",
+    "banca": "FGV",
+    "tags": [
+      "Custo e Avaliação de Estoques",
+      "Apuração do Resultado"
+    ],
+    "enunciado": "Uma empresa realizou a contagem de seus estoques, acabando por superavaliar o estoque inicial, mantendo o controle de compras e estoque final nos valores corretos. \nEm consequência da superavaliação do estoque inicial é correto afirmar que ",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "a receita de vendas do período corrente foi subavaliada. "
+      },
+      {
+        "letra": "B",
+        "texto": "o lucro acumulado do período corrente foi superavaliado. "
+      },
+      {
+        "letra": "C",
+        "texto": "o custo dos produtos vendidos do período corrente foi superavaliado. "
+      },
+      {
+        "letra": "D",
+        "texto": "o estoque final foi subavaliado. "
+      }
+    ],
+    "gabarito": "C",
+    "gabarito_texto": "o custo dos produtos vendidos do período corrente foi superavaliado. ",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false
+  },
+  {
+    "id": 39,
+    "ano": 2025,
+    "exame": "CFC 2025/2",
+    "banca": "FGV",
+    "tags": [
+      "Balanço Patrimonial",
+      "Fundamentos e Patrimônio"
+    ],
+    "enunciado": "Em 31/12/2023, uma sociedade empresária apresentava os seguintes saldos em seus ativos e passivos: \nAtivo Circulante: R$ 50.000,00; \nAtivo Realizável a Longo Prazo: R$ 30.000,00; \nAtivo Imobilizado: R$ 120.000,00; \nPassivo Circulante: R$ 40.000,00; \nPassivo não Circulante: R$ 100.000,00. \nA proporção de capital próprio que financia o ativo da sociedade empresária foi igual a ",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "30%. "
+      },
+      {
+        "letra": "B",
+        "texto": "40%. "
+      },
+      {
+        "letra": "C",
+        "texto": "60%. "
+      },
+      {
+        "letra": "D",
+        "texto": "70%. "
+      }
+    ],
+    "gabarito": "A",
+    "gabarito_texto": "30%. ",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false
+  }
+]
