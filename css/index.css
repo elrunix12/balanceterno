@@ -521,7 +521,8 @@
     background-color: #f0f2f5; /* <-- Cor neutra (fundo do body) */
     color: #555; /* <-- Cor de texto neutra */
     border: 1px solid #ddd; /* <-- Borda sutil */
-    white-space: nowrap; /* Evita que tags longas quebrem a linha no meio */
+    white-space: normal; /* Permite que o texto da tag quebre a linha */
+    overflow-wrap: break-word; /* Força a quebra de palavras muito longas */
 }
 
 /* Aplica cores por classe */
@@ -609,6 +610,7 @@
 /* Mantém o pre-wrap APENAS para enunciados antigos (em <p>) */
 p.enunciado {
     white-space: pre-wrap;
+    overflow-wrap: break-word; /* Garante que linhas longas sem espaço quebrem */
 }
 
 /* Ajusta parágrafos dentro de um enunciado estruturado (em <div>) */
