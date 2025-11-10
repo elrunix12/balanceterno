@@ -15,19 +15,34 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    // --- LÓGICA BOTÃO VOLTAR AO TOPO ---
+    // --- (CORRIGIDO) LÓGICA BOTÃO VOLTAR AO TOPO ---
     const btnBackToTop = document.getElementById('btn-back-to-top');
+    
     if(btnBackToTop) {
-        window.onscroll = () => {
-            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        
+        // Esta é a função que checa o scroll
+        const checkScroll = () => {
+            // Usamos os dois (body e documentElement) para garantir compatibilidade
+            const scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+            
+            if (scrollTop > 100) {
                 btnBackToTop.style.display = "block";
             } else {
                 btnBackToTop.style.display = "none";
             }
         };
+
+        // 1. Usamos 'addEventListener' em vez de '.onscroll'
+        // Isso permite que o lazy-loading também ouça o scroll sem conflitos.
+        window.addEventListener('scroll', checkScroll);
+
+        // 2. Adicionamos o listener de clique
         btnBackToTop.addEventListener('click', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
+        
+        // 3. Checamos o scroll uma vez no início (caso a página carregue no meio)
+        checkScroll();
     }
     // --- FIM: LÓGICA BOTÃO VOLTAR AO TOPO ---
 
@@ -51,10 +66,8 @@ async function carregarRodape() {
 
         const data = await response.json();
         
-        // (NOVO) Cria o HTML do link admin, se ele existir
         let adminLinkHTML = '';
         if (data.adminLink && data.adminLink.url && data.adminLink.text) {
-            // Cria o link no mesmo formato dos outros, com o separador "|"
             adminLinkHTML = `
                 |
                 <a href="${data.adminLink.url}">
@@ -63,7 +76,6 @@ async function carregarRodape() {
             `;
         }
         
-        // (MODIFICADO) Adiciona a variável adminLinkHTML DENTRO do primeiro <p>
         footerElement.innerHTML = `
             <p>
                 &copy; ${data.currentYear} ${data.projectName} | Versão ${data.version} |
