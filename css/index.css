@@ -608,7 +608,8 @@
 }
 
 /* Mantém o pre-wrap APENAS para enunciados antigos (em <p>) */
-p.enunciado {
+p.enunciado 
+div.enunciado p {
     white-space: pre-wrap;
     overflow-wrap: break-word; /* Garante que linhas longas sem espaço quebrem */
 }
