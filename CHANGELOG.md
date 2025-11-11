@@ -11,7 +11,7 @@ O formato é baseado em [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
     * Língua Portuguesa
     * Matemática e Estatística
     * Elaborações das Demonstrações Contábeis
-    * Ética Geral e Profissional
+    * Legislação e Ética Profissional
     * Noções de Direito e Legislação Aplicada
     * Contabilidade de Custos
     * Análise das demonstrações Contábeis
