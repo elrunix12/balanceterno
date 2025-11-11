@@ -69,7 +69,7 @@ const configDisciplinas = {
         allTags: new Set(),
         className: 'disciplina-elaboracoes-dc'
     },
-    "Ética Geral e Profissional": {
+    "Legislação e Ética Profissional": {
         arquivo: 'disciplinas/etica.json',
         questoes: [],
         allTags: new Set(),
