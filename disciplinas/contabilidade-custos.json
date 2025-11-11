@@ -1,0 +1,176 @@
+[
+  {
+    "id": 35,
+    "ano": 2025,
+    "exame": "CFC 2025/2",
+    "banca": "FGV",
+    "tags": ["Conceitos", "Gastos", "Custos", "Despesas"],
+    "enunciado": "A Contabilidade de Custos possui uma linguagem própria que permite ao profissional da contabilidade constituir o processo de análise, apuração e divulgação das informações relacionadas a custos, à medida que se mostrarem pertinentes de acordo com a necessidade informacional dos inúmeros stakeholders. \nTomando por base esse processo de terminologias na contabilidade de custos, assinale a afirmativa correta. ",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "Os gastos representam a compra de um produto ou serviço que tem por capacidade gerar o dispêndio de recursos financeiros por parte da empresa, a exemplo da aquisição de um imobilizado. "
+      },
+      {
+        "letra": "B",
+        "texto": "Os custos representam um sacrifício monetário referente ao pagamento dos gastos, a exemplo do consumo de matéria-prima. "
+      },
+      {
+        "letra": "C",
+        "texto": "As despesas podem ser entendidas como os recursos utilizados na constituição de bens ou serviços em uma indústria, como exemplo tem-se as despesas com vendas e comissões. "
+      },
+      {
+        "letra": "D",
+        "texto": "As perdas são gastos anormais e involuntários do processo produtivo e já estão incluídas no custo do produto. "
+      }
+    ],
+    "gabarito": "A",
+    "gabarito_texto": "Os gastos representam a compra de um produto ou serviço que tem por capacidade gerar o dispêndio de recursos financeiros por parte da empresa, a exemplo da aquisição de um imobilizado. ",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false
+  },
+  {
+    "id": 37,
+    "ano": 2025,
+    "exame": "CFC 2025/2",
+    "banca": "FGV",
+    "tags": ["Métodos de Custeamento", "Custeio por Absorção", "Custeio Variável"],
+    "enunciado": "A Fazenda Laticínios Campo Verde Ltda. produz e comercializa queijos artesanais tipo minas frescal. \nNo mês de julho de 2025, quando a empresa mpresa não possuía estoque inicial, foram produzidas 12.000 unidades de queijo. \nNesse mesmo mês, vendeu 9.000 unidades a um preço unitário de R$ 25,00. \nOs custos variáveis totais somaram R$ 135.000,00 e os custos fixos totalizaram R$ 42.000,00. \nAs despesas fixas totalizaram R$ 25.000,00, e as despesas variáveis com comissão aos vendedores corresponderam a 5% do valor de cada unidade vendida. \nConsiderando os dados fornecidos e desconsiderando efeitos tributários, os lucros líquidos com as vendas em julho de 2025, utilizando, respectively, os métodos de custeio por absorção e custeio variável, foram de ",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "R$ 45.470,00 e R$ 11.750,00. "
+      },
+      {
+        "letra": "B",
+        "texto": "R$ 56.000,00 e R$ 56.000,00. "
+      },
+      {
+        "letra": "C",
+        "texto": "R$ 45.470,00 e R$ 112.500,00. "
+      },
+      {
+        "letra": "D",
+        "texto": "R$ 56.000,00 e R$ 45.500,00. "
+      }
+    ],
+    "gabarito": "D",
+    "gabarito_texto": "R$ 56.000,00 e R$ 45.500,00. ",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false
+  },
+  {
+    "id": 38,
+    "ano": 2025,
+    "exame": "CFC 2025/2",
+    "banca": "FGV",
+    "tags": ["Métodos de Custeamento", "Custeio Baseado em Atividades (ABC)", "Rateio de Custos"],
+    "enunciado": "",
+    "enunciado_blocos": [
+        {
+            "type": "p",
+            "content": "A Indústria Paranaguá Ltda. utiliza o sistema de custeio baseado em atividades (ABC). No mês de junho de 2025, foram apuradas as seguintes informações para os produtos X, Y e Z:"
+        },
+        {
+            "type": "table",
+            "headerRows": [
+                [
+                    {
+                        "content": "Produto"
+                    },
+                    {
+                        "content": "Material Direto (R$)"
+                    },
+                    {
+                        "content": "Mão de Obra Direta (R$)"
+                    },
+                    {
+                        "content": "Pedidos de Mudança"
+                    },
+                    {
+                        "content": "Quilowatts-hora (kWh)"
+                    }
+                ]
+            ],
+            "bodyRows": [
+                [
+                    "X",
+                    "R$35.000,00",
+                    "R$18.000,00",
+                    "28",
+                    "R$12.000,00"
+                ],
+                [
+                    "Y",
+                    "R$40.000,00",
+                    "R$12.000,00",
+                    "20",
+                    "R$14.000,00"
+                ],
+                [
+                    "Z",
+                    "R$25.000,00",
+                    "R$10.000,00",
+                    "32",
+                    "R$14.000,00"
+                ],
+                [
+                    "Total",
+                    "R$100.000,00",
+                    "R$40.000,00",
+                    "80",
+                    "R$40.000,00"
+                ]
+            ]
+        },
+        {
+        "type": "p",
+        "content": "Os custos indiretos de manufatura totalizaram R$ 200.000,00, distribuídos entre as seguintes atividades:"
+        },
+        {
+        "type": "p",
+        "content": "• Gerenciamento de mudanças de projeto (baseado em pedidos): R$ 140.000,00;"
+        },
+        {
+        "type": "p",
+        "content": "• Geração e uso de energia operacional (baseado em kWh): R$ 60.000,00."
+        },
+        {
+        "type": "p",
+        "content": "No período, foram produzidas 1.200 unidades do produto X, 1.500 unidades do produto Y e 2.000 unidades do produto Z."
+        },
+        {
+        "type": "p",
+        "content": "Com base nesses dados, os custos unitários dos produtos X, Y e Z, respectivamente, são"
+        }
+    ],
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "R$ 98,50; R$ 70,00; R$ 60,00. "
+      },
+      {
+        "letra": "B",
+        "texto": "R$ 90,00; R$ 80,00; R$ 65,00. "
+      },
+      {
+        "letra": "C",
+        "texto": "R$ 105,00; R$ 74,00; R$ 52,00. "
+      },
+      {
+        "letra": "D",
+        "texto": "R$ 100,00; R$ 72,00; R$ 56,00. "
+      }
+    ],
+    "gabarito": "D",
+    "gabarito_texto": "R$ 100,00; R$ 72,00; R$ 56,00. ",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false
+  }
+]

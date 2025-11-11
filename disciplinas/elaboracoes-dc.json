@@ -1,0 +1,104 @@
+[
+    {
+    "id": 18,
+    "ano": 2025,
+    "exame": "CFC 2025/2",
+    "banca": "FGV",
+    "tags": [
+        "Demonstração do Valor Adicionado (DVA)"
+    ],
+    "enunciado": "A Demonstração do Valor Adicionado (DVA) busca evidenciar o valor e a distribuição da riqueza econômica gerada pelas atividades da sociedade empresária, incluindo também o valor adicionado recebido em transferência. \nA riqueza gerada é evidenciada na distribuição entre o capital (Remuneração de capital próprio e de terceiros), trabalho (Pessoal) e governo (Impostos, taxas e contribuições). \nRelacione cada item a seguir ao respectivo componente da distribuição da riqueza, conforme disposto na NBC TG 09 (R1) - DEMONSTRAÇÃO DO VALOR ADICIONADO. \n( ) Fundo de Garantia por Tempo de Serviços (FGTS) \n( ) Aluguéis pagos \n( ) Dividendos distribuídos \n( ) Contribuição Social sobre o Lucro Líquido (CSLL) \n1. Pessoal \n2. Impostos, taxas e contribuições \n3. Remuneração de capital de terceiros \n4. Remuneração de capital próprio \nA relação correta, na ordem apresentada, é ",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "1-2-3-4. "
+      },
+      {
+        "letra": "B",
+        "texto": "2-3-4-1. "
+      },
+      {
+        "letra": "C",
+        "texto": "2-4-3-1. "
+      },
+      {
+        "letra": "D",
+        "texto": "1-3-4-2. "
+      }
+    ],
+    "gabarito": "D",
+    "gabarito_texto": "1-3-4-2. ",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false
+  },
+  {
+    "id": 27,
+    "ano": 2025,
+    "exame": "CFC 2025/2",
+    "banca": "FGV",
+    "tags": [
+        "Demonstração dos Fluxos de Caixa"
+    ],
+    "enunciado": "Uma loja de cosméticos começou a funcionar em 01/07/2024. No segundo semestre de 2024, aconteceram os seguintes fatos: \nIntegralização de capital social em dinheiro: R$ 300.000,00. \nCompra à vista de móveis e utensílios para a loja: R$ 40.000,00. \nCompra à vista de estoque para revenda: R$ 80.000,00. \nPagamento do aluguel do semestre: R$ 30.000,00. \nPagamento antecipado do aluguel do primeiro trimestre de 2025: R$ 18.000,00. \nVenda de todo o estoque por R$ 40.000,00, sendo que metade do valor já foi recebido e o restante deverá ser recebido no primeiro semestre de 2025. A loja estima inadimplência de 5%.\nReconhecimento e pagamento de despesas diversas: R$ 12.000,00. \nReconhecimento da despesa de depreciação: R$ 4.000,00. \nO fluxo de caixa gerado pela atividade operacional em 2024, de acordo com as diretrizes da NBC TG 03 (R3) - DEMONSTRAÇÃO DOS FLUXOS DE CAIXA foi de ",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "R$ 20.000,00. "
+      },
+      {
+        "letra": "B",
+        "texto": "R$ 50.000,00. "
+      },
+      {
+        "letra": "C",
+        "texto": "R$ 60.000,00. "
+      },
+      {
+        "letra": "D",
+        "texto": "R$ 360.000,00. "
+      }
+    ],
+    "gabarito": "C",
+    "gabarito_texto": "R$ 60.000,00. ",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false
+  },
+{
+    "id": 31,
+    "ano": 2025,
+    "exame": "CFC 2025/2",
+    "banca": "FGV",
+    "tags": [
+        "Apresentação das Demonstrações Contábeis"
+    ],
+    "enunciado": "A compreensão dos conceitos e métodos relacionados à Demonstração do Resultado do Exercício (DRE) e à Demonstração do Resultado Abrangente (DRA) é fundamental para a adequada análise das variações do patrimônio líquido e para a tomada de decisões baseadas nos resultados operacionais. \nA respeito do tema, analise as seguintes afirmativas: \n1. A recompra de ações de emissão da própria entidade para manutenção em tesouraria afeta o resultado abrangente por representar uma redução no patrimônio líquido. \nII. O resultado abrangente compreende todos os componentes da demonstração do resultado e dos outros resultados abrangentes. \nIII. Pelo método da natureza da despesa, as despesas são classificadas conforme sua função, como administrativas, comerciais e de produção, facilitando a análise do custo dos produtos vendidos. \nIV. A informação sobre a natureza das despesas é útil para prever os fluxos de caixa futuros e requer divulgação adicional quando a classificação adotada na DRE for baseada no método da função das despesas. \nV. A entidade deve apresentar rubricas ou itens de receitas ou despesas como itens extraordinários, quer na demonstração do resultado abrangente, quer na demonstração do resultado do período, quer nas notas explicativas.\nDe acordo com a NBC TG 26 (R5) - APRESENTAÇÃO DAS DEMONSTRAÇÕES CONTÁBEIS, estão corretas as afirmativas ",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "II e IV, apenas. "
+      },
+      {
+        "letra": "B",
+        "texto": "I, III e V, apenas. "
+      },
+      {
+        "letra": "C",
+        "texto": "II, III e IV, apenas. "
+      },
+      {
+        "letra": "D",
+        "texto": "I, II, IV e V, apenas."
+      }
+    ],
+    "gabarito": "A",
+    "gabarito_texto": "II e IV, apenas. ",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false
+  }
+]

@@ -1,0 +1,104 @@
+[
+    {
+    "id": 5,
+    "ano": 2025,
+    "exame": "CFC 2025/2",
+    "banca": "FGV",
+    "tags": [
+        "NOÇÕES DE DIREITO PÚBLICO E PRIVADO"
+    ],
+    "enunciado": "Para o contador que atua no setor público ou na fiscalização de contratos administrativos, o conhecimento da Lei nº 14.133, de 1º de abril de 2021 (Lei de Licitações e Contratos), é fundamental para a avaliação da legalidade e conformidade dos gastos públicos. \nO Art. 5º dessa Lei elenca diversos princípios que devem guiar a atuação das Administrações Públicas diretas, autárquicas e fundacionais da União, dos Estados, do Distrito Federal e dos Municípios. \nCom base no texto legal, avalie os seguintes princípios: \nI. Impessoalidade; \nII. Transparência; \nIII. Racionalidade econômica; \nIV. Probidade administrativa. \nEstão expressamente listados no Art. 5º da Lei os princípios ",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "I e IV, apenas. "
+      },
+      {
+        "letra": "B",
+        "texto": "II e III, apenas. "
+      },
+      {
+        "letra": "C",
+        "texto": "I, II e IV, apenas. "
+      },
+      {
+        "letra": "D",
+        "texto": "I, II, III e IV. "
+      }
+    ],
+    "gabarito": "C",
+    "gabarito_texto": "I, II e IV, apenas. ",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false
+  },
+  {
+    "id": 6,
+    "ano": 2025,
+    "exame": "CFC 2025/2",
+    "banca": "FGV",
+    "tags": [
+        "LEGISLAÇÃO TRIBUTÁRIA"
+    ],
+    "enunciado": "Um estudante de contabilidade, ao iniciar seus estudos em Direito Tributário, depara-se com o conceito fundamental de tributo. \nPara uma compreensão precisa, ele busca a definição legal contida no Código Tributário Nacional (Lei nº 5.172/1966). \nDe acordo com esse diploma legal, assinale a opção que define corretamente o tributo. ",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "Tributo é toda prestação pecuniária voluntária, em moeda ou cujo valor nela se possa exprimir, que não constitua sanção de ato ilícito, instituída por meio de medida provisória e cobrada mediante atividade administrativa com alguma discricionariedade. "
+      },
+      {
+        "letra": "B",
+        "texto": "Tributo é toda sanção de ato ilícito, cobrada compulsoriamente em bens ou serviços, instituída em lei e aplicada com base em decisões discricionárias da administração pública. "
+      },
+      {
+        "letra": "C",
+        "texto": "Tributo é toda prestação pecuniária compulsória, em bens ou cujo valor nela se possa exprimir, que não constitua sanção de ato ilícito, instituída por qualquer ato normativo e cobrada mediante atividade administrativa parcialmente vinculada. "
+      },
+      {
+        "letra": "D",
+        "texto": "Tributo é toda prestação pecuniária compulsória, em moeda ou cujo valor nela se possa exprimir, que não constitua sanção de ato ilícito, instituída em lei e cobrada mediante atividade administrativa plenamente vinculada. "
+      }
+    ],
+    "gabarito": "D",
+    "gabarito_texto": "Tributo é toda prestação pecuniária compulsória, em moeda ou cujo valor nela se possa exprimir, que não constitua sanção de ato ilícito, instituída em lei e cobrada mediante atividade administrativa plenamente vinculada. ",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false
+  },
+  {
+    "id": 7,
+    "ano": 2025,
+    "exame": "CFC 2025/2",
+    "banca": "FGV",
+    "tags": [
+        "LEGISLAÇÃO TRIBUTÁRIA"
+    ],
+    "enunciado": "De acordo com a Lei Complementar nº 123, de 14 de dezembro de 2006, que institui o Estatuto Nacional da Microempresa e da Empresa de Pequeno Porte, os limites de receita bruta anual para fins de enquadramento são informações essenciais para a atuação do contador. \nConsiderando o que a lei estabelece sobre a definição de Microempresa (ME) e Empresa de Pequeno Porte (EPP), assinale a afirmativa correta. ",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "Uma Microempresa (ME) aufere, em cada ano-calendário, receita bruta igual ou inferior a R$ 120.000,00, e uma Empresa de Pequeno Porte (EPP) aufere receita bruta superior a R$ 120.000,00 e igual ou inferior a R$ 1.200.000,00. "
+      },
+      {
+        "letra": "B",
+        "texto": "Uma Microempresa (ME) aufere, em cada ano-calendário, receita bruta igual ou inferior a R$ 360.000,00, e uma Empresa de Pequeno Porte (EPP) aufere receita bruta superior a R$ 360.000,00 e igual ou inferior a R$ 4.800.000,00. "
+      },
+      {
+        "letra": "C",
+        "texto": "Uma Microempresa (ME) aufere, em cada ano-calendário, receita bruta igual ou inferior a R$ 81.000,00, e uma Empresa de Pequeno Porte (EPP) aufere receita bruta superior a R$ 81.000,00 e igual ou inferior a R$ 4.800.000,00. "
+      },
+      {
+        "letra": "D",
+        "texto": "Os limites de receita bruta para ME e EPP são fixados anualmente por decreto do Comitê Gestor do Simples Nacional. "
+      }
+    ],
+    "gabarito": "B",
+    "gabarito_texto": "Uma Microempresa (ME) aufere, em cada ano-calendário, receita bruta igual ou inferior a R$ 360.000,00, e uma Empresa de Pequeno Porte (EPP) aufere receita bruta superior a R$ 360.000,00 e igual ou inferior a R$ 4.800.000,00. ",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false
+  }
+]

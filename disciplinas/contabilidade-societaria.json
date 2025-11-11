@@ -106,7 +106,7 @@
         "banca": "FGV",
         "tags": [
             "Ativo Intangível",
-            "Impairment"
+            "Combinação de Negócios"
         ],
         "enunciado": "O ágio por expectativa de rentabilidade futura (goodwill) reconhecido em uma combinação de negócios é um ativo que representa benefícios econômicos futuros advindos de outros ativos adquiridos na combinação de negócios que não são identificados individualmente e não são reconhecidos separadamente.\n\nDe acordo com a NBC TG 04 (R4) - ATIVO INTANGÍVEL e com a NBC TG 15 (R4) COMBINAÇÃO DE NEGÓCIOS, a empresa adquirente deve reconhecer, na data da aquisição, separadamente do ágio derivado da expectativa de rentabilidade futura (goodwill) apurado em uma combinação de negócios, um ativo intangível da adquirida, independentemente de o ativo ter sido reconhecido pela adquirida antes da aquisição da empresa.\n\nA perda por desvalorização reconhecida para o ágio por expectativa de rentabilidade futura (goodwill) não deve ser revertida em período subsequente, pois",
         "opcoes": [
@@ -173,7 +173,8 @@
         "exame": "CFC 2025/2",
         "banca": "FGV",
         "tags": [
-            "Ativo Intangível"
+            "Valor Justo",
+            "Combinação de Negócios"
         ],
         "enunciado": "A empresa Alfa S.A. adquiriu, por R$ 1.300.000,00, no dia 01/01/2025, 80% do capital da empresa Beta S.A., adquirindo nessa data o seu controle..\n\nNa data da aquisição:\n\n1. o valor contábil do patrimônio líquido da empresa Beta S.A. era de R$ 1.000.000,00;\n2. o valor líquido dos ativos identificáveis e dos passivos da empresa Beta S.A. correspondentes a 100% de seu capital social, mensurados a valor justo, era de R$ 1.500.000,00.\n\nCom base exclusivamente nos dados apresentados e na NBC TG 15 (R4) - COMBINAÇÃO DE NEGÓCIOS, avalie as afirmativas abaixo, com relação à contabilização ocorrida na empresa Alfa S.A.:\n\nI. Foi registrado um goodwill no valor de R$ 100.000,00.\nII. Foi registrada uma compra vantajosa no valor de R$ 200.000,00.\nIII. Foi registrado um ágio ou mais-valia dos ativos no valor de R$ 400.000,00.\nIV. Foi registrado um ágio ou mais-valia dos ativos no valor de R$ 500.000,00.\n\nEstão corretas as afirmativas",
         "opcoes": [
@@ -200,6 +201,127 @@
         "autor_resolucao": "",
         "obsoleta": false
     },
+    {
+    "id": 22,
+    "ano": 2025,
+    "exame": "CFC 2025/2",
+    "banca": "FGV",
+    "tags": [
+      "Investimento em Coligada e em Empreendimento Controlado em Conjunto"
+    ],
+    "enunciado": "Influência significativa é o poder de participar das decisões sobre políticas financeiras e operacionais de uma investida, mas sem que haja o controle individual ou o conjunto dessas políticas. \nA NBC TG 18 (R4) INVESTIMENTO EM COLIGADA determina que a existência de influência significativa por investidor geralmente é evidenciada por uma ou mais das seguintes formas, à exceção de uma. \nAssinale-a. ",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "Indicação de funcionários para a investida. "
+      },
+      {
+        "letra": "B",
+        "texto": "Operações materiais entre o investidor e a investida. "
+      },
+      {
+        "letra": "C",
+        "texto": "Intercâmbio de diretores ou gerentes. "
+      },
+      {
+        "letra": "D",
+        "texto": "Fornecimento de informação técnica essencial. "
+      }
+    ],
+    "gabarito": "A",
+    "gabarito_texto": "Indicação de funcionários para a investida. ",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false
+  },
+  {
+    "id": 24,
+    "ano": 2025,
+    "exame": "CFC 2025/2",
+    "banca": "FGV",
+    "tags": [
+      "Provisões, Passivos Contingentes e Ativos Contingentes"
+    ],
+    "enunciado": "",
+    "enunciado_blocos": [
+        {
+            "type": "p",
+            "content": "A empresa S.A. possuía, em 31/12/2024, obrigações presentes como resultados de eventos passados cuja saída de recursos envolvendo benefícios futuros na liquidação esteve sujeita à análise, com a classificação disposta na tabela a seguir:"
+        },
+        {
+            "type": "table",
+            "headerRows": [
+                [
+                    {
+                        "content": "Tipo de Obrigação"
+                    },
+                    {
+                        "content": "Valor da mensuração por estimativa confiável"
+                    },
+                    {
+                        "content": "Probabilidade de ocorrência de saída de recurso"
+                    }
+                ]
+            ],
+            "bodyRows": [
+                [
+                    "Garantia de venda",
+                    "R$5.000,00",
+                    "Provável"
+                ],
+                [
+                    "Terreno contaminado e obrigação não formalizada",
+                    "R$15.000,00",
+                    "Provável"
+                ],
+                [
+                    "Processo Trabalhista I",
+                    "R$10.000,00",
+                    "Remota"
+                ],
+                [
+                    "Processo Trabalhista II",
+                    "R$20.000,00",
+                    "Possível"
+                ],
+                [
+                    "Processo Fiscal",
+                    "Há impossibilidade de estimar confiavelmente no momento.",
+                    "Possível"
+                ]
+            ]
+        },
+        {
+            "type": "p",
+            "content": "Com base nos dados, seguindo a NBC TG 25 (R2) - PROVISÕES, PASSIVOS CONTINGENTES E ATIVOS CONTINGENTES, o montante a ser reconhecido como provisões no Balanço Patrimonial da empresa deve ser de"
+        }
+    ],
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "R$ 20.000,00. "
+      },
+      {
+        "letra": "B",
+        "texto": "R$ 40.000,00. "
+      },
+      {
+        "letra": "C",
+        "texto": "R$ 30.000,00. "
+      },
+      {
+        "letra": "D",
+        "texto": "R$ 50.000,00. "
+      }
+    ],
+    "gabarito": "A",
+    "gabarito_texto": "R$ 20.000,00. ",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false
+  },
     {
         "id": 28,
         "ano": 2025,
@@ -235,6 +357,109 @@
         "autor_resolucao": "",
         "obsoleta": false
     },
+    {
+    "id": 29,
+    "ano": 2025,
+    "exame": "CFC 2025/2",
+    "banca": "FGV",
+    "tags": [
+      "Avaliação de Investimentos pelo Método de Equivalência Patrimonial"
+    ],
+    "enunciado": "Em junho de 2025, uma companhia aérea reconheceu as seguintes receitas: \ncom a marcação de assentos: R$ 150.000,00; \ncom equivalência patrimonial: R$ 200.000,00; \ncom a venda de passagens: R$ 900.000,00. \nNesse mês, a companhia aérea reconheceu como Receita, na primeira linha da Demonstração do Resultado do Exercício, o seguinte montante: ",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "R$ 900.000,00. "
+      },
+      {
+        "letra": "B",
+        "texto": "R$ 1.050.000,00. "
+      },
+      {
+        "letra": "C",
+        "texto": "R$ 1.100.000,00. "
+      },
+      {
+        "letra": "D",
+        "texto": "R$ 1.250.000,00. "
+      }
+    ],
+    "gabarito": "B",
+    "gabarito_texto": "R$ 1.050.000,00. ",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false
+  },
+  {
+    "id": 32,
+    "ano": 2025,
+    "exame": "CFC 2025/2",
+    "banca": "FGV",
+    "tags": [
+      "Receita de Contrato com Cliente"
+    ],
+    "enunciado": "A empresa S.A. é especializada na construção de galpões industriais sob encomenda de acordo com especificações exclusivas de cada cliente. \nOs contratos firmados pela empresa preveem que a construção ocorra no terreno do cliente, com pagamentos mensais vinculados ao andamento da obra, que pode durar de 6 a 10 meses. \nConsiderando as informações apresentadas e os preceitos da NBC TG 47 RECEITA DE CONTRATO COM CLIENTE, ο reconhecimento da receita deve ocorrer ",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "somente após a emissão do certificado de aceitação técnica da obra pelo cliente. "
+      },
+      {
+        "letra": "B",
+        "texto": "no momento da conclusão da obra, quando todos os riscos e benefícios são transferidos. "
+      },
+      {
+        "letra": "C",
+        "texto": "no início do contrato, pois o pagamento mensal caracteriza o reconhecimento da receita. "
+      },
+      {
+        "letra": "D",
+        "texto": "ao longo do tempo, pois o desempenho da entidade cria ou melhora ativo que o cliente controla à medida que é construído. "
+      }
+    ],
+    "gabarito": "D",
+    "gabarito_texto": "ao longo do tempo, pois o desempenho da entidade cria ou melhora ativo que o cliente controla à medida que é construído. ",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false
+  },
+  {
+    "id": 33,
+    "ano": 2025,
+    "exame": "CFC 2025/2",
+    "banca": "FGV",
+    "tags": [
+      "Ativo Imobilizado",
+      "Arrendamentos"
+    ],
+    "enunciado": "Uma empresa S.A. celebrou um contrato no valor de R$ 30.000,00 para utilizar um equipamento por um período de 10 meses, cujo ativo subjacente do contrato foi considerado de baixo valor pela empresa. \nA administração da empresa S.A. decidiu aplicar a isenção de reconhecimento autorizada pelo item 5 da NBC TG 06 (R3). \nConsiderando-se as informações apresentadas e os preceitos da NBC TG 06 (R3) - ARRENDAMENTOS, o tratamento contábil para esse contrato é ",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "registrar o valor total do contrato antecipadamente como despesa no início do contrato. "
+      },
+      {
+        "letra": "B",
+        "texto": "capitalizar o valor do contrato como ativo imobilizado, amortizando ao longo do contrato. "
+      },
+      {
+        "letra": "C",
+        "texto": "reconhecer os pagamentos do arrendamento como despesa no resultado, de forma linear ou sistemática, ao longo do prazo do contrato. "
+      },
+      {
+        "letra": "D",
+        "texto": "reconhecer um ativo de direito de uso e um passivo de arrendamento, ambos, ao valor presente estipulado no contrato. "
+      }
+    ],
+    "gabarito": "C",
+    "gabarito_texto": "reconhecer os pagamentos do arrendamento como despesa no resultado, de forma linear ou sistemática, ao longo do prazo do contrato. ",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false
+  },
     {
         "id": 34,
         "ano": 2025,
@@ -299,72 +524,6 @@
         ],
         "gabarito": "C",
         "gabarito_texto": "R$ 65.000,00.",
-        "resolucao": "",
-        "autor_resolucao": "",
-        "obsoleta": false
-    },
-    {
-        "id": 44,
-        "ano": 2025,
-        "exame": "CFC 2025/2",
-        "banca": "FGV",
-        "tags": [
-            "Valor Justo"
-        ],
-        "enunciado": "De acordo com a NBC TSP - RECEITA DE TRANSAÇÃO SEM CONTRAPRESTAÇÃO, quando uma entidade do setor público adquire um ativo por meio de uma transação sem contraprestação, esse ativo deve ser mensurado inicialmente",
-        "opcoes": [
-            {
-                "letra": "A",
-                "texto": "pelo valor de ativo similar adquirido nos último três anos pela entidade pública."
-            },
-            {
-                "letra": "B",
-                "texto": "pelo valor simbólico de R$ 1,00."
-            },
-            {
-                "letra": "C",
-                "texto": "pelo valor justo do ativo na data de aquisição."
-            },
-            {
-                "letra": "D",
-                "texto": "por valor nenhum, considerando que não houve pagamento na transação."
-            }
-        ],
-        "gabarito": "C",
-        "gabarito_texto": "pelo valor justo do ativo na data de aquisição.",
-        "resolucao": "",
-        "autor_resolucao": "",
-        "obsoleta": false
-    },
-    {
-        "id": 47,
-        "ano": 2025,
-        "exame": "CFC 2025/2",
-        "banca": "FGV",
-        "tags": [
-            "Depreciação/Amortização"
-        ],
-        "enunciado": "Um Auditor foi contratado por uma determinada empresa S.A. para realizar auditoria independente e, na ocasião, deparou com a seguinte situação: nos demonstrativos auxiliares, verificou-se que a empresa adota o método linear de depreciação das máquinas e registra o lançamento mensalmente na contabilidade.\n\nConforme a NBC TA 500 (R1) - EVIDÊNCIA DE AUDITORIA, o procedimento que deverá ser adotado para a confirmação da exatidão dos valores lançados é",
-        "opcoes": [
-            {
-                "letra": "A",
-                "texto": "a confirmação externa."
-            },
-            {
-                "letra": "B",
-                "texto": "a inspeção."
-            },
-            {
-                "letra": "C",
-                "texto": "o recálculo."
-            },
-            {
-                "letra": "D",
-                "texto": "a indagação."
-            }
-        ],
-        "gabarito": "C",
-        "gabarito_texto": "o recálculo.",
         "resolucao": "",
         "autor_resolucao": "",
         "obsoleta": false

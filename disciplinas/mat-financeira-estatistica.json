@@ -1,0 +1,79 @@
+[
+{
+    "id": 3,
+    "ano": 2025,
+    "exame": "CFC 2025/2",
+    "banca": "FGV",
+    "tags": [
+      "Payback",
+      "Fluxo de Caixa Descontado",
+      "Valor Presente",
+      "Taxa Mínima de Atratividade (TMA)",
+      "Juros Compostos",
+      "Taxa Efetiva"
+    ],
+    "enunciado": "A empresa Gama S.A. avalia um projeto com investimento inicial de R$ 300.000,00, a ser realizado na data zero. \nEstimam-se entradas de caixa ao final de cada ano, conforme segue: \n1º ano: R$ 121.000,00; \n2º ano: R$ 121.000,00; \n3º ano em diante: R$ 146.410,00 por ano. \nChama-se payback descontado ao tempo necessário para que a soma dos fluxos de caixa descontados iguale o investimento inicial. \nConsiderando-se uma taxa de desconto de 10% ao ano, o payback do projeto está entre ",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "1 ano e 2 anos. "
+      },
+      {
+        "letra": "B",
+        "texto": "2 anos e 3 anos. "
+      },
+      {
+        "letra": "C",
+        "texto": "3 anos e 4 anos. "
+      },
+      {
+        "letra": "D",
+        "texto": "4 anos e 5 anos. "
+      }
+    ],
+    "gabarito": "B",
+    "gabarito_texto": "2 anos e 3 anos. ",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false
+  },
+  {
+    "id": 4,
+    "ano": 2025,
+    "exame": "CFC 2025/2",
+    "banca": "FGV",
+    "tags": [
+      "Séries de Pagamentos Uniformes",
+      "Juros Compostos",
+      "Sistema de Amortização",
+      "Taxa Efetiva",
+      "Valor Presente"
+    ],
+    "enunciado": "A empresa VGF S.A. tomou um empréstimo bancário de R$ 14.560,00 para financiar a compra de equipamentos. \nO contrato de empréstimo estabelece que o valor tomado deve ser liquidado por meio de uma série postecipada de 3 pagamentos mensais, iguais e sucessivos. \nO regime de capitalização adotado é o de juros compostos, à taxa de 20% ao mês. \nConsiderando essas informações, é correto afirmar que o valor das prestações mensais será de ",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "R$ 4.853,33. "
+      },
+      {
+        "letra": "B",
+        "texto": "R$ 6.400,00. "
+      },
+      {
+        "letra": "C",
+        "texto": "R$ 6.912,00. "
+      },
+      {
+        "letra": "D",
+        "texto": "R$ 7.280,00. "
+      }
+    ],
+    "gabarito": "C",
+    "gabarito_texto": "R$ 6.912,00. ",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false
+  }
+]

@@ -1,70 +1,67 @@
 [
-    {
+        {
         "id": 40,
         "ano": 2025,
         "exame": "CFC 2025/2",
         "banca": "FGV",
-        "tags": [
-            "Margem de Contribuição",
-            "Custos Relevantes para Decisão"
-        ],
-        "enunciado": "Uma fábrica produz e vende apenas malas de mão. O custo fixo mensal da fábrica é de R$ 10.000,00. As malas são produzidas em dois modelos: com duas rodinhas e com quatro rodinhas. As malas com duas rodinhas são vendidas por R$ 200,00 cada, enquanto as malas com quatro rodinhas são vendidas por R$ 370,00 cada. Além disso, o custo variável da mala com duas rodinhas é de R$ 80,00, e o custo variável da de quatro rodinhas é de R$ 140,00. No primeiro trimestre de 2025, a fábrica tinha em estoque 500 unidades de rodinhas e não era possível adquirir mais. No período, as demandas pela produção de malas com duas e quatro rodinhas eram, respectivamente, de 80 e de 100. Considerando que a fábrica tinha como objetivo maximizar o seu lucro, assinale a opção que indica a produção de malas de duas e quatro rodinhas, respectivamente, no período.",
+        "tags": ["Custos para Decisão", "Fator de Limitação", "Margem de Contribuição", "Custos Fixos", "Custos Variáveis"],
+        "enunciado": "Uma fábrica produz e vende apenas malas de mão. O custo fixo mensal da fábrica é de R$ 10.000,00. \nAs malas são produzidas em dois modelos: com duas rodinhas e com quatro rodinhas. \nAs malas com duas rodinhas são vendidas por R$ 200,00 cada, enquanto as malas com quatro rodinhas são vendidas por R$ 370,00 cada. \nAlém disso, o custo variável da mala com duas rodinhas é de R$ 80,00, e o custo variável da de quatro rodinhas é de R$ 140,00. \nNo primeiro trimestre de 2025, a fábrica tinha em estoque 500 unidades de rodinhas e não era possível adquirir mais. \nNo período, as demandas pela produção de malas com duas e quatro rodinhas eram, respectively, de 80 e de 100. \nConsiderando que a fábrica tinha como objetivo maximizar o seu lucro, assinale a opção que indica a produção de malas de duas e quatro rodinhas, respectivamente, no período. ",
         "opcoes": [
-            {
-                "letra": "A",
-                "texto": "50 e 85."
-            },
-            {
-                "letra": "B",
-                "texto": "50 e 100."
-            },
-            {
-                "letra": "C",
-                "texto": "80 e 85."
-            },
-            {
-                "letra": "D",
-                "texto": "80 e 100."
-            }
+        {
+            "letra": "A",
+            "texto": "50 e 85. "
+        },
+        {
+            "letra": "B",
+            "texto": "50 e 100. "
+        },
+        {
+            "letra": "C",
+            "texto": "80 e 85. "
+        },
+        {
+            "letra": "D",
+            "texto": "80 e 100. "
+        }
         ],
         "gabarito": "C",
-        "gabarito_texto": "80 e 85.",
+        "gabarito_texto": "80 e 85. ",
         "resolucao": "",
         "autor_resolucao": "",
-        "obsoleta": false
+        "obsoleta": false,
+        "anulada": false
     },
     {
         "id": 41,
         "ano": 2025,
         "exame": "CFC 2025/2",
         "banca": "FGV",
-        "tags": [
-            "Custos-Padrão e Variações"
-        ],
-        "enunciado": "A empresa Gigulefere S.A. adota o custo padrão e verificou, em abril de 2025, alguns dados para analisar a variação ocorrida (realizado x orçado). Abaixo estão apresentados os dados apurados pelo contador:\na mão de obra direta efetivamente consumida foi 50 horas superior ao padrão estabelecido de 1.500 horas.\no custo incorrido com a mão de obra direta, por unidade de tempo, ficou R$ 7,00 abaixo do valor previsto de R$ 150,00 por hora.\nCom base exclusivamente nos dados apresentados pelo contador, as variações de taxa e eficiência, respectivamente, ocorridas no mês de abril de 2025, foram",
+        "tags": ["Custos para Controle", "Custo Padrão", "Análise de Variações de Custos"],
+        "enunciado": "A empresa Gigulefere S.A. adota o custo padrão e verificou, em abril de 2025, alguns dados para analisar a variação ocorrida (realizado x orçado). \nAbaixo estão apresentados os dados apurados pelo contador: \na mão de obra direta efetivamente consumida foi 50 horas superior ao padrão estabelecido de 1.500 horas. \no custo incorrido com a mão de obra direta, por unidade de tempo, ficou R$ 7,00 abaixo do valor previsto de R$ 150,00 por hora. \nCom base exclusivamente nos dados apresentados pelo contador, as variações de taxa e eficiência, respectivamente, ocorridas no mês de abril de 2025, foram ",
         "opcoes": [
-            {
-                "letra": "A",
-                "texto": "350 desfavorável e 225.000 favorável."
-            },
-            {
-                "letra": "B",
-                "texto": "10.500 favorável e 7.500 desfavorável."
-            },
-            {
-                "letra": "C",
-                "texto": "75.000 desfavorável e 225.000 favorável."
-            },
-            {
-                "letra": "D",
-                "texto": "1.050 favorável e 75.000 desfavorável."
-            }
+        {
+            "letra": "A",
+            "texto": "350 desfavorável e 225.000 favorável. "
+        },
+        {
+            "letra": "B",
+            "texto": "10.500 favorável e 7.500 desfavorável. "
+        },
+        {
+            "letra": "C",
+            "texto": "75.000 desfavorável e 225.000 favorável. "
+        },
+        {
+            "letra": "D",
+            "texto": "1.050 favorável e 75.000 desfavorável. "
+        }
         ],
         "gabarito": "B",
-        "gabarito_texto": "10.500 favorável e 7.500 desfavorável.",
+        "gabarito_texto": "10.500 favorável e 7.500 desfavorável. ",
         "resolucao": "",
         "autor_resolucao": "",
-        "obsoleta": false
+        "obsoleta": false,
+        "anulada": false
     },
     {
         "id": 39,
@@ -135,7 +132,7 @@
     {
         "id": 39,
         "ano": 2024,
-        "exame": "2024/2",
+        "exame": "CFC 2024/2",
         "banca": "FGV",
         "tags": [
             "Custos-Padrão e Variações"
@@ -353,7 +350,7 @@
     {
         "id": 37,
         "ano": 2024,
-        "exame": "2024/1",
+        "exame": "CFC 2024/1",
         "banca": "FGV",
         "tags": [
             "Custos-Padrão e Variações"
@@ -502,7 +499,7 @@
     {
         "id": 40,
         "ano": 2024,
-        "exame": "2024/1",
+        "exame": "CFC 2024/1",
         "banca": "FGV",
         "tags": [
             "Margem de Contribuição",

@@ -13,20 +13,87 @@
  * Veja o arquivo LICENSE para mais detalhes.
  */
 
-/* --- (MODIFICADO) Cores das Disciplinas --- */
+/* --- (MODIFICADO) Cores das 15 Disciplinas --- */
 :root {
+    /* Cores Padrão */
+    --cor-default-bg: #f0f2f5;
+    --cor-default-border: #ddd;
+    --cor-default-text: #333;
+
+    /* Societária (Azul Claro) - MANTIDO */
     --cor-societaria-bg: #e6f7ff;
     --cor-societaria-border: #b3e0ff;
     --cor-societaria-text: #004a91;
     
+    /* Gerencial (Verde) */
     --cor-gerencial-bg: #e6ffed;
     --cor-gerencial-border: #b3f0c8;
     --cor-gerencial-text: #218838;
     
-    /* Cor padrão (se novas disciplinas forem adicionadas sem cor) */
-    --cor-default-bg: #f0f2f5;
-    --cor-default-border: #ddd;
-    --cor-default-text: #333;
+    /* Geral e Teoria (Neutro / Pedra) */
+    --cor-geral-bg: #f5f5f5;
+    --cor-geral-border: #e0e0e0;
+    --cor-geral-text: #5d5d5d;
+
+    /* Português (Roxo / Violeta) */
+    --cor-portugues-bg: #f3e5f5;
+    --cor-portugues-border: #e1bee7;
+    --cor-portugues-text: #4a148c;
+
+    /* Exatas (Laranja) */
+    --cor-exatas-bg: #fff3e0;
+    --cor-exatas-border: #ffe0b2;
+    --cor-exatas-text: #e65100;
+
+    /* Elaborações DC (Ciano) */
+    --cor-elaboracoes-dc-bg: #e0f7fa;
+    --cor-elaboracoes-dc-border: #b2ebf2;
+    --cor-elaboracoes-dc-text: #006064;
+
+    /* Ética (Índigo / Azul Escuro) */
+    --cor-etica-bg: #e8eaf6;
+    --cor-etica-border: #c5cae9;
+    --cor-etica-text: #1a237e;
+
+    /* Direito (Marrom / Bronze) - (Era Vermelho) */
+    --cor-direito-bg: #fdfbeA;
+    --cor-direito-border: #f5eecb;
+    --cor-direito-text: #5D4037;
+
+    /* Custos (Amarelo / Ouro) */
+    --cor-custos-bg: #fffde7;
+    --cor-custos-border: #fff9c4;
+    --cor-custos-text: #f57f17;
+
+    /* Análise DC (Cinza / Ardósia) */
+    --cor-analise-dc-bg: #eceff1;
+    --cor-analise-dc-border: #cfd8dc;
+    --cor-analise-dc-text: #37474f;
+
+    /* Pública (Azul Médio) */
+    --cor-publica-bg: #e3f2fd;
+    --cor-publica-border: #bbdefb;
+    --cor-publica-text: #000000;
+
+    /* Auditoria (Verde Oliva) */
+    --cor-auditoria-bg: #f1f8e9;
+    --cor-auditoria-border: #dcedc8;
+    --cor-auditoria-text: #33691e;
+
+    /* Controladoria (Rosa / Magenta) */
+    --cor-controladoria-bg: #fce4ec;
+    --cor-controladoria-border: #f8bbd0;
+    --cor-controladoria-text: #880e4f;
+
+    /* Perícia (Laranja Queimado / Ferrugem) */
+    --cor-pericia-bg: #fbe9e7;
+    --cor-pericia-border: #ffccbc;
+    --cor-pericia-text: #bf360c;
+
+    /* Tributária (Verde Água / Teal) */
+    --cor-tributaria-bg: #e0f2f1;
+    --cor-tributaria-border: #b2dfdb;
+    --cor-tributaria-text: #004d40;
 }
 
 /* --- Estilos das Tabs --- */
@@ -188,6 +255,110 @@
     background-color: #d0f5d9;
 }
 
+#disciplina-checkbox-container label.disciplina-geral {
+    background-color: var(--cor-geral-bg);
+    border-color: var(--cor-geral-border);
+}
+#disciplina-checkbox-container label.disciplina-geral:hover {
+    background-color: #e8e8e8;
+}
+
+#disciplina-checkbox-container label.disciplina-portugues {
+    background-color: var(--cor-portugues-bg);
+    border-color: var(--cor-portugues-border);
+}
+#disciplina-checkbox-container label.disciplina-portugues:hover {
+    background-color: #eadef0;
+}
+
+#disciplina-checkbox-container label.disciplina-exatas {
+    background-color: var(--cor-exatas-bg);
+    border-color: var(--cor-exatas-border);
+}
+#disciplina-checkbox-container label.disciplina-exatas:hover {
+    background-color: #ffeccf;
+}
+
+#disciplina-checkbox-container label.disciplina-elaboracoes-dc {
+    background-color: var(--cor-elaboracoes-dc-bg);
+    border-color: var(--cor-elaboracoes-dc-border);
+}
+#disciplina-checkbox-container label.disciplina-elaboracoes-dc:hover {
+    background-color: #cbeef2;
+}
+
+#disciplina-checkbox-container label.disciplina-etica {
+    background-color: var(--cor-etica-bg);
+    border-color: var(--cor-etica-border);
+}
+#disciplina-checkbox-container label.disciplina-etica:hover {
+    background-color: #d7dae8;
+}
+
+#disciplina-checkbox-container label.disciplina-direito {
+    background-color: var(--cor-direito-bg);
+    border-color: var(--cor-direito-border);
+}
+#disciplina-checkbox-container label.disciplina-direito:hover {
+    background-color: #f2efe0;
+}
+
+#disciplina-checkbox-container label.disciplina-custos {
+    background-color: var(--cor-custos-bg);
+    border-color: var(--cor-custos-border);
+}
+#disciplina-checkbox-container label.disciplina-custos:hover {
+    background-color: #fff9e0;
+}
+
+#disciplina-checkbox-container label.disciplina-analise-dc {
+    background-color: var(--cor-analise-dc-bg);
+    border-color: var(--cor-analise-dc-border);
+}
+#disciplina-checkbox-container label.disciplina-analise-dc:hover {
+    background-color: #dde3e6;
+}
+
+#disciplina-checkbox-container label.disciplina-publica {
+    background-color: var(--cor-publica-bg);
+    border-color: var(--cor-publica-border);
+}
+#disciplina-checkbox-container label.disciplina-publica:hover {
+    background-color: #d1e6fa;
+}
+
+#disciplina-checkbox-container label.disciplina-auditoria {
+    background-color: var(--cor-auditoria-bg);
+    border-color: var(--cor-auditoria-border);
+}
+#disciplina-checkbox-container label.disciplina-auditoria:hover {
+    background-color: #e6f0e0;
+}
+
+#disciplina-checkbox-container label.disciplina-controladoria {
+    background-color: var(--cor-controladoria-bg);
+    border-color: var(--cor-controladoria-border);
+}
+#disciplina-checkbox-container label.disciplina-controladoria:hover {
+    background-color: #f7d9e4;
+}
+
+#disciplina-checkbox-container label.disciplina-pericia {
+    background-color: var(--cor-pericia-bg);
+    border-color: var(--cor-pericia-border);
+}
+#disciplina-checkbox-container label.disciplina-pericia:hover {
+    background-color: #fbe0da;
+}
+
+#disciplina-checkbox-container label.disciplina-tributaria {
+    background-color: var(--cor-tributaria-bg);
+    border-color: var(--cor-tributaria-border);
+}
+#disciplina-checkbox-container label.disciplina-tributaria:hover {
+    background-color: #ccebe8;
+}
+
 
 /* --- Filtro de Exame/Ano --- */
 .ano-filter-grid {
@@ -325,10 +496,10 @@
 .questao-disciplina-container {
     margin-top: -10px;
     margin-bottom: 15px;
-    display: flex; /* <-- NOVO */
-    flex-wrap: wrap; /* <-- NOVO (para telas pequenas) */
-    gap: 6px; /* <-- NOVO (espaçamento entre as tags) */
-    align-items: center; /* <-- NOVO (alinha as tags) */
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 6px; 
+    align-items: center; 
 }
 
 /* --- (MODIFICADO) Tags de Disciplina (com Cores) --- */
@@ -350,8 +521,10 @@
     background-color: #f0f2f5; /* <-- Cor neutra (fundo do body) */
     color: #555; /* <-- Cor de texto neutra */
     border: 1px solid #ddd; /* <-- Borda sutil */
-    white-space: nowrap; /* Evita que tags longas quebrem a linha no meio */
+    white-space: normal; /* Permite que o texto da tag quebre a linha */
+    overflow-wrap: break-word; /* Força a quebra de palavras muito longas */
 }
+
 /* Aplica cores por classe */
 .disciplina.disciplina-societaria {
     background-color: var(--cor-societaria-bg);
@@ -361,6 +534,59 @@
     background-color: var(--cor-gerencial-bg);
     color: var(--cor-gerencial-text);
 }
+.disciplina.disciplina-geral {
+    background-color: var(--cor-geral-bg);
+    color: var(--cor-geral-text);
+}
+.disciplina.disciplina-portugues {
+    background-color: var(--cor-portugues-bg);
+    color: var(--cor-portugues-text);
+}
+.disciplina.disciplina-exatas {
+    background-color: var(--cor-exatas-bg);
+    color: var(--cor-exatas-text);
+}
+.disciplina.disciplina-elaboracoes-dc {
+    background-color: var(--cor-elaboracoes-dc-bg);
+    color: var(--cor-elaboracoes-dc-text);
+}
+.disciplina.disciplina-etica {
+    background-color: var(--cor-etica-bg);
+    color: var(--cor-etica-text);
+}
+.disciplina.disciplina-direito {
+    background-color: var(--cor-direito-bg);
+    color: var(--cor-direito-text);
+}
+.disciplina.disciplina-custos {
+    background-color: var(--cor-custos-bg);
+    color: var(--cor-custos-text);
+}
+.disciplina.disciplina-analise-dc {
+    background-color: var(--cor-analise-dc-bg);
+    color: var(--cor-analise-dc-text);
+}
+.disciplina.disciplina-publica {
+    background-color: var(--cor-publica-bg);
+    color: var(--cor-publica-text);
+}
+.disciplina.disciplina-auditoria {
+    background-color: var(--cor-auditoria-bg);
+    color: var(--cor-auditoria-text);
+}
+.disciplina.disciplina-controladoria {
+    background-color: var(--cor-controladoria-bg);
+    color: var(--cor-controladoria-text);
+}
+.disciplina.disciplina-pericia {
+    background-color: var(--cor-pericia-bg);
+    color: var(--cor-pericia-text);
+}
+.disciplina.disciplina-tributaria {
+    background-color: var(--cor-tributaria-bg);
+    color: var(--cor-tributaria-text);
+}
+
 
 .questao-header span {
     font-size: 0.9em; font-weight: bold; color: #444; white-space: nowrap;
@@ -543,4 +769,14 @@ details.cpc-referencia a {
 }
 details.cpc-referencia a:hover {
     text-decoration: underline;
+}
+
+.tag-anulada {
+    background-color: #ffcdd2; /* Vermelho claro */
+    color: #b71c1c;           /* Vermelho escuro */
+    font-size: 0.8em;
+    font-weight: 600;
+    padding: 3px 6px;
+    border-radius: 4px;
+    margin-left: 8px;
 }

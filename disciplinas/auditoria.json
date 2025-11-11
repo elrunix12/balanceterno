@@ -1,0 +1,71 @@
+[
+  {
+    "id": 47,
+    "ano": 2025,
+    "exame": "CFC 2025/2",
+    "banca": "FGV",
+    "tags": [
+      "Evidência de Auditoria",
+      "Procedimentos de Auditoria"
+    ],
+    "enunciado": "Um Auditor foi contratado por uma determinada empresa S.A. para realizar auditoria independente e, na ocasião, deparou com a seguinte situação: nos demonstrativos auxiliares, verificou-se que a empresa adota o método linear de depreciação das máquinas e registra o lançamento mensalmente na contabilidade. \nConforme a NBC TA 500 (R1) - EVIDÊNCIA DE AUDITORIA, o procedimento que deverá ser adotado para a confirmação da exatidão dos valores lançados é ",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "a confirmação externa. "
+      },
+      {
+        "letra": "B",
+        "texto": "a inspeção. "
+      },
+      {
+        "letra": "C",
+        "texto": "o recálculo. "
+      },
+      {
+        "letra": "D",
+        "texto": "a indagação. "
+      }
+    ],
+    "gabarito": "C",
+    "gabarito_texto": "o recálculo. ",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false
+  },
+  {
+    "id": 48,
+    "ano": 2025,
+    "exame": "CFC 2025/2",
+    "banca": "FGV",
+    "tags": [
+      "Planejamento da Auditoria"
+    ],
+    "enunciado": "De acordo com a NBC TA 300 (R1) - PLANEJAMENTO DA AUDITORIA DE DEMONSTRAÇÕES CONTÁBEIS, o envolvimento do sócio do trabalho e de outros membros-chave da equipe de trabalho no planejamento da auditoria ",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "garante o controle e o cumprimento das etapas necessárias, fornecendo agilidade ao processo de planejamento. "
+      },
+      {
+        "letra": "B",
+        "texto": "incorpora a sua experiência e seus pontos de vista, otimizando a eficácia e a eficiência do processo de planejamento. "
+      },
+      {
+        "letra": "C",
+        "texto": "aumenta a admiração e o respeito transferidos pela equipe, proporcionando sinergia para o processo de planejamento. "
+      },
+      {
+        "letra": "D",
+        "texto": "melhora a proximidade e o relacionamento com a equipe, contribuindo para a qualidade do processo de planejamento. "
+      }
+    ],
+    "gabarito": "B",
+    "gabarito_texto": "incorpora a sua experiência e seus pontos de vista, otimizando a eficácia e a eficiência do processo de planejamento. ",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false
+  }
+]
