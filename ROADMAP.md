@@ -1,7 +1,7 @@
 # 🗺️ Roadmap - Balanceterno
 
 ## 📅 Atualização do Roadmap
-Última revisão: **10 de novembro de 2025**
+Última revisão: **11 de novembro de 2025**
 
 Este documento apresenta o **planejamento futuro** do projeto.  
 As tarefas aqui descritas representam objetivos de curto e médio prazo.  
