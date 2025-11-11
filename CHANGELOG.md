@@ -3,7 +3,7 @@
 Todas as mudanças notáveis neste projeto serão documentadas neste arquivo.
 O formato é baseado em [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
-## [0.20] - 2025-11-10
+## [0.20] - 2025-11-11
 
 ### Adicionado (Added)
 * **Expansão de Disciplinas:** O projeto foi expandido de 2 para 15 disciplinas. As novas disciplinas adicionadas são:
