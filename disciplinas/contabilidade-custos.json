@@ -128,8 +128,24 @@
             ]
         },
         {
-            "type": "p",
-            "content": "Os custos indiretos de manufatura totalizaram R$ 200.000,00, distribuídos entre as seguintes atividades:\n• Gerenciamento de mudanças de projeto (baseado em pedidos): R$ 140.000,00;\n• Geração e uso de energia operacional (baseado em kWh): R$ 60.000,00.\nNo período, foram produzidas 1.200 unidades do produto X, 1.500 unidades do produto Y e 2.000 unidades do produto Z.\nCom base nesses dados, os custos unitários dos produtos X, Y e Z, respectivamente, são"
+        "type": "p",
+        "content": "Os custos indiretos de manufatura totalizaram R$ 200.000,00, distribuídos entre as seguintes atividades:"
+        },
+        {
+        "type": "p",
+        "content": "• Gerenciamento de mudanças de projeto (baseado em pedidos): R$ 140.000,00;"
+        },
+        {
+        "type": "p",
+        "content": "• Geração e uso de energia operacional (baseado em kWh): R$ 60.000,00."
+        },
+        {
+        "type": "p",
+        "content": "No período, foram produzidas 1.200 unidades do produto X, 1.500 unidades do produto Y e 2.000 unidades do produto Z."
+        },
+        {
+        "type": "p",
+        "content": "Com base nesses dados, os custos unitários dos produtos X, Y e Z, respectivamente, são"
         }
     ],
     "opcoes": [
