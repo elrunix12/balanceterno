@@ -11,7 +11,7 @@ Mudanças já concluídas são movidas para o [`CHANGELOG.md`](CHANGELOG.md).
 
 ## Próxima versão [0.21]:
 - [ ] Adição e classificação de disciplinas da Edição CFC 2025/1
-- [ ] Adição de um filtro para ocutar questões anuladas
+- [ ] Adição de um filtro para ocultar questões anuladas
 - [ ] Alterar comportamento das ementas para ser exibida como oculta na primeira inicialização
 - [ ] Correção de bugs
 
