@@ -780,3 +780,182 @@ details.cpc-referencia a:hover {
     border-radius: 4px;
     margin-left: 8px;
 }
+
+/* --- MODAL DE LANÇAMENTOS (Visual Atualizado) --- */
+.modal-overlay {
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(2px);
+    animation: fadeInOverlay 0.2s ease-out; /* Animação suave de entrada */
+}
+
+.modal-content {
+    background-color: #fff;
+    width: 90%;
+    max-width: 700px;
+    max-height: 90vh;
+    /* Cantos arredondados iguais aos cards (8px) */
+    border-radius: 8px; 
+    box-shadow: 0 5px 25px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    /* IMPORTANTE: overflow: hidden garante que o cabeçalho azul
+       não "vaze" para fora dos cantos arredondados superiores */
+    overflow: hidden; 
+    animation: scaleInModal 0.2s ease-out; /* Animação de "pop" */
+}
+
+/* Cabeçalho Azul para combinar com o site */
+.modal-header {
+    padding: 15px 20px;
+    background-color: #004a91; /* Azul da marca */
+    /* border-bottom: 1px solid #ddd; <- Removido pois não combina com fundo azul */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.modal-header h3 {
+    margin: 0;
+    color: white; /* Texto branco */
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+/* Botão de fechar 'X' branco */
+.modal-close {
+    color: rgba(255, 255, 255, 0.8); /* Branco ligeiramente transparente */
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 1;
+    transition: color 0.2s;
+}
+
+.modal-close:hover {
+    color: white; /* Branco total ao passar o mouse */
+}
+
+.modal-body {
+    padding: 20px;
+    
+    /* Garante que o corpo ocupe todo o espaço sobrando para o scroll funcionar */
+    flex: 1; 
+    
+    /* Scroll no eixo Y */
+    overflow-y: auto; 
+    
+    /* --- SEGREDO DO IPHONE --- */
+    /* Ativa a rolagem "com inércia" (aquela que desliza suave) no iOS */
+    -webkit-overflow-scrolling: touch; 
+    
+    background-color: #f9f9f9; 
+}
+
+/* Animações de entrada (Opcional, mas fica mais bonito) */
+@keyframes fadeInOverlay {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes scaleInModal {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* Estilo do Card de Lançamento (Pequeno ajuste para destacar no fundo novo) */
+.lancamento-card {
+    background-color: #fff; /* Fundo branco para destacar do modal-body cinza */
+    border: 1px solid #eee;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 6px; /* Cantos levemente arredondados nos lançamentos tb */
+    border-left: 4px solid #004a91;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+/* ... (O resto do CSS de .lancamento-meta, .linha-contabil, etc., permanece igual) ... */
+.lancamento-meta {
+    font-family: 'Segoe UI', sans-serif; font-weight: bold; color: #555;
+    margin-bottom: 10px; padding-bottom: 5px; border-bottom: 1px dashed #ccc;
+    display: flex; justify-content: space-between;
+}
+.linha-contabil { display: flex; justify-content: space-between; padding: 3px 0; font-size: 0.95em; }
+.conta-debito { color: #c62828; }
+.conta-credito { color: #2e7d32; padding-left: 40px; }
+.valor-contabil { font-weight: bold; color: #333; font-family: 'Consolas', monospace; }
+.historico-contabil {
+    margin-top: 10px; font-style: italic; color: #666; font-size: 0.9em; font-family: 'Segoe UI', sans-serif;
+}
+
+/* --- Botão Texto Minimalista (Direita) --- */
+.btn-ver-lancamentos {
+    /* Aparência: Apenas texto */
+    background: transparent;
+    border: none;
+    color: #155724; /* Verde Escuro */
+
+    /* Tipografia */
+    font-size: 0.9em;
+    font-weight: 700;
+    font-family: 'Segoe UI', sans-serif;
+    
+    /* Estilo do Link */
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+
+    /* Posicionamento (Desktop: Linha única na direita) */
+    display: block;        /* Comporta-se como bloco para aceitar margens/largura */
+    width: fit-content;    /* Tamanho exato do texto */
+    margin: 10px 0;
+    margin-left: auto;     /* Joga para a direita */
+    
+    /* Alinhamento do texto */
+    text-align: right;     /* Garante que, se quebrar, alinha pela direita */
+
+    /* Interação */
+    cursor: pointer;
+    opacity: 0.85;
+    transition: all 0.2s ease;
+}
+
+/* Hover */
+.btn-ver-lancamentos:hover {
+    opacity: 1;
+    color: #000;
+    transform: translateX(-2px);
+}
+
+/* --- VERSÃO MOBILE (Quebra o texto em 2 linhas) --- */
+@media (max-width: 600px) {
+    .btn-ver-lancamentos {
+        /* O Pulo do Gato: força a largura ser a da menor palavra possível,
+           o que obriga "Lançamentos" e "Contábeis" a ficarem um em cima do outro */
+        width: min-content; 
+        
+        line-height: 1.3;   /* Altura de linha confortável */
+        margin-top: 15px;   /* Um pouco mais de espaço do gabarito */
+    }
+}
+
+/* Ajuste para telas pequenas */
+@media (max-width: 600px) {
+    .modal-content {
+        width: 95%; /* Aproveita mais a largura da tela */
+        max-height: 85vh; /* Evita ficar muito colado nas barras do navegador mobile */
+    }
+    .linha-contabil {
+        font-size: 0.85em; /* Reduz um tiquinho para não quebrar linha fácil */
+    }
+    .conta-credito {
+        padding-left: 20px; /* Reduz o recuo para caber na tela */
+    }
+}

@@ -208,6 +208,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- LÓGICA DE OCULTAR E FILTRAR EMENTAS ---
     const btnToggleEmentas = document.getElementById('btn-toggle-ementas');
     const searchEmentasInput = document.getElementById('search-ementas-input');
+    const ementasWrapper = document.getElementById('ementas-toggle-wrapper');
+    
+    ementasWrapper.style.display = 'none';
+    btnToggleEmentas.dataset.visible = 'false';
+    btnToggleEmentas.textContent = '[ Exibir ]'
 
     btnToggleEmentas.addEventListener('click', () => {
         const wrapper = document.getElementById('ementas-toggle-wrapper');
@@ -262,6 +267,12 @@ document.addEventListener('DOMContentLoaded', () => {
         renderizarFiltrosDeEmenta(); // Atualiza ementas (vai mostrar o aviso)
         renderizarQuestoes(); // Atualiza questões (vai mostrar o prompt inicial)
         atualizarBotaoDisciplinas(); // Sincroniza o botão "Marcar Todas"
+
+        document.getElementById('ementas-toggle-wrapper').style.display = 'none';
+        btnToggleEmentas.dataset.visible = 'false';
+        btnToggleEmentas.textContent = '[ Exibir ]';
+        searchEmentasInput.value = '';
+    });
 
         // Expande e limpa o filtro de ementas
         document.getElementById('ementas-toggle-wrapper').style.display = 'block';
@@ -419,6 +430,16 @@ document.addEventListener('DOMContentLoaded', () => {
         const disciplinasSelecionadas = Array.from(
             disciplinaCheckContainer.querySelectorAll('.disciplina-filter-check:checked')
         ).map(check => check.value);
+
+        // Força o contêiner de ementas a ficar oculto por padrão ao renderizar
+        const wrapper = document.getElementById('ementas-toggle-wrapper');
+        const btnToggle = document.getElementById('btn-toggle-ementas');
+        
+        wrapper.style.display = 'none'; // Oculta a lista
+        if (btnToggle) {
+            btnToggle.dataset.visible = 'false';
+            btnToggle.textContent = '[ Exibir ]'; // Reseta o texto do botão
+        }
 
         // Se nenhuma disciplina estiver marcada, mostra um aviso
         if (disciplinasSelecionadas.length === 0) {
@@ -810,6 +831,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 `;
             }
 
+            // --- BOTÃO DE LANÇAMENTOS ---
+            let botaoLancamentosHTML = '';
+            if (questao.lancamentos && Array.isArray(questao.lancamentos) && questao.lancamentos.length > 0) {
+                // Prepara o JSON para ser guardado no botão (escapa as aspas)
+                const lancamentosJSON = JSON.stringify(questao.lancamentos).replace(/"/g, '&quot;');
+                botaoLancamentosHTML = `
+                    <button class="btn-ver-lancamentos" data-lancamentos="${lancamentosJSON}">
+                        Lançamentos Contábeis
+                    </button>
+                `;
+            }
+
             const cardHTML = `
                 <div class="questao-card" data-gabarito="${questao.gabarito}">
                     <div class="questao-header">
@@ -836,7 +869,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <div class="gabarito-texto">
                             <strong>Gabarito: (${questao.gabarito})</strong> ${questao.gabarito_texto}
                         </div>
-                        ${resolucaoHTML} 
+                        ${botaoLancamentosHTML} ${resolucaoHTML} 
                         ${autorHTML} 
                         ${cpcHTML}
                     </div>
@@ -1087,4 +1120,42 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-}); // Fim do DOMContentLoaded
+    // --- LÓGICA DO MODAL DE LANÇAMENTOS ---
+    const modalLancamentos = document.getElementById('modal-lancamentos');
+    const modalBody = document.getElementById('modal-body');
+    const btnFecharModal = document.getElementById('btn-fechar-modal');
+
+    // Fechar modal
+    if(btnFecharModal) btnFecharModal.addEventListener('click', () => modalLancamentos.style.display = 'none');
+    if(modalLancamentos) {
+        modalLancamentos.addEventListener('click', (e) => {
+            if (e.target === modalLancamentos) modalLancamentos.style.display = 'none';
+        });
+    }
+
+    // Abrir modal (Delegação de evento nos botões dinâmicos)
+    questoesContainer.addEventListener('click', (e) => {
+        const btn = e.target.closest('.btn-ver-lancamentos');
+        if (!btn) return;
+
+        try {
+            const lista = JSON.parse(btn.getAttribute('data-lancamentos'));
+            let html = '';
+            
+            lista.forEach(lanc => {
+                let linhas = '';
+                if (lanc.debitos) lanc.debitos.forEach(d => linhas += `<div class="linha-contabil"><span class="conta-debito"><strong>D</strong> - ${d.conta}</span><span class="valor-contabil">${d.valor}</span></div>`);
+                if (lanc.creditos) lanc.creditos.forEach(c => linhas += `<div class="linha-contabil"><span class="conta-credito"><strong>C</strong> - ${c.conta}</span><span class="valor-contabil">${c.valor}</span></div>`);
+                
+                html += `
+                    <div class="lancamento-card">
+                        <div class="lancamento-meta"><span>${lanc.titulo || 'Lançamento'}</span><span>${lanc.data || ''}</span></div>
+                        <div class="lancamento-contas">${linhas}</div>
+                        <div class="historico-contabil">(${lanc.historico || 'Sem histórico'})</div>
+                    </div>`;
+            });
+            
+            modalBody.innerHTML = html;
+            modalLancamentos.style.display = 'flex';
+        } catch (err) { console.error(err); }
+    }); // Fim do DOMContentLoaded

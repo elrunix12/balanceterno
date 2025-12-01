@@ -44,7 +44,7 @@ Status | Descrição | Impacto | Prioridade | Correção prevista | Observaçõe
 | ⬜ | 13 CFC 2023/2 | Contabilidade Societária | Contabilidade Geral | Aguardando adição da edição do exame | 🟠 Baixa | — |
 | ⬜ | 17 CFC 2023/2 | Contabilidade Societária | Contabilidade Geral | Aguardando adição da edição do exame | 🟠 Baixa | — |
 | ⬜ | 36 CFC 2024/1 | Contabilidade Societária | Contabilidade Geral | Aguardando adição da edição do exame | 🟡 Média | — |
-| ⬜ | 28 CFC 2025/1 | Contabilidade Societária | Contabilidade Geral | Aguardando adição da edição do exame | 🟡 Média | — |
+| ✅ | 28 CFC 2025/1 | Contabilidade Societária | Contabilidade Geral | Aguardando adição da edição do exame | 🟡 Média | — |
 
 ---
 

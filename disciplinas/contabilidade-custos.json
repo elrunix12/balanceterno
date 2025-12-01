@@ -172,5 +172,152 @@
     "autor_resolucao": "",
     "obsoleta": false,
     "anulada": false
+  },
+  {
+    "id": "35",
+    "ano": 2025,
+    "exame": "CFC 2025/1",
+    "banca": "FGV",
+    "tags": [
+      "Métodos de Custeamento",
+      "Custeio Variável",
+      "Apuração de Custos"
+    ],
+    "enunciado": "A Indústria Cadeiras Maceió Ltda. produz e comercializa cadeiras de escritório. No mês de setembro de X4, a empresa produziu 30.000 cadeiras e não possuía estoque inicial. No mês, vendeu 24.000 unidades a um preço unitário de R$ 100,00. Os custos variáveis totais, incluindo matéria -prima, mão de obra direta e outros custos variáveis, somaram R$ 1.800.000,00. Os custos fixos, compostos principalmente por aluguel da fábrica, depreciação do maquinário e salários fixos dos supervisores da produção, totalizaram R$ 200.000,00. As despesas fixas, como gastos com administração e vendas, somaram R$ 100.000,00. Com base nessas informações, o lucro obtido com as vendas, aplicando o método de custeio v ariável, foi de",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "R$ 660.000,00."
+      },
+      {
+        "letra": "B",
+        "texto": "R$ 960.000,00."
+      },
+      {
+        "letra": "C",
+        "texto": "R$ 700.000,00."
+      },
+      {
+        "letra": "D",
+        "texto": "R$ 300.000,00."
+      }
+    ],
+    "gabarito": "A",
+    "anulada": false,
+    "gabarito_texto": "R$ 660.000,00.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "lancamentos": []
+  },
+  {
+    "id": "36",
+    "ano": 2025,
+    "exame": "CFC 2025/1",
+    "banca": "FGV",
+    "tags": [
+      "Classificação de Custos",
+      "Custos Fixos"
+    ],
+    "enunciado": "Em janeiro de 2024, uma fábrica que produz bolas de futebol incorreu nos seguintes gastos: aluguel do imóvel e das máquinas: R$ 30.000,00; embalagens indispensáveis ao produto final: R$ 2.000,00; matéria -prima: R$ 10.000,00; seguro do imóvel: R$ 5.000,00. Assinale a opção que indica os custos fixos da fábrica no mês.",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "R$ 5.000,00."
+      },
+      {
+        "letra": "B",
+        "texto": "R$ 30.000,00."
+      },
+      {
+        "letra": "C",
+        "texto": "R$ 35.000,00."
+      },
+      {
+        "letra": "D",
+        "texto": "R$ 45.000,00."
+      }
+    ],
+    "gabarito": "C",
+    "anulada": false,
+    "gabarito_texto": "R$ 35.000,00.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "lancamentos": []
+  },
+  {
+    "id": "37",
+    "ano": 2025,
+    "exame": "CFC 2025/1",
+    "banca": "FGV",
+    "tags": [
+      "Departamentalização",
+      "Centros de Custos"
+    ],
+    "enunciado": "Leia o fragmento a seguir: “Departamento é a unidade _____ administrativa para a Contabilidade de Custos, representada, na maioria dos casos, por pessoas e máquinas, em que se desenvolvem atividades _____.” Assinale a opção cujos itens completam corretamente as lacunas do fragmento.",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "padrão – heterogêneas"
+      },
+      {
+        "letra": "B",
+        "texto": "mínima – homogêneas"
+      },
+      {
+        "letra": "C",
+        "texto": "máxima – complementares"
+      },
+      {
+        "letra": "D",
+        "texto": "padrão – complementares"
+      }
+    ],
+    "gabarito": "B",
+    "anulada": false,
+    "gabarito_texto": "mínima – homogêneas",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "lancamentos": []
+  },
+  {
+    "id": "38",
+    "ano": 2025,
+    "exame": "CFC 2025/1",
+    "banca": "FGV",
+    "tags": [
+      "Gastos",
+      "Custos",
+      "Despesas",
+      "Investimento"
+    ],
+    "enunciado": "Gasto pode ser definido como o sacrifício financeiro necessário para obter um produto ou serviço, representado pela entrega ou promessa de entrega de ativos. Assim, custos, despesas, investimentos e desembolsos são tipos de gastos. Em relação ao tema, analise as afirmativas a seguir. \nI. Custo é um gasto diretamente relacionado a um bem ou serviço utilizado na produção de outros bens e serviços. \nII. Despesa é um gasto com bens ou serviços consumidos direta ou indiretamente para obtenção de receitas. \nIII. Investimento é um gasto que se tornou um item do patrimônio líquido em função da expectativa de geração futura de caixa para a entidade ou em função de sua vida útil. \nIV. Desembolso é um gasto que ocorre quando bens ou serviços são consumidos de forma anormal e/ou involuntária que afetam diretamente o resultado da entidade. \nEstão corretas as afirmativas",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "III e IV, apenas."
+      },
+      {
+        "letra": "B",
+        "texto": "I, II e III, apenas."
+      },
+      {
+        "letra": "C",
+        "texto": "I e II, apenas."
+      },
+      {
+        "letra": "D",
+        "texto": "II, III e IV, apenas."
+      }
+    ],
+    "gabarito": "C",
+    "anulada": false,
+    "gabarito_texto": "I e II, apenas.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "lancamentos": []
   }
 ]

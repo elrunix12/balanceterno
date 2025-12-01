@@ -71,5 +71,80 @@
     "autor_resolucao": "",
     "obsoleta": false,
     "anulada": false
+  },
+  {
+    "id": "45",
+    "ano": 2025,
+    "exame": "CFC 2025/1",
+    "banca": "FGV",
+    "tags": [
+      "Avaliação de Desempenho",
+      "Modelos de Avaliação de Desempenho",
+      "Custo de Oportunidade",
+      "Sistema de Avaliação de Desempenho"
+    ],
+    "enunciado": "Em 2022, uma entidade tinha o seu desempenho financeiro analisado com base no Retorno sobre o Investimento. Em 2023, a administração da entidade determinou que o seu desempenho passasse a ser avaliado com base no EVA (Valor Econômico Agregado). Uma vantagem dessa substituição é a incorporação, na avaliação,",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "do custo de oportunidade."
+      },
+      {
+        "letra": "B",
+        "texto": "das receitas operacionais."
+      },
+      {
+        "letra": "C",
+        "texto": "das despesas operacionais."
+      },
+      {
+        "letra": "D",
+        "texto": "das receitas financeiras."
+      }
+    ],
+    "gabarito": "A",
+    "anulada": false,
+    "gabarito_texto": "do custo de oportunidade.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "lancamentos": []
+  },
+  {
+    "id": "46",
+    "ano": 2025,
+    "exame": "CFC 2025/1",
+    "banca": "FGV",
+    "tags": [
+      "Planejamento Estratégico",
+      "Plano Estratégico",
+      "Planejamento Empresarial"
+    ],
+    "enunciado": "A Administração de uma empresa, na elaboração de seu plano estratégico, deve, na medida do possível, observar alguns aspectos de formalidade necessários dado a sua relevância e seu impacto nas operações da empresa. A respeito desse tema, avalie as afirmativas a seguir e assinale (V) para a verdadeira e (F) para a falsa. \n( ) O Plano Estratégico deve ser executado pela Controladoria sob o comando da alta administração da empresa. \n( ) Uma vez elaborado e aprovado, o Plano Estratégico não deve ser alterado ou ajustado. \n( ) Planejamento Estratégico é a atividade que se ocupa da implementação do Plano Estratégico e assegura que os recursos necessários foram obtidos e também que estão sendo usados de maneira eficiente. \n( ) A elaboração de um Planejamento Estratégico deve levar em consideração que todas as decisões são interdependentes, sejam elas simples ou complexas. Assim, um dos principais desafios dessa atividade é um ajustamento dessa cadeia sistêmica de decisões e a avaliação de suas consequências. \nAs afirmativas são, respectivamente,",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "F – V – V – F."
+      },
+      {
+        "letra": "B",
+        "texto": "F – V – F – V."
+      },
+      {
+        "letra": "C",
+        "texto": "V – F – F – V."
+      },
+      {
+        "letra": "D",
+        "texto": "V – F – V – F."
+      }
+    ],
+    "gabarito": "C",
+    "anulada": false,
+    "gabarito_texto": "V – F – F – V.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "lancamentos": []
   }
 ]

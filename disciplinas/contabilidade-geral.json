@@ -312,10 +312,121 @@
     ],
     "gabarito": "C",
     "gabarito_texto": "R$ 4.660,00. ",
-    "resolucao": "",
-    "autor_resolucao": "",
+    "resolucao": "Estoque inicial em 01/01: 20 livros a R$ 80.\n\nVenda em 28/01: 10 livros.\nPelo PEPS, todos saem do estoque inicial.\nCMV = 10 × 80 = 800.\nEstoque restante: 10 livros a 80.\n\nCompra em 05/02: 15 livros a 90.\nEstoque: 10 livros a 80 e 15 livros a 90.\n\nVenda em 25/02: 18 livros.\nPEPS:\n– Saem 10 livros a 80 = 800.\n– Saem 8 livros a 90 = 720.\nCMV = 1520.\nEstoque restante: 7 livros a 90.\n\nCompra em 05/03: 20 livros a 95.\nEstoque: 7 livros a 90 e 20 livros a 95.\n\nVenda em 28/03: 25 livros.\nPEPS:\n– Saem 7 livros a 90 = 630.\n– Saem 18 livros a 95 = 1710.\nCMV = 2340.\n\nSomando todos os CMVs:\n800 + 1520 + 2340 = 4660.",
+    "autor_resolucao": "elrunix12",
     "obsoleta": false,
-    "anulada": false
+    "anulada": false,
+    "lancamentos": [
+        {
+            "titulo": "Venda de livros",
+            "data": "28/01",
+            "historico": "",
+            "debitos": [
+                {
+                    "conta": "Banco (AC)",
+                    "valor": "1400"
+                },
+                {
+                    "conta": "CMV (DRE)",
+                    "valor": "800"
+                }
+            ],
+            "creditos": [
+                {
+                    "conta": "Receita de vendas (DRE)",
+                    "valor": "1400"
+                },
+                {
+                    "conta": "Estoque (AC)",
+                    "valor": "800"
+                }
+            ]
+        },
+        {
+            "titulo": "Compra de livros",
+            "data": "05/02",
+            "historico": "",
+            "debitos": [
+                {
+                    "conta": "Estoque (AC)",
+                    "valor": "1350"
+                }
+            ],
+            "creditos": [
+                {
+                    "conta": "Banco (AC)",
+                    "valor": "1350"
+                }
+            ]
+        },
+        {
+            "titulo": "Venda de livros",
+            "data": "25/02",
+            "historico": "",
+            "debitos": [
+                {
+                    "conta": "Banco (AC)",
+                    "valor": "2700"
+                },
+                {
+                    "conta": "CMV (DRE)",
+                    "valor": "1520"
+                }
+            ],
+            "creditos": [
+                {
+                    "conta": "Receita de vendas (DRE)",
+                    "valor": "2700"
+                },
+                {
+                    "conta": "Estoque (AC)",
+                    "valor": "1520"
+                }
+            ]
+        },
+        {
+            "titulo": "Compra de livros",
+            "data": "05/03",
+            "historico": "",
+            "debitos": [
+                {
+                    "conta": "Estoque (AC)",
+                    "valor": "1900"
+                }
+            ],
+            "creditos": [
+                {
+                    "conta": "Banco (AC)",
+                    "valor": "1900"
+                }
+            ]
+        },
+        {
+            "titulo": "Venda de livros",
+            "data": "28/03",
+            "historico": "",
+            "debitos": [
+                {
+                    "conta": "Banco (AC)",
+                    "valor": "3750"
+                },
+                {
+                    "conta": "CMV (DRE)",
+                    "valor": "2340"
+                }
+            ],
+            "creditos": [
+                {
+                    "conta": "Receita de vendas (DRE)",
+                    "valor": "3750"
+                },
+                {
+                    "conta": "Estoque (AC)",
+                    "valor": "2340"
+                }
+            ]
+        }
+    ]
   },
   {
     "id": 36,
@@ -386,5 +497,362 @@
     "autor_resolucao": "",
     "obsoleta": false,
     "anulada": false
+  },
+  {
+    "id": "11",
+    "ano": 2025,
+    "exame": "CFC 2025/1",
+    "banca": "FGV",
+    "tags": [
+      "Estrutura Conceitual para Relatório Financeiro"
+    ],
+    "enunciado": "Um supermercado funciona na região sul do país. Em maio de 2024, devido às fortes chuvas, o supermercado perdeu todo o seu estoque. Nas demonstrações contábeis mensais, em 31/05/24, o supermercado optou por baixar todo o estoque, mesmo sem ter recebido um laudo oficial, de modo a tornar as demonstrações mais úteis aos tomadores de decisões. \nA informação apresenta a seguinte característica qualitativa:",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "neutralidade."
+      },
+      {
+        "letra": "B",
+        "texto": "materialidade."
+      },
+      {
+        "letra": "C",
+        "texto": "verificabilidade."
+      },
+      {
+        "letra": "D",
+        "texto": "tempestividade."
+      }
+    ],
+    "gabarito": "D",
+    "anulada": false,
+    "gabarito_texto": "tempestividade.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "lancamentos": []
+  },
+  {
+    "id": "13",
+    "ano": 2025,
+    "exame": "CFC 2025/1",
+    "banca": "FGV",
+    "tags": [
+      "Fundamentos e Patrimônio",
+      "Estrutura Conceitual para Relatório Financeiro"
+    ],
+    "enunciado": "De acordo com a NBC TG Estrutura Conceitual - ESTRUTURA CONCEITUAL PARA RELATÓRIO FINANCEIRO, patrimônio líquido é a participação nos ativos da entidade após",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "a dedução de seus passivos."
+      },
+      {
+        "letra": "B",
+        "texto": "a dedução de suas despesas."
+      },
+      {
+        "letra": "C",
+        "texto": "o acréscimo de suas receitas."
+      },
+      {
+        "letra": "D",
+        "texto": "o acréscimo de seus passivos."
+      }
+    ],
+    "gabarito": "A",
+    "anulada": false,
+    "gabarito_texto": "a dedução de seus passivos.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "lancamentos": []
+  },
+  {
+    "id": "14",
+    "ano": 2025,
+    "exame": "CFC 2025/1",
+    "banca": "FGV",
+    "tags": [
+      "Estrutura Conceitual para Relatório Financeiro"
+    ],
+    "enunciado": "Segundo a NBC TG ESTRUTURA CONCEITUAL, para a representação dos relatórios financeiros ser fidedigna ela precisa ser",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "completa, neutra e isenta de erros."
+      },
+      {
+        "letra": "B",
+        "texto": "confiável, tempestiva e com erros mínimos."
+      },
+      {
+        "letra": "C",
+        "texto": "tempestiva, útil e comparável."
+      },
+      {
+        "letra": "D",
+        "texto": "consistente, completa e compreensível."
+      }
+    ],
+    "gabarito": "A",
+    "anulada": false,
+    "gabarito_texto": "completa, neutra e isenta de erros.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "lancamentos": []
+  },
+  {
+    "id": "17",
+    "ano": 2025,
+    "exame": "CFC 2025/1",
+    "banca": "FGV",
+    "tags": [
+      "Estrutura Conceitual para Relatório Financeiro"
+    ],
+    "enunciado": "",
+    "enunciado_blocos": [
+        {
+            "type": "p",
+            "content": "A NBC TG ESTRUTURA CONCEITUAL descreve uma série de conceitos utilizados para a elaboração de relatórios financeiros para\nfins gerais."
+        },
+        {
+            "type": "p",
+            "content": "Relacione cada elemento a seguir com sua correta definição segundo a Estrutura Conceitual."
+        },
+        {
+            "type": "table",
+            "headerRows": [
+                [
+                    {
+                        "content": "Elemento",
+                        "colspan": 1,
+                        "rowspan": 1,
+                        "isEmpty": false
+                    },
+                    {
+                        "content": "Definição",
+                        "colspan": 1,
+                        "rowspan": 1,
+                        "isEmpty": false
+                    }
+                ]
+            ],
+            "bodyRows": [
+                [
+                    "a. Despesa",
+                    "I. Aumentos nos ativos, ou reduções nos passivos, que resultam em aumento no patrimônio líquido."
+                ],
+                [
+                    "b. Patrimônio Líquido",
+                    "II. Reduções nos ativos, ou aumentos nos passivos, que resultam em reduções no patrimônio líquido."
+                ],
+                [
+                    "c. Receita",
+                    "III. Participação residual nos ativos da entidade após a dedução de todos os seus passivos."
+                ]
+            ]
+        }
+    ],
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "II – III – I."
+      },
+      {
+        "letra": "B",
+        "texto": "I – III – II."
+      },
+      {
+        "letra": "C",
+        "texto": "II – I – III."
+      },
+      {
+        "letra": "D",
+        "texto": "I – II – III."
+      }
+    ],
+    "gabarito": "A",
+    "anulada": false,
+    "gabarito_texto": "II – III – I.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "lancamentos": []
+  },
+  {
+    "id": "23",
+    "ano": 2025,
+    "exame": "CFC 2025/1",
+    "banca": "FGV",
+    "tags": [
+      "Regimes Contábeis"
+    ],
+    "enunciado": "A sociedade empresária Solar administra a carreira de influenciadores digitais. As empresas interessadas em divulgar o seu produto ou serviço por meio dos influenciadores devem pagar para a Solar R$ 20.000,00 por um pacote que consiste em oito inserções em redes socias, sendo quatro ao mês. Em 01/05/2024, a Cia Yellow assinou contrato e pagou, à vista, R$ 20.000,00 para a Cia Solar. Foram realizadas quatro inserções em junho e quatro em julho. A Cia Yellow estimou que, por conta da divulgação, o seu faturamento aumentou em R$ 15.000,00 em agosto e em R$ 18.000,00 em setembro. De acordo com o Regime de Competência, a despesa com a divulgação deve ser reconhecida pela Cia Yellow do seguinte modo:",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "R$ 20.000,00 em maio."
+      },
+      {
+        "letra": "B",
+        "texto": "R$ 10.000,00 em junho e R$ 10.000,00 em julho."
+      },
+      {
+        "letra": "C",
+        "texto": "R$ 10.000,00 em agosto e R$ 10.000,00 em setembro."
+      },
+      {
+        "letra": "D",
+        "texto": "R$ 5.000,00 em cada um dos meses de junho a setembro."
+      }
+    ],
+    "gabarito": "B",
+    "anulada": false,
+    "gabarito_texto": "R$ 10.000,00 em junho e R$ 10.000,00 em julho.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "lancamentos": []
+  },
+  {
+    "id": "28",
+    "ano": 2025,
+    "exame": "CFC 2025/1",
+    "banca": "FGV",
+    "tags": [
+      "Balanço Patrimonial"
+    ],
+    "enunciado": "Uma empresa de doces e bolos possui em 31/12/X0 os seguintes saldos em seu Balanço Patrimonial: \n• Caixa e equivalentes de caixa: R$ 100.000,00; \n• Empréstimos a pagar de curto prazo: R$ 250.000,00; \n• Financiamentos a pagar de longo prazo: R$ 330.000,00; \n• Imobilizado: R$ 450.000,00; \n• Intangível: R$ 320.000,00; \n• Estoques: R$ 250.000,00; \n• Capital Social: R$ 540.000,00. \nCom base nesses saldos, o valor do ativo não circulante da empresa é",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "R$ 770.000,00."
+      },
+      {
+        "letra": "B",
+        "texto": "R$ 350.000,00."
+      },
+      {
+        "letra": "C",
+        "texto": "R$ 1.020.000,00."
+      },
+      {
+        "letra": "D",
+        "texto": "R$ 450.000,00."
+      }
+    ],
+    "gabarito": "A",
+    "anulada": false,
+    "gabarito_texto": "R$ 770.000,00.",
+    "resolucao": "O Ativo Não Circulante é composto pelos ativos de longo prazo da empresa. Com base nos saldos fornecidos, as contas que se classificam como Ativo Não Circulante são:\n\n- Imobilizado: R$ 450.000,00\n- Intangível: R$ 320.000,00\n\nSoma do Ativo Não Circulante = R$ 450.000,00 + R$ 320.000,00 = R$ 770.000,00.\n\nAs demais contas são classificadas como:\n- Caixa e Estoques: Ativo Circulante.\n- Empréstimos (CP): Passivo Circulante.\n- Financiamentos (LP): Passivo Não Circulante.\n- Capital Social: Patrimônio Líquido.",
+    "autor_resolucao": "elrunix12",
+    "obsoleta": false,
+    "lancamentos": []
+  },
+  {
+    "id": "29",
+    "ano": 2025,
+    "exame": "CFC 2025/1",
+    "banca": "FGV",
+    "tags": [
+      "Regimes Contábeis"
+    ],
+    "enunciado": "A empresa ABC S.A. comprou materiais, em agosto de X1, com a finalidade de utilizá -los em suas atividades. O pagamento foi realizado em novembro de X1, e os materiais foram utilizados na prestação de serviços em setembro de X1. Esses materiais devem ser reconhecidos como despesa no mês de",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "novembro de X1."
+      },
+      {
+        "letra": "B",
+        "texto": "setembro de X1."
+      },
+      {
+        "letra": "C",
+        "texto": "agosto de X1."
+      },
+      {
+        "letra": "D",
+        "texto": "dezembro de X1."
+      }
+    ],
+    "gabarito": "B",
+    "anulada": false,
+    "gabarito_texto": "setembro de X1.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "lancamentos": []
+  },
+  {
+    "id": 30,
+    "ano": 2025,
+    "exame": "CFC 2025/1",
+    "banca": "FGV",
+    "tags": [
+        "Balanço Patrimonial"
+    ],
+    "enunciado": "Relacione as contas contábeis do balanço patrimonial apresentadas a seguir com seus respectivas grupos contábeis.\n1. Empréstimos a pagar após 12 meses.\n2. Contas a receber em 5 meses.\n3. Contas a pagar em 3 meses.\n4. Imóveis para uso por 10 anos.\n( ) Ativo Circulante.\n( ) Ativo Não Circulante.\n( ) Passivo Circulante.\n( ) Passivo Não Circulante.\nA relação correta, na ordem apresentada, é",
+    "opcoes": [
+        {
+            "letra": "A",
+            "texto": "4-2-1-3."
+        },
+        {
+            "letra": "B",
+            "texto": "2-4-3-1."
+        },
+        {
+            "letra": "C",
+            "texto": "3-1-2-4."
+        },
+        {
+            "letra": "D",
+            "texto": "1-3-4-2."
+        }
+    ],
+    "gabarito": "B",
+    "gabarito_texto": "2-4-3-1.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false
+  },
+  {
+    "id": "31",
+    "ano": 2025,
+    "exame": "CFC 2025/1",
+    "banca": "FGV",
+    "tags": [
+      "Capital Social"
+    ],
+    "enunciado": "Assinale a opção que contempla apenas componentes do Patrimônio Líquido, descritos na Lei nº 6.404/76 e alterações posteriores.",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "Capital Social – Investimentos – Ações em Tesouraria."
+      },
+      {
+        "letra": "B",
+        "texto": "Capital Social – Dividendos Obrigatórios a Pagar – Ajustes de Avaliação Patrimonial."
+      },
+      {
+        "letra": "C",
+        "texto": "Reservas de Capital – Reservas de Lucros – Ações em Tesouraria."
+      },
+      {
+        "letra": "D",
+        "texto": "Ajustes de Avaliação Patrimonial – Capital Social – Debêntures."
+      }
+    ],
+    "gabarito": "C",
+    "anulada": false,
+    "gabarito_texto": "Reservas de Capital – Reservas de Lucros – Ações em Tesouraria.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "lancamentos": []
   }
 ]

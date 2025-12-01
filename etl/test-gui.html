@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizador (Gabarito Aberto) - Balanceterno</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f0f2f5; padding: 20px; max-width: 900px; margin: 0 auto; color: #333; }
+        
+        /* Header e Controles */
+        .controls-box { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); margin-bottom: 25px; display: flex; flex-wrap: wrap; gap: 15px; align-items: center; justify-content: space-between; }
+        .upload-group { display: flex; flex-direction: column; gap: 5px; }
+        .filter-group { display: flex; flex-direction: column; gap: 5px; flex-grow: 1; max-width: 300px; }
+        
+        input[type="file"] { padding: 5px; }
+        select { padding: 8px; border-radius: 5px; border: 1px solid #ccc; font-size: 1rem; }
+        
+        .stats { font-weight: bold; color: #2c3e50; font-size: 0.9em; width: 100%; text-align: right; margin-top: 5px; border-top: 1px solid #eee; padding-top: 5px; }
+
+        /* Cards das Questões */
+        .questao-card { background: white; padding: 25px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); margin-bottom: 20px; border-left: 5px solid #3498db; position: relative; }
+        
+        .meta-header { display: flex; justify-content: space-between; margin-bottom: 15px; align-items: flex-start; }
+        .tags { display: flex; flex-wrap: wrap; gap: 5px; }
+        .tag { background: #ecf0f1; padding: 4px 8px; border-radius: 4px; font-size: 0.75em; color: #555; font-weight: 600; }
+        .disciplina-badge { background: #2c3e50; color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.75em; text-transform: uppercase; letter-spacing: 0.5px; }
+        
+        .enunciado { font-size: 1.05em; line-height: 1.6; margin-bottom: 20px; white-space: pre-line; }
+        
+        .opcao { display: flex; margin-bottom: 8px; padding: 10px; border: 1px solid #e1e4e8; border-radius: 6px; }
+        /* Removi o hover e cursor pointer pois agora é só visualização */
+        .letra { font-weight: bold; width: 35px; color: #2980b9; flex-shrink: 0; }
+        
+        /* GABARITO SEMPRE VISÍVEL AGORA */
+        .gabarito-area { 
+            margin-top: 20px; 
+            padding: 15px; 
+            background: #e8f8f5; /* Verdinho claro */
+            border-radius: 6px; 
+            border: 1px solid #27ae60; 
+            display: block; /* Visível por padrão */
+        }
+        
+        .anulada-badge { background: #e74c3c; color: white; padding: 2px 6px; border-radius: 3px; font-size: 0.7em; text-transform: uppercase; margin-left: 5px; }
+    </style>
+</head>
+<body>
+
+    <div class="controls-box">
+        <div class="upload-group">
+            <label><strong>1. Selecione a pasta 'exportar':</strong></label>
+            <input type="file" id="folderInput" webkitdirectory directory multiple>
+        </div>
+        
+        <div class="filter-group">
+            <label><strong>2. Filtrar por Disciplina:</strong></label>
+            <select id="filtroDisciplina" disabled>
+                <option value="todas">Carregue a pasta primeiro...</option>
+            </select>
+        </div>
+
+        <div class="stats" id="statsArea">Nenhuma questão carregada.</div>
+    </div>
+
+    <div id="questoes-container"></div>
+
+    <script>
+        let TODAS_QUESTOES = [];
+        let DISCIPLINAS_ENCONTRADAS = new Set();
+
+        document.getElementById('folderInput').addEventListener('change', async function(e) {
+            const files = Array.from(e.target.files).filter(f => f.name.endsWith('.json'));
+            
+            if (files.length === 0) {
+                alert("Nenhum arquivo JSON encontrado nesta pasta!");
+                return;
+            }
+
+            TODAS_QUESTOES = [];
+            DISCIPLINAS_ENCONTRADAS = new Set();
+            document.getElementById('questoes-container').innerHTML = '<p style="text-align:center">Carregando...</p>';
+
+            const promises = files.map(file => {
+                return new Promise((resolve, reject) => {
+                    const reader = new FileReader();
+                    reader.onload = (ev) => {
+                        try {
+                            const data = JSON.parse(ev.target.result);
+                            const questoesComOrigem = data.map(q => ({
+                                ...q,
+                                _origem: file.name.replace('.json', '')
+                            }));
+                            resolve(questoesComOrigem);
+                        } catch (err) {
+                            console.error(`Erro ao ler ${file.name}`, err);
+                            resolve([]); 
+                        }
+                    };
+                    reader.readAsText(file);
+                });
+            });
+
+            const resultados = await Promise.all(promises);
+            
+            resultados.forEach(lista => {
+                lista.forEach(q => {
+                    TODAS_QUESTOES.push(q);
+                    DISCIPLINAS_ENCONTRADAS.add(q._origem);
+                });
+            });
+
+            atualizarFiltro();
+            renderizar(TODAS_QUESTOES);
+            atualizarStats();
+        });
+
+        document.getElementById('filtroDisciplina').addEventListener('change', function(e) {
+            const filtro = e.target.value;
+            if (filtro === 'todas') {
+                renderizar(TODAS_QUESTOES);
+            } else {
+                const filtradas = TODAS_QUESTOES.filter(q => q._origem === filtro);
+                renderizar(filtradas);
+            }
+            atualizarStats();
+        });
+
+        function atualizarFiltro() {
+            const select = document.getElementById('filtroDisciplina');
+            select.innerHTML = '<option value="todas">Todas as Disciplinas</option>';
+            select.disabled = false;
+
+            Array.from(DISCIPLINAS_ENCONTRADAS).sort().forEach(disc => {
+                const option = document.createElement('option');
+                option.value = disc;
+                option.text = disc.replace(/-/g, ' ').toUpperCase();
+                select.appendChild(option);
+            });
+        }
+
+        function atualizarStats() {
+            const total = document.querySelectorAll('.questao-card').length;
+            document.getElementById('statsArea').innerText = `Exibindo ${total} questões de ${DISCIPLINAS_ENCONTRADAS.size} arquivos.`;
+        }
+
+        function renderizar(lista) {
+            const container = document.getElementById('questoes-container');
+            container.innerHTML = '';
+
+            lista.sort((a,b) => (parseInt(a.id) || 0) - (parseInt(b.id) || 0));
+
+            lista.forEach(q => {
+                const anuladaHtml = q.anulada ? '<span class="anulada-badge">ANULADA</span>' : '';
+                const tagsHtml = q.tags ? q.tags.map(t => `<span class="tag">${t}</span>`).join('') : '';
+
+                // Verifica qual opção é a correta para destacar (Visual Check)
+                const gabaritoLetra = q.gabarito ? q.gabarito.trim().toUpperCase() : '';
+
+                let html = `
+                    <div class="questao-card">
+                        <div class="meta-header">
+                            <div class="tags">
+                                <span class="disciplina-badge">${q._origem.replace(/-/g, ' ')}</span>
+                                <span class="tag">Q${q.id}</span>
+                                ${tagsHtml}
+                                ${anuladaHtml}
+                            </div>
+                        </div>
+                        
+                        <div class="enunciado">${q.enunciado}</div>
+                        
+                        <div class="opcoes">
+                `;
+
+                if (q.opcoes) {
+                    q.opcoes.forEach(op => {
+                        // Pequeno bonus: Se a letra for igual ao gabarito, pinta de verde claro pra facilitar a visualização
+                        const isCorrect = op.letra.trim().toUpperCase() === gabaritoLetra;
+                        const style = isCorrect ? 'background-color: #d5f5e3; border-color: #27ae60;' : '';
+                        
+                        html += `
+                            <div class="opcao" style="${style}">
+                                <div class="letra">${op.letra})</div>
+                                <div class="texto">${op.texto}</div>
+                            </div>
+                        `;
+                    });
+                }
+
+                // Área do gabarito sem botão
+                html += `
+                        </div>
+                        <div class="gabarito-area">
+                            <strong>Gabarito: ${q.gabarito}</strong><br>
+                            <span style="color:#555">${q.gabarito_texto || ''}</span>
+                        </div>
+                    </div>
+                `;
+
+                container.insertAdjacentHTML('beforeend', html);
+            });
+        }
+    </script>
+</body>
+</html>

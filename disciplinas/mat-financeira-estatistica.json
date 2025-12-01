@@ -75,5 +75,142 @@
     "autor_resolucao": "",
     "obsoleta": false,
     "anulada": false
+  },
+  {
+    "id": "3",
+    "ano": 2025,
+    "exame": "CFC 2025/1",
+    "banca": "FGV",
+    "tags": [
+      "Estatística Descritiva",
+      "Probabilidade"
+    ],
+    "enunciado": "Uma caixa contém seis bolas brancas e quatro bolas azuis, todas de mesmo tamanho. \nSe sortearmos ao acaso 3 dessas bolas, sem reposição, a probabilidade de que todas sejam brancas é igual a",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "1/3."
+      },
+      {
+        "letra": "B",
+        "texto": "1/4."
+      },
+      {
+        "letra": "C",
+        "texto": "1/5."
+      },
+      {
+        "letra": "D",
+        "texto": "1/6."
+      }
+    ],
+    "gabarito": "D",
+    "anulada": false,
+    "gabarito_texto": "1/6.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "lancamentos": []
+  },
+  {
+    "id": "4",
+    "ano": 2025,
+    "exame": "CFC 2025/1",
+    "banca": "FGV",
+    "tags": [
+      "Payback"
+    ],
+    "enunciado": "",
+    "enunciado_blocos": [
+        {
+            "type": "p",
+            "content": "Em 2023, uma universidade tradicional que, até então, só ofertava cursos presenciais de graduação, resolveu se arriscar em um novo projeto. Tratava -se da abertura de seu primeiro curso 100% à distância a ser disponibilizado ao mercado. Para tal, ainda em 2023, foram investidos R$ 100.000,00 para a estruturação do referido curso."
+        },
+        {
+            "type": "p",
+            "content": "Além disso, foram estimadas despesas e receitas anuais conforme dados apresentados na sequência:"
+        },
+        {
+            "type": "table",
+            "headerRows": [
+                [
+                    {
+                        "content": "Ano",
+                        "colspan": 1,
+                        "rowspan": 1,
+                        "isEmpty": false
+                    },
+                    {
+                        "content": "Receitas",
+                        "colspan": 1,
+                        "rowspan": 1,
+                        "isEmpty": false
+                    },
+                    {
+                        "content": "Despesas",
+                        "colspan": 1,
+                        "rowspan": 1,
+                        "isEmpty": false
+                    }
+                ]
+            ],
+            "bodyRows": [
+                      [
+                          "2024",
+                          "50.000,00",
+                          "35.000,00"
+                      ],
+                      [
+                          "2025",
+                          "65.000,00",
+                          "30.000,00"
+                      ],
+                      [
+                          "2026",
+                          "80.000,00",
+                          "30.000,00"
+                      ],
+                      [
+                          "2027",
+                          "90.000,00",
+                          "20.000,00"
+                      ],
+                      [
+                          "2028",
+                          "90.000,00",
+                          "20.000,00"
+                      ]
+            ]
+        },
+        {
+            "type": "p",
+            "content": "Considerando as informações apresentadas, é possível determinar que o payback simples ocorreu em"
+        }
+    ],
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "2025."
+      },
+      {
+        "letra": "B",
+        "texto": "2026."
+      },
+      {
+        "letra": "C",
+        "texto": "2027."
+      },
+      {
+        "letra": "D",
+        "texto": "2028."
+      }
+    ],
+    "gabarito": "B",
+    "anulada": false,
+    "gabarito_texto": "2026.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "lancamentos": []
   }
 ]

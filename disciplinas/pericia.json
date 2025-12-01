@@ -73,5 +73,83 @@
     "autor_resolucao": "",
     "obsoleta": false,
     "anulada": true
+  },
+  {
+    "id": "49",
+    "ano": 2025,
+    "exame": "CFC 2025/1",
+    "banca": "FGV",
+    "tags": [
+      "Laudo Pericial Contábil",
+      "Parecer Pericial Contábil",
+      "Perito Contábil",
+      "Assistente Técnico (Perícia)",
+      "Quesitos (Perícia)",
+      "Normas de Perícia (NBC TP, NBC PP)"
+    ],
+    "enunciado": "Julgue as afirmativas a seguir, com base na NBC TP 01 (R1) - PERÍCIA CONTÁBIL. \nI. Concluídos os trabalhos periciais, o perito nomeado deve apresentar laudo pericial contábil, e o assistente técnico deve oferecer seu parecer pericial contábil, obedecendo aos respectivos prazos legais e/ou contratuais. \nII. O assistente técnico não pode validar o laudo pericial quando o documento tiver sido elaborado por leigo ou profissional de outra área, devendo, nesse caso, oferecer o parecer pericial contábil sobre a matéria periciada. \nIII. Mesmo quando assinado em conjunto por peritos, a responsabilidade acerca do laudo pericial contábil é exclusiva do perito nomeado, não sendo passível a assunção de responsabilidade solidária pelos demais peritos assinantes no documento. \nIV. As respostas aos quesitos devem ser objetivas, completas e não lacônicas. \nEstão corretas as afirmativas",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "III e IV, apenas."
+      },
+      {
+        "letra": "B",
+        "texto": "I e II, apenas."
+      },
+      {
+        "letra": "C",
+        "texto": "I e III, apenas."
+      },
+      {
+        "letra": "D",
+        "texto": "II e IV, apenas."
+      }
+    ],
+    "gabarito": "D",
+    "anulada": false,
+    "gabarito_texto": "II e IV, apenas.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "lancamentos": []
+  },
+  {
+    "id": "50",
+    "ano": 2025,
+    "exame": "CFC 2025/1",
+    "banca": "FGV",
+    "tags": [
+      "Perito Contábil",
+      "Honorários Periciais",
+      "Legislação de Perícia",
+      "Normas de Perícia (NBC TP, NBC PP)"
+    ],
+    "enunciado": "A Norma Brasileira de Contabilidade Profissional – Perito (NBC PP 01) estabelece as diretrizes e os requisitos para a atuação dos contadores como peritos, incluindo qualificações, deveres, responsabilidades, normas de conduta e as situações que podem acarretar impedimento ou suspeição. Analise as afirmativas a seguir, com base na NBC PP 01, e assinale (V) para a afirmativa verdadeira e (F) para a falsa. \n( ) Em casos de impedimento ou suspeição, o perito contábil tem a opção de continuar no caso desde que obtenha o consentimento expresso de todas as partes envolvidas e da autoridade competente. \n( ) A NBC PP 01 permite que o perito utilize documentos externos aos autos processuais como elementos de prova, desde que previamente acordado com as partes e autorizado pelo juiz ou autoridade competente. \n( ) O perito contábil deve elaborar a proposta de honorários periciais considerando não apenas os custos e o tempo necessário para a execução dos trabalhos, mas também levando em conta a relevância e o risco envolvidos no objeto da perícia. \nAs afirmativas são, respectivamente,",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "F – F – V."
+      },
+      {
+        "letra": "B",
+        "texto": "V – F – F."
+      },
+      {
+        "letra": "C",
+        "texto": "F – V – F."
+      },
+      {
+        "letra": "D",
+        "texto": "V – V – V."
+      }
+    ],
+    "gabarito": "A",
+    "anulada": false,
+    "gabarito_texto": "F – F – V.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "lancamentos": []
   }
 ]
