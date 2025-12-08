@@ -17,7 +17,7 @@ O Balanceterno centraliza provas antigas, organiza por disciplina e oferece ferr
 * **Lançamentos Contábeis Visuais:** Visualize os razonetes (Débito e Crédito) em um modal dedicado para entender a mecânica da questão.
 * **Status das Questões:** Identificação automática de questões anuladas ou obsoletas (lei antiga).
 
-### ⚙️ Engenharia e Automação (Backend)
+### ⚙️ Engenharia e Automação (ETL)
 * **Pipeline ETL com IA:** Script em Python (`etl/`) que lê PDFs de provas, usa o **Google Gemini** para extrair/classificar questões e gera JSONs estruturados.
 * **Integridade de Dados:** Validação de gabarito via cruzamento de dados manuais.
 * **Ferramentas de Backoffice:** Gerador manual de JSON (`tools/`) para criação de tabelas complexas e edição fina.
