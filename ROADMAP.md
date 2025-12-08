@@ -1,7 +1,7 @@
 # 🗺️ Roadmap - Balanceterno
 
 ## 📅 Atualização do Roadmap
-Última revisão: **11 de novembro de 2025**
+Última revisão: **08 de dezembro de 2025**
 
 Este documento apresenta o **planejamento futuro** do projeto.  
 As tarefas aqui descritas representam objetivos de curto e médio prazo.  
@@ -9,11 +9,8 @@ Mudanças já concluídas são movidas para o [`CHANGELOG.md`](CHANGELOG.md).
 
 ---
 
-## Próxima versão [0.21]:
-- [ ] Adição e classificação de disciplinas da Edição CFC 2025/1
-- [ ] Adição de um filtro para ocultar questões anuladas
-- [ ] Alterar comportamento das ementas para ser exibida como oculta na primeira inicialização
-- [ ] Correção de bugs
+## Próxima versão [0.3]:
+***Aguardando especificações***
 
 ## 🐞 Bugs Conhecidos
 Esta seção lista problemas identificados que serão corrigidos nas próximas versões.
@@ -44,7 +41,6 @@ Status | Descrição | Impacto | Prioridade | Correção prevista | Observaçõe
 | ⬜ | 13 CFC 2023/2 | Contabilidade Societária | Contabilidade Geral | Aguardando adição da edição do exame | 🟠 Baixa | — |
 | ⬜ | 17 CFC 2023/2 | Contabilidade Societária | Contabilidade Geral | Aguardando adição da edição do exame | 🟠 Baixa | — |
 | ⬜ | 36 CFC 2024/1 | Contabilidade Societária | Contabilidade Geral | Aguardando adição da edição do exame | 🟡 Média | — |
-| ✅ | 28 CFC 2025/1 | Contabilidade Societária | Contabilidade Geral | Aguardando adição da edição do exame | 🟡 Média | — |
 
 ---
 
