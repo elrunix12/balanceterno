@@ -69,7 +69,9 @@
         "exame": "CFC 2025/1",
         "banca": "FGV",
         "tags": [
-            "Análise Custo-Volume-Lucro (CVL)"
+            "Ponto de Equilíbrio Contábil",
+            "Custos Fixos",
+            "Volume de Produção"
         ],
         "enunciado": "Em 01/01/2024, uma loja de teclados apresentava os seguintes saldos em seu balanço patrimonial:\n• Disponibilidades: R$ 60.000,00;\n• Estoque: R$ 240.000,00;\n• Patrimônio Líquido: R$ 300.000,00.\nO estoque era composto por 400 unidades de teclado, sendo que cada uma era vendida por R$ 1.000,00.\nNo primeiro semestre de 2024, os gastos fixos, considerando a loja e o escritório, foram os seguintes:\n• Aluguel: R$ 36.000,00;\n• Depreciação: R$ 30.000,00;\n• Salários: R$ 60.000,00.\nAlém disso, foi paga, antecipadamente, uma despesa de R$ 4.000,00 relacionada ao segundo semestre do ano.\nO ponto de equilíbrio contábil da loja, em unidades, no primeiro semestre de 2024, foi de",
         "opcoes": [
@@ -102,7 +104,9 @@
         "exame": "CFC 2025/1",
         "banca": "FGV",
         "tags": [
-            "Formação de Preços e Transferência"
+            "Preço de Transferência",
+            "Custo de Oportunidade",
+            "Custos para Decisão"
         ],
         "enunciado": "Acerca do Modelo de Determinação do Preço de Transferência, avalie as afirmativas a seguir.\nI. No Modelo de Preço de Transferência Baseado em Custo Total Realizado (Full Cost), o bem/serviço é transferido pelo valor resultante do somatório dos custos totais incorridos (fixos e variáveis) dividido pelo volume de produção de um determinado período (custeio por absorção).\nII. No Modelo de Preço de Transferência Baseado em Negociação entre os Gestores, o bem/serviço é transferido pelo preço vigente no mercado, que pode ser um preço médio.\nIII. No Modelo de Preço de Transferência Baseado em Custo de Oportunidade, o preço do bem/serviço transferido estrutura-se a partir da premissa de que deveria refletir o valor do benefício possível de ser auferido na melhor alternativa econômica de obtenção dos insumos demandados.\nEstá correto o que se afirma em",
         "opcoes": [

@@ -1,0 +1,34 @@
+# --- ARQUIVOS DE SISTEMA ---
+.DS_Store
+Thumbs.db
+
+# --- IDE / EDITOR ---
+.vscode/
+.idea/
+
+# --- PYTHON GERAL ---
+# Isso pega arquivos python compilados em QUALQUER pasta
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# --- AMBIENTES VIRTUAIS ---
+# Isso pega a pasta .venv onde quer que ela esteja (na raiz ou em etl/)
+.venv/
+venv/
+env/
+ENV/
+
+# --- SEGURANÇA (CRÍTICO) ---
+# Isso ignora qualquer arquivo chamado .env em qualquer lugar
+.env
+
+# --- DADOS DO ETL (AUTOMACAO) ---
+# AQUI ESTÁ O PULO DO GATO:
+# Avisamos o git que essas pastas estão dentro de 'etl/'
+etl/importar/
+etl/exportar/
+
+# --- LOGS ---
+*.log

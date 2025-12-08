@@ -75,7 +75,7 @@
     "tags": [
         "Apresentação das Demonstrações Contábeis"
     ],
-    "enunciado": "A compreensão dos conceitos e métodos relacionados à Demonstração do Resultado do Exercício (DRE) e à Demonstração do Resultado Abrangente (DRA) é fundamental para a adequada análise das variações do patrimônio líquido e para a tomada de decisões baseadas nos resultados operacionais. \nA respeito do tema, analise as seguintes afirmativas: \n1. A recompra de ações de emissão da própria entidade para manutenção em tesouraria afeta o resultado abrangente por representar uma redução no patrimônio líquido. \nII. O resultado abrangente compreende todos os componentes da demonstração do resultado e dos outros resultados abrangentes. \nIII. Pelo método da natureza da despesa, as despesas são classificadas conforme sua função, como administrativas, comerciais e de produção, facilitando a análise do custo dos produtos vendidos. \nIV. A informação sobre a natureza das despesas é útil para prever os fluxos de caixa futuros e requer divulgação adicional quando a classificação adotada na DRE for baseada no método da função das despesas. \nV. A entidade deve apresentar rubricas ou itens de receitas ou despesas como itens extraordinários, quer na demonstração do resultado abrangente, quer na demonstração do resultado do período, quer nas notas explicativas.\nDe acordo com a NBC TG 26 (R5) - APRESENTAÇÃO DAS DEMONSTRAÇÕES CONTÁBEIS, estão corretas as afirmativas ",
+    "enunciado": "A compreensão dos conceitos e métodos relacionados à Demonstração do Resultado do Exercício (DRE) e à Demonstração do Resultado Abrangente (DRA) é fundamental para a adequada análise das variações do patrimônio líquido e para a tomada de decisões baseadas nos resultados operacionais. \nA respeito do tema, analise as seguintes afirmativas: \nI. A recompra de ações de emissão da própria entidade para manutenção em tesouraria afeta o resultado abrangente por representar uma redução no patrimônio líquido. \nII. O resultado abrangente compreende todos os componentes da demonstração do resultado e dos outros resultados abrangentes. \nIII. Pelo método da natureza da despesa, as despesas são classificadas conforme sua função, como administrativas, comerciais e de produção, facilitando a análise do custo dos produtos vendidos. \nIV. A informação sobre a natureza das despesas é útil para prever os fluxos de caixa futuros e requer divulgação adicional quando a classificação adotada na DRE for baseada no método da função das despesas. \nV. A entidade deve apresentar rubricas ou itens de receitas ou despesas como itens extraordinários, quer na demonstração do resultado abrangente, quer na demonstração do resultado do período, quer nas notas explicativas.\nDe acordo com a NBC TG 26 (R5) - APRESENTAÇÃO DAS DEMONSTRAÇÕES CONTÁBEIS, estão corretas as afirmativas ",
     "opcoes": [
       {
         "letra": "A",
@@ -100,5 +100,180 @@
     "autor_resolucao": "",
     "obsoleta": false,
     "anulada": false
+  },
+  {
+    "id": "15",
+    "ano": 2025,
+    "exame": "CFC 2025/1",
+    "banca": "FGV",
+    "tags": [
+      "Apresentação das Demonstrações Contábeis"
+    ],
+    "enunciado": "Segundo a NBC TG 26 (R5) - APRESENTAÇÃO DAS DEMONSTRAÇÕES CONTÁBEIS, quando da elaboração de demonstrações contábeis, a administração deve avaliar a capacidade de a entidade continuar em operação no futuro previsível, o que significa que as demonstrações contábeis devem ser elaboradas no pressuposto da",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "continuidade, a menos que a administração tenha a intenção de liquidar a entidade ou cessar seus negócios, ou ainda não possua uma alternativa realista senão a descontinuidade de suas atividades."
+      },
+      {
+        "letra": "B",
+        "texto": "competência, sendo os itens reconhecidos como ativos, passivos, patrimônio líquido, receitas e despesas, inclusive para a demonstração de fluxo de caixa."
+      },
+      {
+        "letra": "C",
+        "texto": "materialidade e agregação, tendo a entidade que apresentar conjun tamente nas demonstrações contábeis cada classe material de itens semelhantes, aglutinando os de natureza ou função distinta mesmo que sejam materiais."
+      },
+      {
+        "letra": "D",
+        "texto": "compensação de valores, ativos e passivos ou receitas e despesas devem ser compensados, exceto quand o permitido exclusivamente por norma."
+      }
+    ],
+    "gabarito": "A",
+    "anulada": false,
+    "gabarito_texto": "continuidade, a menos que a administração tenha a intenção de liquidar a entidade ou cessar seus negócios, ou ainda não possua uma alternativa realista senão a descontinuidade de suas atividades.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "lancamentos": []
+  },
+  {
+    "id": "19",
+    "ano": 2025,
+    "exame": "CFC 2025/1",
+    "banca": "FGV",
+    "tags": [
+      "Demonstração do Valor Adicionado (DVA)"
+    ],
+    "enunciado": "De acordo com a NBC TG 09 (R1) - DEMONSTRAÇÃO DO VALOR ADICIONADO, a referida Demonstração (DVA) está relacionada com informações econômicas e com a comunicação de elementos ambientais, sociais e de governança (ASG), e tem por finalidade evidenciar a riqueza criada pela entidade e sua distribuição, durante determinado período. Nesse sentido, considerando que a sociedade empresária “B” possui reversão de perdas estimadas com créditos de liquidação duvidosa, essa informação deve ser apresentada, em sua DVA, do seguinte modo:",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "em remuneração de capitais próprios, na segunda parte da DVA."
+      },
+      {
+        "letra": "B",
+        "texto": "em remuneração de capitais de terceiros, na segunda parte da DVA."
+      },
+      {
+        "letra": "C",
+        "texto": "em valor adicionado recebido em transferência, na primeira parte da DVA."
+      },
+      {
+        "letra": "D",
+        "texto": "em riqueza criada pela própria entidade, na primeira parte da DVA."
+      }
+    ],
+    "gabarito": "D",
+    "anulada": false,
+    "gabarito_texto": "em riqueza criada pela própria entidade, na primeira parte da DVA.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "lancamentos": []
+  },
+  {
+    "id": "20",
+    "ano": 2025,
+    "exame": "CFC 2025/1",
+    "banca": "FGV",
+    "tags": [
+      "Demonstração do Valor Adicionado (DVA)"
+    ],
+    "enunciado": "A Demonstração do Valor Adicionado proporciona aos usuários das demonstrações contábeis informações relativas à riqueza criada pela entidade em determinado período e à forma como tais riquezas foram distribuídas. Na distribuição do valor adicionado, o total de “Remuneração de capitais próprios” deve ser igual",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "às reservas de lucro reportadas no Balanço Patrimonial."
+      },
+      {
+        "letra": "B",
+        "texto": "ao pagamento de dividendos reportado na Demonstração dos Fluxos de Caixa."
+      },
+      {
+        "letra": "C",
+        "texto": "ao resultado líquido do exercício reportado na Demonstração do Resultado do Período."
+      },
+      {
+        "letra": "D",
+        "texto": "à distribuição de dividendos reportada na Demonstração das Mutações do Patrimônio Líquido."
+      }
+    ],
+    "gabarito": "C",
+    "anulada": false,
+    "gabarito_texto": "ao resultado líquido do exercício reportado na Demonstração do Resultado do Período.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "lancamentos": []
+  },
+  {
+    "id": "21",
+    "ano": 2025,
+    "exame": "CFC 2025/1",
+    "banca": "FGV",
+    "tags": [
+      "Demonstração do Valor Adicionado (DVA)"
+    ],
+    "enunciado": "Uma loja que vende produtos de escritório apresentava os seguintes saldos em 31/12/2023: \n• Custo da mercadoria vendida (inclui os valores dos impostos recuperáveis): R$ 80.000,00 \n• Despesa de depreciação dos ativos imobilizados: R$ 15.000,00 \n• Perdas estimadas com crédito de liquidação duvidosa: R$ 6.000,00 \n• Perdas por desvalorização dos ativos imobilizados: R$ 10.000,00 \n• Receita de contrato com clientes: R$ 200.000,00 \nAssinale a opção que indica o saldo do valor adicionado líquido produzido pela loja, apresentado em sua Demonstração do Valor Adicionado em 31/12/2023.",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "R$ 89.000,00."
+      },
+      {
+        "letra": "B",
+        "texto": "R$ 114.000,00."
+      },
+      {
+        "letra": "C",
+        "texto": "R$ 104.000,00."
+      },
+      {
+        "letra": "D",
+        "texto": "R$ 194.000,00."
+      }
+    ],
+    "gabarito": "A",
+    "anulada": false,
+    "gabarito_texto": "R$ 89.000,00.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "lancamentos": []
+  },
+  {
+    "id": "26",
+    "ano": 2025,
+    "exame": "CFC 2025/1",
+    "banca": "FGV",
+    "tags": [
+      "Benefícios a Empregados"
+    ],
+    "enunciado": "A Cia Lua atua no setor de comércio de relógios e tem 20 empregados. Todos os anos, na primeira semana de janeiro, a empresa contrata uma equipe de médicos para ir ao escritório realizar exames de rotina em seus empregados. Em janeiro de 2025, os gastos com os médicos foram de R$ 6.000,00. Do valor, 20% são pagos pelos empregados, enquanto o restante é pago pela empresa. O impacto do atendimento médico na Demonstração do Resultado da Cia Lua em janeiro de 2025, de acordo com o Regime de Competência, foi de",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "-R$ 400,00."
+      },
+      {
+        "letra": "B",
+        "texto": "-R$ 500,00."
+      },
+      {
+        "letra": "C",
+        "texto": "-R$ 4.800,00."
+      },
+      {
+        "letra": "D",
+        "texto": "-R$ 6.000,00."
+      }
+    ],
+    "gabarito": "C",
+    "anulada": false,
+    "gabarito_texto": "-R$ 4.800,00.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "lancamentos": []
   }
 ]

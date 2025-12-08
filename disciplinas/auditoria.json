@@ -67,5 +67,78 @@
     "autor_resolucao": "",
     "obsoleta": false,
     "anulada": false
+  },
+  {
+    "id": "47",
+    "ano": 2025,
+    "exame": "CFC 2025/1",
+    "banca": "FGV",
+    "tags": [
+      "Utilização do Trabalho de Especialistas",
+      "Relatório do Auditor Independente",
+      "Normas de Auditoria"
+    ],
+    "enunciado": "Uma empresa de auditoria independente precisou contratar o trabalho de um especialista na área de Tecnologia da Informação. Após receber as conclusões do especialista, foi constatado que esse trabalho era adequado para fins da auditoria. Com base na NBC T A 620 – UTILIZAÇÃO DO TRABALHO DE ESPECIALISTAS, assinale a afirmativa correta acerca da responsabilidade do auditor ao emitir a sua opinião.",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "O auditor tem sua responsabilidade dividida com o especialista em todo o trabalho."
+      },
+      {
+        "letra": "B",
+        "texto": "O auditor é o único responsável por expressar opinião de auditoria, e essa responsabilidade não é reduzida pelo trabalho de especialista contratado pelo auditor."
+      },
+      {
+        "letra": "C",
+        "texto": "O auditor é responsável pela parte contábil, e o especialista, pelo trabalho que fez."
+      },
+      {
+        "letra": "D",
+        "texto": "O auditor, modificando sua opinião em virtude do trabalho do especialista, não terá nenhuma responsabilidade, sendo a responsabilidade transferida ao especialista."
+      }
+    ],
+    "gabarito": "B",
+    "anulada": false,
+    "gabarito_texto": "O auditor é o único responsável por expressar opinião de auditoria, e essa responsabilidade não é reduzida pelo trabalho de especialista contratado pelo auditor.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "lancamentos": []
+  },
+  {
+    "id": "48",
+    "ano": 2025,
+    "exame": "CFC 2025/1",
+    "banca": "FGV",
+    "tags": [
+      "Relatório do Auditor Independente",
+      "Parágrafos de Ênfase"
+    ],
+    "enunciado": "No exercício de 2024, uma sociedade empresária foi incluída em um Plano de Refinanciamento de Impostos. O fato foi apropriadamente divulgado nas demonstrações contábeis. Mesmo sendo divulgado o Plano de Refinanciamento de Impostos, o auditor julgou que o assunto é de importância fundamental para o entendimento pelos usuários das demonstrações contábeis. Assim, o auditor independente incluirá, em seu relatório,",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "uma ressalva."
+      },
+      {
+        "letra": "B",
+        "texto": "um fato relevante."
+      },
+      {
+        "letra": "C",
+        "texto": "um parágrafo de ênfase."
+      },
+      {
+        "letra": "D",
+        "texto": "um parágrafo de outros assuntos."
+      }
+    ],
+    "gabarito": "C",
+    "anulada": false,
+    "gabarito_texto": "um parágrafo de ênfase.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "lancamentos": []
   }
 ]

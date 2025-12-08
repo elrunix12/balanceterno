@@ -69,5 +69,115 @@
     "autor_resolucao": "",
     "obsoleta": false,
     "anulada": false
+  },
+  {
+    "id": "42",
+    "ano": 2025,
+    "exame": "CFC 2025/1",
+    "banca": "FGV",
+    "tags": [
+      "Princípios Orçamentários",
+      "Lei nº 4.320/1964"
+    ],
+    "enunciado": "A Lei Orçamentária Anual de cada ente federado deverá conter todas as receitas e despesas de todos os Poderes, órgãos, entidades, fundos e fundações instituídas e mantidas pelo Poder Público. Esse princípio orçamentário é denominado",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "Unidade."
+      },
+      {
+        "letra": "B",
+        "texto": "Universalidade."
+      },
+      {
+        "letra": "C",
+        "texto": "Exclusividade."
+      },
+      {
+        "letra": "D",
+        "texto": "Orçamento Bruto."
+      }
+    ],
+    "gabarito": "B",
+    "anulada": false,
+    "gabarito_texto": "Universalidade.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "lancamentos": []
+  },
+  {
+    "id": "43",
+    "ano": 2025,
+    "exame": "CFC 2025/1",
+    "banca": "FGV",
+    "tags": [
+      "Estrutura Conceitual (Setor Público)",
+      "Características Qualitativas",
+      "Normas Brasileiras de Contabilidade (NBC TSP)"
+    ],
+    "enunciado": "De acordo com a NBC TSP ESTRUTURA CONCEITUAL - ESTRUTURA CONCEITUAL PARA ELABORAÇÃO E DIVULGAÇÃO DE INFORMAÇÃO CONTÁBIL DE PROPÓSITO GERAL PELAS ENTIDADES DO SETOR PÚBLICO, as informações financeiras e não financeiras são relevantes quando",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "permitem que os usuários compreendam o seu significado."
+      },
+      {
+        "letra": "B",
+        "texto": "retratam a substância da transação, a qual pode não corresponder, necessariamente, à sua forma jurídica."
+      },
+      {
+        "letra": "C",
+        "texto": "são capazes de influenciar significativamente o cumprimento dos objetivos da elaboração e da divulgação da informação contábil."
+      },
+      {
+        "letra": "D",
+        "texto": "estão disponíveis aos usuários a tempo de serem úteis para fins de prestação de contas, responsabilização e tomada de decisão."
+      }
+    ],
+    "gabarito": "C",
+    "anulada": false,
+    "gabarito_texto": "são capazes de influenciar significativamente o cumprimento dos objetivos da elaboração e da divulgação da informação contábil.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "lancamentos": []
+  },
+  {
+    "id": "44",
+    "ano": 2025,
+    "exame": "CFC 2025/1",
+    "banca": "FGV",
+    "tags": [
+      "Usuários da Informação Contábil (Setor Público)",
+      "Relatório Contábil de Propósito Geral (RCPG)",
+      "Normas Brasileiras de Contabilidade (NBC TSP)"
+    ],
+    "enunciado": "Com relação aos usuários dos Relatórios Contábeis de Propósito Geral das Entidades do Setor Público (RCPGs) , avalie as afirmativas a seguir e assinale (V) para a verdadeira e (F) para a falsa. \n( ) Os RCPGs devem ser elaborados e divulgados, principalmente, para atender às necessidades de informações dos usuários dos serviços e dos provedores de recursos, quando est es detêm a prerrogativa de exigir que a entidade do setor público divulgue as informações que atendam às suas necessidades específicas. \n( ) Os membros do Poder Legislativo são também usuários primários dos RCPGs e utilizam extensiva e continuamente os relatórios enquanto atuam como representantes dos interesses dos usuários de serviços e dos provedores de recursos. \n( ) Alguns usuários dos serviços e alguns provedores de recursos que dependem dos RCPGs para obter informações que eles necessitam para os propósitos de prestação de contas e responsabilização e tomada de decisão podem não ser cidadãos, como, agências bilaterais ou multilaterais. \nDe acordo com a NBC TSP ESTRUTURA CONCEITUAL - ESTRUTURA CONCEITUAL PARA ELABORAÇÃO E DIVULGAÇÃO DE INFORMAÇÃO CONTÁBIL DE PROPÓSITO GERAL PELAS ENTIDADES DO SETOR PÚBLICO as afirmativas são, respectivamente,",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "V – F – F."
+      },
+      {
+        "letra": "B",
+        "texto": "V – F – V."
+      },
+      {
+        "letra": "C",
+        "texto": "F – V – V."
+      },
+      {
+        "letra": "D",
+        "texto": "V – V – F."
+      }
+    ],
+    "gabarito": "C",
+    "anulada": false,
+    "gabarito_texto": "F – V – V.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "lancamentos": []
   }
 ]

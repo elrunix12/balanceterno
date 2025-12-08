@@ -62,5 +62,75 @@
     "autor_resolucao": "",
     "obsoleta": false,
     "anulada": false
+  },
+  {
+    "id": "1",
+    "ano": 2025,
+    "exame": "CFC 2025/1",
+    "banca": "FGV",
+    "tags": [
+      "Língua Portuguesa"
+    ],
+    "enunciado": "Um cartaz, na porta de um supermercado, dizia:\n“Compre hoje! Amanhã pode estar mais caro!”\nEsse cartaz",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "aconselha o cliente a economizar."
+      },
+      {
+        "letra": "B",
+        "texto": "dá ordem ao cliente para ganhar tempo."
+      },
+      {
+        "letra": "C",
+        "texto": "chama a atenção do cliente para a possível falta de produtos."
+      },
+      {
+        "letra": "D",
+        "texto": "pretende ensinar o cliente a controlar seu orçamento."
+      }
+    ],
+    "gabarito": "A",
+    "anulada": false,
+    "gabarito_texto": "aconselha o cliente a economizar.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "lancamentos": []
+  },
+  {
+    "id": "2",
+    "ano": 2025,
+    "exame": "CFC 2025/1",
+    "banca": "FGV",
+    "tags": [
+      "Língua Portuguesa"
+    ],
+    "enunciado": "Um famoso escritor falou sobre a leitura:\n“A leitura é para a mente o que a ginástica é para o corpo.”\nCom essa frase, o autor quer dizer que",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "exercícios físicos devem ser feitos todos os dias."
+      },
+      {
+        "letra": "B",
+        "texto": "a leitura, como a ginástica, deve ser feita diariamente."
+      },
+      {
+        "letra": "C",
+        "texto": "a leitura enriquece o nosso conhecimento."
+      },
+      {
+        "letra": "D",
+        "texto": "exercícios físicos e leitura fortalecem o corpo."
+      }
+    ],
+    "gabarito": "X",
+    "anulada": true,
+    "gabarito_texto": "Questão Anulada pela Banca.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "lancamentos": []
   }
 ]

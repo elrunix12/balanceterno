@@ -323,41 +323,6 @@
     "anulada": false
   },
     {
-        "id": 28,
-        "ano": 2025,
-        "exame": "CFC 2025/2",
-        "banca": "FGV",
-        "tags": [
-            "Ativo Imobilizado",
-            "Impairment",
-            "Valor Justo"
-        ],
-        "enunciado": "Em 01/12/2024, uma sociedade empresária apresentava, em seu Balanço Patrimonial, como ativo imobilizado, um terreno, cujo valor contábil era de R$ 80.000,00.\n\nEm 31/12/2024, a sociedade empresária realizou um teste de recuperabilidade em seus ativos imobilizados.\n\nFoi constatado que o valor em uso do terreno era de R$ 75.000,00.\n\nPara que não haja reconhecimento de perda de recuperabilidade do terreno, o valor justo líquido de despesa de venda deve ser",
-        "opcoes": [
-            {
-                "letra": "A",
-                "texto": "menor do que R$ 75.000,00."
-            },
-            {
-                "letra": "B",
-                "texto": "maior do que R$ 79.999,99."
-            },
-            {
-                "letra": "C",
-                "texto": "entre R$ 72.000,00 e R$ 74.999,99."
-            },
-            {
-                "letra": "D",
-                "texto": "entre R$ 75.000,00 e R$ 79.999,99."
-            }
-        ],
-        "gabarito": "B",
-        "gabarito_texto": "maior do que R$ 79.999,99.",
-        "resolucao": "",
-        "autor_resolucao": "",
-        "obsoleta": false
-    },
-    {
     "id": 29,
     "ano": 2025,
     "exame": "CFC 2025/2",
@@ -529,6 +494,77 @@
         "obsoleta": false
     },
     {
+        "id": "10",
+        "ano": 2025,
+        "exame": "CFC 2025/1",
+        "banca": "FGV",
+        "tags": [
+        "Provisões, Passivos Contingentes e Ativos Contingentes"
+        ],
+        "enunciado": "Para que um passivo se qualifique para reconhecimento, é necessário haver não somente uma obrigação presente, mas \ntambém a probabilidade de saída de recursos que incorporem benefícios econômicos para liquidar essa obrigação. \nNo caso de uma Provisão, o reconhecimento se dá quando: \n(a) a entidade tem uma obrigação presente (legal ou não formalizada) como resultado de evento passado; \n(b) seja provável uma necessária saída de recursos que incorporem benefícios econômicos para liquidar a obrigação; e \n(c) possa ser feita uma estimativa confiável do valor da obrigação. \nSe essas condições não forem satisfeitas, nenhuma provisão deve ser reconhecida. \nEm relação ao reconhecimento de um PASSIVO CONTINGENTE, de acordo com a NBC TG 25 (R2), é correto afirmar que",
+        "opcoes": [
+        {
+            "letra": "A",
+            "texto": "não é reconhecido e nem divulgado em notas explicativas."
+        },
+        {
+            "letra": "B",
+            "texto": "não é reconhecido, mas é divulgado em notas explicativas."
+        },
+        {
+            "letra": "C",
+            "texto": "é reconhecido e divulgado em notas explicativas."
+        },
+        {
+            "letra": "D",
+            "texto": "é reconhecido, mas não é divulgado em notas explicativas."
+        }
+        ],
+        "gabarito": "X",
+        "anulada": true,
+        "gabarito_texto": "Questão Anulada pela Banca.",
+        "resolucao": "",
+        "autor_resolucao": "",
+        "obsoleta": false,
+        "lancamentos": []
+    },
+    {
+        "id": "12",
+        "ano": 2025,
+        "exame": "CFC 2025/1",
+        "banca": "FGV",
+        "tags": [
+        "Demonstrações Consolidadas",
+        "Estrutura Conceitual para Relatório Financeiro"
+        ],
+        "enunciado": "De acordo com a NBC TG Estrutura Conceitual - ESTRUTURA CONCEITUAL PARA RELATÓRIO FINANCEIRO , as demonstrações \ncontábeis consolidadas fornecem informações sobre os ativos, passivos, patrimônio líquido, receitas e despesas",
+        "opcoes": [
+        {
+            "letra": "A",
+            "texto": "apenas das controladas."
+        },
+        {
+            "letra": "B",
+            "texto": "apenas da controladora."
+        },
+        {
+            "letra": "C",
+            "texto": "da controladora e de suas controladas, como entidades independentes."
+        },
+        {
+            "letra": "D",
+            "texto": "da controladora e de suas controladas, como uma única entidade que reporta."
+        }
+        ],
+        "gabarito": "D",
+        "anulada": false,
+        "gabarito_texto": "da controladora e de suas controladas, como uma única entidade que reporta.",
+        "resolucao": "",
+        "autor_resolucao": "",
+        "obsoleta": false,
+        "lancamentos": []
+    },
+    {
         "id": 16,
         "ano": 2025,
         "exame": "CFC 2025/1",
@@ -536,7 +572,7 @@
         "tags": [
             "Ativo Não Circulante Mantido para Venda"
         ],
-        "enunciado": "Sobre a classification e mensuração de ativos não circulantes mantidos para a venda, de acordo com a NBC TG 31 (R4) - ATIVO NÃO CIRCULANTE MANTIDO PARA VENDA E OPERAÇÃO DESCONTINUADA, analise as seguintes afirmativas:\n\nI. Os ativos não circulantes mantidos para a venda, desde que satisfeitos os critérios de classificação, são realocados para o ativo circulante da entidade.\nII. A classificação, a apresentação e a mensuração requeridas pela NBC TG 31 aplicáveis a ativo não circulante classificado como mantido para venda também se aplicam a ativo não circulante que seja classificado como destinado a ser distribuído aos sócios na sua condição de proprietários.\nIII. O ativo não circulante mantido para venda será mensurado pelo maior entre o seu valor contábil e o valor justo menos as despesas de venda.\n\nEstá correto o que se afirma em",
+        "enunciado": "Sobre a classificação e mensuração de ativos não circulantes mantidos para a venda, de acordo com a NBC TG 31 (R4) - ATIVO NÃO CIRCULANTE MANTIDO PARA VENDA E OPERAÇÃO DESCONTINUADA, analise as seguintes afirmativas:\n\nI. Os ativos não circulantes mantidos para a venda, desde que satisfeitos os critérios de classificação, são realocados para o ativo circulante da entidade.\nII. A classificação, a apresentação e a mensuração requeridas pela NBC TG 31 aplicáveis a ativo não circulante classificado como mantido para venda também se aplicam a ativo não circulante que seja classificado como destinado a ser distribuído aos sócios na sua condição de proprietários.\nIII. O ativo não circulante mantido para venda será mensurado pelo maior entre o seu valor contábil e o valor justo menos as despesas de venda.\n\nEstá correto o que se afirma em",
         "opcoes": [
             {
                 "letra": "A",
@@ -560,6 +596,76 @@
         "resolucao": "I. Correto. A NBC TG 31, item 6, estabelece que a entidade deve classificar ativo não circulante como mantido para venda se seu valor contábil for recuperado, principalmente, por meio de transação de venda, em vez do uso contínuo. Eles são realocados para o Ativo Circulante.\n\nII. Correto. A NBC TG 31, item 5A, expande a aplicação para ativos não circulantes que serão distribuídos aos sócios.\n\nIII. Incorreto. A NBC TG 31, item 15, afirma que o ativo não circulante mantido para venda deve ser mensurado pelo *menor* entre o seu valor contábil e o valor justo menos as despesas de venda.",
         "autor_resolucao": "elrunix12",
         "obsoleta": false
+    },
+    {
+        "id": "18",
+        "ano": 2025,
+        "exame": "CFC 2025/1",
+        "banca": "FGV",
+        "tags": [
+        "Provisões, Passivos Contingentes e Ativos Contingentes"
+        ],
+        "enunciado": "De acordo com a NBC TG 25 (R2) - PROVISÕES, PASSIVOS CONTINGENTES E ATIVOS CONTINGENTES, provisão é um passivo de prazo incerto ou de valor incerto. Considere que a sociedade empresária Beta tenha recebido laudo de seu advogado sobre um provável pagamento de processo trabalhista, entretanto com mensuração ainda não confiável. Nesse caso, o seu reconhecimento nas demonstrações financeiras deve ser",
+        "opcoes": [
+        {
+            "letra": "A",
+            "texto": "como apropriação por competência no balanço patrimonial."
+        },
+        {
+            "letra": "B",
+            "texto": "como provisão trabalhista no balanço patrimonial."
+        },
+        {
+            "letra": "C",
+            "texto": "não realizar reconhecimento de provisão trabalhista no balanço patrimonial e não divulgar em nota explicativa."
+        },
+        {
+            "letra": "D",
+            "texto": "não realizar reconhecimento de provisão trabalhista no balanço patrimonial, mas divulgar em nota explicativa como passivo contingente."
+        }
+        ],
+        "gabarito": "D",
+        "anulada": false,
+        "gabarito_texto": "não realizar reconhecimento de provisão trabalhista no balanço patrimonial, mas divulgar em nota explicativa como passivo contingente.",
+        "resolucao": "",
+        "autor_resolucao": "",
+        "obsoleta": false,
+        "lancamentos": []
+    },
+    {
+    "id": "22",
+    "ano": 2025,
+    "exame": "CFC 2025/1",
+    "banca": "FGV",
+    "tags": [
+      "Provisões, Passivos Contingentes e Ativos Contingentes"
+    ],
+    "enunciado": "De acordo com a NBC TG 25 (R2) - PROVISÕES, PASSIVOS CONTINGENTES E ATIVOS CONTINGENTES, a entidade deve divulgar, em notas explicativas, para cada classe de passivo contingente na data do balanço, uma breve descrição da natureza do passivo contingente, a menos que a possibilidade de ocorrer qualquer desembolso na liquidação seja",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "remota."
+      },
+      {
+        "letra": "B",
+        "texto": "possível."
+      },
+      {
+        "letra": "C",
+        "texto": "provável."
+      },
+      {
+        "letra": "D",
+        "texto": "possível e provável."
+      }
+    ],
+    "gabarito": "A",
+    "anulada": false,
+    "gabarito_texto": "remota.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "lancamentos": []
     },
     {
         "id": 24,
@@ -595,6 +701,41 @@
         "obsoleta": false
     },
     {
+        "id": "25",
+        "ano": 2025,
+        "exame": "CFC 2025/1",
+        "banca": "FGV",
+        "tags": [
+        "Provisões, Passivos Contingentes e Ativos Contingentes"
+        ],
+        "enunciado": "Em janeiro de 2025, um artista, que possui uma empresa, estava em um evento estratégico em um resort na Bahia. Ao voltar da viagem, descobriu que um influenciador digital, que também estava no evento, divulgou fotos e vídeos do artista em redes sociais. A empresa do artista entrou na justiça por quebra de privacidade contra o resort e contra o influencia dor, pedindo, respectivamente, R$ 10.000,00 e R$ 15.000,00. Os advogados da empresa do artista julgaram que as chances de ganho das causas eram, respectivamente, remota e possível. Com base no julgamento dos advogados, a empresa deve apresentar, em suas demonstrações contábeis, um ativo contingente",
+        "opcoes": [
+        {
+            "letra": "A",
+            "texto": "igual a zero."
+        },
+        {
+            "letra": "B",
+            "texto": "de R$ 10.000,00."
+        },
+        {
+            "letra": "C",
+            "texto": "de R$ 15.000,00."
+        },
+        {
+            "letra": "D",
+            "texto": "de R$ 25.000,00."
+        }
+        ],
+        "gabarito": "A",
+        "anulada": false,
+        "gabarito_texto": "igual a zero.",
+        "resolucao": "",
+        "autor_resolucao": "",
+        "obsoleta": false,
+        "lancamentos": []
+    },
+    {
         "id": 27,
         "ano": 2025,
         "exame": "CFC 2025/1",
@@ -628,71 +769,96 @@
         "obsoleta": false
     },
     {
-        "id": 28,
+        "id": "32",
         "ano": 2025,
         "exame": "CFC 2025/1",
         "banca": "FGV",
         "tags": [
-            "Ativo Imobilizado",
-            "Ativo Intangível"
+        "Demonstrações Consolidadas"
         ],
-        "enunciado": "Uma empresa de doces e bolos possui em 31/12/x0 os seguintes saldos em seu Balanço Patrimonial:\nCaixa e equivalentes de caixa: R$ 100.000,00;\nEmpréstimos a pagar de curto prazo: R$ 250.000,00;\nFinanciamentos a pagar de longo prazo: R$ 330.000,00;\nImobilizado: R$ 450.000,00;\nIntangível: R$ 320.000,00;\nEstoques: R$ 250.000,00;\nCapital Social: R$ 540.000,00.\nCom base nesses saldos, o valor do ativo não circulante da empresa é",
+        "enunciado": "",
+        "enunciado_blocos": [
+        {
+            "type": "p",
+            "content": "A companhia investidora Alfa S.A., obrigada legalmente a elaborar demonstrações financeiras consolidadas, possui a seguinte participação societária nas empresas:"
+        },
+        {
+            "type": "table",
+            "headerRows": [
+                [
+                    {
+                        "content": "Investida",
+                        "colspan": 1,
+                        "rowspan": 1,
+                        "isEmpty": false
+                    },
+                    {
+                        "content": "% de participação de Alfa S.A.",
+                        "colspan": 1,
+                        "rowspan": 1,
+                        "isEmpty": false
+                    },
+                    {
+                        "content": "PL da investida em 31/12/2023",
+                        "colspan": 1,
+                        "rowspan": 1,
+                        "isEmpty": false
+                    }
+                ]
+            ],
+            "bodyRows": [
+                [
+                    "Kappa (controlada)",
+                    "90",
+                    "R$ 1.000.000,00"
+                ],
+                [
+                    "Sigma (controlada)",
+                    "70",
+                    "R$ 700.000,00"
+                ],
+                [
+                    "Zeta (coligada)",
+                    "25",
+                    "R$ 600.000,00"
+                ],
+                [
+                    "Delta (sem influência significativa)",
+                    "15",
+                    "R$ 900.000,00"
+                ]
+            ]
+        },
+        {
+            "type": "p",
+            "content": "Com base exclusivamente nas informações acima, o montante registrado na conta de participação de acionistas não controladores no balanço consolidado da investidora Alfa S.A. em 31/12/2023 deverá ser de"
+        }
+        ],
         "opcoes": [
-            {
-                "letra": "A",
-                "texto": "R$ 770.000,00."
-            },
-            {
-                "letra": "B",
-                "texto": "R$ 350.000,00."
-            },
-            {
-                "letra": "C",
-                "texto": "R$ 1.020.000,00."
-            },
-            {
-                "letra": "D",
-                "texto": "R$ 450.000,00."
-            }
-        ],
-        "gabarito": "A",
-        "gabarito_texto": "R$ 770.000,00.",
-        "resolucao": "O Ativo Não Circulante é composto pelos ativos de longo prazo da empresa. Com base nos saldos fornecidos, as contas que se classificam como Ativo Não Circulante são:\n\n- Imobilizado: R$ 450.000,00\n- Intangível: R$ 320.000,00\n\nSoma do Ativo Não Circulante = R$ 450.000,00 + R$ 320.000,00 = R$ 770.000,00.\n\nAs demais contas são classificadas como:\n- Caixa e Estoques: Ativo Circulante.\n- Empréstimos (CP): Passivo Circulante.\n- Financiamentos (LP): Passivo Não Circulante.\n- Capital Social: Patrimônio Líquido.",
-        "autor_resolucao": "elrunix12",
-        "obsoleta": false
-    },
-    {
-        "id": 30,
-        "ano": 2025,
-        "exame": "CFC 2025/1",
-        "banca": "FGV",
-        "tags": [
-            "Ativo Imobilizado"
-        ],
-        "enunciado": "Relacione as contas contábeis do balanço patrimonial apresentadas a seguir com seus respectivas grupos contábeis.\n1. Empréstimos a pagar após 12 meses.\n2. Contas a receber em 5 meses.\n3. Contas a pagar em 3 meses.\n4. Imóveis para uso por 10 anos.\n( ) Ativo Circulante.\n( ) Ativo Não Circulante.\n( ) Passivo Circulante.\n( ) Passivo Não Circulante.\nA relação correta, na ordem apresentada, é",
-        "opcoes": [
-            {
-                "letra": "A",
-                "texto": "4-2-1-3."
-            },
-            {
-                "letra": "B",
-                "texto": "2-4-3-1."
-            },
-            {
-                "letra": "C",
-                "texto": "3-1-2-4."
-            },
-            {
-                "letra": "D",
-                "texto": "1-3-4-2."
-            }
+        {
+            "letra": "A",
+            "texto": "R$ 100.000,00."
+        },
+        {
+            "letra": "B",
+            "texto": "R$ 310.000,00."
+        },
+        {
+            "letra": "C",
+            "texto": "R$ 760.000,00."
+        },
+        {
+            "letra": "D",
+            "texto": "R$ 1.525.000,00."
+        }
         ],
         "gabarito": "B",
-        "gabarito_texto": "2-4-3-1.",
+        "anulada": false,
+        "gabarito_texto": "R$ 310.000,00.",
         "resolucao": "",
         "autor_resolucao": "",
-        "obsoleta": false
+        "obsoleta": false,
+        "lancamentos": []
     },
     {
         "id": 33,

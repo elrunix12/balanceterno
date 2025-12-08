@@ -3,6 +3,25 @@
 Todas as mudanças notáveis neste projeto serão documentadas neste arquivo.
 O formato é baseado em [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [0.21] - 2025-12-01
+
+### Adicionado (Added)
+* **Pipeline ETL Automatizado:** Implementado um módulo completo de automação na pasta `etl/` (em Python) para leitura de PDFs de provas antigas utilizando Inteligência Artificial (Google Gemini). Isso acelera drasticamente a inserção de novas questões.
+* **Arquitetura Monorepo:** Reestruturação total do projeto para separar o Frontend (site estático) da Automação (ETL), facilitando a manutenção e a colaboração.
+* **Modal de Lançamentos Contábeis:** Nova funcionalidade visual exclusiva para contabilidade. Agora é possível clicar em um botão "Lançamentos Contábeis" na resposta para ver uma janela com os lançamentos (Débito e Crédito) alinhados e formatados, facilitando o entendimento da mecânica contábil.
+* **Ferramenta de Backoffice Atualizada:** O `tools/generator.html` foi atualizado para suportar a criação visual de lançamentos contábeis (com adição dinâmica de débitos/créditos) e o novo campo de anulação manual.
+* **Padronização de Anuladas:** O script de importação agora identifica e padroniza automaticamente questões anuladas com base no gabarito, garantindo consistência visual em todo o site.
+* **Adição de questões:** Agora o projeto conta com todas as questões do Exame CFC 2025/1.
+
+### Alterado (Changed)
+* **Documentação (README):** O `README.md` principal foi reescrito para refletir a nova arquitetura híbrida (Site + Automação) e incluir instruções para quem deseja contribuir com código ou conteúdo.
+- **Comportamento do Filtro de Ementas:** A lista de tópicos (ementas) agora permanece **oculta por padrão** ao selecionar disciplinas ou utilizar a função "Marcar Todas". O usuário deve clicar manualmente em `[ Exibir ]` para visualizar as opções, prevenindo a poluição visual excessiva na interface quando muitas disciplinas são selecionadas simultaneamente.
+* **Documentação (README):** O `README.md` principal foi reescrito para refletir a nova arquitetura híbrida (Site + Automação) e incluir instruções para quem deseja contribuir com código ou conteúdo.
+* **Refatoração Estrutural:** A pasta `tags` foi **movida** da raiz do projeto para dentro de `etl/tags`.
+
+### Corrigido (Fixed)
+* **Correção de pequenos bugs:** Incluindo tabelas, formatação e erros ortográficos.
+
 ## [0.20] - 2025-11-11
 
 ### Adicionado (Added)

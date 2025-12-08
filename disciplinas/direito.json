@@ -100,5 +100,110 @@
     "autor_resolucao": "",
     "obsoleta": false,
     "anulada": false
+  },
+  {
+    "id": "5",
+    "ano": 2025,
+    "exame": "CFC 2025/1",
+    "banca": "FGV",
+    "tags": [
+      "NOÇÕES DE DIREITO PÚBLICO E PRIVADO"
+    ],
+    "enunciado": "Avalie se os princípios da Administração Pública incluem: \nI. a legalidade; \nII. a moralidade; \nIII. a livre concorrência; \nIV. a publicidade. \nSão de fato princípios da Administração Pública os itens",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "I e II, apenas."
+      },
+      {
+        "letra": "B",
+        "texto": "II, III e IV, apenas."
+      },
+      {
+        "letra": "C",
+        "texto": "I, II e IV, apenas."
+      },
+      {
+        "letra": "D",
+        "texto": "I, II, III e IV."
+      }
+    ],
+    "gabarito": "C",
+    "anulada": false,
+    "gabarito_texto": "I, II e IV, apenas.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "lancamentos": []
+  },
+  {
+    "id": "6",
+    "ano": 2025,
+    "exame": "CFC 2025/1",
+    "banca": "FGV",
+    "tags": [
+      "LEGISLAÇÃO TRIBUTÁRIA"
+    ],
+    "enunciado": "Entre as limitações ao poder de tributar, previstas na Constituição Federal de 1988, estão os princípios gerais do Direito Tributário que, além de estabelecer limites ao poder de tributar, garantem segurança jurídica e justiça fiscal. \nSobre esse tema, assinale a afirmativa correta.",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "O princípio da anterioridade nonagesimal ou noventena estabelece que nenhum tributo pode ser cobrado antes de decorridos 90 dias da data da publicação da sua instituição ou majoração, exce to as contribuições sociais, que podem ser exigidas imediatamente."
+      },
+      {
+        "letra": "B",
+        "texto": "O princípio da legalidade tributária determina que nenhum tributo pode ser instituído ou majorado sem previsão em lei complementar."
+      },
+      {
+        "letra": "C",
+        "texto": "O princípio da isonomia garante tratamento igualitário a todos que se encontram em situação equivalente, sendo proibida qualquer distinção em razão de ocupação profissional ou função por eles exercida, independentemente da denominação jurídica dos rendimentos, títulos ou direitos."
+      },
+      {
+        "letra": "D",
+        "texto": "O princípio da irre troatividade veda a aplicação da lei a ato ou fato pretérito, ainda que a lei seja expressamente interpretativa."
+      }
+    ],
+    "gabarito": "C",
+    "anulada": false,
+    "gabarito_texto": "O princípio da isonomia garante tratamento igualitário a todos que se encontram em situação equivalente, sendo proibida \nqualquer distinção em razão de ocupação profissional ou função por eles exercida, independentemente da denominação \njurídica dos rendimentos, títulos ou direitos.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "lancamentos": []
+  },
+  {
+    "id": "7",
+    "ano": 2025,
+    "exame": "CFC 2025/1",
+    "banca": "FGV",
+    "tags": [
+      "LEGISLAÇÃO TRIBUTÁRIA"
+    ],
+    "enunciado": "A empresa Alfa Indústria Ltda. realizou, ao final do mês de julho, o levantamento de suas obrigações tributárias, verificando os \nseguintes tributos devidos: \n• ICMS (Imposto sobre Circulação de Mercadorias e Serviços): incidente sobre as operações de vendas realizadas no período. \n• ISS (Imposto sobre Serviços): devido pelos serviços prestados. \n• IRPJ (Imposto sobre a Renda das Pessoas Jurídicas): apurado sobre a renda tributável do exercício. \nCom base nessas informações, a contabilidade da empresa elaborou um demonstrativo das obrigações tributárias a pagar. \nDe acordo com os conceitos de obrigação tributária e tributo, assinale a afirmativa correta.",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "O ISS e o ICMS são impostos de mesma competência tributária, pois ambos são devidos aos Estados."
+      },
+      {
+        "letra": "B",
+        "texto": "A obrigação tributária principal consiste no pagamento do tributo devido, enquanto a obrigação tributária acessória está relacionada a deveres instrumentais, como a emissão de notas fiscais e declarações ao Fisco."
+      },
+      {
+        "letra": "C",
+        "texto": "O IRPJ, por ser um imposto sobre a renda, é classificado como um tributo indireto, pois seu ônus pode ser repassado ao consumidor."
+      },
+      {
+        "letra": "D",
+        "texto": "O fato gerador do ICMS ocorre quando a empresa apura seus lucros ao final do exercício contábil."
+      }
+    ],
+    "gabarito": "B",
+    "anulada": false,
+    "gabarito_texto": "A obrigação tributária principal consiste no pagamento do tributo devido, enquanto a obrigação tributária acessória está \nrelacionada a deveres instrumentais, como a emissão de notas fiscais e declarações ao Fisco.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "lancamentos": []
   }
 ]
