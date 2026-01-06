@@ -1,9 +1,9 @@
 
-# ⚖️ Balanceterno - Plataforma de Estudos Contábeis (Open Source)
+# ⚖️ Balanceterno - Plataforma de Estudos Contábeis
 
 > **Democratizando o acesso ao conhecimento contábil com tecnologia aberta.**
 
-O **Balanceterno** é uma plataforma de código aberto projetada para centralizar, organizar e facilitar o estudo para o Exame de Suficiência do CFC.
+O **Balanceterno** é uma plataforma projetada para centralizar, organizar e facilitar o estudo para o Exame de Suficiência do CFC.
 
 
 🔗 **[Acesse a versão online aqui](https://elrunix12.github.io/balanceterno/)**
