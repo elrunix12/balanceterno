@@ -31,7 +31,7 @@
  * Você deve listar os arquivos gerados aqui ou criar um 'index.json' no Python.
  */
 const ARQUIVOS_EXAMES = [
-    'etl/exportar/CFC_2025_02.json',
+    'exames/CFC_2025_02.json',
     'etl/exportar/CFC_2025_01.json',
     'etl/exportar/CFC_2024_02.json',
     // Adicione os novos arquivos aqui conforme forem gerados...
