@@ -1,0 +1,137 @@
+{
+    "Língua Portuguesa Aplicada": [
+      "Acordo Ortográfico",
+      "Língua Portuguesa"
+    ],
+    "Matemática Financeira e Estatística": [
+      "Fundamentos da Matemática Financeira",
+      "Correção Monetária e Inflação",
+      "Payback",
+      "VPL, TIR e TMA",
+      "Juros Simples",
+      "Juros Compostos",
+      "Fundamentos de Estatística",
+      "Estatística Aplicada à Contabilidade"
+    ],
+    "Noções de Direito e Legislação Aplicada": [
+      "Noções De Direito Público e Privado",
+      "Direito Trabalhista e Legislação Social",
+      "Direito Empresarial e Societário",
+      "Legislação Tributária"
+    ],
+    "Legislação e Ética Profissional": [
+      "Ética Geral e Profissional",
+      "NBC PG 01",
+      "NBC PG 12",
+      "NBC PG 100",
+      "NBC PG 200",
+      "NBC PG 300",
+      "NBC PA 400",
+      "NBC PO 900"
+    ],
+    "Teoria da Contabilidade": [
+      "Estrutura Conceitual para Relatório Financeiro",
+      "Elementos Contábeis Patrimoniais",
+      "Escolas do Pensamento Contábil"
+    ],
+    "Contabilidade Geral e NBCs": [
+      "Ativo Imobilizado",
+      "Ativo Intangível",
+      "Depreciação/Amortização",
+      "Impairment",
+      "Valor Justo",
+      "Propriedade para Investimento",
+      "Ativo Não Circulante Mantido para Venda",
+      "Investimento em Coligada e em Empreendimento Controlado em Conjunto",
+      "Negócios em Conjunto",
+      "Avaliação de Investimentos pelo Método de Equivalência Patrimonial",
+      "Demonstrações Consolidadas",
+      "Transformações Societárias: Incorporação, Fusão e Cisão",
+      "Combinação de Negócios",
+      "Ajuste a Valor Presente",
+      "Empréstimos e Financiamentos",
+      "Custos de Empréstimos",
+      "Provisões, Passivos Contingentes e Ativos Contingentes",
+      "Folha de Pagamento",
+      "Receita de Contrato com Cliente",
+      "Subvenção e Assistência Governamentais",
+      "Arrendamentos",
+      "Ativo Biológico e Produto Agrícola",
+      "Instrumentos Financeiros",
+      "Patrimônio e Variações Patrimoniais",
+      "Demonstração dos Fluxos de Caixa",
+      "Demonstração do Valor Adicionado (DVA)",
+      "Demonstração Intermediária",
+      "Políticas Contábeis, Mudança de Estimativa e Retificação de Erro",
+      "Evento Subsequente",
+      "Apresentação das Demonstrações Contábeis",
+      "Tributos sobre o Lucro",
+      "Benefícios a Empregados",
+      "Exploração e Avaliação de Recursos Minerais",
+      "Demonstrações Separadas",
+      "Plano de Contas e Procedimentos de escrituração",
+      "Operações Fiscais Tributárias e de Contribuições",
+      "Balanço Patrimonial",
+      "Efeitos das mudanças nas taxas de câmbio e conversão de demonstrações contábeis",
+      "Demonstração do Resultado do Exercício (DRE)",
+      "DMPL e DLPA",                                   
+      "Métodos de Avaliação e Estoques (NBC TG 16)",                          
+      "Operações com Mercadorias"
+    ],
+    "Contabilidade de Custos": [
+      "Conceitos, Objetivos e Finalidades",
+      "Classificação e Nomenclatura de Custos",
+      "Controle, Registro, Apuração e Alocação de Custos",
+      "Métodos de Custeamento",
+      "Sistemas de Acumulação de Custos",
+      "Apuração de Custos para controle"
+    ],
+    "Contabilidade Gerencial": [
+      "Custos para Decisão",
+      "Custos para Controle",
+      "Análise das Demonstrações Contábeis"
+    ],
+    "Contabilidade Aplicada ao Setor Público": [
+      "NBC TSP Estrutura Conceitual",
+      "Receita de Transação sem Contraprestação",
+      "Receita de Transação com Contraprestação",
+      "Provisões, Passivos Contingentes e Ativos Contingentes do Setor Público",
+      "NBC TSP 04",
+      "Contratos de Concessão de Serviços Públicos: Concedente",
+      "Plano de Contas - Setor Público",
+      "Princípios Orçamentários - Setor Público",
+      "Composição, Mensuração e Variações do Patrimônio Público",
+      "Reflexo Patrimonial das Despesas de Exercícios Anteriores",
+      "Procedimentos Contábeis Específicos - Setor Público",
+      "Demonstrações Contábeis - Setor Público",
+      "NBCs Aplicadas ao Setor Público"     
+    ],
+    "Controladoria": [
+      "Função da Controladoria",
+      "Compliance",
+      "Gestão e Controladoria",
+      "Centro de Responsabilidades",
+      "Modelos de Avaliação de Desempenho",
+      "Sistemas de Informações Gerenciais"
+    ],
+    "Auditoria Contábil": [
+      "Conceito de Auditoria Contábil",
+      "Estrutura Conceitual Para Trabalhos De Asseguração",
+      "Objetivos Gerais Do Auditor Independente",
+      "Responsabilidade Do Auditor Em Relação À Fraude",
+      "Planejamento Da Auditoria De Demonstrações Contábeis",
+      "Identificação E Avaliação Dos Riscos De Distorção Relevante Por Meio Do Entendimento Da Entidade E Do Seu Ambiente",
+      "Procedimentos Analíticos",
+      "Formação Da Opinião E Emissão Do Relatório Do Auditor Independente Sobre As Demonstrações Contábeis",
+      "Modificações Na Opinião Do Auditor Independente",
+      "Parágrafos De Ênfase E Parágrafos De Outros Assuntos No Relatório Do Auditor Independente",
+      "Outros Aspectos Relevantes"
+    ],
+    "Perícia Contábil": [
+      "Conceito",
+      "Aspectos Profissionais",
+      "Aspectos Técnicos",
+      "Legislação",
+      "Aplicações Práticas de Perícia"
+    ]
+}

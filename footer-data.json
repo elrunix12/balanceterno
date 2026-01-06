@@ -1,19 +1,24 @@
 {
   "projectName": "Balanceterno",
-  "currentYear": 2025,
-  "version": "0.21 - Em Desenvolvimento",
+  "currentYear": 2026,
+  "version": "0.40 - Em Desenvolvimento",
   "github": {
     "text": "Código-fonte no GitHub",
     "url": "https://github.com/elrunix12/balanceterno"
   },
-  "disclaimer": "Este é um projeto educacional independente, desenvolvido para ajudar estudantes e profissionais da contabilidade. Não possuímos qualquer vínculo ou afiliação com o Conselho Federal de Contabilidade.",
+  "disclaimer": "Este é um projeto educacional independente, desenvolvido para ajudar estudantes e profissionais da contabilidade. Não possuímos qualquer vínculo ou afiliação com o Conselho Federal de Contabilidade ou com qualquer banca organizadora do exame.",
   "license": {
     "prefix": "Distribuído sob a",
     "text": "Licença AGPL-3.0",
-    "url": "https://www.gnu.org/licenses/agpl-3.0.html"
+    "url": "https://www.gnu.org/licenses/agpl-3.0.txt"
+  },
+  "contentLicense": {
+    "prefix": "Conteúdo (resoluções, lançamentos contábeis, comentários, explicações, compilações e a organização dos dados) sob",
+    "text": "CC BY-SA 4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.txt"
   },
   "adminLink": {
-    "text": "Gerador de Questões (para desenvolvedores)",
+    "text": "Gerador de Questões",
     "url": "tools/generator.html"
   }
 }

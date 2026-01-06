@@ -1,7 +1,39 @@
 # Changelog
 
-Todas as mudanças notáveis neste projeto serão documentadas neste arquivo.
-O formato é baseado em [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
+## [0.30] - 2026-01-XX
+
+### Adicionado (Added)
+- **Automação de Diretórios:** O script Python agora cria automaticamente as pastas de input (`importar/exame`, `importar/gabarito`) se não existirem.
+- **Documentação do Backoffice:** Novo `man-generator` criado especificamente para a pasta `tools/`, explicando o uso do Gerador Manual.
+- **Campos no Schema JSON:** Adicionados campos padronizados `gabarito_texto`, `obsoleta` e `lancamentos` (lista vazia) no output do Python para paridade com o frontend.
+- **Gerador de questões:** Agora o gerador possui 4 funcões: gerar questão completa, apenas resolução, resolução e lançamento contábil, apenas lançamento.
+
+### Alterado (Changed)
+- **Ordenação de Questões:** Aprimorada a lógica de sort no JSON para: Ano (Decrescente) > Exame (Decrescente) > ID (Crescente).
+- **Documentação Principal:** O `README.md` raiz foi reescrito.
+- **Refatoração:** Agora os arquivos .json são organizados por edição do exame. Isso permite a imutabilidade e uma maior facilidade de manutenção no longo prazo.
+- **Separação entre licença de conteúdo e do software:** Agora o conteúdo é licenciado com a Licença CC-BY-SA.
+- **Unificação dos enunciados:** `enunciado` e `enunciado_blocos` foram unificados em uma só função no index.js
+- **Nova distribuição de disciplinas**: Agora o site se aproxima da classificação proposta pelo conteúdo programático do edital oficial:
+    - Língua Portuguesa
+    - Matemática Financeira e Estatística
+    - Noções de Direito e Legislação Aplicada
+    - Legislação e Ética Profissional
+    - Teoria da Contabilidade
+    - Contabilidade Geral e NBCs
+    - Contabilidade de Custos
+    - Contabilidade Gerencial
+    - Contabilidade Aplicada ao Setor Público
+    - Controladoria
+    - Auditoria Contábil
+    - Perícia Contábil
+
+
+### Corrigido (Fixed)
+- **Renderização de Tabelas:** Confirmada a utilização de `.innerHTML` no frontend para suportar tabelas HTML vindas do JSON.
+
+### Removido
+- **Pipeline ETL Automatizado:** A ferramenta apresentou bugs em testes posteriores, por isso foi removida.
 
 ## [0.21] - 2025-12-01
 

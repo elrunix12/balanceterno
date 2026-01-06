@@ -8,7 +8,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gerador de JSON - Banco de Questões (v2.0)</title>
+    <title>Gerador Modular (v3.1 - Padronizado) - Balanceterno</title>
     <style>
         :root {
             --cor-principal: #004a91;
@@ -41,6 +41,40 @@
             border-bottom: 2px solid #eee;
             padding-bottom: 15px;
         }
+        
+        /* Seletor de Modos */
+        .mode-selector {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+            margin-bottom: 25px;
+            background: #eee;
+            padding: 10px;
+            border-radius: 8px;
+        }
+        .mode-label {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #fff;
+            padding: 10px;
+            border-radius: 6px;
+            cursor: pointer;
+            border: 2px solid transparent;
+            font-weight: 500;
+            text-align: center;
+            font-size: 0.9em;
+            transition: all 0.2s;
+        }
+        .mode-label:hover { border-color: #bbb; }
+        .mode-label input { display: none; }
+        .mode-label:has(input:checked) {
+            border-color: var(--cor-principal);
+            background-color: #e3f2fd;
+            color: var(--cor-principal);
+            font-weight: bold;
+        }
+
         form { display: flex; flex-direction: column; gap: 20px; }
         fieldset {
             border: 1px solid var(--cor-borda);
@@ -48,7 +82,10 @@
             padding: 20px;
             margin: 0;
             background: #fff;
+            display: block;
         }
+        fieldset.hidden { display: none; }
+        
         legend {
             font-size: 1.2em;
             font-weight: 600;
@@ -81,6 +118,7 @@
         }
         textarea { min-height: 80px; resize: vertical; }
         .radio-group { display: flex; gap: 20px; margin-bottom: 15px; }
+        
         .btn, button {
             padding: 10px 15px;
             font-size: 1em;
@@ -90,12 +128,11 @@
             cursor: pointer;
             transition: background-color 0.2s;
         }
-        button[type="submit"] { background-color: var(--cor-principal); color: white; }
+        button[type="submit"] { background-color: var(--cor-principal); color: white; width: 100%; margin-bottom: 10px;}
         button[type="submit"]:hover { background-color: #003366; }
-        button[type="reset"] { background-color: #6c757d; color: white; }
-        button[type="reset"]:hover { background-color: #5a6268; }
+        button[type="reset"] { background-color: #6c757d; color: white; width: 100%; }
         
-        /* --- Blocos Genéricos --- */
+        /* Blocos Genéricos */
         .bloco {
             border: 1px dashed var(--cor-borda);
             background-color: var(--cor-fundo);
@@ -121,7 +158,7 @@
         }
         .btn-remover-bloco:hover { background: #d9534f; color: white; }
 
-        /* --- Estilos Específicos para Lançamentos --- */
+        /* Estilos Lançamentos */
         .bloco-lancamento {
             border-left: 4px solid var(--cor-principal);
             background-color: #fcfcfc;
@@ -177,7 +214,7 @@
         }
         .btn-add-conta:hover { background: #eee; }
 
-        /* --- Output --- */
+        /* Output */
         #output-container { margin-top: 25px; display: none; }
         #json-output {
             background-color: #f4f4f4;
@@ -190,9 +227,8 @@
             font-family: Consolas, 'Courier New', monospace;
             font-size: 0.9em;
         }
-        #btn-copy { background-color: #28a745; color: white; margin-top: 10px; }
+        #btn-copy { background-color: #28a745; color: white; margin-top: 10px; width: 100%; }
         
-        /* Checkbox grande */
         .chk-label { display: inline-flex; align-items: center; gap: 8px; cursor: pointer; margin-right: 15px; }
         .chk-input { width: 18px; height: 18px; cursor: pointer; }
     </style>
@@ -200,70 +236,82 @@
 <body>
 
     <div class="container">
-        <h1>Gerador de JSON (v2.0)</h1>
+        <h1>Gerador Modular (v3.1)</h1>
+
+        <div class="mode-selector">
+            <label class="mode-label">
+                <input type="radio" name="modo" value="completo" checked>
+                Questão Completa
+            </label>
+            <label class="mode-label">
+                <input type="radio" name="modo" value="resolucao">
+                Apenas Resolução
+            </label>
+            <label class="mode-label">
+                <input type="radio" name="modo" value="lancamentos">
+                Apenas Lançamentos
+            </label>
+            <label class="mode-label">
+                <input type="radio" name="modo" value="res_lanc">
+                Resolução + Lançamentos
+            </label>
+        </div>
+
         <form id="questao-form">
 
-            <fieldset>
-                <legend>1. Identificação</legend>
+            <fieldset id="section-dados">
+                <legend>1. Dados & Enunciado</legend>
                 <div class="grid-4">
                     <div class="form-group">
                         <label for="id">ID</label>
-                        <input type="number" id="id" name="id" required>
+                        <input type="number" id="id" name="id">
                     </div>
                     <div class="form-group">
                         <label for="ano">Ano</label>
-                        <input type="number" id="ano" name="ano" required>
+                        <input type="number" id="ano" name="ano">
                     </div>
                     <div class="form-group">
-                        <label for="exame">Exame (ex: CFC 2025/2)</label>
-                        <input type="text" id="exame" name="exame" required>
+                        <label for="exame">Exame</label>
+                        <input type="text" id="exame" name="exame">
                     </div>
                     <div class="form-group">
-                        <label for="banca">Banca (ex: FGV)</label>
-                        <input type="text" id="banca" name="banca" required>
+                        <label for="banca">Banca</label>
+                        <input type="text" id="banca" name="banca">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="tags">Ementas (separadas por vírgula)</label>
-                    <input type="text" id="tags" name="tags" placeholder="Impairment, Ativo Imobilizado...">
+                    <label for="disciplina">Disciplina</label>
+                    <input type="text" id="disciplina" name="disciplina" placeholder="Ex: Contabilidade Geral">
                 </div>
-                <div style="margin-top: 10px;">
-                    <label class="chk-label">
-                        <input type="checkbox" class="chk-input" name="obsoleta"> 
-                        Obsoleta (Lei mudou)
-                    </label>
-                    <label class="chk-label">
-                        <input type="checkbox" class="chk-input" name="anulada"> 
-                        Anulada (Questão cancelada)
-                    </label>
+                <div class="form-group">
+                    <label for="tags">Ementas (Tags)</label>
+                    <input type="text" id="tags" name="tags">
                 </div>
-            </fieldset>
+                <div style="margin-top: 10px; margin-bottom: 20px;">
+                    <label class="chk-label"><input type="checkbox" class="chk-input" name="obsoleta"> Obsoleta</label>
+                    <label class="chk-label"><input type="checkbox" class="chk-input" name="anulada"> Anulada</label>
+                </div>
 
-            <fieldset>
-                <legend>2. Enunciado</legend>
                 <div class="radio-group">
                     <label><input type="radio" name="enunciado-tipo" value="simples" checked> Texto Simples</label>
-                    <label><input type="radio" name="enunciado-tipo" value="estruturado"> Estruturado (Tabelas)</label>
+                    <label><input type="radio" name="enunciado-tipo" value="estruturado"> Blocos/Tabelas</label>
                 </div>
 
                 <div id="enunciado-simples-container">
                     <div class="form-group">
-                        <textarea id="enunciado" name="enunciado" placeholder="Digite o enunciado corrido..."></textarea>
+                        <textarea id="enunciado" name="enunciado" placeholder="Enunciado corrido..."></textarea>
                     </div>
                 </div>
 
                 <div id="enunciado-estruturado-container" style="display: none;">
                     <div id="blocos-container"></div>
                     <div style="display: flex; gap: 10px; margin-top: 10px;">
-                        <button id="btn-add-paragrafo" class="btn-add-small">+ Parágrafo</button>
-                        <button id="btn-add-tabela" class="btn-add-small">+ Tabela</button>
+                        <button id="btn-add-paragrafo" class="btn-add-small" type="button" style="width: auto;">+ Parágrafo</button>
+                        <button id="btn-add-tabela" class="btn-add-small" type="button" style="width: auto;">+ Tabela</button>
                     </div>
                 </div>
-            </fieldset>
 
-            <fieldset>
-                <legend>3. Opções</legend>
-                <div class="grid-4">
+                <div class="grid-4" style="margin-top: 20px;">
                     <div class="form-group"><label>A</label><input type="text" name="opcao_a"></div>
                     <div class="form-group"><label>B</label><input type="text" name="opcao_b"></div>
                     <div class="form-group"><label>C</label><input type="text" name="opcao_c"></div>
@@ -280,26 +328,26 @@
                 </div>
             </fieldset>
 
-            <fieldset>
-                <legend>4. Resolução</legend>
+            <fieldset id="section-resolucao">
+                <legend>2. Resolução Comentada</legend>
                 <div class="form-group">
                     <label for="resolucao">Texto Explicativo</label>
                     <textarea id="resolucao" name="resolucao" placeholder="Explique a questão..."></textarea>
                 </div>
                 <div class="form-group">
-                    <label for="autor_resolucao">Autor (Opcional)</label>
-                    <input type="text" id="autor_resolucao" name="autor_resolucao">
+                    <label for="autor_resolucao">Autor da Resolução</label>
+                    <input type="text" id="autor_resolucao" name="autor_resolucao" placeholder="Seu nome">
                 </div>
-                
-                <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
-                
-                <h4 style="margin: 0 0 10px 0; color: #555;">Lançamentos Contábeis (Diário)</h4>
+            </fieldset>
+
+            <fieldset id="section-lancamentos">
+                <legend>3. Lançamentos Contábeis</legend>
                 <div id="lancamentos-container"></div>
                 <button id="btn-add-lancamento" type="button" style="background: #e1f5fe; color: #0277bd; border: 1px solid #81d4fa; margin-top: 10px;">+ Adicionar Lançamento</button>
             </fieldset>
 
-            <div style="display: flex; gap: 10px; margin-top: 20px;">
-                <button type="submit">Gerar JSON</button>
+            <div style="display: flex; gap: 10px; margin-top: 20px; flex-direction: column;">
+                <button type="submit" id="btn-submit">Gerar JSON Completo</button>
                 <button type="reset" id="reset-btn">Limpar Tudo</button>
             </div>
         </form>
@@ -314,15 +362,63 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const form = document.getElementById('questao-form');
+            const modes = document.querySelectorAll('input[name="modo"]');
+            
+            // Seções
+            const secDados = document.getElementById('section-dados');
+            const secResolucao = document.getElementById('section-resolucao');
+            const secLancamentos = document.getElementById('section-lancamentos');
+            
+            // Campos Obrigatórios
+            const inputId = document.getElementById('id');
+            const inputAutor = document.getElementById('autor_resolucao');
+            const btnSubmit = document.getElementById('btn-submit');
+
+            // --- 1. Lógica de Troca de Modos ---
+            function updateMode() {
+                const mode = document.querySelector('input[name="modo"]:checked').value;
+
+                secDados.classList.add('hidden');
+                secResolucao.classList.add('hidden');
+                secLancamentos.classList.add('hidden');
+                
+                inputId.required = false;
+                inputAutor.required = false;
+
+                if (mode === 'completo') {
+                    secDados.classList.remove('hidden');
+                    secResolucao.classList.remove('hidden');
+                    secLancamentos.classList.remove('hidden');
+                    inputId.required = true;
+                    btnSubmit.textContent = "Gerar Questão Completa";
+                
+                } else if (mode === 'resolucao') {
+                    secResolucao.classList.remove('hidden');
+                    inputAutor.required = true;
+                    btnSubmit.textContent = "Gerar Resolução";
+
+                } else if (mode === 'lancamentos') {
+                    secLancamentos.classList.remove('hidden');
+                    btnSubmit.textContent = "Gerar Lançamentos";
+
+                } else if (mode === 'res_lanc') {
+                    secResolucao.classList.remove('hidden');
+                    secLancamentos.classList.remove('hidden');
+                    inputAutor.required = true;
+                    btnSubmit.textContent = "Gerar Res. + Lançamentos";
+                }
+            }
+
+            modes.forEach(m => m.addEventListener('change', updateMode));
+            updateMode();
+
+            // --- 2. Funcionalidades (Toggles, adds, removes) ---
+            const blocosContainer = document.getElementById('blocos-container');
+            const lancamentosContainer = document.getElementById('lancamentos-container');
             const radioTipoEnunciado = document.querySelectorAll('input[name="enunciado-tipo"]');
             const containerSimples = document.getElementById('enunciado-simples-container');
             const containerEstruturado = document.getElementById('enunciado-estruturado-container');
-            const blocosContainer = document.getElementById('blocos-container');
-            const lancamentosContainer = document.getElementById('lancamentos-container');
-            const outputContainer = document.getElementById('output-container');
-            const jsonOutput = document.getElementById('json-output');
-
-            // --- Toggle Enunciado ---
+            
             radioTipoEnunciado.forEach(radio => {
                 radio.addEventListener('change', (e) => {
                     const isSimple = e.target.value === 'simples';
@@ -331,275 +427,171 @@
                 });
             });
 
-            // --- Delegação de Eventos (Otimizada para todos os botões dinâmicos) ---
             document.body.addEventListener('click', (e) => {
                 const target = e.target;
-                e.stopPropagation(); // Evita bubbles indesejados
+                e.stopPropagation();
 
-                // 1. Adicionar Bloco Texto (Enunciado)
-                if (target.id === 'btn-add-paragrafo') {
-                    e.preventDefault();
-                    addBlocoParagrafo();
-                }
-                // 2. Adicionar Bloco Tabela (Enunciado)
-                else if (target.id === 'btn-add-tabela') {
-                    e.preventDefault();
-                    addBlocoTabela();
-                }
-                // 3. Adicionar Lançamento (Resolução)
-                else if (target.id === 'btn-add-lancamento') {
-                    e.preventDefault();
-                    addLancamento();
-                }
-                // 4. Remover Qualquer Bloco (Genérico)
-                else if (target.classList.contains('btn-remover-bloco')) {
-                    target.closest('.bloco').remove();
-                }
-                // 5. Adicionar Conta (Débito ou Crédito)
-                else if (target.classList.contains('btn-add-conta')) {
-                    const tipo = target.dataset.tipo; // 'debito' ou 'credito'
-                    const container = target.previousElementSibling; // div.contas-list
-                    addContaRow(container, tipo);
-                }
-                // 6. Remover Conta
-                else if (target.classList.contains('btn-remove-conta')) {
-                    target.closest('.row-conta').remove();
-                }
-                // 7. Tabelas: Adicionar Linha Header
-                else if (target.classList.contains('btn-add-header-row')) {
-                    addHeaderRow(target.closest('.bloco'));
-                }
-                // 8. Tabelas: Adicionar Célula
-                else if (target.classList.contains('btn-add-header-cell')) {
-                    addHeaderCell(target.closest('.header-row'));
-                }
-                // 9. Tabelas: Remover item interno
-                else if (target.classList.contains('btn-remove-header-row')) {
-                    target.closest('.header-row').remove();
-                }
-                else if (target.classList.contains('btn-remove-header-cell')) {
-                    target.closest('.header-cell').remove();
-                }
+                if (target.id === 'btn-add-paragrafo') { addBlocoParagrafo(); }
+                else if (target.id === 'btn-add-tabela') { addBlocoTabela(); }
+                else if (target.id === 'btn-add-lancamento') { addLancamento(); }
+                else if (target.classList.contains('btn-remover-bloco')) { target.closest('.bloco').remove(); }
+                else if (target.classList.contains('btn-add-conta')) { addContaRow(target.previousElementSibling); }
+                else if (target.classList.contains('btn-remove-conta')) { target.closest('.row-conta').remove(); }
+                else if (target.classList.contains('btn-add-header-row')) { addHeaderRow(target.closest('.bloco')); }
+                else if (target.classList.contains('btn-add-header-cell')) { addHeaderCell(target.closest('.header-row')); }
+                else if (target.classList.contains('btn-remove-header-row')) { target.closest('.header-row').remove(); }
+                else if (target.classList.contains('btn-remove-header-cell')) { target.closest('.header-cell').remove(); }
             });
-
-            // --- Funções Auxiliares de Construção ---
 
             function addBlocoParagrafo() {
-                const div = document.createElement('div');
-                div.className = 'bloco';
-                div.dataset.type = 'p';
-                div.innerHTML = `
-                    <button type="button" class="btn-remover-bloco">&times;</button>
-                    <strong>Parágrafo</strong>
-                    <textarea class="bloco-conteudo" style="width:100%; margin-top:5px;" placeholder="Texto..."></textarea>
-                `;
+                const div = document.createElement('div'); div.className = 'bloco'; div.dataset.type = 'p';
+                div.innerHTML = `<button type="button" class="btn-remover-bloco">&times;</button><strong>Parágrafo</strong><textarea class="bloco-conteudo" style="width:100%; margin-top:5px;"></textarea>`;
                 blocosContainer.appendChild(div);
             }
-
             function addBlocoTabela() {
-                const div = document.createElement('div');
-                div.className = 'bloco';
-                div.dataset.type = 'table';
-                div.innerHTML = `
-                    <button type="button" class="btn-remover-bloco">&times;</button>
-                    <strong>Tabela HTML Complexa</strong>
-                    <div class="header-rows-builder" style="margin:10px 0; border:1px solid #eee; padding:10px;"></div>
-                    <button type="button" class="btn-add-header-row" style="font-size:0.8em;">+ Linha Cabeçalho</button>
-                    <div style="margin-top:10px;">
-                        <label>Corpo (CSV com ponto e vírgula):</label>
-                        <textarea class="bloco-tabela-corpo" rows="3" placeholder="Valor A; Valor B..."></textarea>
-                    </div>
-                `;
+                const div = document.createElement('div'); div.className = 'bloco'; div.dataset.type = 'table';
+                div.innerHTML = `<button type="button" class="btn-remover-bloco">&times;</button><strong>Tabela</strong><div class="header-rows-builder" style="margin:10px 0; border:1px solid #eee; padding:10px;"></div><button type="button" class="btn-add-header-row" style="font-size:0.8em;">+ Linha Cabeçalho</button><div style="margin-top:10px;"><label>Corpo (CSV com ;):</label><textarea class="bloco-tabela-corpo" rows="3"></textarea></div>`;
                 blocosContainer.appendChild(div);
             }
-
             function addHeaderRow(bloco) {
                 const container = bloco.querySelector('.header-rows-builder');
-                const row = document.createElement('div');
-                row.className = 'header-row';
-                row.style.background = '#f9f9f9';
-                row.style.marginBottom = '5px';
-                row.style.padding = '5px';
-                row.innerHTML = `
-                    <div style="display:flex; justify-content:space-between;">
-                        <span>Linha</span>
-                        <button type="button" class="btn-remove-header-row" style="color:red; border:none; background:none; cursor:pointer;">&times;</button>
-                    </div>
-                    <div class="header-cells-list"></div>
-                    <button type="button" class="btn-add-header-cell" style="font-size:0.7em;">+ Célula</button>
-                `;
+                const row = document.createElement('div'); row.className = 'header-row'; row.style.cssText = 'background:#f9f9f9;margin-bottom:5px;padding:5px;';
+                row.innerHTML = `<div style="display:flex;justify-content:space-between;"><span>Linha</span><button type="button" class="btn-remove-header-row" style="color:red;border:none;background:none;cursor:pointer;">&times;</button></div><div class="header-cells-list"></div><button type="button" class="btn-add-header-cell" style="font-size:0.7em;">+ Célula</button>`;
                 container.appendChild(row);
             }
-
             function addHeaderCell(row) {
                 const list = row.querySelector('.header-cells-list');
-                const cell = document.createElement('div');
-                cell.className = 'header-cell';
-                cell.style.display = 'grid';
-                cell.style.gridTemplateColumns = '1fr 60px 60px 20px';
-                cell.style.gap = '5px';
-                cell.style.marginTop = '5px';
-                cell.innerHTML = `
-                    <input type="text" class="cell-content" placeholder="Texto">
-                    <input type="number" class="cell-colspan" value="1" title="Colspan">
-                    <input type="number" class="cell-rowspan" value="1" title="Rowspan">
-                    <button type="button" class="btn-remove-header-cell" style="color:red; border:none; background:none; cursor:pointer;">&times;</button>
-                `;
+                const cell = document.createElement('div'); cell.className = 'header-cell'; cell.style.cssText = 'display:grid;grid-template-columns:1fr 60px 60px 20px;gap:5px;margin-top:5px;';
+                cell.innerHTML = `<input type="text" class="cell-content" placeholder="Texto"><input type="number" class="cell-colspan" value="1" title="Col"><input type="number" class="cell-rowspan" value="1" title="Row"><button type="button" class="btn-remove-header-cell" style="color:red;border:none;background:none;">&times;</button>`;
                 list.appendChild(cell);
             }
-
             function addLancamento() {
-                const div = document.createElement('div');
-                div.className = 'bloco bloco-lancamento';
-                div.innerHTML = `
-                    <button type="button" class="btn-remover-bloco">&times;</button>
-                    <div class="lancamento-header-inputs">
-                        <input type="text" class="lanc-titulo" placeholder="Título (ex: Pelo pagamento...)">
-                        <input type="text" class="lanc-data" placeholder="Data (ex: 31/12/X1)">
-                    </div>
-                    <input type="text" class="lanc-historico" placeholder="Histórico (opcional)" style="width:100%;">
-                    
-                    <div class="contas-container">
-                        <div class="grupo-contas grupo-debito">
-                            <span class="grupo-titulo titulo-debito">Débitos</span>
-                            <div class="contas-list"></div>
-                            <button type="button" class="btn-add-conta" data-tipo="debito">+ Add Débito</button>
-                        </div>
-                        <div class="grupo-contas grupo-credito">
-                            <span class="grupo-titulo titulo-credito">Créditos</span>
-                            <div class="contas-list"></div>
-                            <button type="button" class="btn-add-conta" data-tipo="credito">+ Add Crédito</button>
-                        </div>
-                    </div>
-                `;
+                const div = document.createElement('div'); div.className = 'bloco bloco-lancamento';
+                div.innerHTML = `<button type="button" class="btn-remover-bloco">&times;</button><div class="lancamento-header-inputs"><input type="text" class="lanc-titulo" placeholder="Título"><input type="text" class="lanc-data" placeholder="Data"></div><input type="text" class="lanc-historico" placeholder="Histórico" style="width:100%;"><div class="contas-container"><div class="grupo-contas grupo-debito"><span class="grupo-titulo titulo-debito">Débitos</span><div class="contas-list"></div><button type="button" class="btn-add-conta" data-tipo="debito">+ Add Débito</button></div><div class="grupo-contas grupo-credito"><span class="grupo-titulo titulo-credito">Créditos</span><div class="contas-list"></div><button type="button" class="btn-add-conta" data-tipo="credito">+ Add Crédito</button></div></div>`;
                 lancamentosContainer.appendChild(div);
-                // Adiciona uma linha de débito e uma de crédito padrão para agilizar
-                addContaRow(div.querySelector('.grupo-debito .contas-list'), 'debito');
-                addContaRow(div.querySelector('.grupo-credito .contas-list'), 'credito');
+                addContaRow(div.querySelector('.grupo-debito .contas-list')); addContaRow(div.querySelector('.grupo-credito .contas-list'));
             }
-
-            function addContaRow(container, tipo) {
-                const row = document.createElement('div');
-                row.className = 'row-conta';
-                row.innerHTML = `
-                    <input type="text" class="conta-nome" placeholder="Nome da Conta" style="flex:2;">
-                    <input type="text" class="conta-valor" placeholder="R$ 0,00" style="flex:1;">
-                    <button type="button" class="btn-remove-conta" tabindex="-1">&times;</button>
-                `;
+            function addContaRow(container) {
+                const row = document.createElement('div'); row.className = 'row-conta';
+                row.innerHTML = `<input type="text" class="conta-nome" placeholder="Conta" style="flex:2;"><input type="text" class="conta-valor" placeholder="R$" style="flex:1;"><button type="button" class="btn-remove-conta" tabindex="-1">&times;</button>`;
                 container.appendChild(row);
             }
 
-            // --- Reset ---
-            document.getElementById('reset-btn').addEventListener('click', () => {
-                blocosContainer.innerHTML = '';
-                lancamentosContainer.innerHTML = '';
-                jsonOutput.textContent = '';
-                outputContainer.style.display = 'none';
-                containerSimples.style.display = 'block';
-                containerEstruturado.style.display = 'none';
-            });
-
-            // --- Submit (Gerar JSON) ---
+            // --- 3. SUBMIT (Padronizado) ---
             form.addEventListener('submit', (e) => {
                 e.preventDefault();
                 const formData = new FormData(form);
+                const mode = document.querySelector('input[name="modo"]:checked').value;
                 const json = {};
 
-                // 1. Identificação
-                json.id = parseInt(formData.get('id')) || null;
-                json.ano = parseInt(formData.get('ano')) || null;
-                json.exame = formData.get('exame');
-                json.banca = formData.get('banca');
-                json.tags = formData.get('tags').split(',').map(t => t.trim()).filter(Boolean);
-                json.obsoleta = formData.get('obsoleta') === 'on';
-                json.anulada = formData.get('anulada') === 'on';
-
-                // 2. Enunciado
-                if (formData.get('enunciado-tipo') === 'estruturado') {
-                    json.enunciado = "";
-                    json.enunciado_blocos = [];
-                    // Processa blocos (mesma lógica do seu código anterior, simplificada aqui)
-                    document.querySelectorAll('#blocos-container .bloco').forEach(bloco => {
-                        if (bloco.dataset.type === 'p') {
-                            json.enunciado_blocos.push({ type: 'p', content: bloco.querySelector('.bloco-conteudo').value });
-                        } else if (bloco.dataset.type === 'table') {
-                            // ... Lógica de extração de tabela ...
-                            let headerRows = [];
-                            bloco.querySelectorAll('.header-row').forEach(r => {
-                                let rowArr = [];
-                                r.querySelectorAll('.header-cell').forEach(c => {
-                                    rowArr.push({
-                                        content: c.querySelector('.cell-content').value,
-                                        colspan: parseInt(c.querySelector('.cell-colspan').value),
-                                        rowspan: parseInt(c.querySelector('.cell-rowspan').value),
-                                        isEmpty: c.querySelector('.cell-content').value === ""
-                                    });
-                                });
-                                headerRows.push(rowArr);
-                            });
-                            const bodyText = bloco.querySelector('.bloco-tabela-corpo').value;
-                            const bodyRows = bodyText.split('\n').map(l => l.split(';').map(t => t.trim())).filter(l => l.length && l[0]!=="");
-                            json.enunciado_blocos.push({ type: 'table', headerRows, bodyRows });
-                        }
+                const getLancamentos = () => {
+                    const lancs = [];
+                    document.querySelectorAll('.bloco-lancamento').forEach(lancEl => {
+                        const obj = {
+                            titulo: lancEl.querySelector('.lanc-titulo').value,
+                            data: lancEl.querySelector('.lanc-data').value,
+                            historico: lancEl.querySelector('.lanc-historico').value,
+                            debitos: [], creditos: []
+                        };
+                        lancEl.querySelectorAll('.grupo-debito .row-conta').forEach(r => obj.debitos.push({ conta: r.querySelector('.conta-nome').value, valor: r.querySelector('.conta-valor').value }));
+                        lancEl.querySelectorAll('.grupo-credito .row-conta').forEach(r => obj.creditos.push({ conta: r.querySelector('.conta-nome').value, valor: r.querySelector('.conta-valor').value }));
+                        if(obj.debitos.length || obj.creditos.length) lancs.push(obj);
                     });
-                } else {
-                    json.enunciado = formData.get('enunciado');
+                    return lancs;
+                };
+
+                if (mode === 'completo') {
+                    // 1. Meta (Ordem Forçada)
+                    json.id = parseInt(formData.get('id')) || 0; // Inteiro
+                    json.ano = parseInt(formData.get('ano')) || null;
+                    json.exame = formData.get('exame');
+                    json.banca = formData.get('banca');
+                    json.disciplina = formData.get('disciplina');
+                    json.tags = formData.get('tags').split(',').map(t => t.trim()).filter(Boolean);
+
+                    // 2. Enunciado (Lógica Unificada v3.1)
+                    if (formData.get('enunciado-tipo') === 'estruturado') {
+                        // Agora 'enunciado' recebe o Array direto, não usamos mais 'enunciado_blocos'
+                        json.enunciado = []; 
+                        
+                        document.querySelectorAll('#blocos-container .bloco').forEach(bloco => {
+                            if (bloco.dataset.type === 'p') {
+                                json.enunciado.push({ 
+                                    type: 'p', 
+                                    content: bloco.querySelector('.bloco-conteudo').value 
+                                });
+                            } else if (bloco.dataset.type === 'table') {
+                                // Lógica de extração da tabela (mantida igual, só muda o destino)
+                                let headerRows = []; 
+                                bloco.querySelectorAll('.header-row').forEach(r => { 
+                                    let arr=[]; 
+                                    r.querySelectorAll('.header-cell').forEach(c => 
+                                        arr.push({ 
+                                            content: c.querySelector('.cell-content').value, 
+                                            colspan: parseInt(c.querySelector('.cell-colspan').value), 
+                                            rowspan: parseInt(c.querySelector('.cell-rowspan').value), 
+                                            isEmpty: c.querySelector('.cell-content').value==="" 
+                                        })
+                                    ); 
+                                    headerRows.push(arr); 
+                                });
+                                
+                                const bodyText = bloco.querySelector('.bloco-tabela-corpo').value;
+                                const bodyRows = bodyText.split('\n')
+                                    .map(l => l.split(';').map(t => t.trim()))
+                                    .filter(l => l.length && l[0]!=="");
+                                
+                                json.enunciado.push({ type: 'table', headerRows, bodyRows });
+                            }
+                        });
+                    } else {
+                        // Se for simples, continua sendo apenas uma String
+                        json.enunciado = formData.get('enunciado');
+                    }
+
+                    // 3. Opções e Resposta
+                    json.opcoes = [];
+                    ['a','b','c','d'].forEach(l => { const t = formData.get('opcao_'+l); if(t) json.opcoes.push({ letra: l.toUpperCase(), texto: t }); });
+                    json.gabarito = formData.get('gabarito');
+                    const gabItem = json.opcoes.find(o => o.letra === json.gabarito);
+                    json.gabarito_texto = gabItem ? gabItem.texto : (formData.get('anulada')==='on' ? "Questão Anulada" : "");
+                    
+                    // 4. Resolução
+                    json.resolucao = formData.get('resolucao');
+                    json.autor_resolucao = formData.get('autor_resolucao');
+                    
+                    // 5. Status (Final)
+                    json.obsoleta = formData.get('obsoleta') === 'on';
+                    json.anulada = formData.get('anulada') === 'on';
+
+                    // 6. Extras
+                    json.lancamentos = getLancamentos();
                 }
 
-                // 3. Opções
-                json.opcoes = [];
-                ['a','b','c','d'].forEach(letra => {
-                    const txt = formData.get('opcao_'+letra);
-                    if(txt) json.opcoes.push({ letra: letra.toUpperCase(), texto: txt });
-                });
-                json.gabarito = formData.get('gabarito');
-                const gabItem = json.opcoes.find(o => o.letra === json.gabarito);
-                json.gabarito_texto = gabItem ? gabItem.texto : "";
-                if (json.anulada) json.gabarito_texto = "Questão Anulada pela Banca.";
+                // Modos Parciais (não precisam mudar muito, pois são fragmentos)
+                else if (mode === 'resolucao') {
+                    json.resolucao = formData.get('resolucao');
+                    json.autor_resolucao = formData.get('autor_resolucao');
+                } else if (mode === 'lancamentos') {
+                    json.lancamentos = getLancamentos();
+                } else if (mode === 'res_lanc') {
+                    json.resolucao = formData.get('resolucao');
+                    json.autor_resolucao = formData.get('autor_resolucao');
+                    json.lancamentos = getLancamentos();
+                }
 
-                // 4. Resolução
-                json.resolucao = formData.get('resolucao');
-                json.autor_resolucao = formData.get('autor_resolucao');
-
-                // 5. Lançamentos (NOVO)
-                json.lancamentos = [];
-                document.querySelectorAll('.bloco-lancamento').forEach(lancEl => {
-                    const lancObj = {
-                        titulo: lancEl.querySelector('.lanc-titulo').value,
-                        data: lancEl.querySelector('.lanc-data').value,
-                        historico: lancEl.querySelector('.lanc-historico').value,
-                        debitos: [],
-                        creditos: []
-                    };
-                    
-                    lancEl.querySelectorAll('.grupo-debito .row-conta').forEach(row => {
-                        lancObj.debitos.push({
-                            conta: row.querySelector('.conta-nome').value,
-                            valor: row.querySelector('.conta-valor').value
-                        });
-                    });
-                    
-                    lancEl.querySelectorAll('.grupo-credito .row-conta').forEach(row => {
-                        lancObj.creditos.push({
-                            conta: row.querySelector('.conta-nome').value,
-                            valor: row.querySelector('.conta-valor').value
-                        });
-                    });
-                    
-                    // Só adiciona se tiver contas preenchidas
-                    if(lancObj.debitos.length || lancObj.creditos.length) {
-                        json.lancamentos.push(lancObj);
-                    }
-                });
-
-                // Exibir
+                const jsonOutput = document.getElementById('json-output');
                 jsonOutput.textContent = JSON.stringify(json, null, 4);
-                outputContainer.style.display = 'block';
+                document.getElementById('output-container').style.display = 'block';
             });
-            
-            // Botão Copy
+
+            document.getElementById('reset-btn').addEventListener('click', () => {
+                blocosContainer.innerHTML = '';
+                lancamentosContainer.innerHTML = '';
+                document.getElementById('output-container').style.display = 'none';
+            });
             document.getElementById('btn-copy').addEventListener('click', () => {
-                navigator.clipboard.writeText(jsonOutput.textContent);
+                navigator.clipboard.writeText(document.getElementById('json-output').textContent);
                 document.getElementById('btn-copy').textContent = 'Copiado!';
                 setTimeout(() => document.getElementById('btn-copy').textContent = 'Copiar JSON', 2000);
             });

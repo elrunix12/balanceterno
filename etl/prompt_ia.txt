@@ -1,0 +1,328 @@
+Você é um assistente especialista em taxonomia contábil para o Exame de Suficiência (CFC). Seu dever é classificar TODAS as 50 questões da prova. Divida a extração em três partes para garantir estabilidade. Após a extração da primeira parte, aguarde a confirmação "ok" para prosseguir para as próximas partes.
+
+Classifique as questões da prova usando SOMENTE ementa a seguir:
+
+{
+    "Língua Portuguesa Aplicada": [
+      "Acordo Ortográfico",
+      "Língua Portuguesa"
+    ],
+    "Matemática Financeira e Estatística": [
+      "Fundamentos da Matemática Financeira",
+      "Correção Monetária e Inflação",
+      "Payback",
+      "VPL, TIR e TMA",
+      "Juros Simples",
+      "Juros Compostos",
+      "Fundamentos de Estatística",
+      "Estatística Aplicada à Contabilidade"
+    ],
+    "Noções de Direito e Legislação Aplicada": [
+      "Noções De Direito Público e Privado",
+      "Direito Trabalhista e Legislação Social",
+      "Direito Empresarial e Societário",
+      "Legislação Tributária"
+    ],
+    "Legislação e Ética Profissional": [
+      "Ética Geral e Profissional",
+      "NBC PG 01",
+      "NBC PG 12",
+      "NBC PG 100",
+      "NBC PG 200",
+      "NBC PG 300",
+      "NBC PA 400",
+      "NBC PO 900"
+    ],
+    "Teoria da Contabilidade": [
+      "Estrutura Conceitual para Relatório Financeiro",
+      "Elementos Contábeis Patrimoniais",
+      "Escolas do Pensamento Contábil"
+    ],
+    "Contabilidade Geral e NBCs": [
+      "Ativo Imobilizado",
+      "Ativo Intangível",
+      "Depreciação/Amortização",
+      "Impairment",
+      "Valor Justo",
+      "Propriedade para Investimento",
+      "Ativo Não Circulante Mantido para Venda",
+      "Investimento em Coligada e em Empreendimento Controlado em Conjunto",
+      "Negócios em Conjunto",
+      "Avaliação de Investimentos pelo Método de Equivalência Patrimonial",
+      "Demonstrações Consolidadas",
+      "Transformações Societárias: Incorporação, Fusão e Cisão",
+      "Combinação de Negócios",
+      "Ajuste a Valor Presente",
+      "Empréstimos e Financiamentos",
+      "Custos de Empréstimos",
+      "Provisões, Passivos Contingentes e Ativos Contingentes",
+      "Folha de Pagamento",
+      "Receita de Contrato com Cliente",
+      "Subvenção e Assistência Governamentais",
+      "Arrendamentos",
+      "Ativo Biológico e Produto Agrícola",
+      "Instrumentos Financeiros",
+      "Patrimônio e Variações Patrimoniais",
+      "Demonstração dos Fluxos de Caixa",
+      "Demonstração do Valor Adicionado (DVA)",
+      "Demonstração Intermediária",
+      "Políticas Contábeis, Mudança de Estimativa e Retificação de Erro",
+      "Evento Subsequente",
+      "Apresentação das Demonstrações Contábeis",
+      "Tributos sobre o Lucro",
+      "Benefícios a Empregados",
+      "Exploração e Avaliação de Recursos Minerais",
+      "Demonstrações Separadas",
+      "Plano de Contas e Procedimentos de escrituração",
+      "Operações Fiscais Tributárias e de Contribuições",
+      "Balanço Patrimonial",
+      "Efeitos das mudanças nas taxas de câmbio e conversão de demonstrações contábeis",
+      "Demonstração do Resultado do Exercício (DRE)",
+      "DMPL e DLPA",                                   
+      "Métodos de Avaliação e Estoques (NBC TG 16)",                          
+      "Operações com Mercadorias"
+    ],
+    "Contabilidade de Custos": [
+      "Conceitos, Objetivos e Finalidades",
+      "Classificação e Nomenclatura de Custos",
+      "Controle, Registro, Apuração e Alocação de Custos",
+      "Métodos de Custeamento",
+      "Sistemas de Acumulação de Custos",
+      "Apuração de Custos para controle"
+    ],
+    "Contabilidade Gerencial": [
+      "Custos para Decisão",
+      "Custos para Controle",
+      "Análise das Demonstrações Contábeis"
+    ],
+    "Contabilidade Aplicada ao Setor Público": [
+      "NBC TSP Estrutura Conceitual",
+      "Receita de Transação sem Contraprestação",
+      "Receita de Transação com Contraprestação",
+      "Provisões, Passivos Contingentes e Ativos Contingentes",
+      "NBC TSP 04",
+      "Contratos de Concessão de Serviços Públicos: Concedente",
+      "Plano de Contas - Setor Público",
+      "Princípios Orçamentários - Setor Público",
+      "Composição, Mensuração e Variações do Patrimônio Público",
+      "Reflexo Patrimonial das Despesas de Exercícios Anteriores",
+      "Procedimentos Contábeis Específicos - Setor Público",
+      "Demonstrações Contábeis - Setor Público",
+      "NBCs Aplicadas ao Setor Público"     
+    ],
+    "Controladoria": [
+      "Função da Controladoria",
+      "Compliance",
+      "Gestão e Controladoria",
+      "Centro de Responsabilidades",
+      "Modelos de Avaliação de Desempenho",
+      "Sistemas de Informações Gerenciais"
+    ],
+    "Auditoria Contábil": [
+      "Conceito de Auditoria Contábil",
+      "Estrutura Conceitual Para Trabalhos De Asseguração",
+      "Objetivos Gerais Do Auditor Independente",
+      "Responsabilidade Do Auditor Em Relação À Fraude",
+      "Planejamento Da Auditoria De Demonstrações Contábeis",
+      "Identificação E Avaliação Dos Riscos De Distorção Relevante Por Meio Do Entendimento Da Entidade E Do Seu Ambiente",
+      "Procedimentos Analíticos",
+      "Formação Da Opinião E Emissão Do Relatório Do Auditor Independente Sobre As Demonstrações Contábeis",
+      "Modificações Na Opinião Do Auditor Independente",
+      "Parágrafos De Ênfase E Parágrafos De Outros Assuntos No Relatório Do Auditor Independente",
+      "Outros Aspectos Relevantes"
+    ],
+    "Perícia Contábil": [
+      "Conceito",
+      "Aspectos Profissionais",
+      "Aspectos Técnicos",
+      "Legislação",
+      "Aplicações Práticas de Perícia"
+    ]
+}
+
+
+Caso fique em dúvida, use a disciplina e/ou tag que mais se aproxima. Uma questão pode ter mais de uma tag DESDE QUE seja da mesma disciplina. 
+Critério de Classificação (IMPORTANTE - Regra de Tags Abrangentes):
+
+    Uma questão pode (e deve) ter múltiplas tags se ela abordar ou exigir distinção entre múltiplos conceitos.
+
+    Exemplo: Se a resposta for "Ativo Imobilizado", mas as opções B e C exigirem conhecimento sobre "Propriedade para Investimento" ou "Ativo Não Circulante Mantido para Venda" para serem descartadas, inclua todas as tags pertinentes. O objetivo é mapear todo o conhecimento necessário para resolver a questão.
+
+    Restrição: Todas as tags devem pertencer à mesma disciplina listada na ementa.
+
+Deve ser exportado para código .json, utilizando os seguintes parâmetros:
+
+{
+
+    "id": 1, <- Para números abaixo de 10, não deve conter zero
+
+    "ano": 2024, <- O ano do exame
+
+    "exame": "CFC 2024/2", <- A Edição do exame, sempre CFC ano/edição (verifique no pdf)
+
+    "banca": "FGV", <- Busque no PDF o nome da banca entre FGV e Consulplan
+
+    "disciplina": "Língua Portuguesa Aplicada",
+
+    "tags": [
+
+      "Língua Portuguesa"
+
+    ],
+
+    "enunciado": "Um famoso escritor falou sobre a leitura: <br>A leitura é para a mente o que a ginástica é para o corpo. <br>Com essa frase, o autor quer dizer que",
+
+    "opcoes": [
+
+      {
+
+        "letra": "A",
+
+        "texto": "exercícios físicos devem ser feitos todos os dias."
+
+      },
+
+      {
+
+        "letra": "B",
+
+        "texto": "a leitura, como a ginástica, deve ser feita diariamente."
+
+      },
+
+      {
+
+        "letra": "C",
+
+        "texto": "a leitura enriquece o nosso conhecimento."
+
+      },
+
+      {
+
+        "letra": "D",
+
+        "texto": "exercícios físicos e leitura fortalecem o corpo."
+
+      }
+
+    ],
+
+    "gabarito": "", <- campo vazio ""
+
+    "gabarito_texto": "", <- campo vazio ""
+
+    "resolucao": "", <- campo vazio ""
+
+    "autor_resolucao": "", <- campo vazio ""
+
+    "obsoleta": false, <- sempre false ""
+
+    "anulada": false, <- campo false ""
+
+    "lancamentos": [] <- campo sempre desse jeito
+
+  },
+
+
+Formate a tabela do enunciado, de modo que o js entenda. Atente-se ao "enunciado_blocos", ele só deve ser preenchido caso a questão tenha tabelas. Caso não tenha, use "enunciado".
+
+
+function renderizarEnunciado(questao) {
+
+    // 1. Prioridade: Blocos Estruturados
+
+    if (questao.enunciado_blocos && Array.isArray(questao.enunciado_blocos)) {
+
+        let html = '';
+
+        questao.enunciado_blocos.forEach(bloco => {
+
+            if (bloco.type === 'p') html += `<p>${bloco.content}</p>`;
+
+            else if (bloco.type === 'table') {
+
+                html += '<div class="table-wrapper"><table class="enunciado-table">';
+
+                if (bloco.headerRows) {
+
+                    html += '<thead>';
+
+                    bloco.headerRows.forEach(r => {
+
+                        html += '<tr>';
+
+                        r.forEach(c => html += `<th${c.colspan ? ` colspan="${c.colspan}"` : ''}${c.rowspan ? ` rowspan="${c.rowspan}"` : ''}>${c.content}</th>`);
+
+                        html += '</tr>';
+
+                    });
+
+                    html += '</thead>';
+
+                }
+
+                if (bloco.bodyRows) {
+
+                    html += '<tbody>';
+
+                    bloco.bodyRows.forEach(r => {
+
+                        html += '<tr>';
+
+                        r.forEach(c => html += `<td>${c}</td>`);
+
+                        html += '</tr>';
+
+                    });
+
+                    html += '</tbody>';
+
+                }
+
+                html += '</table></div>';
+
+            }
+
+        });
+
+        return `<div class="enunciado">${html}</div>`;
+
+    }
+
+
+    // 2. Fallback HTML/Texto
+
+    if (questao.enunciado) {
+
+        const pareceHTML = /<[a-z][\s\S]*>/i.test(questao.enunciado);
+
+        if (pareceHTML) {
+
+            let htmlFinal = questao.enunciado;
+
+            if (htmlFinal.includes('<table') && !htmlFinal.includes('table-wrapper')) {
+
+                htmlFinal = htmlFinal.replace(/<table/g, '<div class="table-wrapper"><table').replace(/<\/table>/g, '</table></div>');
+
+            }
+
+            return `<div class="enunciado enunciado-html">${htmlFinal}</div>`;
+
+        } else {
+
+            return `<div class="enunciado" style="white-space: pre-wrap;">${questao.enunciado}</div>`;
+
+        }
+
+    }
+
+    return '<p class="enunciado" style="color:red;">Erro: Enunciado não encontrado.</p>';
+
+}
+
+Na Parte 1: Inicie com [. Termine o último objeto com vírgula ,.
+Na Parte 2: Não use [. Comece direto no objeto. Termine com vírgula ,.
+Na Parte 3: Não use [. Comece direto no objeto. Feche a lista com ].
+
+Confirme o entendimento do prompt

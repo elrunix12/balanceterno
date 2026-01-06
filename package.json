@@ -1,0 +1,22 @@
+{
+  "name": "balanceterno",
+  "version": "1.0.0",
+  "description": "> **Democratizando o acesso ao conhecimento contábil com tecnologia e liberdade.**",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elrunix12/balanceterno.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elrunix12/balanceterno/issues"
+  },
+  "homepage": "https://github.com/elrunix12/balanceterno#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.57.0",
+    "@types/node": "^25.0.2"
+  }
+}

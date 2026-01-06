@@ -1,6 +1,10 @@
 # --- ARQUIVOS DE SISTEMA ---
 .DS_Store
 Thumbs.db
+.Spotlight-V100
+.Trashes
+__MACOSX
+desktop.ini
 
 # --- IDE / EDITOR ---
 .vscode/
@@ -25,10 +29,23 @@ ENV/
 .env
 
 # --- DADOS DO ETL (AUTOMACAO) ---
-# AQUI ESTÁ O PULO DO GATO:
-# Avisamos o git que essas pastas estão dentro de 'etl/'
-etl/importar/
-etl/exportar/
+etl/importar/*
+!etl/importar/.gitkeep
+etl/exportar/*
+!etl/exportar/.gitkeep
 
 # --- LOGS ---
 *.log
+
+# Playwright
+node_modules/
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/
+
+# --- DEBUGGING NODE/NPM ---
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
