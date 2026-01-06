@@ -1387,7 +1387,117 @@
     "autor_resolucao": "",
     "obsoleta": false,
     "anulada": false,
-    "lancamentos": []
+    "lancamentos": [
+      {
+            "titulo": "Venda de livros",
+            "data": "28/01",
+            "historico": "",
+            "debitos": [
+                {
+                    "conta": "Banco (AC)",
+                    "valor": "1400"
+                },
+                {
+                    "conta": "CMV (DRE)",
+                    "valor": "800"
+                }
+            ],
+            "creditos": [
+                {
+                    "conta": "Receita de vendas (DRE)",
+                    "valor": "1400"
+                },
+                {
+                    "conta": "Estoque (AC)",
+                    "valor": "800"
+                }
+            ]
+        },
+        {
+            "titulo": "Compra de livros",
+            "data": "05/02",
+            "historico": "",
+            "debitos": [
+                {
+                    "conta": "Estoque (AC)",
+                    "valor": "1350"
+                }
+            ],
+            "creditos": [
+                {
+                    "conta": "Banco (AC)",
+                    "valor": "1350"
+                }
+            ]
+        },
+        {
+            "titulo": "Venda de livros",
+            "data": "25/02",
+            "historico": "",
+            "debitos": [
+                {
+                    "conta": "Banco (AC)",
+                    "valor": "2700"
+                },
+                {
+                    "conta": "CMV (DRE)",
+                    "valor": "1520"
+                }
+            ],
+            "creditos": [
+                {
+                    "conta": "Receita de vendas (DRE)",
+                    "valor": "2700"
+                },
+                {
+                    "conta": "Estoque (AC)",
+                    "valor": "1520"
+                }
+            ]
+        },
+        {
+            "titulo": "Compra de livros",
+            "data": "05/03",
+            "historico": "",
+            "debitos": [
+                {
+                    "conta": "Estoque (AC)",
+                    "valor": "1900"
+                }
+            ],
+            "creditos": [
+                {
+                    "conta": "Banco (AC)",
+                    "valor": "1900"
+                }
+            ]
+        },
+        {
+            "titulo": "Venda de livros",
+            "data": "28/03",
+            "historico": "",
+            "debitos": [
+                {
+                    "conta": "Banco (AC)",
+                    "valor": "3750"
+                },
+                {
+                    "conta": "CMV (DRE)",
+                    "valor": "2340"
+                }
+            ],
+            "creditos": [
+                {
+                    "conta": "Receita de vendas (DRE)",
+                    "valor": "3750"
+                },
+                {
+                    "conta": "Estoque (AC)",
+                    "valor": "2340"
+                }
+            ]
+        }
+    ]
   },
   {
     "id": 31,
