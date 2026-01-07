@@ -1,6 +1,6 @@
 # Changelog
 
-## [0.30] - 2026-01-XX
+## [0.30-beta] - 2026-01-06
 
 ### Adicionado (Added)
 - **Automação de Diretórios:** O script Python agora cria automaticamente as pastas de input (`importar/exame`, `importar/gabarito`) se não existirem.
