@@ -17,7 +17,7 @@
 
 // (NOVO) Lista de arquivos por edição de exame
 const ARQUIVOS_EXAMES = [
-    'exame/CFC_2025_02.json',
+    'exames/CFC_2025_02.json',
     //'etl/exportar/CFC_2025_01.json',
     //'etl/exportar/CFC_2024_02.json',
     // ... adicione os demais aqui
