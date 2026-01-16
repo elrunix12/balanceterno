@@ -14,7 +14,7 @@ O Balanceterno centraliza provas antigas, organiza por disciplina e oferece ferr
 * **Banco de Questões Unificado:** Questões de diversas disciplinas (Contabilidade Geral, Custos, Auditoria, etc.).
 * **Filtros Inteligentes:** Filtre por disciplina, ano, banca ou busque por palavras-chave (ex: "Depreciação").
 * **Modo Estudo:** Resolução comentada e visualização de gabarito instantânea.
-* **Lançamentos Contábeis Visuais:** Visualize os razonetes (Débito e Crédito) em um modal dedicado para entender a mecânica da questão.
+* **Lançamentos Contábeis Visuais:** Visualize os lançamentos (Débito e Crédito) em um modal dedicado para entender a mecânica da questão.
 * **Status das Questões:** Identificação automática de questões anuladas ou obsoletas (lei antiga).
 
 ### ⚙️ Engenharia e Automação (ETL)
