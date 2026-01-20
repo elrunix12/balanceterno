@@ -1,34 +1,31 @@
-# 📊 Validador de Integridade e Injetor de Gabaritos - Balanceterno
+# 📊 Pipeline ETL: Validador, Sanitizador e Injetor - Balanceterno
 
-Este repositório contém o utilitário de processamento de dados (`main.py`) desenvolvido para o projeto **Balanceterno**.
+Esta pasta contém o utilitário de processamento de dados (`main.py`) desenvolvido para o projeto **Balanceterno**.
 
-Sua função é atuar como uma **camada de auditoria e validação**, cruzando os dados brutos  (arquivos `.json`) com o gabarito oficial da banca examinadora (arquivos `.txt`). Além disso, o script gera relatórios estatísticos para permitir a Avaliação Analítica da distribuição de disciplinas.
+Sua função é atuar como uma **camada de auditoria, limpeza e validação (ETL)**, transformando os dados brutos gerados (arquivos `.json`) em dados confiáveis para a aplicação. O script cruza informações com o gabarito oficial, injeta licenciamento e, crucialmente, **remove alucinações de classificação** através de uma lista de tags permitidas.
 
 ---
 
 ## 🚀 Funcionalidades
 
-* **Conciliação Automatizada:** Cruza o ID da questão com o arquivo de gabarito externo, garantindo 100% de fidelidade à resposta oficial.
+* **Sanitização Taxonômica:** Filtra as tags de cada questão comparando-as com a `ementa.json` oficial. Classificações alucinadas pela IA são removidas e o script registra no log exatamente qual questão e qual tag foi interceptada, criando uma trilha de auditoria técnica.
+* **Conciliação de Gabarito:** Cruza o ID da questão com o arquivo de texto (`.txt`) oficial da banca, garantindo 100% de fidelidade à resposta correta.
 * **Injeção de Metadados (TASL):** Adiciona automaticamente o cabeçalho de licenciamento (CC-BY-SA 4.0) e atribuição correta em todos os arquivos processados.
 * **Padronização de Dados:**
-* Converte IDs numéricos (ex: `"01"`  `1`).
-* Limpa campos de enunciado redundantes (prioriza blocos estruturados).
-* Identifica questões anuladas (`X` ou `*`).
-
-
-* **Relatórios Analíticos:** Gera planilhas (`.csv`) contendo a contagem de questões por disciplina para conferência com o Edital.
-* **Processamento em Lote:** Processa múltiplos exames simultaneamente.
+    * Converte IDs para inteiros.
+    * Identifica e marca questões anuladas (`X` ou `*`).
+    * Preenche lacunas de texto para evitar erros no frontend.
+* **Relatórios Matriciais:** Gera planilhas (`.csv`) comparando a contagem de questões extraídas *versus* a contagem oficial do Edital.
 
 ---
 
 ## 🛠️ Pré-requisitos
 
-O script foi projetado para ser **leve e sem dependências externas complexas**.
+O script foi projetado para ser **leve e nativo**.
 
-* **Python 3.8+** (Nenhuma biblioteca externa como `pandas` ou `pdfplumber` é necessária).
+* **Python 3.8+** (Nenhuma biblioteca externa necessária).
 
-Para rodar, basta usar a biblioteca padrão do Python:
-
+Para rodar:
 ```bash
 python main.py
 
@@ -36,23 +33,25 @@ python main.py
 
 ---
 
-## 📂 Estrutura de Pastas
+## 📂 Estrutura de Arquivos
 
-Ao executar o script pela primeira vez, ele criará a estrutura de diretórios automaticamente:
+O script espera a seguinte organização para funcionar plenamente:
 
 ```text
 / (Raiz do Projeto)
 │
-├── main.py                # O script de validação
+├── main.py                # O motor de processamento
+├── ementa.json            # [IMPORTANTE] A lista oficial de tags permitidas
 ├── README.md              # Documentação
 │
 ├── importar/              # ENTRADA DE DADOS
+│   ├── oficial.csv        # Dados quantitativos do Edital (opcional)
 │   ├── CFC_2024_01.json   # Arquivo bruto (gerado pela IA)
 │   └── CFC_2024_01.txt    # Gabarito oficial (digitado manualmente)
 │
-└── exportar/              # SAÍDA DE DADOS (Validada)
-    ├── CFC_2024_01.json   # Arquivo final (pronto para o site)
-    └── RELATORIO_CFC...   # Planilha de conferência (.csv)
+└── exportar/              # SAÍDA DE DADOS (Sanitizada)
+    ├── CFC_2024_01.json   # Arquivo limpo e pronto para o site
+    └── relatorio_geral.csv # Auditoria de extração
 
 ```
 
@@ -62,62 +61,50 @@ Ao executar o script pela primeira vez, ele criará a estrutura de diretórios a
 
 ### 1. Preparação
 
-Execute o script uma vez para criar as pastas:
-
-```bash
-python main.py
-
-```
+Certifique-se de que o arquivo `ementa.json` esteja na mesma pasta do script. Ele serve como o "porteiro" das tags válidas.
 
 ### 2. Importação
 
-Coloque na pasta `importar/` os pares de arquivos. Eles devem ter o **mesmo nome**:
+Coloque na pasta `importar/` os pares de arquivos da prova. Eles devem ter o **mesmo nome base**:
 
 * **O JSON:** O arquivo contendo as questões extraídas.
-* **O TXT:** Um arquivo de texto simples com o gabarito oficial.
+* **O TXT:** Gabarito simples (formato `1-A`, `2-C`, `3-X`).
 
-**Formato do arquivo .txt:**
-Basta colocar o número da questão, um traço e a letra correta. Espaços são ignorados.
+### 3. Execução
 
-```text
-1-A
-2-C
-3-X  (Use X ou * para Anulada)
-4-D
-...
+Rode o script: `python main.py`.
 
-```
-
-### 3. Execução e Relatórios
-
-Rode o script novamente. Ele processará os arquivos e perguntará ao final:
+O terminal exibirá o log de auditoria detalhado:
 
 ```text
-? Deseja gerar o relatório de disciplinas para Excel? (s/n):
-
+> INICIANDO ARQUIVO: CFC_2022_01.json
+   [LENDO] Buscando gabarito em: CFC_2022_01.txt
+   [CORREÇÃO] Q24 (Contabilidade Setor Público): Removida(s) ['NBC TSP 08']
+   [LIMPEZA] Total de 1 tags inválidas removidas neste arquivo.
 ```
 
-* Digite `s` para gerar o arquivo `.csv` na pasta `exportar`.
-* Use este relatório para comparar a quantidade de questões extraídas com a quantidade prevista no Edital (Avaliação Analítica).
+### 4. Auditoria
+
+Ao final, responda `s` para gerar o relatório comparativo. O arquivo CSV gerado na pasta `exportar` mostrará se alguma disciplina está com contagem divergente do `oficial.csv`.
 
 ---
 
 ## 📝 Detalhes da Validação
 
-O script realiza as seguintes alterações nos dados para garantir a integridade:
+O script realiza as seguintes transformações (Transform) nos dados:
 
 | Campo | Ação do Script |
 | --- | --- |
-| `id` | Força conversão para **Inteiro** (remove zeros à esquerda e aspas). |
-| `gabarito` | Substitui qualquer valor anterior pelo valor do **TXT oficial**. |
-| `gabarito_texto` | Busca automaticamente o texto correspondente dentro da lista de `opcoes`. |
-| `anulada` | Marca como `true` automaticamente se o gabarito for `X` ou `*`. |
-| `resolucao` | Preenche com string vazia `""` se o campo estiver ausente (evita erros no frontend). |
-| `enunciado` | Remove o campo de texto simples se houver `enunciado_blocos` (otimização). |
+| `tags` | **Filtro Rígido:** Remove qualquer string que não exista na `ementa.json`. |
+| `id` | Força conversão para **Inteiro** (remove zeros à esquerda). |
+| `gabarito` | Substitui o valor da IA pelo valor do **TXT oficial**. |
+| `gabarito_texto` | Busca o texto correspondente à letra correta nas opções. |
+| `anulada` | Marca `true` se o gabarito for `X`, `*` ou `NULA`. |
+| `resolucao` | Garante que o campo exista (string vazia) se estiver ausente. |
 
 ---
 
 ## ⚖️ Licença
 
 Este utilitário é distribuído sob a licença **AGPL-3.0**.
-Por padrão, os dados processados por ele (conteúdo das questões) são atribuídos sob a licença **CC-BY-SA 4.0**. Você pode alterar as licenças dos arquivos gerados por você.
+Os dados processados (conteúdo das questões) são atribuídos sob a licença **CC-BY-SA 4.0**. Você pode alterar as licenças dos arquivos gerados por você.

@@ -17,10 +17,15 @@
 
 // (NOVO) Lista de arquivos por edição de exame
 const ARQUIVOS_EXAMES = [
+    'exames/CFC_2022_01.json',
+    'exames/CFC_2022_02.json',
+    'exames/CFC_2023_01.json',
+    'exames/CFC_2023_02.json',
+    'exames/CFC_2024_01.json',
+    'exames/CFC_2024_01_RS.json',
+    'exames/CFC_2024_02.json',
+    'exames/CFC_2025_01.json',
     'exames/CFC_2025_02.json',
-    //'etl/exportar/CFC_2025_01.json',
-    //'etl/exportar/CFC_2024_02.json',
-    // ... adicione os demais aqui
 ];
 
 const QUESTIONS_PER_EXAM = 50;

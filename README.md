@@ -62,7 +62,8 @@ Ideal para criar questões inéditas ou ajustar tabelas muito complexas. Para ch
 
 1.  Abra o arquivo `tools/generator.html` no seu navegador, ou acesse (Gerador de questões)[https://elrunix12.github.io/balanceterno/tools/generator.html]
 2.  Utilize a interface visual para preencher Enunciado, Opções e Lançamentos.
-3.  O sistema gera o JSON validado para você copiar e colar na pasta `/disciplinas`.
+3.  O sistema gera o JSON validado.
+4.  Edite o arquivo `etl/ementas.json` caso você precise alterar disciplinas ou as *tags*.
 
 Dica: Você pode usar uma LLM de sua preferência para classificar e extrair para o formato .json e inserir o gabarito com nosso script em python (Leia a documentação [aqui](/etl/README.md)). O prompt está disponível [aqui](/etl/prompt_ia.md)
 
@@ -102,10 +103,6 @@ Para garantir a interoperabilidade, todas as questões geradas pelo sistema segu
 Este é um projeto comunitário\!
 
   * **Conteúdo:** Encontrou um erro ou quer enviar uma resolução? Use nosso [Formulário de Contribuição](https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAYAAF_bnDZUODNHWlVVRFNBNlgwUDlXTUU1VEQ2MEJNRS4u).
-  * **Código:** Quer melhorar o filtro ou o script Python?
-    1.  Faça um Fork do projeto.
-    2.  Crie uma Branch (`git checkout -b feature/minha-melhoria`).
-    3.  Abra um Pull Request.
 
 -----
 

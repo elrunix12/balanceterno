@@ -17,32 +17,15 @@
     "tags": [
       "Língua Portuguesa"
     ],
-    "enunciado": [
-      {
-        "type": "p",
-        "content": "Os dicionários registram os diversos significados de um vocábulo; os dois textos abaixo definem o termo 'contabilidade', segundo, respectivamente, os dicionários de Antônio Houaiss (AH) e de Aurélio Buarque de Hollanda (ABH)."
-      },
-      {
-        "type": "p",
-        "content": "(AH) Contabilidade: ciência teórica e prática que estuda os métodos de cálculo e registro da movimentação financeira de uma firma ou empresa."
-      },
-      {
-        "type": "p",
-        "content": "(ABH) Contabilidade: ciência que estuda e interpreta os registros dos fenômenos que afetam o patrimônio de uma entidade (empresa, instituição pública, pessoa física, instituição não lucrativa etc.)."
-      },
-      {
-        "type": "p",
-        "content": "Sobre esses textos, assinale a afirmativa correta."
-      }
-    ],
+    "enunciado": "Os dicionários registram os diversos significados de um vocábulo; os dois textos abaixo definem o termo “contabilidade”, segundo, respectivamente, os dicionários de Antônio Houaiss (AH) e de Aurélio Buarque de Hollanda (ABH). <br>(AH) Contabilidade: ciência teórica e prática que estuda os métodos de cálculo e registro da movimentação financeira de uma firma ou empresa.<br>(ABH) Contabilidade: ciência que estuda e interpreta os registros dos fenômenos que afetam o patrimônio de uma entidade (empresa, instituição pública, pessoa física, instituição não lucrativa etc.).<br>Sobre esses textos, assinale a afirmativa correta.",
     "opcoes": [
       {
         "letra": "A",
-        "texto": "As definições começam sempre por uma palavra de conteúdo geral que, nesses casos, é representada pela palavra 'ciência'."
+        "texto": "As definições começam sempre por uma palavra de conteúdo geral que, nesses casos, é representada pela palavra “ciência”."
       },
       {
         "letra": "B",
-        "texto": "Os termos 'teórica e prática' e 'cálculo e registro' são construídos com palavras antônimas, ou seja, de significados opostos."
+        "texto": "Os termos “teórica e prática” e “cálculo e registro” são construídos com palavras antônimas, ou seja, de significados opostos."
       },
       {
         "letra": "C",
@@ -50,11 +33,11 @@
       },
       {
         "letra": "D",
-        "texto": "As duas definições mostram o mesmo objetivo da ciência 'contabilidade'."
+        "texto": "As duas definições mostram o mesmo objetivo da ciência “contabilidade”."
       }
     ],
     "gabarito": "A",
-    "gabarito_texto": "As definições começam sempre por uma palavra de conteúdo geral que, nesses casos, é representada pela palavra 'ciência'.",
+    "gabarito_texto": "As definições começam sempre por uma palavra de conteúdo geral que, nesses casos, é representada pela palavra “ciência”.",
     "resolucao": "",
     "autor_resolucao": "",
     "obsoleta": false,
@@ -70,7 +53,7 @@
     "tags": [
       "Língua Portuguesa"
     ],
-    "enunciado": "As frases listadas nas opções a seguir foram reescritas de forma a eliminar-se o 'que', com substituição do verbo por um substantivo semanticamente correlato. <br>Assinale a frase em que a substituição foi feita de forma adequada.",
+    "enunciado": "As frases listadas nas opções a seguir foram reescritas de forma a eliminar-se o “que”, com substituição do verbo por um substantivo semanticamente correlato.<br>Assinale a frase em que a substituição foi feita de forma adequada.",
     "opcoes": [
       {
         "letra": "A",
@@ -104,7 +87,8 @@
     "banca": "FGV",
     "disciplina": "Matemática Financeira e Estatística",
     "tags": [
-      "Payback"
+      "Payback",
+      "Fluxo de Caixa Descontado"
     ],
     "enunciado": [
       {
@@ -113,15 +97,11 @@
       },
       {
         "type": "p",
-        "content": "1º ano: R$ 121.000,00;<br>2º ano: R$ 121.000,00;<br>3º ano em diante: R$ 146.410,00 por ano."
+        "content": "• 1º ano: R$ 121.000,00;<br>• 2º ano: R$ 121.000,00;<br>• 3º ano em diante: R$ 146.410,00 por ano."
       },
       {
         "type": "p",
-        "content": "Chama-se payback descontado ao tempo necessário para que a soma dos fluxos de caixa descontados iguale o investimento inicial."
-      },
-      {
-        "type": "p",
-        "content": "Considerando-se uma taxa de desconto de 10% ao ano, o payback do projeto está entre"
+        "content": "Chama-se payback descontado ao tempo necessário para que a soma dos fluxos de caixa descontados iguale o investimento inicial.<br>Considerando-se uma taxa de desconto de 10% ao ano, o payback do projeto está entre"
       }
     ],
     "opcoes": [
@@ -159,7 +139,7 @@
     "tags": [
       "Juros Compostos"
     ],
-    "enunciado": "A empresa VGF S.A. tomou um empréstimo bancário de R$ 14.560,00 para financiar a compra de equipamentos. O contrato de empréstimo estabelece que o valor tomado deve ser liquidado por meio de uma série postecipada de 3 pagamentos mensais, iguais e sucessivos.<br>O regime de capitalização adotado é o de juros compostos, à taxa de 20% ao mês.<br>Considerando essas informações, é correto afirmar que o valor das prestações mensais será de",
+    "enunciado": "A empresa VGF S.A. tomou um empréstimo bancário de R$ 14.560,00 para financiar a compra de equipamentos. O contrato de empréstimo estabelece que o valor tomado deve ser liquidado por meio de uma série postecipada de 3 pagamentos mensais, iguais e sucessivos. O regime de capitalização adotado é o de juros compostos, à taxa de 20% ao mês.<br>Considerando essas informações, é correto afirmar que o valor das prestações mensais será de",
     "opcoes": [
       {
         "letra": "A",
@@ -198,15 +178,11 @@
     "enunciado": [
       {
         "type": "p",
-        "content": "Para o contador que atua no setor público ou na fiscalização de contratos administrativos, o conhecimento da Lei nº 14.133, de 1º de abril de 2021 (Lei de Licitações e Contratos), é fundamental para a avaliação da legalidade e conformidade dos gastos públicos."
+        "content": "Para o contador que atua no setor público ou na fiscalização de contratos administrativos, o conhecimento da Lei nº 14.133, de 1º de abril de 2021 (Lei de Licitações e Contratos), é fundamental para a avaliação da legalidade e conformidade dos gastos públicos.<br>O Art. 5º dessa Lei elenca diversos princípios que devem guiar a atuação das Administrações Públicas diretas, autárquicas e fundacionais da União, dos Estados, do Distrito Federal e dos Municípios.<br>Com base no texto legal, avalie os seguintes princípios:"
       },
       {
         "type": "p",
-        "content": "O Art. 5º dessa Lei elenca diversos princípios que devem guiar a atuação das Administrações Públicas diretas, autárquicas e fundacionais da União, dos Estados, do Distrito Federal e dos Municípios."
-      },
-      {
-        "type": "p",
-        "content": "Com base no texto legal, avalie os seguintes princípios:<br>I. Impessoalidade;<br>II. Transparência;<br>III. Racionalidade econômica;<br>IV. Probidade administrativa."
+        "content": "I. Impessoalidade;<br>II. Transparência;<br>III. Racionalidade econômica;<br>IV. Probidade administrativa."
       },
       {
         "type": "p",
@@ -320,7 +296,7 @@
     "tags": [
       "NBC PG 01"
     ],
-    "enunciado": "Um escritório contábil quer expandir sua clientela com campanha de marketing, mas tem dúvidas sobre publicidade e preços conforme o Código de Ética.<br>Com base na NBC PG 01 CÓDIGO DE ÉTICA PROFISSIONAL DO CONTADOR, uma prática de divulgação e precificação eticamente correta é",
+    "enunciado": "Um escritório contábil quer expandir sua clientela com campanha de marketing, mas tem dúvidas sobre publicidade e preços conforme o Código de Ética.<br>Com base na NBC PG 01 – CÓDIGO DE ÉTICA PROFISSIONAL DO CONTADOR, uma prática de divulgação e precificação eticamente correta é",
     "opcoes": [
       {
         "letra": "A",
@@ -462,13 +438,13 @@
     "banca": "FGV",
     "disciplina": "Contabilidade Geral e NBCs",
     "tags": [
-      "Balanço Patrimonial",
-      "Plano de Contas e Procedimentos de escrituração"
+      "Mensuração e Reconhecimento de Operações",
+      "Balanço Patrimonial"
     ],
     "enunciado": [
       {
         "type": "p",
-        "content": "Uma sociedade empresária presta serviços de perícia a terceiros. Em junho de 2024, aconteceram os seguintes fatos:"
+        "content": "Uma sociedade empresária presta serviços de perícia a terceiros.<br>Em junho de 2024, aconteceram os seguintes fatos:"
       },
       {
         "type": "p",
@@ -521,15 +497,7 @@
       },
       {
         "type": "p",
-        "content": "( ) Utilizar consistentemente as mesmas bases de mensuração para os mesmos itens, seja de período a período, na entidade que reporta ou em um único período para diferentes entidades, prejudica a comparabilidade das demonstrações."
-      },
-      {
-        "type": "p",
-        "content": "( ) A mudança na base de mensuração pode tornar as demonstrações contábeis menos compreensíveis. Contudo, a mudança pode ser justificada se outros fatores compensarem a redução na compreensibilidade, por exemplo, se a mudança resulta em informações mais relevantes."
-      },
-      {
-        "type": "p",
-        "content": "( ) A verificação é melhorada utilizando-se bases de mensuração que resultam em avaliações que podem ser independentemente corroboradas diretamente, por exemplo, observando os preços, ou indiretamente, por exemplo, verificando dados de entrada de modelo."
+        "content": "( ) Utilizar consistentemente as mesmas bases de mensuração para os mesmos itens, seja de período a período, na entidade que reporta ou em um único período para diferentes entidades, prejudica a comparabilidade das demonstrações.<br>( ) A mudança na base de mensuração pode tornar as demonstrações contábeis menos compreensíveis. Contudo, a mudança pode ser justificada se outros fatores compensarem a redução na compreensibilidade, por exemplo, se a mudança resulta em informações mais relevantes.<br>( ) A verificação é melhorada utilizando-se bases de mensuração que resultam em avaliações que podem ser independentemente corroboradas diretamente, por exemplo, observando os preços, ou indiretamente, por exemplo, verificando dados de entrada de modelo."
       },
       {
         "type": "p",
@@ -539,23 +507,23 @@
     "opcoes": [
       {
         "letra": "A",
-        "texto": "V - V - V."
+        "texto": "V – V – V."
       },
       {
         "letra": "B",
-        "texto": "V - V - F."
+        "texto": "V – V – F."
       },
       {
         "letra": "C",
-        "texto": "V - F - V."
+        "texto": "V – F – V."
       },
       {
         "letra": "D",
-        "texto": "F - V - V."
+        "texto": "F – V – V."
       }
     ],
     "gabarito": "D",
-    "gabarito_texto": "F - V - V.",
+    "gabarito_texto": "F – V – V.",
     "resolucao": "",
     "autor_resolucao": "",
     "obsoleta": false,
@@ -574,7 +542,7 @@
     "enunciado": [
       {
         "type": "p",
-        "content": "A NBC TG 28 (R4) - PROPRIEDADES PARA INVESTIMENTO trata de definição, classificação e mensuração de propriedades para investimento. Sobre esse item, analise as seguintes afirmativas:"
+        "content": "A NBC TG 28 (R4) - PROPRIEDADES PARA INVESTIMENTO trata de definição, classificação e mensuração de propriedades para investimento.<br>Sobre esse item, analise as seguintes afirmativas:"
       },
       {
         "type": "p",
@@ -659,11 +627,11 @@
     "enunciado": [
       {
         "type": "p",
-        "content": "De acordo com a NBC TG 01 (R4) - REDUÇÃO AO VALOR RECUPERÁVEL DE ATIVOS, o valor em uso é o valor presente de fluxos de caixa futuros esperados que devem advir de um ativo ou de unidade geradora de caixa."
+        "content": "De acordo com a NBC TG 01 (R4) - REDUÇÃO AO VALOR RECUPERÁVEL DE ATIVOS, o valor em uso é o valor presente de fluxos de caixa futuros esperados que devem advir de um ativo ou de unidade geradora de caixa.<br>Avalie se os seguintes elementos devem ser refletidos no cálculo do valor em uso do ativo:"
       },
       {
         "type": "p",
-        "content": "Avalie se os seguintes elementos devem ser refletidos no cálculo do valor em uso do ativo:<br>I. O valor pago na aquisição do ativo.<br>II. As expectativas acerca de possíveis variações no montante ou no período de ocorrência desses fluxos de caixa futuros.<br>III. As estimativas dos fluxos de caixa futuros que a entidade espera obter com esse ativo.<br>IV. O valor do dinheiro no tempo, representado pela atual taxa de juros livre de risco."
+        "content": "I. O valor pago na aquisição do ativo.<br>II. As expectativas acerca de possíveis variações no montante ou no período de ocorrência desses fluxos de caixa futuros.<br>III. As estimativas dos fluxos de caixa futuros que a entidade espera obter com esse ativo.<br>IV. O valor do dinheiro no tempo, representado pela atual taxa de juros livre de risco."
       },
       {
         "type": "p",
@@ -707,7 +675,7 @@
       "Combinação de Negócios",
       "Impairment"
     ],
-    "enunciado": "O ágio por expectativa de rentabilidade futura (goodwill) reconhecido em uma combinação de negócios é um ativo que representa benefícios econômicos futuros advindos de outros ativos adquiridos na combinação de negócios que não são identificados individualmente e não são reconhecidos separadamente.<br>De acordo com a NBC TG 04 (R4) - ATIVO INTANGÍVEL e com a NBC TG 15 (R4) COMBINAÇÃO DE NEGÓCIOS, a empresa adquirente deve reconhecer, na data da aquisição, separadamente do ágio derivado da expectativa de rentabilidade futura (goodwill) apurado em uma combinação de negócios, um ativo intangível da adquirida, independentemente de o ativo ter sido reconhecido pela adquirida antes da aquisição da empresa.<br>A perda por desvalorização reconhecida para o ágio por expectativa de rentabilidade futura (goodwill) não deve ser revertida em período subsequente, pois",
+    "enunciado": "O ágio por expectativa de rentabilidade futura (goodwill) reconhecido em uma combinação de negócios é um ativo que representa benefícios econômicos futuros advindos de outros ativos adquiridos na combinação de negócios que não são identificados individualmente e não são reconhecidos separadamente.<br>De acordo com a NBC TG 04 (R4) - ATIVO INTANGÍVEL e com a NBC TG 15 (R4) - COMBINAÇÃO DE NEGÓCIOS, a empresa adquirente deve reconhecer, na data da aquisição, separadamente do ágio derivado da expectativa de rentabilidade futura (goodwill) apurado em uma combinação de negócios, um ativo intangível da adquirida, independentemente de o ativo ter sido reconhecido pela adquirida antes da aquisição da empresa.<br>A perda por desvalorização reconhecida para o ágio por expectativa de rentabilidade futura (goodwill) não deve ser revertida em período subsequente, pois",
     "opcoes": [
       {
         "letra": "A",
@@ -746,11 +714,7 @@
     "enunciado": [
       {
         "type": "p",
-        "content": "A Demonstração do Valor Adicionado (DVA) busca evidenciar o valor e a distribuição da riqueza econômica gerada pelas atividades da sociedade empresária, incluindo também o valor adicionado recebido em transferência. A riqueza gerada é evidenciada na distribuição entre o capital (Remuneração de capital próprio e de terceiros), trabalho (Pessoal) e governo (Impostos, taxas e contribuições)."
-      },
-      {
-        "type": "p",
-        "content": "Relacione cada item a seguir ao respectivo componente da distribuição da riqueza, conforme disposto na NBC TG 09 (R1) - DEMONSTRAÇÃO DO VALOR ADICIONADO."
+        "content": "A Demonstração do Valor Adicionado (DVA) busca evidenciar o valor e a distribuição da riqueza econômica gerada pelas atividades da sociedade empresária, incluindo também o valor adicionado recebido em transferência. A riqueza gerada é evidenciada na distribuição entre o capital (Remuneração de capital próprio e de terceiros), trabalho (Pessoal) e governo (Impostos, taxas e contribuições).<br>Relacione cada item a seguir ao respectivo componente da distribuição da riqueza, conforme disposto na NBC TG 09 (R1) - DEMONSTRAÇÃO DO VALOR ADICIONADO."
       },
       {
         "type": "p",
@@ -768,23 +732,23 @@
     "opcoes": [
       {
         "letra": "A",
-        "texto": "1 - 2 - 3 - 4."
+        "texto": "1 – 2 – 3 – 4."
       },
       {
         "letra": "B",
-        "texto": "2 - 3 - 4 - 1."
+        "texto": "2 – 3 – 4 – 1."
       },
       {
         "letra": "C",
-        "texto": "2 - 4 - 3 - 1."
+        "texto": "2 – 4 – 3 – 1."
       },
       {
         "letra": "D",
-        "texto": "1 - 3 - 4 - 2."
+        "texto": "1 – 3 – 4 – 2."
       }
     ],
     "gabarito": "D",
-    "gabarito_texto": "1 - 3 - 4 - 2.",
+    "gabarito_texto": "1 – 3 – 4 – 2.",
     "resolucao": "",
     "autor_resolucao": "",
     "obsoleta": false,
@@ -798,18 +762,12 @@
     "banca": "FGV",
     "disciplina": "Contabilidade Geral e NBCs",
     "tags": [
-      "Ativo Imobilizado",
-      "Depreciação/Amortização",
-      "Políticas Contábeis, Mudança de Estimativa e Retificação de Erro"
+      "Ativo Imobilizado"
     ],
     "enunciado": [
       {
         "type": "p",
-        "content": "A empresa Delta S.A. adquiriu uma máquina por R$ 350.000,00 em 01/01/2020. No momento da aquisição, a administração de Delta S.A. estimou a vida útil desse ativo em 10 anos e um valor residual de R$ 50.000,00. A máquina estava disponível para uso em 01/01/2020 e a empresa adotou o método de depreciação linear."
-      },
-      {
-        "type": "p",
-        "content": "Em 31/12/2023, a empresa procedeu a uma revisão das suas estimativas, conforme previsto no NBC TG 27 (R4) ATIVO IMOBILIZADO, e constatou as seguintes informações:"
+        "content": "A empresa Delta S.A. adquiriu uma máquina por R$ 350.000,00 em 01/01/2020. No momento da aquisição, a administração de Delta S.A. estimou a vida útil desse ativo em 10 anos e um valor residual de R$ 50.000,00. A máquina estava disponível para uso em 01/01/2020 e a empresa adotou o método de depreciação linear.<br>Em 31/12/2023, a empresa procedeu a uma revisão das suas estimativas, conforme previsto no NBC TG 27 (R4) - ATIVO IMOBILIZADO, e constatou as seguintes informações:"
       },
       {
         "type": "p",
@@ -853,13 +811,13 @@
     "banca": "FGV",
     "disciplina": "Teoria da Contabilidade",
     "tags": [
-      "Estrutura Conceitual para Relatório Financeiro",
-      "Elementos Contábeis Patrimoniais"
+      "Elementos Contábeis Patrimoniais",
+      "Estrutura Conceitual para Relatório Financeiro"
     ],
     "enunciado": [
       {
         "type": "p",
-        "content": "A NBC TG ESTRUTURA CONCEITUAL estabelece os conceitos dos elementos das demonstrações contábeis. Com base nessa norma, avalie as afirmativas a seguir e assinale (V) para a verdadeira e (F) para a falsa."
+        "content": "A NBC TG ESTRUTURA CONCEITUAL estabelece os conceitos dos elementos das demonstrações contábeis.<br>Com base nessa norma, avalie as afirmativas a seguir e assinale (V) para a verdadeira e (F) para a falsa."
       },
       {
         "type": "p",
@@ -873,23 +831,23 @@
     "opcoes": [
       {
         "letra": "A",
-        "texto": "F - F - V - V."
+        "texto": "F – F – V – V."
       },
       {
         "letra": "B",
-        "texto": "F - V - F - V."
+        "texto": "F – V – F – V."
       },
       {
         "letra": "C",
-        "texto": "V - F - V - F."
+        "texto": "V – F – V – F."
       },
       {
         "letra": "D",
-        "texto": "V - V - F - F."
+        "texto": "V – V – F – F."
       }
     ],
     "gabarito": "A",
-    "gabarito_texto": "F - F - V - V.",
+    "gabarito_texto": "F – F – V – V.",
     "resolucao": "",
     "autor_resolucao": "",
     "obsoleta": false,
@@ -908,7 +866,7 @@
     "enunciado": [
       {
         "type": "p",
-        "content": "A empresa Alfa S.A. adquiriu, por R$ 1.300.000,00, no dia 01/01/2025, 80% do capital da empresa Beta S.A., adquirindo nessa data o seu controle. Na data da aquisição:"
+        "content": "A empresa Alfa S.A. adquiriu, por R$ 1.300.000,00, no dia 01/01/2025, 80% do capital da empresa Beta S.A., adquirindo nessa data o seu controle.<br>Na data da aquisição:"
       },
       {
         "type": "p",
@@ -916,7 +874,7 @@
       },
       {
         "type": "p",
-        "content": "Com base exclusivamente nos dados apresentados e na NBC TG 15 (R4) - COMBINAÇÃO DE NEGÓCIOS, avalie as afirmativas abaixo, com relação à contabilização ocorrida na empresa Alfa S.A.:"
+        "content": "Com base exclusivamente nos dados apresentados e na NBC TG 15 (R4) – COMBINAÇÃO DE NEGÓCIOS, avalie as afirmativas abaixo, com relação à contabilização ocorrida na empresa Alfa S.A.:"
       },
       {
         "type": "p",
@@ -962,7 +920,7 @@
     "tags": [
       "Investimento em Coligada e em Empreendimento Controlado em Conjunto"
     ],
-    "enunciado": "Influência significativa é o poder de participar das decisões sobre políticas financeiras e operacionais de uma investida, mas sem que haja o controle individual ou o conjunto dessas políticas.<br>A NBC TG 18 (R4) INVESTIMENTO EM COLIGADA determina que a existência de influência significativa por investidor geralmente é evidenciada por uma ou mais das seguintes formas, à exceção de uma.<br>Assinale-a.",
+    "enunciado": "Influência significativa é o poder de participar das decisões sobre políticas financeiras e operacionais de uma investida, mas sem que haja o controle individual ou o conjunto dessas políticas.<br>A NBC TG 18 (R4) - INVESTIMENTO EM COLIGADA determina que a existência de influência significativa por investidor geralmente é evidenciada por uma ou mais das seguintes formas, à exceção de uma. Assinale-a.",
     "opcoes": [
       {
         "letra": "A",
@@ -996,7 +954,8 @@
     "banca": "FGV",
     "disciplina": "Contabilidade Geral e NBCs",
     "tags": [
-      "Operações com Mercadorias"
+      "Demonstração do Resultado",
+      "Estoques (NBC TG 16)"
     ],
     "enunciado": [
       {
@@ -1005,7 +964,7 @@
       },
       {
         "type": "p",
-        "content": "Compras: R$ 5.000,00.<br>Estoque inicial: R$ 3.000,00.<br>Estoque final: R$ 2.000,00.<br>Vendas: R$ 30.000,00.<br>Despesas gerais: R$ 1.000,00.<br>Devolução de compras: R$ 500,00."
+        "content": "• Compras: R$ 5.000,00.<br>• Estoque inicial: R$ 3.000,00.<br>• Estoque final: R$ 2.000,00.<br>• Vendas: R$ 30.000,00.<br>• Despesas gerais: R$ 1.000,00.<br>• Devolução de compras: R$ 500,00."
       },
       {
         "type": "p",
@@ -1127,7 +1086,8 @@
     "banca": "FGV",
     "disciplina": "Contabilidade Geral e NBCs",
     "tags": [
-      "Plano de Contas e Procedimentos de escrituração"
+      "Mensuração e Reconhecimento de Operações",
+      "Políticas Contábeis, Mudança de Estimativa e Retificação de Erro"
     ],
     "enunciado": "A empresa Serviços S.A. encerrou seu exercício em 31/12/2024, deixando de efetuar o lançamento referente à receita de serviços prestados a um cliente em dezembro e ainda não recebidos, deixando de obedecer, assim, ao regime de competência.<br>Como consequência do erro cometido pela ausência desse registro,",
     "opcoes": [
@@ -1163,12 +1123,12 @@
     "banca": "FGV",
     "disciplina": "Contabilidade Geral e NBCs",
     "tags": [
-      "Métodos de Avaliação e Estoques (NBC TG 16)"
+      "Estoques (NBC TG 16)"
     ],
     "enunciado": [
       {
         "type": "p",
-        "content": "A Cia. Gold vende pulseiras. Em 31/12/2024, não havia estoque inicial de pulseiras. No primeiro trimestre de 2025 aconteceram os seguintes fatos:"
+        "content": "A Cia. Gold vende pulseiras.<br>Em 31/12/2024, não havia estoque inicial de pulseiras.<br>No primeiro trimestre de 2025 aconteceram os seguintes fatos:"
       },
       {
         "type": "p",
@@ -1221,11 +1181,11 @@
       },
       {
         "type": "p",
-        "content": "• Integralização de capital social em dinheiro: R$ 300.000,00.<br>• Compra à vista de móveis e utensílios para a loja: R$ 40.000,00.<br>• Compra à vista de estoque para revenda: R$ 80.000,00.<br>• Pagamento do aluguel do semestre: R$ 30.000,00.<br>• Pagamento antecipado do aluguel do primeiro trimestre de 2025: R$ 18.000,00.<br>• Venda de todo o estoque por R$ 200.000,00, sendo que metade do valor já foi recebido e o restante deverá ser recebido no primeiro semestre de 2025. A loja estima inadimplência de 5%.<br>• Reconhecimento e pagamento de despesas diversas: R$ 12.000,00.<br>• Reconhecimento da despesa de depreciação: R$ 4.000,00."
+        "content": "• Integralização de capital social em dinheiro: R$ 300.000,00.<br>• Compra à vista de móveis e utensílios para a loja: R$ 40.000,00.<br>• Compra à vista de estoque para revenda: R$ 80.000,00.<br>• Pagamento do aluguel do semestre: R$ 30.000,00.<br>• Pagamento antecipado do aluguel do primeiro trimestre de 2025: R$ 18.000,00.<br>• Venda de todo o estoque por R$ 400.000,00, sendo que metade do valor já foi recebido e o restante deverá ser recebido no primeiro semestre de 2025. A loja estima inadimplência de 5%.<br>• Reconhecimento e pagamento de despesas diversas: R$ 12.000,00.<br>• Reconhecimento da despesa de depreciação: R$ 4.000,00."
       },
       {
         "type": "p",
-        "content": "O fluxo de caixa gerado pela atividade operacional em 2024, de acordo com as diretrizes da NBC TG 03 (R3) - DEMONSTRAÇÃO DOS FLUXOS DE CAIXA foi de"
+        "content": "O fluxo de caixa gerado pela atividade operacional em 2024, de acordo com as diretrizes da NBC TG 03 (R3) – DEMONSTRAÇÃO DOS FLUXOS DE CAIXA foi de"
       }
     ],
     "opcoes": [
@@ -1263,7 +1223,7 @@
     "tags": [
       "Impairment"
     ],
-    "enunciado": "Em 01/12/2024, uma sociedade empresária apresentava, em seu Balanço Patrimonial, como ativo imobilizado, um terreno, cujo valor contábil era de R$ 80.000,00. Em 31/12/2024, a sociedade empresária realizou um teste de recuperabilidade em seus ativos imobilizados. Foi constatado que o valor em uso do terreno era de R$ 75.000,00.<br>Para que não haja reconhecimento de perda de recuperabilidade do terreno, o valor justo líquido de despesa de venda deve ser",
+    "enunciado": "Em 01/12/2024, uma sociedade empresária apresentava, em seu Balanço Patrimonial, como ativo imobilizado, um terreno, cujo valor contábil era de R$ 80.000,00.<br>Em 31/12/2024, a sociedade empresária realizou um teste de recuperabilidade em seus ativos imobilizados.<br>Foi constatado que o valor em uso do terreno era de R$ 75.000,00.<br>Para que não haja reconhecimento de perda de recuperabilidade do terreno, o valor justo líquido de despesa de venda deve ser",
     "opcoes": [
       {
         "letra": "A",
@@ -1297,7 +1257,7 @@
     "banca": "FGV",
     "disciplina": "Contabilidade Geral e NBCs",
     "tags": [
-      "Demonstração do Resultado do Exercício (DRE)",
+      "Demonstração do Resultado",
       "Receita de Contrato com Cliente"
     ],
     "enunciado": [
@@ -1347,12 +1307,12 @@
     "banca": "FGV",
     "disciplina": "Contabilidade Geral e NBCs",
     "tags": [
-      "Métodos de Avaliação e Estoques (NBC TG 16)"
+      "Estoques (NBC TG 16)"
     ],
     "enunciado": [
       {
         "type": "p",
-        "content": "Em 01/01/2025, uma livraria tinha em estoque 20 livros 'Estatística Simples'. Cada livro tinha sido adquirido por R$ 80,00 e era vendido por R$ 140,00. No primeiro trimestre desse ano, a movimentação do livro foi a seguinte:"
+        "content": "Em 01/01/2025, uma livraria tinha em estoque 20 livros “Estatística Simples”. Cada livro tinha sido adquirido por R$ 80,00 e era vendido por R$ 140,00.<br>No primeiro trimestre desse ano, a movimentação do livro foi a seguinte:"
       },
       {
         "type": "p",
@@ -1383,15 +1343,15 @@
     ],
     "gabarito": "C",
     "gabarito_texto": "R$ 4.660,00.",
-    "resolucao": "",
-    "autor_resolucao": "",
+    "resolucao": "Estoque inicial em 01/01: 20 livros a R$ 80.\n\nVenda em 28/01: 10 livros.\nPelo PEPS, todos saem do estoque inicial.\nCMV = 10 × 80 = 800.\nEstoque restante: 10 livros a 80.\n\nCompra em 05/02: 15 livros a 90.\nEstoque: 10 livros a 80 e 15 livros a 90.\n\nVenda em 25/02: 18 livros.\nPEPS:\n– Saem 10 livros a 80 = 800.\n– Saem 8 livros a 90 = 720.\nCMV = 1520.\nEstoque restante: 7 livros a 90.\n\nCompra em 05/03: 20 livros a 95.\nEstoque: 7 livros a 90 e 20 livros a 95.\n\nVenda em 28/03: 25 livros.\nPEPS:\n– Saem 7 livros a 90 = 630.\n– Saem 18 livros a 95 = 1710.\nCMV = 2340.\n\nSomando todos os CMVs:\n800 + 1520 + 2340 = 4660.",
+    "autor_resolucao": "elrunix12",
     "obsoleta": false,
     "anulada": false,
     "lancamentos": [
       {
             "titulo": "Venda de livros",
             "data": "28/01",
-            "historico": "",
+            "historico": "venda de 10 livros por R$ 140,00.",
             "debitos": [
                 {
                     "conta": "Banco (AC)",
@@ -1416,7 +1376,7 @@
         {
             "titulo": "Compra de livros",
             "data": "05/02",
-            "historico": "",
+            "historico": "compra de 15 livros por R$ 90,00.",
             "debitos": [
                 {
                     "conta": "Estoque (AC)",
@@ -1433,7 +1393,7 @@
         {
             "titulo": "Venda de livros",
             "data": "25/02",
-            "historico": "",
+            "historico": "venda de 18 livros por R$ 150,00.",
             "debitos": [
                 {
                     "conta": "Banco (AC)",
@@ -1458,7 +1418,7 @@
         {
             "titulo": "Compra de livros",
             "data": "05/03",
-            "historico": "",
+            "historico": "compra de 20 livros por R$ 95,00.",
             "debitos": [
                 {
                     "conta": "Estoque (AC)",
@@ -1475,7 +1435,7 @@
         {
             "titulo": "Venda de livros",
             "data": "28/03",
-            "historico": "",
+            "historico": "venda de 25 livros por R$ 150,00.",
             "debitos": [
                 {
                     "conta": "Banco (AC)",
@@ -1506,16 +1466,14 @@
     "banca": "FGV",
     "disciplina": "Contabilidade Geral e NBCs",
     "tags": [
-      "Apresentação das Demonstrações Contábeis"
+      "Apresentação das Demonstrações Contábeis",
+      "Demonstração do Resultado Abrangente",
+      "Demonstração do Resultado"
     ],
     "enunciado": [
       {
         "type": "p",
-        "content": "A compreensão dos conceitos e métodos relacionados à Demonstração do Resultado do Exercício (DRE) e à Demonstração do Resultado Abrangente (DRA) é fundamental para a adequada análise das variações do patrimônio líquido e para a tomada de decisões baseadas nos resultados operacionais."
-      },
-      {
-        "type": "p",
-        "content": "A respeito do tema, analise as seguintes afirmativas:"
+        "content": "A compreensão dos conceitos e métodos relacionados à Demonstração do Resultado do Exercício (DRE) e à Demonstração do Resultado Abrangente (DRA) é fundamental para a adequada análise das variações do patrimônio líquido e para a tomada de decisões baseadas nos resultados operacionais.<br>A respeito do tema, analise as seguintes afirmativas:"
       },
       {
         "type": "p",
@@ -1561,7 +1519,7 @@
     "tags": [
       "Receita de Contrato com Cliente"
     ],
-    "enunciado": "A empresa S.A. é especializada na construção de galpões industriais sob encomenda de acordo com especificações exclusivas de cada cliente. Os contratos firmados pela empresa preveem que a construção ocorra no terreno do cliente, com pagamentos mensais vinculados ao andamento da obra, que pode durar de 6 a 10 meses.<br>Considerando as informações apresentadas e os preceitos da NBC TG 47 RECEITA DE CONTRATO COM CLIENTE, o reconhecimento da receita deve ocorrer",
+    "enunciado": "A empresa S.A. é especializada na construção de galpões industriais sob encomenda de acordo com especificações exclusivas de cada cliente. Os contratos firmados pela empresa preveem que a construção ocorra no terreno do cliente, com pagamentos mensais vinculados ao andamento da obra, que pode durar de 6 a 10 meses.<br>Considerando as informações apresentadas e os preceitos da NBC TG 47 – RECEITA DE CONTRATO COM CLIENTE, o reconhecimento da receita deve ocorrer",
     "opcoes": [
       {
         "letra": "A",
@@ -1597,7 +1555,7 @@
     "tags": [
       "Arrendamentos"
     ],
-    "enunciado": "Uma empresa S.A. celebrou um contrato no valor de R$ 30.000,00 para utilizar um equipamento por um período de 10 meses, cujo ativo subjacente do contrato foi considerado de baixo valor pela empresa. A administração da empresa S.A. decidiu aplicar a isenção de reconhecimento autorizada pelo item 5 da NBC TG 06 (R3).<br>Considerando-se as informações apresentadas e os preceitos da NBC TG 06 (R3) - ARRENDAMENTOS, o tratamento contábil para esse contrato é",
+    "enunciado": "Uma empresa S.A. celebrou um contrato no valor de R$ 30.000,00 para utilizar um equipamento por um período de 10 meses, cujo ativo subjacente do contrato foi considerado de baixo valor pela empresa.<br>A administração da empresa S.A. decidiu aplicar a isenção de reconhecimento autorizada pelo item 5 da NBC TG 06 (R3).<br>Considerando-se as informações apresentadas e os preceitos da NBC TG 06 (R3) – ARRENDAMENTOS, o tratamento contábil para esse contrato é",
     "opcoes": [
       {
         "letra": "A",
@@ -1636,7 +1594,7 @@
     "enunciado": [
       {
         "type": "p",
-        "content": "Uma empresa que atua na produção de medicamentos há 10 anos decidiu trocar dois de seus equipamentos (classificados como ativo imobilizado) mais relevantes por outros com tecnologia mais atualizada com o objetivo de redução nos seus custos de produção. As informações sobre os equipamentos retirados de operação são relatadas a seguir:"
+        "content": "Uma empresa que atua na produção de medicamentos há 10 anos decidiu trocar dois de seus equipamentos (classificados como ativo imobilizado) mais relevantes por outros com tecnologia mais atualizada com o objetivo de redução nos seus custos de produção.<br>As informações sobre os equipamentos retirados de operação são relatadas a seguir:"
       },
       {
         "type": "table",
@@ -1654,11 +1612,7 @@
       },
       {
         "type": "p",
-        "content": "Sabendo que os novos equipamentos adquiridos já estão em uso, um plano de venda desses ativos (Equipamentos 1 e 2) foi submetido e aprovado pelo Conselho de Administração, que considerou a venda altamente provável de ser concluída nos próximos 12 meses."
-      },
-      {
-        "type": "p",
-        "content": "Logo, segundo a NBC TG 31 (R3) - ATIVO NÃO CIRCULANTE MANTIDO PARA VENDA E OPERAÇÃO DESCONTINUADA, a mensuração subsequente dos equipamentos a ser adotada pela empresa a partir da decisão do Conselho de Administração é:"
+        "content": "Sabendo que os novos equipamentos adquiridos já estão em uso, um plano de venda desses ativos (Equipamentos 1 e 2) foi submetido e aprovado pelo Conselho de Administração, que considerou a venda altamente provável de ser concluída nos próximos 12 meses.<br>Logo, segundo a NBC TG 31 (R3) – ATIVO NÃO CIRCULANTE MANTIDO PARA VENDA E OPERAÇÃO DESCONTINUADA, a mensuração subsequente dos equipamentos a ser adotada pela empresa a partir da decisão do Conselho de Administração é:"
       }
     ],
     "opcoes": [
@@ -1729,9 +1683,9 @@
     "ano": 2025,
     "exame": "CFC 2025/2",
     "banca": "FGV",
-    "disciplina": "Contabilidade de Custos",
+    "disciplina": "Contabilidade Geral e NBCs",
     "tags": [
-      "Controle, Registro, Apuração e Alocação de Custos"
+      "Estoques (NBC TG 16)"
     ],
     "enunciado": "Uma empresa realizou a contagem de seus estoques, acabando por superavaliar o estoque inicial, mantendo o controle de compras e estoque final nos valores corretos.<br>Em consequência da superavaliação do estoque inicial é correto afirmar que",
     "opcoes": [
@@ -1769,20 +1723,7 @@
     "tags": [
       "Métodos de Custeamento"
     ],
-    "enunciado": [
-      {
-        "type": "p",
-        "content": "A Fazenda Laticínios Campo Verde Ltda. produz e comercializa queijos artesanais tipo minas frescal. No mês de julho de 2025, quando a empresa não possuía estoque inicial, foram produzidas 12.000 unidades de queijo. Nesse mesmo mês, vendeu 9.000 unidades a um preço unitário de R$ 25,00."
-      },
-      {
-        "type": "p",
-        "content": "Os custos variáveis totais somaram R$ 135.000,00 e os custos fixos totalizaram R$ 42.000,00. As despesas fixas totalizaram R$ 25.000,00, e as despesas variáveis com comissão aos vendedores corresponderam a 5% do valor de cada unidade vendida."
-      },
-      {
-        "type": "p",
-        "content": "Considerando os dados fornecidos e desconsiderando efeitos tributários, os lucros líquidos com as vendas em julho de 2025, utilizando, respectivamente, os métodos de custeio por absorção e custeio variável, foram de"
-      }
-    ],
+    "enunciado": "A Fazenda Laticínios Campo Verde Ltda. produz e comercializa queijos artesanais tipo minas frescal. No mês de julho de 2025, quando a empresa não possuía estoque inicial, foram produzidas 12.000 unidades de queijo. Nesse mesmo mês, vendeu 9.000 unidades a um preço unitário de R$ 25,00. Os custos variáveis totais somaram R$ 135.000,00 e os custos fixos totalizaram R$ 42.000,00. As despesas fixas totalizaram R$ 25.000,00, e as despesas variáveis com comissão aos vendedores corresponderam a 5% do valor de cada unidade vendida.<br>Considerando os dados fornecidos e desconsiderando efeitos tributários, os lucros líquidos com as vendas em julho de 2025, utilizando, respectivamente, os métodos de custeio por absorção e custeio variável, foram de",
     "opcoes": [
       {
         "letra": "A",
@@ -1867,11 +1808,7 @@
       },
       {
         "type": "p",
-        "content": "Os custos indiretos de manufatura totalizaram R$ 200.000,00, distribuídos entre as seguintes atividades:<br>• Gerenciamento de mudanças de projeto (baseado em pedidos): R$ 140.000,00;<br>• Geração e uso de energia operacional (baseado em kWh): R$ 60.000,00."
-      },
-      {
-        "type": "p",
-        "content": "No período, foram produzidas 1.200 unidades do produto X, 1.500 unidades do produto Y e 2.000 unidades do produto Z.<br>Com base nesses dados, os custos unitários dos produtos X, Y e Z, respectivamente, são"
+        "content": "Os custos indiretos de manufatura totalizaram R$ 200.000,00, distribuídos entre as seguintes atividades:<br>• Gerenciamento de mudanças de projeto (baseado em pedidos): R$ 140.000,00;<br>• Geração e uso de energia operacional (baseado em kWh): R$ 60.000,00.<br>No período, foram produzidas 1.200 unidades do produto X, 1.500 unidades do produto Y e 2.000 unidades do produto Z.<br>Com base nesses dados, os custos unitários dos produtos X, Y e Z, respectivamente, são"
       }
     ],
     "opcoes": [
@@ -1916,7 +1853,7 @@
       },
       {
         "type": "p",
-        "content": "Ativo Circulante: R$ 50.000,00;<br>Ativo Realizável a Longo Prazo: R$ 30.000,00;<br>Ativo Imobilizado: R$ 120.000,00;<br>Passivo Circulante: R$ 40.000,00;<br>Passivo não Circulante: R$ 100.000,00."
+        "content": "• Ativo Circulante: R$ 50.000,00;<br>• Ativo Realizável a Longo Prazo: R$ 30.000,00;<br>• Ativo Imobilizado: R$ 120.000,00;<br>• Passivo Circulante: R$ 40.000,00;<br>• Passivo não Circulante: R$ 100.000,00."
       },
       {
         "type": "p",
@@ -1997,7 +1934,7 @@
     "enunciado": [
       {
         "type": "p",
-        "content": "A empresa Gigulefere S.A. adota o custo padrão e verificou, em abril de 2025, alguns dados para analisar a variação ocorrida (realizado x orçado). Abaixo estão apresentados os dados apurados pelo contador:"
+        "content": "A empresa Gigulefere S.A. adota o custo padrão e verificou, em abril de 2025, alguns dados para analisar a variação ocorrida (realizado x orçado).<br>Abaixo estão apresentados os dados apurados pelo contador:"
       },
       {
         "type": "p",
@@ -2041,9 +1978,10 @@
     "banca": "FGV",
     "disciplina": "Contabilidade Aplicada ao Setor Público",
     "tags": [
-      "NBCs Aplicadas ao Setor Público"
+      "NBCs Aplicadas ao Setor Público",
+      "Procedimentos Contábeis Específicos - Setor Público"
     ],
-    "enunciado": "Em janeiro de 2024, um município adquiriu computadores para o edifício-sede da Prefeitura por R$ 50.000,00, classificando-os como ativo imobilizado. O transporte do estabelecimento do fornecedor para o edifício foi de R$ 5.000,00, pagos pelo município.<br>Além disso, os custos de preparação dos locais para a instalação dos computadores foram de R$ 10.000,00. Após estarem devidamente instalados, o município gastou R$ 8.000,00 para treinar os funcionários que utilizarão esses computadores.<br>O valor a ser reconhecido a título desse ativo, inicialmente, é",
+    "enunciado": "Em janeiro de 2024, um município adquiriu computadores para o edifício-sede da Prefeitura por R$ 50.000,00, classificando-os como ativo imobilizado. O transporte do estabelecimento do fornecedor para o edifício foi de R$ 5.000,00, pagos pelo município. Além disso, os custos de preparação dos locais para a instalação dos computadores foram de R$ 10.000,00.<br>Após estarem devidamente instalados, o município gastou R$ 8.000,00 para treinar os funcionários que utilizarão esses computadores.<br>O valor a ser reconhecido a título desse ativo, inicialmente, é",
     "opcoes": [
       {
         "letra": "A",
@@ -2260,7 +2198,7 @@
     "tags": [
       "Planejamento Da Auditoria De Demonstrações Contábeis"
     ],
-    "enunciado": "De acordo com a NBC TA 300 (R1) - PLANEJAMENTO DA AUDITORIA DE DEMONSTRAÇÕES CONTÁBEIS, o envolvimento do sócio do trabalho e de outros membros-chave da equipe de trabalho no planejamento da auditoria",
+    "enunciado": "De acordo com a NBC TA 300 (R1) – PLANEJAMENTO DA AUDITORIA DE DEMONSTRAÇÕES CONTÁBEIS, o envolvimento do sócio do trabalho e de outros membros-chave da equipe de trabalho no planejamento da auditoria",
     "opcoes": [
       {
         "letra": "A",
@@ -2294,8 +2232,7 @@
     "banca": "FGV",
     "disciplina": "Perícia Contábil",
     "tags": [
-      "Conceito",
-      "Aspectos Profissionais",
+      "Legislação",
       "Aspectos Técnicos"
     ],
     "enunciado": [
@@ -2345,6 +2282,7 @@
     "banca": "FGV",
     "disciplina": "Perícia Contábil",
     "tags": [
+      "Legislação",
       "Aspectos Técnicos"
     ],
     "enunciado": "O Parecer Pericial Contábil é um documento elaborado pelo perito-contador assistente, destinado a analisar, comentar ou contestar o Laudo Pericial Contábil elaborado pelo perito-contador nomeado pelo juízo. O parecer deve ser redigido de forma clara, objetiva e técnica, seguindo rigorosamente as normas contábeis.<br>Segundo a NBC TP 01 - PERÍCIA CONTÁBIL, uma condição para a emissão do Parecer Pericial Contábil é que o Parecer Pericial Contábil deve",

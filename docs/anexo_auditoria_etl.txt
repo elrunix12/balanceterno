@@ -1,0 +1,42 @@
+=== SCRIPT BALANCETERNO ===
+
+   [IMPORTANDO] Lendo dados oficiais de 'oficial.csv'...
+
+   [EMENTA] Carregando tags válidas de 'ementa.json'...
+   [EMENTA] 132 tags únicas carregadas.
+1. Inserir licença? (s/n): 2. Gerar Relatório Comparativo? (s/n): ----------------------------------------
+
+> INICIANDO ARQUIVO: CFC_2025_01.json
+   [LENDO] Buscando gabarito em: CFC_2025_01.txt
+
+> INICIANDO ARQUIVO: CFC_2022_01.json
+   [LENDO] Buscando gabarito em: CFC_2022_01.txt
+   [CORREÇÃO] Q24 (Contabilidade Aplicada ao Setor Público): Removida(s) ['NBC TSP 08']
+   [LIMPEZA] Total de 1 tags inválidas removidas neste arquivo.
+
+> INICIANDO ARQUIVO: CFC_2023_02.json
+   [LENDO] Buscando gabarito em: CFC_2023_02.txt
+
+> INICIANDO ARQUIVO: CFC_2025_02.json
+   [LENDO] Buscando gabarito em: CFC_2025_02.txt
+
+> INICIANDO ARQUIVO: CFC_2024_02.json
+   [LENDO] Buscando gabarito em: CFC_2024_02.txt
+
+> INICIANDO ARQUIVO: CFC_2024_01_RS.json
+   [LENDO] Buscando gabarito em: CFC_2024_01_RS.txt
+   [CORREÇÃO] Q43 (Contabilidade Aplicada ao Setor Público): Removida(s) ['NBC TSP 01']
+   [LIMPEZA] Total de 1 tags inválidas removidas neste arquivo.
+
+> INICIANDO ARQUIVO: CFC_2022_02.json
+   [LENDO] Buscando gabarito em: CFC_2022_02.txt
+
+> INICIANDO ARQUIVO: CFC_2023_01.json
+   [LENDO] Buscando gabarito em: CFC_2023_01.txt
+
+> INICIANDO ARQUIVO: CFC_2024_01.json
+   [LENDO] Buscando gabarito em: CFC_2024_01.txt
+
+   [RELATÓRIO] Arquivo comparativo gerado: relatorio_geral_comparativo.csv
+
+Concluído. Pressione ENTER para sair.
