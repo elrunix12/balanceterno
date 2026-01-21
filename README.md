@@ -108,8 +108,8 @@ Este é um projeto comunitário\!
 
 ## 📄 Licença
 
-Este projeto é distribuído sob a **Licença GNU AGPLv3**.
-Isso garante que o Balanceterno (e qualquer derivado dele) permaneça livre e aberto para sempre. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+Este projeto é distribuído sob a **Licença GNU AGPLv3**. O Conteúdo (resoluções, lançamentos contábeis, comentários, explicações, compilações e a organização dos dados) é licenciado sob CC BY-SA 4.0.
+Isso garante que o Balanceterno (e qualquer derivado dele) permaneça livre e aberto para sempre. Veja o arquivo [LICENSE](LICENSE) para mais detalhes da licença de software. Veja [LICENSE-CONTENT](LICENSE-CONTENT) para a licença de conteúdo.
 
 -----
 
