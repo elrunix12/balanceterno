@@ -65,7 +65,7 @@ Ideal para criar questões inéditas ou ajustar tabelas muito complexas. Para ch
 3.  O sistema gera o JSON validado.
 4.  Edite o arquivo `etl/ementas.json` caso você precise alterar disciplinas ou as *tags*.
 
-Dica: Você pode usar uma LLM de sua preferência para classificar e extrair para o formato .json e inserir o gabarito com nosso script em python (Leia a documentação [aqui](/etl/README.md)). O prompt está disponível [aqui](/etl/prompt_ia.md)
+Dica: Você pode usar uma LLM de sua preferência para classificar e extrair para o formato .json e inserir o gabarito com nosso script em python (Leia a documentação [aqui](/etl/README.md)). O prompt está disponível [aqui](/etl/prompt_ia.md).
 
 -----
 
