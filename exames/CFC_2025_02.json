@@ -124,8 +124,8 @@
     ],
     "gabarito": "B",
     "gabarito_texto": "2 anos e 3 anos.",
-    "resolucao": "",
-    "autor_resolucao": "",
+    "resolucao": "Primeiramente, é importante entender o fluxo de caixa do projeto:\n\nAno 0: -300.000\nAno 1: 121.000\nAno 2: 121.000\nAno 3 em diante: 146.410\n\n<strong>Valor do investimento inicial:</strong> 300.000  \n<strong>Taxa de desconto:</strong> 10% a.a. (0,10)\n\nPara calcular os fluxos de caixa descontados, utiliza-se a fórmula do Valor Presente:\n\n<strong>VP = VF / (1 + i)^n</strong>\n\nOnde <strong>VF</strong> é o valor do fluxo de caixa futuro, <strong>i</strong> é a taxa de desconto e <strong>n</strong> é o período.\n\n<strong>Ano 1</strong>  \nVP = 121.000 / 1,1 = 110.000\n\n<strong>Ano 2</strong>  \nVP = 121.000 / (1,1)^2 = 121.000 / 1,21 = 100.000\n\n<strong>Ano 3</strong>  \nVP = 146.410 / (1,1)^3 = 146.410 / 1,331 = 110.000\n\n<strong>Fluxo descontado acumulado</strong>  \nAno 1: 110.000  \nAno 2: 100.000  \nTotal até o ano 2: 210.000  \nAno 3: 110.000  \nTotal acumulado: 320.000\n\n<strong>Conclusão:</strong> como no terceiro ano o fluxo de caixa descontado acumulado ultrapassa o investimento inicial de 300.000, o payback descontado do projeto ocorre <strong>entre o 2º e o 3º ano</strong>.",
+    "autor_resolucao": "elrunix12",
     "obsoleta": false,
     "anulada": false,
     "lancamentos": []
@@ -160,8 +160,8 @@
     ],
     "gabarito": "C",
     "gabarito_texto": "R$ 6.912,00.",
-    "resolucao": "",
-    "autor_resolucao": "",
+    "resolucao": "Valor do empréstimo (VP): 14.560  \nNúmero de parcelas (n): 3  \nTaxa de juros: 20% ao mês (0,20)  \nSistema: juros compostos  \nSérie: postecipada (pagamentos ao final de cada mês)\n\n<strong>Fórmula da prestação (anuidade postecipada)</strong>\n\nPMT = VP × [ i / (1 − (1 + i)^(-n)) ]\n\n<strong>Substituindo os valores</strong>\n\nPMT = 14.560 × [ 0,20 / (1 − (1,20)^(-3)) ]\n\n<strong>Cálculo</strong>\n\n(1,20)^3 = 1,728  \n(1,20)^(-3) = 1 / 1,728 ≈ 0,5787  \n1 − 0,5787 = 0,4213  \n\nPMT = 14.560 × (0,20 / 0,4213)  \nPMT ≈ 14.560 × 0,4747  \nPMT ≈ 6.912\n\n<strong>Conclusão</strong>\n\nO valor das prestações mensais será de <strong>R$ 6.912,00</strong>.",
+    "autor_resolucao": "elrunix12",
     "obsoleta": false,
     "anulada": false,
     "lancamentos": []
@@ -475,11 +475,61 @@
     ],
     "gabarito": "D",
     "gabarito_texto": "R$ 27.000,00.",
-    "resolucao": "",
-    "autor_resolucao": "",
+    "resolucao": "Compra de material gerará um passivo de 5.000;\n\nRecebimento antecipado é uma conta do <strong>Passivo Circulante</strong>, pois o serviço será prestado no segundo semestre. Veja os <strong>lançamentos contábeis</strong> para mais detalhes.\nReconhecimento de salários gerará um passivo de 12.000\n\nPortanto: 5.000 + 10.000 + 12.000 = 27.000",
+    "autor_resolucao": "elrunix12",
     "obsoleta": false,
     "anulada": false,
-    "lancamentos": []
+    "lancamentos": [{
+            "titulo": "Compra de Material de escritório",
+            "data": "06/2024",
+            "historico": "Compra de material de escritório para pagamento em 60 dias: R$ 5.000,00",
+            "debitos": [
+                {
+                    "conta": "Material de escritório (Despesa Operacional - DRE)",
+                    "valor": "5.000"
+                }
+            ],
+            "creditos": [
+                {
+                    "conta": "Contas a pagar (PC)",
+                    "valor": "5.000"
+                }
+            ]
+        },
+        {
+            "titulo": "Recebimento antecipado de clientes",
+            "data": "06/2024",
+            "historico": "Recebimento antecipado pelos serviços que serão prestados no segundo semestre: R$ 10.000,00",
+            "debitos": [
+                {
+                    "conta": "Caixa/Banco (AC)",
+                    "valor": "10.000"
+                }
+            ],
+            "creditos": [
+                {
+                    "conta": "Antecipação de clientes (PC)",
+                    "valor": "10.000"
+                }
+            ]
+        },
+        {
+            "titulo": "Reconhecimento de salário",
+            "data": "06/2024",
+            "historico": "Reconhecimento do salário de seus empregados, para pagamento em 5 de julho: R$ 12.000,00",
+            "debitos": [
+                {
+                    "conta": "Despesa com salários (DRE)",
+                    "valor": "12.000"
+                }
+            ],
+            "creditos": [
+                {
+                    "conta": "Salários a pagar (PC)",
+                    "valor": "12.000"
+                }
+            ]
+        }]
   },
   {
     "id": 13,
