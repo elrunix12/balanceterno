@@ -959,3 +959,26 @@ details.cpc-referencia a:hover {
         padding-left: 20px; /* Reduz o recuo para caber na tela */
     }
 }
+
+/* --- ADIÇÃO: Estilo para Tabelas Geradas pela IA --- */
+
+/* Garante que o cabeçalho (thead) tenha destaque visual */
+.enunciado-table thead th {
+    background-color: #f0f4f8; /* Cinza azulado suave */
+    font-weight: 700;
+    color: #333;
+    text-align: center; /* Centraliza títulos */
+    vertical-align: middle;
+}
+
+/* Garante que células mescladas (rowspan) fiquem centralizadas */
+.enunciado-table td[rowspan], 
+.enunciado-table th[rowspan] {
+    vertical-align: middle;
+}
+
+/* Pequeno ajuste de espaçamento para parágrafos da IA */
+.enunciado-html p {
+    margin-bottom: 1em;
+    line-height: 1.6;
+}

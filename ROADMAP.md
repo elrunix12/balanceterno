@@ -1,7 +1,7 @@
 # 🗺️ Roadmap - Balanceterno
 
 ## 📅 Atualização do Roadmap
-Última revisão: **08 de dezembro de 2025**
+Última revisão: **20 de dezembro de 2026**
 
 Este documento apresenta o **planejamento futuro** do projeto.  
 As tarefas aqui descritas representam objetivos de curto e médio prazo.  
@@ -9,15 +9,12 @@ Mudanças já concluídas são movidas para o [`CHANGELOG.md`](CHANGELOG.md).
 
 ---
 
-## Próxima versão [0.3]:
-***Aguardando especificações***
+## Próxima versão [0.31]:
+
+- [ ] Correção de bugs
 
 ## 🐞 Bugs Conhecidos
-Esta seção lista problemas identificados que serão corrigidos nas próximas versões.
 
-Status | Descrição | Impacto | Prioridade | Correção prevista | Observações
-:--:|--|--:|:--:|--:|--
-⬜ | Questão 24 CFC 2022/1 - Problema na visualização das opções: aparece um código nos lançamentos | Baixo | 🟠 Baixa | Sem previsão | Não interfere na questão, apenas na visualização
 
 ## 💡 Ideias Futuras
 
@@ -30,17 +27,7 @@ Status | Descrição | Impacto | Prioridade | Correção prevista | Observaçõe
 
 ## 🔄 Migração de Questões entre Disciplinas
 
-| Status | Questão | De | Para | Condição / Dependência | Prioridade | Observações |
-|:------:|:--------|:--|:-----|:-----------------------|:------------|:-------------|
-| ⬜ | 26 CFC 2022/1 | Contabilidade Societária | Controladoria | Aguardando adição da edição do exame | 🟠 Baixa | — |
-| ⬜ | 45 CFC 2022/1 | Contabilidade Societária | Auditoria | Aguardando adição da edição do exame | 🟠 Baixa | — |
-| ⬜ | 11 CFC 2022/2 | Contabilidade Societária | Contabilidade Geral | Aguardando adição da edição do exame | 🟠 Baixa | — |
-| ⬜ | 25 CFC 2022/2 | Contabilidade Societária | Contabilidade de Custos | Aguardando adição da edição do exame | 🟠 Baixa | — |
-| ⬜ | 04 CFC 2023/1 | Contabilidade Societária | Contabilidade Geral | Aguardando adição da edição do exame | 🟠 Baixa | — |
-| ⬜ | 13 CFC 2023/1 | Contabilidade Societária | Contabilidade Geral | Aguardando adição da edição do exame | 🟠 Baixa | — |
-| ⬜ | 13 CFC 2023/2 | Contabilidade Societária | Contabilidade Geral | Aguardando adição da edição do exame | 🟠 Baixa | — |
-| ⬜ | 17 CFC 2023/2 | Contabilidade Societária | Contabilidade Geral | Aguardando adição da edição do exame | 🟠 Baixa | — |
-| ⬜ | 36 CFC 2024/1 | Contabilidade Societária | Contabilidade Geral | Aguardando adição da edição do exame | 🟡 Média | — |
+- As questões foram geradas novamente com um novo método de classificação, por isso a tabela foi removida
 
 ---
 

@@ -1,274 +1,283 @@
-# Balanceterno - Plataforma de Estudos para o Exame de Suficiência
-# Copyright (C) 2025  elrunix12 (Balanceterno)
-#
-# Este programa é um software livre: você pode redistribuí-lo e/ou modificá-lo
-# sob os termos da GNU Affero General Public License, versão 3 (AGPLv3),
-# conforme publicada pela Free Software Foundation.
-#
-# Este programa é distribuído na esperança de que seja útil,
-# mas SEM NENHUMA GARANTIA; sem mesmo a garantia implícita de
-# COMERCIALIZAÇÃO ou ADEQUAÇÃO A UM DETERMINADO PROPÓSITO.
-#
-# Veja o arquivo LICENSE para mais detalhes.
+# Parte do projeto Balanceterno © 2025 elrunix12
+# Licenciado sob AGPLv3 – veja LICENSE
 
-import os
 import json
-import glob
-import re
-import math
+import csv
 from pathlib import Path
-import google.generativeai as genai
-from pypdf import PdfReader
-from dotenv import load_dotenv
+from collections import Counter
 
 # --- CONFIGURAÇÕES ---
-load_dotenv()
-genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
+PASTA_ATUAL = Path(__file__).parent
+PASTA_IMPORTAR = PASTA_ATUAL / "importar"
+PASTA_EXPORTAR = PASTA_ATUAL / "exportar"
 
-# Use o modelo que você tiver acesso
-model = genai.GenerativeModel("gemini-2.5-flash")
+# Arquivos na raiz (ao lado do main.py) ou na pasta importar
+ARQUIVO_OFICIAL_NOME = "oficial.csv"
+ARQUIVO_EMENTA_NOME = "ementa.json"
 
-BASE_DIR = Path(__file__).parent
-DIR_TAGS = BASE_DIR / "tags"
-DIR_EXAME = BASE_DIR / "importar" / "exame"
-DIR_GABARITO = BASE_DIR / "importar" / "gabarito"
-DIR_EXPORTAR = BASE_DIR / "exportar"
-DIR_EXPORTAR.mkdir(exist_ok=True)
+# Cabeçalho de licença
+CABECALHO_LICENCA = {
+    "tipo": "metadados_licenca",
+    "titulo": "Banco de Questões Comentadas - Balanceterno",
+    "autor": "Comunidade do Balanceterno",
+    "fonte": "https://github.com/elrunix12/Balanceterno", 
+    "licenca": "Creative Commons Attribution-ShareAlike 4.0 International (CC-BY-SA 4.0)",
+    "licenca_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.txt",
+    "aviso_legal": "As questões de exames e concursos públicos são de acesso público e pertencem às suas respectivas bancas organizadoras (como CFC, FGV, Consulplan, entre outras), não sendo de propriedade deste projeto. Este projeto utiliza tais questões exclusivamente para fins educacionais. As resoluções, lançamentos contábeis, comentários, explicações, compilações e a organização dos dados constituem criações originais da Comunidade do Balanceterno e são disponibilizadas sob a licença Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)."
+}
 
-# --- FUNÇÕES AUXILIARES ---
-
-def extrair_metadados_nome_arquivo(nome_arquivo):
-    """
-    Tenta adivinhar Ano e Edição pelo nome do arquivo.
-    Ex esperado: cfc_2025_01.pdf -> Ano: 2025, Exame: CFC 2025/1
-    """
-    match = re.search(r"(\d{4})_(\d{2})", nome_arquivo)
-    if match:
-        ano = int(match.group(1))
-        edicao = int(match.group(2))
-        return ano, f"CFC {ano}/{edicao}"
-    return 2025, "CFC Indefinido" # Fallback
-
-def carregar_gabarito_txt(caminho_txt):
-    """Lê o arquivo TXT manual e retorna um dict {'1': 'A', '2': 'B'}"""
+def ler_gabarito_manual(arquivo_txt):
+    """Lê arquivo TXT de gabarito."""
     gabarito = {}
-    if not caminho_txt.exists():
-        return {}
-    
-    print(f"📖 Lendo gabarito manual: {caminho_txt.name}")
-    with open(caminho_txt, 'r', encoding='utf-8') as f:
-        for linha in f:
-            # Aceita formatos "1-A", "1:A", "1 A"
-            partes = re.split(r'[-:\s]+', linha.strip())
-            if len(partes) >= 2:
-                numero = partes[0]
-                letra = partes[1].upper()
-                gabarito[str(numero)] = letra
+    print(f"   [LENDO] Buscando gabarito em: {arquivo_txt.name}")
+    try:
+        with open(arquivo_txt, 'r', encoding='utf-8') as f:
+            for linha in f:
+                linha = linha.strip()
+                if not linha: continue
+                if '-' in linha:
+                    partes = linha.split('-')
+                    if partes[0].strip().isdigit():
+                        gabarito[int(partes[0].strip())] = partes[1].strip().upper()
+    except Exception as e:
+        print(f"   [ERRO] Não foi possível ler o TXT: {e}")
     return gabarito
 
-def carregar_tags():
-    tags_map = {}
-    for arq in glob.glob(str(DIR_TAGS / "*.json")):
-        nome = Path(arq).name
-        with open(arq, 'r', encoding='utf-8') as f:
-            tags_map[nome] = json.load(f)
-    return tags_map
+def carregar_tags_validas():
+    """Carrega a ementa oficial da raiz e retorna um SET com tags permitidas."""
+    caminho_ementa = PASTA_ATUAL / ARQUIVO_EMENTA_NOME
+    tags_validas = set()
 
-def dividir_pdf_em_chunks(caminho_pdf, paginas_por_chunk=6):
-    """
-    Divide o texto do PDF em partes menores para a IA não pular questões.
-    Retorna uma lista de strings (textos).
-    """
-    reader = PdfReader(caminho_pdf)
-    total_paginas = len(reader.pages)
-    chunks = []
+    if not caminho_ementa.exists():
+        print(f"\n   [AVISO] '{ARQUIVO_EMENTA_NOME}' não encontrado na raiz. A sanitização será PULADA.")
+        return None
+
+    print(f"\n   [EMENTA] Carregando tags válidas de '{caminho_ementa.name}'...")
+    try:
+        with open(caminho_ementa, 'r', encoding='utf-8') as f:
+            dados = json.load(f)
+            for lista_tags in dados.values():
+                tags_validas.update(lista_tags)
+        print(f"   [EMENTA] {len(tags_validas)} tags únicas carregadas.")
+        return tags_validas
+    except Exception as e:
+        print(f"   [ERRO] Falha ao ler ementa: {e}")
+        return None
+
+def carregar_dados_oficiais():
+    """Lê o CSV oficial e carrega na memória."""
+    caminho_oficial = PASTA_IMPORTAR / ARQUIVO_OFICIAL_NOME
+    if not caminho_oficial.exists():
+        caminho_oficial = PASTA_ATUAL / ARQUIVO_OFICIAL_NOME
     
-    texto_acumulado = ""
-    for i, page in enumerate(reader.pages):
-        texto_acumulado += page.extract_text() + "\n"
-        
-        # Se atingiu o limite ou é a última página, fecha o chunk
-        if (i + 1) % paginas_por_chunk == 0 or (i + 1) == total_paginas:
-            chunks.append(texto_acumulado)
-            texto_acumulado = "" # Limpa para o próximo
-            
-    return chunks
+    dados_oficiais = {}
 
-def criar_prompt(texto_chunk, disciplinas_map, ano_detectado, exame_detectado):
-    return f"""
-    CONTEXTO:
-    Você é um assistente que extrai questões de provas do CFC.
+    if not caminho_oficial.exists():
+        print(f"\n   [AVISO] '{ARQUIVO_OFICIAL_NOME}' não encontrado. Coluna Oficial ficará vazia.")
+        return {}
+
+    print(f"\n   [IMPORTANDO] Lendo dados oficiais de '{caminho_oficial.name}'...")
+    try:
+        with open(caminho_oficial, 'r', encoding='utf-8-sig') as f:
+            leitor = csv.reader(f, delimiter=';')
+            cabecalho = next(leitor, None)
+            if not cabecalho: return {}
+
+            indices_edicoes = {}
+            for i, coluna in enumerate(cabecalho):
+                if i == 0: continue
+                nome_limpo = coluna.strip()
+                indices_edicoes[i] = nome_limpo
+                dados_oficiais[nome_limpo] = {}
+
+            for linha in leitor:
+                if not linha: continue
+                disciplina = linha[0].strip()
+                for i, valor in enumerate(linha):
+                    if i in indices_edicoes and valor.strip():
+                        edicao = indices_edicoes[i]
+                        dados_oficiais[edicao][disciplina] = valor.strip()
+        return dados_oficiais
+    except Exception as e:
+        print(f"   [ERRO] Falha ao ler CSV oficial: {e}")
+        return {}
+
+def salvar_relatorio_matricial(lista_dados_completos, dados_oficiais_map):
+    """Gera o CSV matriz comparando Extraído (JSON) vs Oficial (CSV)."""
+    if not lista_dados_completos: return
+
+    caminho_csv = PASTA_EXPORTAR / "relatorio_geral_comparativo.csv"
     
-    METADADOS OBRIGATÓRIOS PARA TODAS AS QUESTÕES DESTE LOTE:
-    - "ano": {ano_detectado}
-    - "exame": "{exame_detectado}"
-    - "banca": "FGV" (ou Consulplan, verifique no texto)
+    lista_dados_completos.sort(key=lambda x: x[0]) 
+    nomes_arquivos = [dado[0] for dado in lista_dados_completos]
 
-    SUA TAREFA:
-    Extraia TODAS as questões encontradas no texto abaixo. Não pule nenhuma.
-    Para cada questão, identifique a disciplina baseando-se nas tags fornecidas.
+    todas_disciplinas = set()
+    mapa_dados_json = {} 
+
+    for nome, stats in lista_dados_completos:
+        mapa_dados_json[nome] = stats
+        todas_disciplinas.update(stats.keys())
     
-    LISTA DE DISCIPLINAS (TAGS):
-    {json.dumps(disciplinas_map, ensure_ascii=False)}
+    for edicao_chave in dados_oficiais_map:
+        todas_disciplinas.update(dados_oficiais_map[edicao_chave].keys())
 
-    FORMATO JSON DE SAÍDA (Lista):
-    [
-      {{
-        "id": "numero_da_questao_no_texto",
-        "ano": {ano_detectado},
-        "exame": "{exame_detectado}",
-        "banca": "FGV",
-        "arquivo_destino": "nome_do_json_da_disciplina",
-        "tags": ["Nome Da Disciplina", "Outra Tag"],
-        "enunciado": "Texto completo...",
-        "opcoes": [
-          {{"letra": "A", "texto": "..."}},
-          {{"letra": "B", "texto": "..."}}
-        ]
-      }}
-    ]
+    disciplinas_ordenadas = sorted(list(todas_disciplinas), key=str.lower)
 
-    ATENÇÃO:
-    - Retorne APENAS o JSON.
-    - Se uma questão estiver cortada pela metade (início ou fim), tente reconstruir ou ignore se estiver ilegível.
+    try:
+        with open(caminho_csv, 'w', newline='', encoding='utf-8-sig') as f:
+            escritor = csv.writer(f, delimiter=';')
+            
+            linha_titulos = ["Disciplina"]
+            for nome in nomes_arquivos:
+                linha_titulos.append(nome)
+                linha_titulos.append("") 
+            escritor.writerow(linha_titulos)
+
+            linha_subtitulos = [""]
+            for _ in nomes_arquivos:
+                linha_subtitulos.append("Extraída")
+                linha_subtitulos.append("Oficial")
+            escritor.writerow(linha_subtitulos)
+
+            for disciplina in disciplinas_ordenadas:
+                linha = [disciplina]
+                for nome_arquivo in nomes_arquivos:
+                    qtd_extraida = mapa_dados_json.get(nome_arquivo, {}).get(disciplina, 0)
+                    dados_da_edicao = dados_oficiais_map.get(nome_arquivo)
+                    
+                    if not dados_da_edicao:
+                        nome_sem_prefixo = nome_arquivo.replace("CFC_", "")
+                        dados_da_edicao = dados_oficiais_map.get(nome_sem_prefixo, {})
+
+                    qtd_oficial = dados_da_edicao.get(disciplina, "")
+                    
+                    if qtd_oficial == "" and dados_da_edicao:
+                        for k, v in dados_da_edicao.items():
+                            if k.lower() == disciplina.lower():
+                                qtd_oficial = v
+                                break
+
+                    linha.append(qtd_extraida)
+                    linha.append(qtd_oficial)
+                
+                escritor.writerow(linha)
+
+        print(f"\n   [RELATÓRIO] Arquivo comparativo gerado: {caminho_csv.name}")
+    except Exception as e:
+        print(f"   [ERRO] Falha ao criar relatório: {e}")
+
+def processar_arquivo(caminho_json, inserir_licenca, tags_validas_set=None):
+    """Processa o JSON: insere gabarito e sanitiza tags."""
+    print(f"\n> INICIANDO ARQUIVO: {caminho_json.name}")
+    caminho_txt = caminho_json.with_suffix(".txt")
     
-    --- TEXTO DA PROVA (PARTE) ---
-    {texto_chunk}
-    """
+    if not caminho_txt.exists():
+        print(f"   [ALERTA] Gabarito ausente: {caminho_txt.name}")
+        return None
 
-def salvar_questoes_com_deduplicacao(novas_questoes, gabarito_map):
-    print(f"\n💾 Processando {len(novas_questoes)} questões extraídas...")
+    gabarito_map = ler_gabarito_manual(caminho_txt)
     
-    questoes_por_arquivo = {}
+    try:
+        with open(caminho_json, 'r', encoding='utf-8') as f:
+            dados_questoes = json.load(f)
+    except:
+        return None
 
-    for q in novas_questoes:
-        # 1. Injeta o Gabarito Manual
-        num_q = str(q.get("id"))
-        resp = gabarito_map.get(num_q) # Pega a letra do arquivo TXT (Ex: "C")
-        
-        # --- LÓGICA DO ASTERISCO E ANULAÇÃO ---
-        is_anulada = False
-        gabarito_letra = "?"
+    questoes_finais = []
+    if inserir_licenca: questoes_finais.append(CABECALHO_LICENCA)
+    
+    contador = Counter()
+    count_tags_removidas = 0
 
-        if resp:
-            resp_limpa = resp.strip().upper()
-            if resp_limpa in ["*", "X", "ANULADA"]:
-                is_anulada = True
-                gabarito_letra = "X"
-            else:
-                is_anulada = False
-                gabarito_letra = resp_limpa
+    for item in dados_questoes:
+        if item.get('tipo') == 'metadados_licenca': continue
         
-        # Aplica a letra e o booleano
-        q["gabarito"] = gabarito_letra
-        q["anulada"] = is_anulada
-        
-        # --- CORREÇÃO AQUI: BUSCA O TEXTO DA OPÇÃO ---
-        if is_anulada:
-            q["gabarito_texto"] = "Questão Anulada pela Banca."
-        else:
-            # Procura dentro das opções qual tem a letra igual ao gabarito
-            texto_encontrado = "Texto não encontrado."
+        if 'id' in item: 
+            try: item['id'] = int(item['id'])
+            except: pass
             
-            # Garante que 'opcoes' existe e é uma lista
-            lista_opcoes = q.get("opcoes", [])
+        id_q = item.get('id')
+        disc_atual = item.get('disciplina', 'Sem Disciplina').strip()
+        
+        # --- LÓGICA DE SANITIZAÇÃO COM LOG DETALHADO ---
+        if tags_validas_set is not None and 'tags' in item:
+            tags_originais = item.get('tags', [])
+            tags_limpas = []
+            tags_removidas_nesta_questao = []
+
+            # Verifica cada tag individualmente
+            for t in tags_originais:
+                if t in tags_validas_set:
+                    tags_limpas.append(t)
+                else:
+                    tags_removidas_nesta_questao.append(t)
             
-            for opcao in lista_opcoes:
-                letra_opcao = str(opcao.get("letra", "")).strip().upper()
-                if letra_opcao == gabarito_letra:
-                    texto_encontrado = opcao.get("texto", "")
-                    break # Achou, para de procurar
+            # Se houve remoção, imprime o detalhe na hora
+            if tags_removidas_nesta_questao:
+                print(f"   [CORREÇÃO] Q{id_q} ({disc_atual}): Removida(s) {tags_removidas_nesta_questao}")
+                count_tags_removidas += len(tags_removidas_nesta_questao)
             
-            q["gabarito_texto"] = texto_encontrado
-        # ---------------------------------------------
+            item['tags'] = tags_limpas
+        # -----------------------------------------------
 
-        # Campos default (Preenchimento futuro manual)
-        q.setdefault("resolucao", "")
-        q.setdefault("autor_resolucao", "")
-        q.setdefault("obsoleta", False)
-        
-        # --- NOVO: Garante a lista vazia para os lançamentos ---
-        q.setdefault("lancamentos", []) 
-        # -------------------------------------------------------
-
-        # 2. Organiza por arquivo (mesma lógica)
-        arquivo_dest = q.get("arquivo_destino", "sem-classificacao.json")
-        if "arquivo_destino" in q: del q["arquivo_destino"]
-        
-        if arquivo_dest not in questoes_por_arquivo:
-            questoes_por_arquivo[arquivo_dest] = []
-        questoes_por_arquivo[arquivo_dest].append(q)
-
-    # 3. Salva verificando duplicidade (mesma lógica)
-    for arquivo, lista_q in questoes_por_arquivo.items():
-        path_json = DIR_EXPORTAR / arquivo
-        conteudo_atual = []
-        
-        if path_json.exists():
-            with open(path_json, 'r', encoding='utf-8') as f:
-                try: conteudo_atual = json.load(f)
-                except: conteudo_atual = []
-
-        ids_existentes = {str(item['id']) + str(item['exame']) for item in conteudo_atual}
-        
-        adicionados_count = 0
-        for nova_q in lista_q:
-            chave_unica = str(nova_q['id']) + str(nova_q['exame'])
+        if id_q in gabarito_map:
+            letra = gabarito_map[id_q]
+            item['gabarito'] = letra
+            item['anulada'] = (letra in ['X', '*'])
             
-            if chave_unica not in ids_existentes:
-                conteudo_atual.append(nova_q)
-                ids_existentes.add(chave_unica)
-                adicionados_count += 1
+            item['gabarito_texto'] = ""
+            if 'opcoes' in item and not item['anulada']:
+                for op in item['opcoes']:
+                    if op.get('letra') == letra:
+                        item['gabarito_texto'] = op.get('texto'); break
+            
+            if 'resolucao' not in item: item['resolucao'] = ""
+            if 'autor_resolucao' not in item: item['autor_resolucao'] = ""
+            if 'lancamentos' not in item: item['lancamentos'] = []
+            
+            contador[disc_atual] += 1
+            
+            questoes_finais.append(item)
 
-        try:
-            conteudo_atual.sort(key=lambda x: int(x['id']) if str(x['id']).isdigit() else 999)
-        except: pass
+    if count_tags_removidas > 0:
+        print(f"   [LIMPEZA] Total de {count_tags_removidas} tags inválidas removidas neste arquivo.")
 
-        with open(path_json, 'w', encoding='utf-8') as f:
-            json.dump(conteudo_atual, f, ensure_ascii=False, indent=2)
+    caminho_saida = PASTA_EXPORTAR / caminho_json.name
+    with open(caminho_saida, 'w', encoding='utf-8') as f:
+        json.dump(questoes_finais, f, ensure_ascii=False, indent=2)
         
-        if adicionados_count > 0:
-            print(f"   -> {arquivo}: +{adicionados_count} questões novas.")
+    return contador
 
 def main():
-    tags = carregar_tags()
-    pdfs = list(DIR_EXAME.glob("*.pdf"))
+    print("=== SCRIPT BALANCETERNO ===")
+    
+    if not PASTA_IMPORTAR.exists(): PASTA_IMPORTAR.mkdir()
+    if not PASTA_EXPORTAR.exists(): PASTA_EXPORTAR.mkdir()
 
-    for pdf in pdfs:
-        print(f"\n🚀 PROCESSANDO: {pdf.name}")
-        
-        # 1. Metadados do nome
-        ano, exame_nome = extrair_metadados_nome_arquivo(pdf.name)
-        print(f"   -> Detectado: {exame_nome}")
+    lista_arquivos = list(PASTA_IMPORTAR.glob("*.json"))
+    if not lista_arquivos:
+        print("Nenhum arquivo .json encontrado em 'importar'.")
+        return
 
-        # 2. Carregar Gabarito Manual
-        txt_gabarito = DIR_GABARITO / f"{pdf.stem}.txt"
-        gabarito_map = carregar_gabarito_txt(txt_gabarito)
+    dados_oficiais = carregar_dados_oficiais()
+    tags_validas = carregar_tags_validas()
 
-        # 3. Dividir PDF em partes (Chunking) para não perder questões
-        chunks = dividir_pdf_em_chunks(pdf, paginas_por_chunk=5) # 5 páginas por vez é seguro
-        print(f"   -> Dividido em {len(chunks)} partes para análise.")
+    resp_licenca = input("1. Inserir licença? (s/n): ").lower() == 's'
+    resp_csv = input("2. Gerar Relatório Comparativo? (s/n): ").lower() == 's'
 
-        todas_questoes_do_pdf = []
+    print("-" * 40)
+    dados_para_relatorio = []
 
-        for i, chunk in enumerate(chunks):
-            print(f"   ⏳ Analisando parte {i+1}/{len(chunks)}...")
-            prompt = criar_prompt(chunk, tags, ano, exame_nome)
-            
-            try:
-                # Retry simples caso dê erro de cota
-                response = model.generate_content(prompt)
-                texto_limpo = response.text.replace("```json", "").replace("```", "")
-                
-                lote_questoes = json.loads(texto_limpo)
-                todas_questoes_do_pdf.extend(lote_questoes)
-                print(f"      ✅ Parte {i+1}: encontrou {len(lote_questoes)} questões.")
-                
-            except Exception as e:
-                print(f"      ❌ Erro na parte {i+1}: {e}")
+    for arquivo in lista_arquivos:
+        estatisticas = processar_arquivo(arquivo, inserir_licenca=resp_licenca, tags_validas_set=tags_validas)
+        if estatisticas and resp_csv:
+            dados_para_relatorio.append((arquivo.stem, estatisticas))
 
-        # 4. Salvar tudo de uma vez
-        salvar_questoes_com_deduplicacao(todas_questoes_do_pdf, gabarito_map)
+    if resp_csv and dados_para_relatorio:
+        salvar_relatorio_matricial(dados_para_relatorio, dados_oficiais)
+
+    print("\nConcluído. Pressione ENTER para sair.")
+    input()
 
 if __name__ == "__main__":
     main()

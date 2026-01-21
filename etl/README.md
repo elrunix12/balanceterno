@@ -1,125 +1,110 @@
-# ⚙️ Balanceterno ETL - Automação de Questões
+# 📊 Pipeline ETL: Validador, Sanitizador e Injetor - Balanceterno
 
-Este módulo contém os scripts em Python responsáveis por alimentar o banco de dados do **Balanceterno**. O sistema utiliza Inteligência Artificial (Google Gemini API) para ler PDFs de provas do CFC, classificar disciplinas e estruturar os dados em JSON.
+Esta pasta contém o utilitário de processamento de dados (`main.py`) desenvolvido para o projeto **Balanceterno**.
+
+Sua função é atuar como uma **camada de auditoria, limpeza e validação (ETL)**, transformando os dados brutos gerados (arquivos `.json`) em dados confiáveis para a aplicação. O script cruza informações com o gabarito oficial, injeta licenciamento e, crucialmente, **remove alucinações de classificação** através de uma lista de tags permitidas.
 
 ---
 
-## 📂 Estrutura do Módulo
+## 🚀 Funcionalidades
 
-```text
-etl/
-├── .env                 # Sua chave de API (Crie este arquivo)
-├── main.py              # Script principal de automação
-├── tags/                # Definições das disciplinas (Palavras-chave)
-├── importar/            # ARQUIVOS DE ENTRADA
-│   ├── exame/           # Coloque os PDFs aqui (ex: cfc_2025_01.pdf)
-│   └── gabarito/        # Coloque os TXTs aqui (ex: cfc_2025_01.txt)
-└── exportar/            # ARQUIVOS DE SAÍDA (JSONs gerados)
-````
+* **Sanitização Taxonômica:** Filtra as tags de cada questão comparando-as com a `ementa.json` oficial. Classificações alucinadas pela IA são removidas e o script registra no log exatamente qual questão e qual tag foi interceptada, criando uma trilha de auditoria técnica.
+* **Conciliação de Gabarito:** Cruza o ID da questão com o arquivo de texto (`.txt`) oficial da banca, garantindo 100% de fidelidade à resposta correta.
+* **Injeção de Metadados (TASL):** Adiciona automaticamente o cabeçalho de licenciamento (CC-BY-SA 4.0) e atribuição correta em todos os arquivos processados.
+* **Padronização de Dados:**
+    * Converte IDs para inteiros.
+    * Identifica e marca questões anuladas (`X` ou `*`).
+    * Preenche lacunas de texto para evitar erros no frontend.
+* **Relatórios Matriciais:** Gera planilhas (`.csv`) comparando a contagem de questões extraídas *versus* a contagem oficial do Edital.
 
------
+---
 
-## 🛠️ Instalação e Configuração
+## 🛠️ Pré-requisitos
 
-1.  **Pré-requisitos:**
+O script foi projetado para ser **leve e nativo**.
 
-      - Python 3.12+
-      - Conta no Google AI Studio (para obter a API Key)
+* **Python 3.8+** (Nenhuma biblioteca externa necessária).
 
-2.  **Instalação das Dependências:**
-    Navegue até esta pasta e instale os pacotes:
-
-    ```bash
-    pip install google-generativeai pypdf python-dotenv
-    ```
-
-3.  **Configuração da Chave:**
-    Crie um arquivo chamado `.env` dentro da pasta `etl/` e adicione sua chave:
-
-    ```env
-    GEMINI_API_KEY=Sua_Chave_Aqui
-    ```
-
-4.  **Configuração do Modelo (Opcional):**
-    No arquivo `main.py`, você pode alterar a versão do modelo Gemini (ex: `gemini-2.5-flash`, `gemini-2.5-pro`) dependendo da disponibilidade da sua chave.
-
------
-
-## 🚀 Como Importar uma Nova Prova
-
-### 1\. Preparação dos Arquivos
-
-O nome dos arquivos é crucial para a detecção automática do ano e edição.
-
-  * **PDF da Prova:** Coloque em `importar/exame/`.
-
-      * *Padrão:* `cfc_ANO_EDICAO.pdf` (Ex: `cfc_2025_01.pdf`).
-
-  * **Gabarito Manual:** Coloque em `importar/gabarito/`.
-
-      * *Nome:* Exatamente igual ao do PDF (`cfc_2025_01.txt`).
-      * *Conteúdo:* Lista simples linha a linha.
-      * *Anuladas:* Use `*`, `X` ou `ANULADA`.
-
-    **Exemplo de Gabarito (`cfc_2025_01.txt`):**
-
-    ```text
-    1-A
-    2-B
-    3-*
-    4-ANULADA
-    ```
-
-### 2\. Executando o Script
-
-No terminal, dentro da pasta `etl/`:
-
+Para rodar:
 ```bash
 python main.py
+
 ```
 
-**O que o script faz:**
+---
 
-1.  Lê o PDF em fatias (chunks) para garantir a leitura completa.
-2.  Classifica as questões nas disciplinas corretas baseando-se nos arquivos da pasta `tags/`.
-3.  Cruza com o gabarito manual.
-      * *Nota:* Se o gabarito for `*` ou `X`, o script define automaticamente `anulada: true` e padroniza o texto.
-4.  Gera/Atualiza os arquivos JSON na pasta `exportar/`.
+## 📂 Estrutura de Arquivos
 
-> **Deduplicação:** O script verifica se a questão já existe no arquivo de destino (por ID e Exame) para evitar duplicatas.
+O script espera a seguinte organização para funcionar plenamente:
 
------
+```text
+/ (Raiz do Projeto)
+│
+├── main.py                # O motor de processamento
+├── ementa.json            # [IMPORTANTE] A lista oficial de tags permitidas
+├── README.md              # Documentação
+│
+├── importar/              # ENTRADA DE DADOS
+│   ├── oficial.csv        # Dados quantitativos do Edital (opcional)
+│   ├── CFC_2024_01.json   # Arquivo bruto (gerado pela IA)
+│   └── CFC_2024_01.txt    # Gabarito oficial (digitado manualmente)
+│
+└── exportar/              # SAÍDA DE DADOS (Sanitizada)
+    ├── CFC_2024_01.json   # Arquivo limpo e pronto para o site
+    └── relatorio_geral.csv # Auditoria de extração
 
-## 📝 Campos do JSON e Curadoria
-
-O script gera uma estrutura padronizada. Alguns campos são preenchidos pela IA, outros são criados vazios para preenchimento manual posterior (Curadoria).
-
-```json
-{
-  "id": 10,
-  "ano": 2025,
-  "exame": "CFC 2025/1",
-  "enunciado": "Texto extraído pela IA...",
-  "gabarito": "A",
-  "anulada": false,
-  
-  // Campos para Edição Manual (Backoffice):
-  "resolucao": "",          // Texto explicativo da resolução
-  "autor_resolucao": "",    // Nome do autor
-  "lancamentos": []         // Lista de lançamentos contábeis (ativa botão no site)
-}
 ```
 
-### Sobre o campo `lancamentos`:
+---
 
-Ele é gerado automaticamente como uma lista vazia `[]`. O site só exibirá o botão "Lançamentos Contábeis" se você preencher este campo manualmente no JSON.
+## ⏯️ Como Usar (Fluxo de Trabalho)
 
------
+### 1. Preparação
 
-## 🏷️ Adicionando Novas Disciplinas
+Certifique-se de que o arquivo `ementa.json` esteja na mesma pasta do script. Ele serve como o "porteiro" das tags válidas.
 
-Para a IA reconhecer uma nova matéria (ex: Direito Tributário):
+### 2. Importação
 
-1.  Crie o arquivo `tags/direito-tributario.json`.
-2.  Adicione palavras-chave relevantes: `["CTN", "Tributos", "Impostos"]`.
-3.  Na próxima execução, o script criará automaticamente o arquivo `exportar/direito-tributario.json`.
+Coloque na pasta `importar/` os pares de arquivos da prova. Eles devem ter o **mesmo nome base**:
+
+* **O JSON:** O arquivo contendo as questões extraídas.
+* **O TXT:** Gabarito simples (formato `1-A`, `2-C`, `3-X`).
+
+### 3. Execução
+
+Rode o script: `python main.py`.
+
+O terminal exibirá o log de auditoria detalhado:
+
+```text
+> INICIANDO ARQUIVO: CFC_2022_01.json
+   [LENDO] Buscando gabarito em: CFC_2022_01.txt
+   [CORREÇÃO] Q24 (Contabilidade Setor Público): Removida(s) ['NBC TSP 08']
+   [LIMPEZA] Total de 1 tags inválidas removidas neste arquivo.
+```
+
+### 4. Auditoria
+
+Ao final, responda `s` para gerar o relatório comparativo. O arquivo CSV gerado na pasta `exportar` mostrará se alguma disciplina está com contagem divergente do `oficial.csv`.
+
+---
+
+## 📝 Detalhes da Validação
+
+O script realiza as seguintes transformações (Transform) nos dados:
+
+| Campo | Ação do Script |
+| --- | --- |
+| `tags` | **Filtro Rígido:** Remove qualquer string que não exista na `ementa.json`. |
+| `id` | Força conversão para **Inteiro** (remove zeros à esquerda). |
+| `gabarito` | Substitui o valor da IA pelo valor do **TXT oficial**. |
+| `gabarito_texto` | Busca o texto correspondente à letra correta nas opções. |
+| `anulada` | Marca `true` se o gabarito for `X`, `*` ou `NULA`. |
+| `resolucao` | Garante que o campo exista (string vazia) se estiver ausente. |
+
+---
+
+## ⚖️ Licença
+
+Este utilitário é distribuído sob a licença **AGPL-3.0**.
+Os dados processados (conteúdo das questões) são atribuídos sob a licença **CC-BY-SA 4.0**. Você pode alterar as licenças dos arquivos gerados por você.

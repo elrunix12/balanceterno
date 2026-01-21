@@ -53,11 +53,11 @@ document.addEventListener('DOMContentLoaded', () => {
     carregarRodape();
 });
 
-// --- LÓGICA PARA CARREGAR RODAPÉ DINÂMICO ---
+// --- LÓGICA PARA CARREGAR RODAPÉ DINÂMICO (ATUALIZADA) ---
 async function carregarRodape() {
     const footerElement = document.querySelector('.site-footer');
     if (!footerElement) {
-        console.warn('Elemento .site-footer não encontrado. Não foi possível carregar o rodapé.');
+        console.warn('Elemento .site-footer não encontrado.');
         return;
     }
 
@@ -69,16 +69,31 @@ async function carregarRodape() {
 
         const data = await response.json();
         
+        // 1. Prepara o Link de Admin (se existir)
         let adminLinkHTML = '';
         if (data.adminLink && data.adminLink.url && data.adminLink.text) {
             adminLinkHTML = `
                 |
-                <a href="${data.adminLink.url}">
+                <a href="${data.adminLink.url}" target="_blank" rel="noopener noreferrer">
                     ${data.adminLink.text}
                 </a>
             `;
         }
+
+        // 2. Prepara a Licença de Conteúdo (NOVO - CC BY-SA)
+        let contentLicenseHTML = '';
+        if (data.contentLicense) {
+            contentLicenseHTML = `
+                <p>
+                    ${data.contentLicense.prefix} 
+                    <a href="${data.contentLicense.url}" target="_blank" rel="noopener noreferrer">
+                        ${data.contentLicense.text}
+                    </a>
+                </p>
+            `;
+        }
         
+        // 3. Monta o HTML Final
         footerElement.innerHTML = `
             <p>
                 &copy; ${data.currentYear} ${data.projectName} | Versão ${data.version} |
@@ -96,7 +111,7 @@ async function carregarRodape() {
                     ${data.license.text}
                 </a>
             </p>
-        `;
+            ${contentLicenseHTML} `;
 
     } catch (error) {
         console.error('Erro ao carregar dados do rodapé:', error);

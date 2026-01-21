@@ -1,0 +1,3519 @@
+[
+  {
+    "tipo": "metadados_licenca",
+    "titulo": "Banco de Questões Comentadas - Balanceterno",
+    "autor": "Comunidade do Balanceterno",
+    "fonte": "https://github.com/elrunix12/Balanceterno",
+    "licenca": "Creative Commons Attribution-ShareAlike 4.0 International (CC-BY-SA 4.0)",
+    "licenca_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.txt",
+    "aviso_legal": "As questões de exames e concursos públicos são de acesso público e pertencem às suas respectivas bancas organizadoras (como CFC, FGV, Consulplan, entre outras), não sendo de propriedade deste projeto. Este projeto utiliza tais questões exclusivamente para fins educacionais. As resoluções, lançamentos contábeis, comentários, explicações, compilações e a organização dos dados constituem criações originais da Comunidade do Balanceterno e são disponibilizadas sob a licença Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)."
+  },
+  {
+    "id": 1,
+    "ano": 2022,
+    "exame": "CFC 2022/2",
+    "banca": "Consulplan",
+    "disciplina": "Contabilidade Geral e NBCs",
+    "tags": [
+      "Demonstração das Mutações do Patrimônio Líquido"
+    ],
+    "enunciado": [
+      {
+        "type": "p",
+        "content": "Uma sociedade empresária apresentou em 31/12/2020 os seguintes saldos nas contas do Patrimônio Líquido:"
+      },
+      {
+        "type": "table",
+        "headerRows": [
+          [
+            {
+              "content": "Patrimônio Líquido",
+              "colspan": 2,
+              "rowspan": 1
+            }
+          ]
+        ],
+        "bodyRows": [
+          [
+            "Capital Social",
+            "R$ 60.000,00"
+          ],
+          [
+            "Reservas de Capital",
+            "R$ 15.000,00"
+          ],
+          [
+            "Reservas de Lucros",
+            "R$ 5.000,00"
+          ],
+          [
+            "Lucros / Prejuízos Acumulados",
+            "R$ 10.000,00"
+          ],
+          [
+            "Total do PL",
+            "R$ 90.000,00"
+          ]
+        ]
+      },
+      {
+        "type": "p",
+        "content": "Durante o exercício social de 2021, ocorreram os seguintes eventos:<br>• Aumento de Capital por incorporação de Reservas de Capital no valor de R$ 15.000,00;<br>• Lucro Líquido do período no valor de R$ 40.000,00; e,<br>• Proposta de destinação do lucro para constituição das Reservas de Lucros no valor de R$ 6.000,00 e para Dividendos Obrigatórios no valor de R$ 20.000,00."
+      },
+      {
+        "type": "p",
+        "content": "Considerando exclusivamente as informações apresentadas e o disposto na NBC TG 26 (R5) – Apresentação das Demonstrações Contábeis, é correto afirmar, em relação à Demonstração das Mutações do Patrimônio Líquido apresentada em 31/12/2021, que:"
+      }
+    ],
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "Os saldos finais das Reservas de Lucros e das Reservas de Capital foram, respectivamente, de R$ 6.000,00 e R$ 15.000,00."
+      },
+      {
+        "letra": "B",
+        "texto": "As variações do Patrimônio Líquido e de Lucros / Prejuízos Acumulados correspondem, respectivamente, a R$ 40.000,00 e R$ 34.000,00."
+      },
+      {
+        "letra": "C",
+        "texto": "Os saldos finais do Patrimônio Líquido e de Lucros / Prejuízos Acumulados foram, respectivamente, de R$ 110.000,00 e R$ 24.000,00."
+      },
+      {
+        "letra": "D",
+        "texto": "O saldo final de Capital Social de R$ 45.000,00 e a movimentação da Distribuição de Dividendos aumentaram o saldo de Lucros / Prejuízos Acumulados em R$ 20.000,00."
+      }
+    ],
+    "gabarito": "C",
+    "gabarito_texto": "Os saldos finais do Patrimônio Líquido e de Lucros / Prejuízos Acumulados foram, respectivamente, de R$ 110.000,00 e R$ 24.000,00.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 2,
+    "ano": 2022,
+    "exame": "CFC 2022/2",
+    "banca": "Consulplan",
+    "disciplina": "Contabilidade Geral e NBCs",
+    "tags": [
+      "Demonstração dos Fluxos de Caixa"
+    ],
+    "enunciado": [
+      {
+        "type": "p",
+        "content": "Uma sociedade empresária apresentou os seguintes dados extraídos da contabilidade em 31/12/2021:"
+      },
+      {
+        "type": "table",
+        "headerRows": [
+          [
+            "Saldos em 31/12/2020",
+            "R$",
+            "Saldos em 31/12/2021",
+            "R$",
+            "Movimentação em 2021",
+            "R$"
+          ]
+        ],
+        "bodyRows": [
+          [
+            "Duplicatas a Receber",
+            "48.000,00",
+            "Duplicatas a Receber",
+            "26.000,00",
+            "Vendas de Mercadorias",
+            "180.000,00"
+          ],
+          [
+            "Fornecedores",
+            "22.000,00",
+            "Fornecedores",
+            "31.000,00",
+            "Compras de Mercadorias",
+            "132.000,00"
+          ]
+        ]
+      },
+      {
+        "type": "p",
+        "content": "Informações adicionais:<br>• Todas as Compras de Mercadorias para Revenda e as Vendas de Mercadorias foram efetuadas a prazo;<br>• Não houveram outros eventos classificados em atividades operacionais; e,<br>• A Demonstração dos Fluxos de Caixa é elaborada pelo Método Direto."
+      },
+      {
+        "type": "p",
+        "content": "Considerando somente as informações disponibilizadas e de acordo com a NBC TG 03 (R3) – Demonstração dos Fluxos de Caixa, é correto afirmar que o caixa gerado pelo recebimento de Duplicatas a Receber (Vendas de Mercadorias) e o caixa consumido para pagamento de Fornecedores (Compras de Mercadorias) foram, respectivamente, de:"
+      }
+    ],
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "R$ 79.000,00 e R$ 48.000,00."
+      },
+      {
+        "letra": "B",
+        "texto": "R$ 158.000,00 e R$ 141.000,00."
+      },
+      {
+        "letra": "C",
+        "texto": "R$ 180.000,00 e R$ 132.000,00."
+      },
+      {
+        "letra": "D",
+        "texto": "R$ 202.000,00 e R$ 123.000,00."
+      }
+    ],
+    "gabarito": "D",
+    "gabarito_texto": "R$ 202.000,00 e R$ 123.000,00.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 3,
+    "ano": 2022,
+    "exame": "CFC 2022/2",
+    "banca": "Consulplan",
+    "disciplina": "Contabilidade Geral e NBCs",
+    "tags": [
+      "Balanço Patrimonial",
+      "Ativo Imobilizado",
+      "Patrimônio e Variações Patrimoniais"
+    ],
+    "enunciado": [
+      {
+        "type": "p",
+        "content": "Uma sociedade empresária apresentou, após a apuração do resultado do exercício, os saldos das seguintes contas patrimoniais em 31/12/2021:"
+      },
+      {
+        "type": "table",
+        "headerRows": [
+          [
+            "Contas",
+            "Valores em R$"
+          ]
+        ],
+        "bodyRows": [
+          [
+            "Bancos conta Movimento",
+            "22.000,00"
+          ],
+          [
+            "Caixa",
+            "35.000,00"
+          ],
+          [
+            "Depreciação Acumulada de Edificações",
+            "5.000,00"
+          ],
+          [
+            "Depreciação Acumulada de Máquinas e Equipamentos",
+            "1.850,00"
+          ],
+          [
+            "Depreciação Acumulada de Móveis e Utensílios",
+            "4.500,00"
+          ],
+          [
+            "Depreciação Acumulada de Veículos",
+            "3.000,00"
+          ],
+          [
+            "Despesas Antecipadas",
+            "950,00"
+          ],
+          [
+            "Duplicatas a Receber",
+            "8.000,00"
+          ],
+          [
+            "Edificações",
+            "30.000,00"
+          ],
+          [
+            "Financiamentos – Longo Prazo",
+            "40.000,00"
+          ],
+          [
+            "Fornecedores",
+            "7.500,00"
+          ],
+          [
+            "ICMS a Recolher",
+            "2.400,00"
+          ],
+          [
+            "ICMS a Recuperar",
+            "1.100,00"
+          ],
+          [
+            "Máquinas e Equipamentos",
+            "15.000,00"
+          ],
+          [
+            "Mercadorias para Revenda",
+            "11.000,00"
+          ],
+          [
+            "Móveis e Utensílios",
+            "12.000,00"
+          ],
+          [
+            "Salários a Pagar",
+            "6.000,00"
+          ],
+          [
+            "Veículos",
+            "10.000,00"
+          ]
+        ]
+      },
+      {
+        "type": "p",
+        "content": "Sabe-se que o resultado do exercício já foi apurado. Considerando somente as informações apresentadas e de acordo com a NBC TG 26 (R5) – Apresentação das Demonstrações Contábeis e a Lei nº 6.404/1976 – Lei das Sociedades por Ações, assinale os respectivos saldos do Ativo não Circulante – Imobilizado e do Patrimônio Líquido a serem evidenciados no Balanço Patrimonial em 31/12/2021."
+      }
+    ],
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "R$ 52.650,00; R$ 74.800,00."
+      },
+      {
+        "letra": "B",
+        "texto": "R$ 53.600,00; R$ 73.850,00."
+      },
+      {
+        "letra": "C",
+        "texto": "R$ 67.000,00; R$ 60.450,00."
+      },
+      {
+        "letra": "D",
+        "texto": "R$ 130.700,00; R$ 55.900,00."
+      }
+    ],
+    "gabarito": "A",
+    "gabarito_texto": "R$ 52.650,00; R$ 74.800,00.",
+    "resolucao": "Ativo total = 130.700\n\nCirculante = 78.050\n\n- Bancos conta movimento 22.000\n- Caixa 35.000\n- Mercadorias para revenda 11.000\n- Duplicatas a receber\n- Despesas antecipadas 950\n- ICMS a Recuperar 1.100\n\nNão circulante\n\nImobilizado = 52.650\n\n- Edificações 30.000\n- Depreciação Acumulada de Edificações (5.000,00)\n- Máquinas e Equipamentos 15.000,00\n- Depreciação Acumulada de Máquinas e Equipamentos (1.850,00)\n- Móveis e Utensílios 12.000,00\n- Depreciação Acumulada de Móveis e Utensílios (4.500,00)\n- Veículos 10.000,00\n- Depreciação Acumulada de Veículos (3.000,00)\n\nPassivo total = 55.900\n\nPassivo circulante\n\n- ICMS a recolher 2.400\n- Salários a pagar 6.000\n- Fornecedores 7.500 \n\nPassivo não circulante\n\n- Financiamentos - Longo Prazo 40.000\n\nPatrimônio líquido = Ativo - Passivo = 130.700 - 55.900 = 74.800",
+    "autor_resolucao": "elrunix12",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 4,
+    "ano": 2022,
+    "exame": "CFC 2022/2",
+    "banca": "Consulplan",
+    "disciplina": "Contabilidade Geral e NBCs",
+    "tags": [
+      "Demonstração do Resultado"
+    ],
+    "enunciado": [
+      {
+        "type": "p",
+        "content": "Uma empresa comercial apresentou os seguintes saldos em suas contas de resultado em 31/12/2021:"
+      },
+      {
+        "type": "table",
+        "headerRows": [
+          [
+            "Contas",
+            "Valores em R$"
+          ]
+        ],
+        "bodyRows": [
+          [
+            "Abatimentos sobre vendas",
+            "12.000,00"
+          ],
+          [
+            "COFINS sobre faturamento",
+            "9.600,00"
+          ],
+          [
+            "Comissões sobre vendas",
+            "16.000,00"
+          ],
+          [
+            "Custo da Mercadoria Vendida",
+            "145.000,00"
+          ],
+          [
+            "Descontos condicionais concedidos",
+            "3.000,00"
+          ],
+          [
+            "ICMS sobre vendas",
+            "57.600,00"
+          ],
+          [
+            "PIS sobre faturamento",
+            "2.080,00"
+          ],
+          [
+            "Receita de Vendas",
+            "320.000,00"
+          ],
+          [
+            "Vendas Canceladas",
+            "6.400,00"
+          ]
+        ]
+      },
+      {
+        "type": "p",
+        "content": "Considerando exclusivamente as informações apresentadas e de acordo com a Lei nº 6.404/1976 – Lei das Sociedades por Ações, os valores da Receita Líquida de Vendas e do Lucro Bruto evidenciados na Demonstração do Resultado em 31/12/2021 correspondem, respectivamente, a:"
+      }
+    ],
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "R$ 232.320,00; R$ 87.320,00."
+      },
+      {
+        "letra": "B",
+        "texto": "R$ 213.320,00; R$ 68.320,00."
+      },
+      {
+        "letra": "C",
+        "texto": "R$ 301.600,00; R$ 87.860,00."
+      },
+      {
+        "letra": "D",
+        "texto": "R$ 250.720,00; R$ 105.720,00."
+      }
+    ],
+    "gabarito": "A",
+    "gabarito_texto": "R$ 232.320,00; R$ 87.320,00.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 5,
+    "ano": 2022,
+    "exame": "CFC 2022/2",
+    "banca": "Consulplan",
+    "disciplina": "Contabilidade Geral e NBCs",
+    "tags": [
+      "Demonstração das Mutações do Patrimônio Líquido"
+    ],
+    "enunciado": [
+      {
+        "type": "p",
+        "content": "Uma sociedade empresária apresentou a seguinte Demonstração de Mutações do Patrimônio Líquido com os saldos de 31/12/2020:"
+      },
+      {
+        "type": "table",
+        "headerRows": [
+          [
+            {
+              "content": "Demonstração das Mutações do Patrimônio Líquido – Valores em R$",
+              "colspan": 6,
+              "rowspan": 1
+            }
+          ],
+          [
+            {
+              "content": "Contas",
+              "colspan": 1,
+              "rowspan": 2
+            },
+            {
+              "content": "Capital Social",
+              "colspan": 1,
+              "rowspan": 2
+            },
+            {
+              "content": "Reservas de Lucros",
+              "colspan": 3,
+              "rowspan": 1
+            },
+            {
+              "content": "Lucros / Prejuízos Acumulados",
+              "colspan": 1,
+              "rowspan": 2
+            }
+          ],
+          [
+            "Reserva Legal",
+            "Reserva Estatutária",
+            "Reserva para Contingências"
+          ]
+        ],
+        "bodyRows": [
+          [
+            "Saldo inicial (31/12/2020)",
+            "R$ 150.000,00",
+            "R$ 4.000,00",
+            "R$ 0,00",
+            "R$ 20.000,00",
+            "(R$ 55.000,00)"
+          ]
+        ]
+      },
+      {
+        "type": "p",
+        "content": "Durante o exercício social de 2021 ocorreram os seguintes eventos que impactaram nas contas do Patrimônio Líquido:"
+      },
+      {
+        "type": "table",
+        "headerRows": [],
+        "bodyRows": [
+          [
+            "Aumento do Capital Social em dinheiro",
+            "R$ 30.000,00"
+          ],
+          [
+            "Reversão da Reserva para Contingências",
+            "R$ 20.000,00"
+          ],
+          [
+            "Lucro Líquido do exercício",
+            "R$ 280.000,00"
+          ],
+          [
+            "Constituição de Reserva Legal",
+            "R$ 14.000,00"
+          ],
+          [
+            "Constituição de Reserva Estatutária",
+            "R$ 28.000,00"
+          ],
+          [
+            "Dividendos Obrigatórios a Distribuir",
+            "R$ 140.000,00"
+          ]
+        ]
+      },
+      {
+        "type": "p",
+        "content": "Considerando exclusivamente os dados fornecidos e de acordo com a NBC TG 26 (R5) – Apresentação das Demonstrações Contábeis, a Demonstração das Mutações do Patrimônio Líquido em 31/12/2021 deverá evidenciar:"
+      }
+    ],
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "Saldo final de Capital Social de R$ 180.000,00 e da Reserva para Contingências de R$ 20.000,00."
+      },
+      {
+        "letra": "B",
+        "texto": "Saldo final de Capital Social que corresponderá a R$ 172.000,00 e variação das Reservas de Lucros de R$ 42.000,00."
+      },
+      {
+        "letra": "C",
+        "texto": "Saldo final de Lucros e Prejuízos Acumulados de R$ 63.000,00 e variação do Patrimônio Líquido de R$ 170.000,00."
+      },
+      {
+        "letra": "D",
+        "texto": "Saldo final de Lucro e Prejuízos Acumulados corresponderá a R$ 203.000,00 e do Patrimônio Líquido a R$ 429.000,00."
+      }
+    ],
+    "gabarito": "C",
+    "gabarito_texto": "Saldo final de Lucros e Prejuízos Acumulados de R$ 63.000,00 e variação do Patrimônio Líquido de R$ 170.000,00.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 6,
+    "ano": 2022,
+    "exame": "CFC 2022/2",
+    "banca": "Consulplan",
+    "disciplina": "Contabilidade Geral e NBCs",
+    "tags": [
+      "Demonstração dos Fluxos de Caixa"
+    ],
+    "enunciado": [
+      {
+        "type": "p",
+        "content": "Uma sociedade empresária apresentou as seguintes informações relativas ao exercício social de 2021:<br>• O Lucro Líquido do exercício foi de R$ 18.500,00;<br>• A Despesa com Depreciação, no exercício, foi de R$ 1.300,00;<br>• Os valores totais das variações ocorridas nas contas do Ativo Circulante e Passivo Circulante foram:<br>✓ Duplicatas a Receber: aumento de R$ 7.000,00;<br>✓ Estoques de Mercadoria para Revenda: diminuição de R$ 9.000,00;<br>✓ Fornecedores: aumento de R$ 5.000,00; e,<br>✓ Outras Obrigações a Pagar: diminuição de R$ 1.500,00;<br>• Recebimento do valor de R$ 2.000,00 referente à venda de item do Imobilizado, sem ganho ou perda de capital na operação; e,<br>• Pagamento do valor de R$ 20.000,00 relativo à parcela de Financiamento realizado em 2019."
+      },
+      {
+        "type": "p",
+        "content": "Considerando as informações apresentadas e o disposto na NBC TG 03 (R3) – Demonstração dos Fluxos de Caixa, é correto afirmar que a Demonstração dos Fluxos de Caixa em 31/12/2021 evidenciará uma Variação Líquida de Caixa e Equivalentes de Caixa de:"
+      }
+    ],
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "(R$ 3.700,00)."
+      },
+      {
+        "letra": "B",
+        "texto": "R$ 7.300,00."
+      },
+      {
+        "letra": "C",
+        "texto": "R$ 3.300,00."
+      },
+      {
+        "letra": "D",
+        "texto": "R$ 47.300,00."
+      }
+    ],
+    "gabarito": "B",
+    "gabarito_texto": "R$ 7.300,00.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 7,
+    "ano": 2022,
+    "exame": "CFC 2022/2",
+    "banca": "Consulplan",
+    "disciplina": "Contabilidade Geral e NBCs",
+    "tags": [
+      "Folha de Pagamento e Encargos Sociais"
+    ],
+    "enunciado": [
+      {
+        "type": "p",
+        "content": "Uma sociedade empresária optante pelo Lucro Presumido tem um funcionário contratado pelo regime da CLT, em março de 2022, que não possui dependentes e sobre o qual foram apresentadas as seguintes informações referentes à sua remuneração:"
+      },
+      {
+        "type": "table",
+        "headerRows": [
+          [
+            "Discriminação",
+            "R$"
+          ]
+        ],
+        "bodyRows": [
+          [
+            "Salário mensal",
+            "2.200,00"
+          ],
+          [
+            "Horas Extras + Descanso Semanal Remunerado sobre Horas Extras",
+            "260,00"
+          ],
+          [
+            "TOTAL",
+            "2.460,00"
+          ]
+        ]
+      },
+      {
+        "type": "p",
+        "content": "As tabelas a seguir apresentam as bases de cálculo e as alíquotas de INSS e IRRF vigentes a partir de 1º de janeiro de 2022:"
+      },
+      {
+        "type": "table",
+        "headerRows": [
+          [
+            {
+              "content": "Tabela de Contribuição do INSS para 2022",
+              "colspan": 4,
+              "rowspan": 1
+            }
+          ],
+          [
+            {
+              "content": "Base de Cálculo",
+              "colspan": 2,
+              "rowspan": 1
+            },
+            "Alíquota",
+            "Dedução"
+          ]
+        ],
+        "bodyRows": [
+          [
+            "R$ 0,00",
+            "a R$ 1.212,00",
+            "7,5%",
+            "0,00"
+          ],
+          [
+            "R$ 1.212,01",
+            "a R$ 2.427,35",
+            "9,0%",
+            "18,18"
+          ],
+          [
+            "R$ 2.427,36",
+            "a R$ 3.641,03",
+            "12,0%",
+            "91,00"
+          ],
+          [
+            "R$ 3.641,04",
+            "a R$ 7.087,22",
+            "14,0%",
+            "163,82"
+          ]
+        ]
+      },
+      {
+        "type": "table",
+        "headerRows": [
+          [
+            {
+              "content": "Tabela do IRRF para 2022 – Valores mensais",
+              "colspan": 4,
+              "rowspan": 1
+            }
+          ],
+          [
+            {
+              "content": "Base de Cálculo",
+              "colspan": 2,
+              "rowspan": 1
+            },
+            "Alíquota",
+            "Dedução"
+          ]
+        ],
+        "bodyRows": [
+          [
+            "R$ 0,00",
+            "a R$ 1.903,98",
+            "isento",
+            "0,00"
+          ],
+          [
+            "R$ 1.903,99",
+            "a R$ 2.826,65",
+            "7,5%",
+            "142,80"
+          ],
+          [
+            "R$ 2.826,66",
+            "a R$ 3.751,05",
+            "15,0%",
+            "354,80"
+          ],
+          [
+            "R$ 3.751,06",
+            "a R$ 4.664,68",
+            "22,5%",
+            "636,13"
+          ],
+          [
+            "a partir de",
+            "R$ 4.664,69",
+            "27,5%",
+            "869,36"
+          ]
+        ]
+      },
+      {
+        "type": "p",
+        "content": "A tabela a seguir apresenta os percentuais em que está submetida a sociedade empresária para cálculo dos encargos sociais."
+      },
+      {
+        "type": "table",
+        "headerRows": [
+          [
+            {
+              "content": "INSS – Encargos do Empregador",
+              "colspan": 2,
+              "rowspan": 1
+            }
+          ]
+        ],
+        "bodyRows": [
+          [
+            "Fundo de Previdência e Assistência Social – FPAS",
+            "20,0%"
+          ],
+          [
+            "Contribuições para Terceiros",
+            "5,8%"
+          ],
+          [
+            "Seguro Acidente de Trabalho – SAT",
+            "2,0%"
+          ],
+          [
+            "TOTAL:",
+            "27,8%"
+          ],
+          [
+            "Fundo de Garantia por Tempo de Serviço – FGTS",
+            "8,0%"
+          ]
+        ]
+      },
+      {
+        "type": "p",
+        "content": "Considerando exclusivamente as informações apresentadas, o valor da remuneração líquida do empregado e dos encargos sociais (parte da empresa) a serem pagos, referentes a março de 2022, correspondem, aproximadamente (para fins de simplificação), a:"
+      }
+    ],
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "R$ 2.123,00 e R$ 831,00."
+      },
+      {
+        "letra": "B",
+        "texto": "R$ 2.230,00 e R$ 881,00."
+      },
+      {
+        "letra": "C",
+        "texto": "R$ 2.033,00 e R$ 684,00."
+      },
+      {
+        "letra": "D",
+        "texto": "R$ 2.257,00 e R$ 907,00."
+      }
+    ],
+    "gabarito": "B",
+    "gabarito_texto": "R$ 2.230,00 e R$ 881,00.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 8,
+    "ano": 2022,
+    "exame": "CFC 2022/2",
+    "banca": "Consulplan",
+    "disciplina": "Contabilidade Geral e NBCs",
+    "tags": [
+      "Provisões, Passivos Contingentes e Ativos Contingentes"
+    ],
+    "enunciado": [
+      {
+        "type": "p",
+        "content": "O advogado de determinada entidade empresária do setor de serviços apresentou as seguintes informações referentes às questões judiciais movidas em desfavor da empresa:"
+      },
+      {
+        "type": "table",
+        "headerRows": [
+          [
+            "Processo",
+            "Valor",
+            "Chance de ocorrência"
+          ]
+        ],
+        "bodyRows": [
+          [
+            "Processo trabalhista relativo a horas extras",
+            "R$ 100.000,00",
+            "Provável"
+          ],
+          [
+            "Processo trabalhista relativo a trabalho análogo à escravidão",
+            "R$ 80.000,00",
+            "Remota"
+          ],
+          [
+            "Processo civil relativo a danos corporais advindos de acidentes de trabalho",
+            "R$ 70.000,00",
+            "Possível"
+          ],
+          [
+            "Processo tributário relativo a recolhimento do ISSQN",
+            "R$ 60.000,00",
+            "Provável"
+          ],
+          [
+            "Processo tributário relativo a Imposto de Renda Pessoa Jurídica",
+            "R$ 50.000,00",
+            "Provável"
+          ]
+        ]
+      },
+      {
+        "type": "p",
+        "content": "Considerando as informações disponibilizadas e as disposições da NBC TG 25 (R2) – Provisões, Passivos Contingentes e Ativos Contingentes, podemos afirmar que a empresa:"
+      }
+    ],
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "Deverá reconhecer como provisão o valor de R$ 280.000,00 dos processos."
+      },
+      {
+        "letra": "B",
+        "texto": "Não deverá divulgar o valor de R$ 150.000,00 dos processos como passivo contingente."
+      },
+      {
+        "letra": "C",
+        "texto": "Deverá apenas divulgar o valor de R$ 70.000,00 de processos como passivo contingente."
+      },
+      {
+        "letra": "D",
+        "texto": "Deverá divulgar, mas não reconhecer, R$ 80.000,00 de processos como passivo contingente."
+      }
+    ],
+    "gabarito": "*",
+    "gabarito_texto": "",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": true,
+    "lancamentos": []
+  },
+  {
+    "id": 9,
+    "ano": 2022,
+    "exame": "CFC 2022/2",
+    "banca": "Consulplan",
+    "disciplina": "Contabilidade Geral e NBCs",
+    "tags": [
+      "Demonstração dos Fluxos de Caixa"
+    ],
+    "enunciado": [
+      {
+        "type": "p",
+        "content": "Determinada sociedade empresária apresentou o Balanço Patrimonial e a Demonstração de Resultado nos anos de X1 e X2."
+      },
+      {
+        "type": "table",
+        "headerRows": [
+          [
+            {
+              "content": "Balanço Patrimonial (R$)",
+              "colspan": 3,
+              "rowspan": 1
+            }
+          ],
+          [
+            "Ativos",
+            "31-12-X1",
+            "31-12-X2"
+          ]
+        ],
+        "bodyRows": [
+          [
+            "Caixa",
+            "R$ 159.000,00",
+            "R$ 191.000,00"
+          ],
+          [
+            "Contas a receber",
+            "R$ 15.000,00",
+            "R$ 12.000,00"
+          ],
+          [
+            "Estoques",
+            "R$ 160.000,00",
+            "R$ 130.000,00"
+          ],
+          [
+            "Despesas pagas antecipadamente",
+            "R$ 8.000,00",
+            "R$ 6.000,00"
+          ],
+          [
+            "Terreno",
+            "R$ 80.000,00",
+            "R$ 180.000,00"
+          ],
+          [
+            "Equipamentos",
+            "",
+            "R$ 163.000,00"
+          ],
+          [
+            "Depreciação acumulada",
+            "",
+            "R$ (19.000,00)"
+          ],
+          [
+            "Total do Ativo",
+            "R$ 422.000,00",
+            "R$ 663.000,00"
+          ],
+          [
+            {
+              "content": "Passivos e PL",
+              "colspan": 3,
+              "rowspan": 1
+            }
+          ],
+          [
+            "Fornecedor",
+            "R$ 60.000,00",
+            "R$ 52.000,00"
+          ],
+          [
+            "Despesas provisionadas a pagar (operacionais)",
+            "R$ 20.000,00",
+            "R$ 15.000,00"
+          ],
+          [
+            "Impostos de Renda a pagar",
+            "",
+            "R$ 12.000,00"
+          ],
+          [
+            "Títulos de dívida a pagar",
+            "",
+            "R$ 90.000,00"
+          ],
+          [
+            "Ações Ordinárias",
+            "R$ 300.000,00",
+            "R$ 400.000,00"
+          ],
+          [
+            "Lucros Acumulados",
+            "R$ 42.000,00",
+            "R$ 94.000,00"
+          ],
+          [
+            "Total do Passivo",
+            "R$ 422.000,00",
+            "R$ 663.000,00"
+          ]
+        ]
+      },
+      {
+        "type": "table",
+        "headerRows": [
+          [
+            {
+              "content": "Demonstração do Resultado 31-12-X2",
+              "colspan": 2,
+              "rowspan": 1
+            }
+          ]
+        ],
+        "bodyRows": [
+          [
+            "Receitas",
+            "R$ 975.000,00"
+          ],
+          [
+            "Custo das mercadorias vendidas",
+            "(R$ 660.000,00)"
+          ],
+          [
+            "Despesas Operacionais (excluindo Depreciação)",
+            "(R$ 176.000,00)"
+          ],
+          [
+            "Despesas de depreciação",
+            "(R$ 19.000,00)"
+          ],
+          [
+            "Lucro antes do imposto de renda",
+            "R$ 120.000,00"
+          ],
+          [
+            "Despesa de imposto de renda",
+            "(R$ 36.000,00)"
+          ],
+          [
+            "Lucro Líquido",
+            "R$ 84.000,00"
+          ]
+        ]
+      },
+      {
+        "type": "p",
+        "content": "Considerando única e exclusivamente as informações disponibilizadas e, ainda, a NBC TG 03 (R3) – Demonstração do Fluxo de Caixa (DFC), em relação à DFC dessa empresa, apurada em 31-12-20X2, assinale a afirmativa correta."
+      }
+    ],
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "O caixa gerado nas atividades operacionais foi R$ 32.000,00."
+      },
+      {
+        "letra": "B",
+        "texto": "O caixa gerado nas atividades operacionais foi R$ 137.000,00."
+      },
+      {
+        "letra": "C",
+        "texto": "O caixa gerado nas atividades de investimento foi R$ 58.000,00."
+      },
+      {
+        "letra": "D",
+        "texto": "O caixa consumido nas atividades de financiamento foi R$ 163.000,00."
+      }
+    ],
+    "gabarito": "B",
+    "gabarito_texto": "O caixa gerado nas atividades operacionais foi R$ 137.000,00.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 10,
+    "ano": 2022,
+    "exame": "CFC 2022/2",
+    "banca": "Consulplan",
+    "disciplina": "Contabilidade Geral e NBCs",
+    "tags": [
+      "Estoques (NBC TG 16)"
+    ],
+    "enunciado": [
+      {
+        "type": "p",
+        "content": "Determinada entidade empresária do ramo comercial apresentou, no mês de janeiro, as seguintes operações:<br>• 05/01 – Compra de 20 unidades de mercadorias, a prazo, a R$ 110,00 cada uma;<br>• 06/01 – Devolução de uma das unidades de mercadorias adquirida no dia anterior;<br>• 07/01 – Abatimento de R$ 5,00 por unidade sobre as 19 unidades das mercadorias restantes (adquiridas em 05/01);<br>• 08/01 – Venda a prazo de 20 unidades de mercadorias pelo total de R$ 4.000,00;<br>• 09/01 – Recebimento em devolução de duas unidades da venda anterior;<br>• 10/01 – Abatimento concedido sobre as demais mercadorias vendidas no total de R$ 230,00; e,<br>• Estoque inicial constituído de 5 unidades adquiridas a R$ 100,00 cada uma."
+      },
+      {
+        "type": "p",
+        "content": "Considerando única e exclusivamente as informações disponibilizadas e, ainda, sabendo que a empresa utiliza o método de avaliação de estoque “Primeiro a Entrar Primeiro a Sair (PEPS)”, assinale, a seguir, o valor do Custo da Mercadorias Vendidas no dia 08/01."
+      }
+    ],
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "R$ 1.865,00"
+      },
+      {
+        "letra": "B",
+        "texto": "R$ 2.075,00"
+      },
+      {
+        "letra": "C",
+        "texto": "R$ 2.590,00"
+      },
+      {
+        "letra": "D",
+        "texto": "R$ 2.700,00"
+      }
+    ],
+    "gabarito": "B",
+    "gabarito_texto": "R$ 2.075,00",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 11,
+    "ano": 2022,
+    "exame": "CFC 2022/2",
+    "banca": "Consulplan",
+    "disciplina": "Contabilidade Geral e NBCs",
+    "tags": [
+      "Balanço Patrimonial",
+      "Mensuração e Reconhecimento de Operações",
+      "Ativo Imobilizado"
+    ],
+    "enunciado": [
+      {
+        "type": "p",
+        "content": "Determinada sociedade empresária do ramo comercial apresentou os seguintes saldos iniciais em 1º/01/20XX:"
+      },
+      {
+        "type": "table",
+        "headerRows": [],
+        "bodyRows": [
+          [
+            "Banco Conta Movimento",
+            "R$ 160.000,00"
+          ],
+          [
+            "Estoque de Mercadorias (200 unidades)",
+            "R$ 20.000,00"
+          ],
+          [
+            "Clientes",
+            "R$ 60.000,00"
+          ],
+          [
+            "Fornecedores",
+            "R$ 130.000,00"
+          ],
+          [
+            "Empréstimos – Curto Prazo",
+            "R$ 40.000,00"
+          ],
+          [
+            "Veículos",
+            "R$ 40.000,00"
+          ],
+          [
+            "Imóveis",
+            "R$ 80.000,00"
+          ],
+          [
+            "Capital Social",
+            "R$ 308.500,00"
+          ],
+          [
+            "Depreciação Acumulada Veículos",
+            "R$ 500,00"
+          ],
+          [
+            "Despesa Antecipada (Aluguel)",
+            "R$ 120.000,00"
+          ],
+          [
+            "Depreciação Acumulada Imóveis",
+            "R$ 1.000,00"
+          ]
+        ]
+      },
+      {
+        "type": "p",
+        "content": "Durante o mês de janeiro do citado ano, ocorreram as operações descritas a seguir; analise-as.<br>01/01/20XX: Empresa vende à vista 100 unidades de mercadorias que estavam no estoque por R$ 300,00 cada unidade.<br>05/01/20XX: Clientes pagaram a metade do que deviam.<br>04/01/20XX: Empresa comprou 50 unidades de mercadorias para revenda no valor total de R$ 5.000,00, pagando à vista.<br>10/01/20XX: Empresa pagou 40% do que devia aos fornecedores.<br>15/01/20XX: Sócio integralizou capital no montante de R$ 200.000,00, sendo metade integralizada na conta bancária e o restante em um imóvel.<br>17/01/20XX: Empresa vendeu 40 unidades de mercadorias a R$ 250,00 cada. A venda foi a prazo.<br>20/01/20XX: Empresa pagou metade do empréstimo bancário.<br>21/01/20XX: Empresa reconheceu a despesa com energia elétrica e água, pagando o valor de R$ 1.000,00.<br>31/01/20XX: Empresa reconheceu um mês de despesa com aluguel pago antecipadamente.<br>31/01/20XX: Empresa fez o reconhecimento da despesa com salários no valor de R$ 3.000,00. Tal quantia será paga no mês seguinte.<br>31/01/20XX: Empresa fez a contabilização da depreciação e a amortização dos bens do ativo imobilizado de acordo com a legislação fiscal e com o quadro a seguir:"
+      },
+      {
+        "type": "table",
+        "headerRows": [
+          [
+            "",
+            "Taxa Anual",
+            "Anos de Vida Útil"
+          ]
+        ],
+        "bodyRows": [
+          [
+            "Veículos",
+            "20%",
+            "5"
+          ],
+          [
+            "Imóveis",
+            "4%",
+            "25"
+          ]
+        ]
+      },
+      {
+        "type": "p",
+        "content": "Considerando exclusivamente as informações disponibilizadas e, ainda, a NBC TG 26 (R5) – Apresentação das Demonstrações Contábeis, em relação ao Balanço Patrimonial da empresa, apurado em 31/01/20XX, assinale a afirmativa correta."
+      }
+    ],
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "O total do Ativo Circulante é R$ 403.000,00."
+      },
+      {
+        "letra": "B",
+        "texto": "O total do Passivo Circulante é R$ 217.566,66."
+      },
+      {
+        "letra": "C",
+        "texto": "O total do Ativo Não Circulante é R$ 101.000,00."
+      },
+      {
+        "letra": "D",
+        "texto": "O total do Passivo Não Circulante é R$ 20.000,00."
+      }
+    ],
+    "gabarito": "*",
+    "gabarito_texto": "",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": true,
+    "lancamentos": []
+  },
+  {
+    "id": 12,
+    "ano": 2022,
+    "exame": "CFC 2022/2",
+    "banca": "Consulplan",
+    "disciplina": "Contabilidade Geral e NBCs",
+    "tags": [
+      "Combinação de Negócios",
+      "Investimento em Coligada e em Empreendimento Controlado em Conjunto"
+    ],
+    "enunciado": [
+      {
+        "type": "p",
+        "content": "Duas sociedades empresárias – empresa A e empresa B – realizaram uma operação conjunta no ano de X2. Essa operação se referiu à compra de 80% da empresa B pela empresa A, no valor de R$ 50.000,00. O Balanço Patrimonial das duas empresas, no ano de X1, encontra-se disponibilizado a seguir:"
+      },
+      {
+        "type": "table",
+        "headerRows": [
+          [
+            {
+              "content": "ATIVO",
+              "colspan": 3,
+              "rowspan": 1
+            },
+            {
+              "content": "PASSIVO",
+              "colspan": 3,
+              "rowspan": 1
+            }
+          ],
+          [
+            "",
+            "Empresa A",
+            "Empresa B",
+            "",
+            "Empresa A",
+            "Empresa B"
+          ]
+        ],
+        "bodyRows": [
+          [
+            "Ativo Circulante",
+            "",
+            "",
+            "Passivo Circulante",
+            "",
+            ""
+          ],
+          [
+            "• Bancos",
+            "R$ 150.000,00",
+            "R$ 10.000,00",
+            "",
+            "",
+            ""
+          ],
+          [
+            "Ativo Não Circulante",
+            "",
+            "",
+            "Passivo Não Circulante",
+            "",
+            ""
+          ],
+          [
+            "• Imobilizado",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "• Terreno",
+            "",
+            "R$ 10.000,00",
+            "Patrimônio Líquido",
+            "",
+            ""
+          ],
+          [
+            "",
+            "",
+            "",
+            "• Capital Social",
+            "R$ 150.000,00",
+            "R$ 20.000,00"
+          ],
+          [
+            "TOTAL DO ATIVO",
+            "R$ 150.000,00",
+            "R$ 20.000,00",
+            "TOTAL DO PASSIVO",
+            "R$ 150.000,00",
+            "R$ 20.000,00"
+          ]
+        ]
+      },
+      {
+        "type": "p",
+        "content": "Na data da compra, o valor de mercado do terreno era R$ 20.000,00. Há, também, o valor de mercado da marca da empresa B, que era de R$ 8.000,00. Nesse sentido, considerando exclusivamente tais informações, qual o valor do ágio por expectativa de rentabilidade futura na combinação de negócio (também chamado de goodwill) total contabilizado no Balanço Patrimonial consolidado ao final de X2?<br>(Considerar que o valor justo da parcela dos não controladores é igual ao do valor pago pelo novo controlador.)"
+      }
+    ],
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "R$ 12.500,00"
+      },
+      {
+        "letra": "B",
+        "texto": "R$ 24.500,00"
+      },
+      {
+        "letra": "C",
+        "texto": "R$ 38.000,00"
+      },
+      {
+        "letra": "D",
+        "texto": "R$ 50.000,00"
+      }
+    ],
+    "gabarito": "B",
+    "gabarito_texto": "R$ 24.500,00",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 13,
+    "ano": 2022,
+    "exame": "CFC 2022/2",
+    "banca": "Consulplan",
+    "disciplina": "Contabilidade Geral e NBCs",
+    "tags": [
+      "Tributos sobre o Lucro",
+      "Demonstração do Resultado"
+    ],
+    "enunciado": "Uma sociedade empresária optante do lucro real apresentou as seguintes despesas, custos e receitas em 2021:<br>• Receita de serviços prestados (tributável): R$ 500.000,00;<br>• Receita de equivalência patrimonial (não tributável): R$ 20.000,00;<br>• Custos dos serviços prestados (dedutíveis): R$ 250.000,00;<br>• Despesas com provisão para processos trabalhistas (não dedutíveis – temporárias): R$ 50.000,00; e,<br>• Despesas com multas (não dedutíveis): R$ 40.000,00.<br>A sociedade empresária apresenta histórico de lucratividade e um estudo detalhado que também prevê a apuração de lucro nos próximos cinco anos. De acordo com o Pronunciamento Técnico CPC 32 – Tributos sobre o Lucro, o lucro líquido (contábil) da sociedade empresária, em 31/12/2021, considerando a alíquota fixa de tributos sobre o lucro de 34% foi:",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "R$ 95.000,00"
+      },
+      {
+        "letra": "B",
+        "texto": "R$ 108.800,00"
+      },
+      {
+        "letra": "C",
+        "texto": "R$ 112.000,00"
+      },
+      {
+        "letra": "D",
+        "texto": "R$ 180.000,00"
+      }
+    ],
+    "gabarito": "C",
+    "gabarito_texto": "R$ 112.000,00",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 14,
+    "ano": 2022,
+    "exame": "CFC 2022/2",
+    "banca": "Consulplan",
+    "disciplina": "Contabilidade Geral e NBCs",
+    "tags": [
+      "Ativo Imobilizado"
+    ],
+    "enunciado": "Uma indústria adquiriu um equipamento de grande porte em 1º de julho de 2020. Para aquisição da máquina, a sociedade deveria desembolsar R$ 1.500.000,00 à vista. Após analisar o seu fluxo de caixa, a administração da indústria decidiu financiar o pagamento da máquina junto ao fornecedor em 36 parcelas mensais de R$ 50.000,00, totalizando R$ 1.800.000,00. Adicionalmente, a empresa ainda desembolsou R$ 52.000,00 para transportar a máquina da sede do fornecedor ao local de sua instalação; R$ 160.000,00 com tributos não recuperáveis; e, R$ 10.000,00 com seguro no transporte. Sabe-se que a indústria contratou uma empresa especializada para realizar a instalação e incorreu em gastos com instalação no montante de R$ 70.000,00. Findada a instalação, a fase de testes do funcionamento da máquina gerou custos de R$ 14.000,00 e as amostras produzidas, na fase de testes, foram vendidas por R$ 6.000,00. Devidamente instalada e testada, a máquina ficou apta para produzir em 1º de outubro de 2020. Posteriormente, a empresa pagou R$ 5.000,00 na realização de um curso para treinamento de seus empregados a fim de operar o equipamento. O método de unidades produzidas foi adotado para o cálculo da depreciação, considerando valor residual de 10% do custo de aquisição. A capacidade estimada de produção ao longo da vida útil da máquina é de 2.000.000 unidades. Em 2020, a produção foi de 60.000 unidades. Em 2021, a produção foi de 220.000 unidades. Considerando tais informações e, ainda, de acordo com a NBC TG 27 (R4) – Ativo Imobilizado, é correto afirmar que o valor contábil líquido (deduzido o saldo da depreciação acumulada) desse ativo, em 31/12/2021, foi:",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "R$ 1.566.208,00"
+      },
+      {
+        "letra": "B",
+        "texto": "R$ 1.573.200,00"
+      },
+      {
+        "letra": "C",
+        "texto": "R$ 1.577.570,00"
+      },
+      {
+        "letra": "D",
+        "texto": "R$ 1.835.400,00"
+      }
+    ],
+    "gabarito": "B",
+    "gabarito_texto": "R$ 1.573.200,00",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 15,
+    "ano": 2022,
+    "exame": "CFC 2022/2",
+    "banca": "Consulplan",
+    "disciplina": "Contabilidade Geral e NBCs",
+    "tags": [
+      "Estoques (NBC TG 16)",
+      "Mensuração e Reconhecimento de Operações"
+    ],
+    "enunciado": "A empresa Potiffar Ltda. atua no ramo de revenda de celulares para consumidores finais. No dia 10/08/2022, a empresa adquiriu dez celulares da marca Xonglong, sendo o valor total da nota fiscal de entrada de R$ 21.120,00, pagando 50% à vista e 50% para pagamento em dois meses. Na operação incidem IPI à alíquota de 10% (com valor destacado na Nota Fiscal) e ICMS de 18%. Considerando única e exclusivamente as informações disponibilizadas, a situação descrita e o disposto na NBC TG 16 (R2) – Estoques, a escrituração contábil da operação no Livro Diário será:",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "D – Mercadorias para revenda R$ 17.664,00<br>D – ICMS a recuperar R$ 3.456,00<br>C – Bancos Conta Movimento R$ 10.560,00<br>C – Fornecedores Nacionais R$ 10.560,00"
+      },
+      {
+        "letra": "B",
+        "texto": "D – Mercadorias para revenda R$ 15.774,00<br>D – ICMS a recuperar R$ 3.456,00<br>D – IPI a recuperar R$ 1.920,00<br>C – Bancos Conta Movimento R$ 10.560,00<br>C – Fornecedores Nacionais R$ 10.560,00"
+      },
+      {
+        "letra": "C",
+        "texto": "D – Mercadorias para revenda R$ 17.318,40<br>D – ICMS a recuperar R$ 3.801,60<br>C – Bancos Conta Movimento R$ 10.560,00<br>C – Fornecedores Nacionais R$ 10.560,00"
+      },
+      {
+        "letra": "D",
+        "texto": "D – Mercadorias para revenda R$ 15.398,40<br>D – ICMS a recuperar R$ 3.801,60<br>D – IPI a recuperar R$ 1.920,00<br>C – Bancos Conta Movimento R$ 10.560,00<br>C – Fornecedores Nacionais R$ 10.560,00"
+      }
+    ],
+    "gabarito": "A",
+    "gabarito_texto": "D – Mercadorias para revenda R$ 17.664,00<br>D – ICMS a recuperar R$ 3.456,00<br>C – Bancos Conta Movimento R$ 10.560,00<br>C – Fornecedores Nacionais R$ 10.560,00",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 16,
+    "ano": 2022,
+    "exame": "CFC 2022/2",
+    "banca": "Consulplan",
+    "disciplina": "Contabilidade Geral e NBCs",
+    "tags": [
+      "Demonstração do Resultado",
+      "Operações Fiscais, Tributárias e de Contribuições"
+    ],
+    "enunciado": [
+      {
+        "type": "p",
+        "content": "Uma empresa do ramo comercial apresentou, no mês de dezembro/2021, os seguintes fatos econômicos:<br>I. Venda de mercadorias pelo valor bruto de R$ 40.000,00, sobre o qual incidem PIS e COFINS, sob o regime cumulativo, e também à alíquota interna de 15%.<br>II. Desconto incondicional sobre a venda, no valor de R$ 4.000,00.<br>III. Como parte da venda foi efetuada a longo prazo, houve contabilização de ajuste a valor presente do crédito a receber, no valor de R$ 3.500,00, indedutível para fins tributários.<br>IV. O custo das mercadorias vendidas equivale a 35% do valor da Receita Líquida.<br>V. A referida empresa é optante pelo regime de tributação do IRPJ com base no lucro presumido e adota o regime de competência para fins de incidência da Contribuição para o PIS e para COFINS."
+      },
+      {
+        "type": "p",
+        "content": "Informações adicionais:<br>• As alíquotas cumulativas da Contribuição para o PIS e para COFINS, de acordo com o Art. 124 da Instrução Normativa RFB nº 1.911/2019 são, respectivamente, de 0,65% e de 3%; e,<br>• O valor do ICMS não compõe a base de cálculo para fins de incidência do PIS e da COFINS, conforme entendimento do Supremo Tribunal Federal."
+      },
+      {
+        "type": "p",
+        "content": "Com base nas informações disponibilizadas, o Resultado com Mercadorias do mês de dezembro/2021 foi:"
+      }
+    ],
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "R$ 15.025,85"
+      },
+      {
+        "letra": "B",
+        "texto": "R$ 15.778,18"
+      },
+      {
+        "letra": "C",
+        "texto": "R$ 16.889,02"
+      },
+      {
+        "letra": "D",
+        "texto": "R$ 19.164,02"
+      }
+    ],
+    "gabarito": "*",
+    "gabarito_texto": "",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": true,
+    "lancamentos": []
+  },
+  {
+    "id": 17,
+    "ano": 2022,
+    "exame": "CFC 2022/2",
+    "banca": "Consulplan",
+    "disciplina": "Contabilidade Geral e NBCs",
+    "tags": [
+      "Provisões, Passivos Contingentes e Ativos Contingentes"
+    ],
+    "enunciado": "Por meio de Memorando Conjunto do Departamento Jurídico e do Departamento Tributário, o Departamento de Contabilidade da Cia. Terra Prometida é comunicado de que a entidade acaba de ingressar com ação judicial contra a União, pleiteando créditos tributários cobrados a maior nos últimos cinco anos. O documento informa ainda que, em casos parecidos, não há consenso sobre o efetivo direito das empresas, sendo possível, mas improvável, o desfecho favorável da ação. Diante da situação descrita, e com base na NBC TG 25 (R2) – Provisões, Passivos Contingentes e Ativos Contingentes, o contador da Cia. Terra Prometida:",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "Não deve proceder a qualquer registro contábil em contas patrimoniais, nem efetuar qualquer tipo de divulgação em notas explicativas."
+      },
+      {
+        "letra": "B",
+        "texto": "Deve registrar em conta de Ativo Diferido o valor das diferenças apuradas pelos outros setores, atualizados monetariamente e corrigidos por juros de mora."
+      },
+      {
+        "letra": "C",
+        "texto": "Deve divulgar o fato em notas explicativas sem, no entanto, proceder ao registro de qualquer direito no Balanço Patrimonial, ante a incerteza de fruição de benefícios econômicos futuros."
+      },
+      {
+        "letra": "D",
+        "texto": "Deve registrar em conta de Ativo Não Circulante – Realizável a Longo Prazo – Créditos Tributários, o montante provável de realização da ação judicial, em valores nominais, divulgando o fato em notas explicativas."
+      }
+    ],
+    "gabarito": "A",
+    "gabarito_texto": "Não deve proceder a qualquer registro contábil em contas patrimoniais, nem efetuar qualquer tipo de divulgação em notas explicativas.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 18,
+    "ano": 2022,
+    "exame": "CFC 2022/2",
+    "banca": "Consulplan",
+    "disciplina": "Contabilidade de Custos",
+    "tags": [
+      "Controle, Registro, Apuração e Alocação de Custos"
+    ],
+    "enunciado": [
+      {
+        "type": "p",
+        "content": "A Indústria W produz somente os produtos A, B e C e trabalhou com sua capacidade normal de produção. As informações seguintes foram coletadas na gerência de custos da Indústria W e se referem aos dados de produção dos produtos A, B e C no mês de abril/2022."
+      },
+      {
+        "type": "table",
+        "headerRows": [
+          [
+            {
+              "content": "Custos Diretos de Produção Variáveis / Total no mês",
+              "colspan": 3,
+              "rowspan": 1
+            }
+          ],
+          [
+            "",
+            "Mão de Obra",
+            "Matéria-Prima"
+          ]
+        ],
+        "bodyRows": [
+          [
+            "Produto A",
+            "R$ 15.000,00",
+            "R$ 6.000,00"
+          ],
+          [
+            "Produto B",
+            "R$ 17.000,00",
+            "R$ 21.000,00"
+          ],
+          [
+            "Produto C",
+            "R$ 42.000,00",
+            "R$ 58.000,00"
+          ]
+        ]
+      },
+      {
+        "type": "table",
+        "headerRows": [
+          [
+            {
+              "content": "Custos Indiretos de Produção Fixos / Total no mês",
+              "colspan": 2,
+              "rowspan": 1
+            }
+          ]
+        ],
+        "bodyRows": [
+          [
+            "Manutenção das Instalações Fabris",
+            "R$ 20.000,00"
+          ],
+          [
+            "Aluguel",
+            "R$ 15.000,00"
+          ],
+          [
+            "Energia Elétrica",
+            "R$ 25.000,00"
+          ]
+        ]
+      },
+      {
+        "type": "p",
+        "content": "Todo o processo de produção dos produtos A, B e C passa por três departamentos existentes na Indústria W. A indústria utiliza o critério de departamentalização para alocação dos Custos Indiretos de Produção Fixos a esses produtos e tais custos são assim distribuídos por departamento:"
+      },
+      {
+        "type": "table",
+        "headerRows": [
+          [
+            "",
+            "Distribuído por",
+            "Departamento 1",
+            "Departamento 2",
+            "Departamento 3"
+          ]
+        ],
+        "bodyRows": [
+          [
+            "Manutenção das Instalações Fabris",
+            "horas/máquinas trabalhadas",
+            "100/horas",
+            "50/horas",
+            "50/horas"
+          ],
+          [
+            "Aluguel",
+            "área em m²",
+            "50 m²",
+            "50 m²",
+            "150 m²"
+          ],
+          [
+            "Energia Elétrica",
+            "consumo em kWh",
+            "200 kWh",
+            "300 kWh",
+            "500 kWh"
+          ]
+        ]
+      },
+      {
+        "type": "p",
+        "content": "A Indústria W utiliza as seguintes proporções para distribuição dos custos departamentais aos Produtos A, B e C:"
+      },
+      {
+        "type": "table",
+        "headerRows": [
+          [
+            "",
+            "Departamento 1",
+            "Departamento 2",
+            "Departamento 3"
+          ]
+        ],
+        "bodyRows": [
+          [
+            "Produto A",
+            "5%",
+            "30%",
+            "40%"
+          ],
+          [
+            "Produto B",
+            "25%",
+            "15%",
+            "40%"
+          ],
+          [
+            "Produto C",
+            "70%",
+            "55%",
+            "20%"
+          ]
+        ]
+      },
+      {
+        "type": "p",
+        "content": "Considerando única e exclusivamente as informações apresentadas, assinale a alternativa que evidencia, respectivamente, o custo total para produzir 1.000 unidades de cada um dos produtos A, B e C no mês de abril/2022."
+      }
+    ],
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "R$ 37.150,00; R$ 55.425,00; R$ 126.425,00."
+      },
+      {
+        "letra": "B",
+        "texto": "R$ 41.000,00; R$ 58.000,00; R$ 120.000,00."
+      },
+      {
+        "letra": "C",
+        "texto": "R$ 41.000,00; R$ 53.000,00; R$ 125.000,00."
+      },
+      {
+        "letra": "D",
+        "texto": "R$ 39.000,00; R$ 53.000,00; R$ 126.000,00."
+      }
+    ],
+    "gabarito": "A",
+    "gabarito_texto": "R$ 37.150,00; R$ 55.425,00; R$ 126.425,00.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 19,
+    "ano": 2022,
+    "exame": "CFC 2022/2",
+    "banca": "Consulplan",
+    "disciplina": "Contabilidade de Custos",
+    "tags": [
+      "Métodos de Custeamento"
+    ],
+    "enunciado": "Uma pequena indústria fabrica somente três produtos: produto A, produto B e produto C. Apesar de serem produtos distintos, eles têm em sua composição a matéria-prima X. O custo da matéria-prima X é de R$ 2,00 por kg e, no mês de fevereiro de 2022, o consumo dessa matéria-prima para produzir cada um dos produtos foi:<br>• Produto A -> 6 kg de matéria-prima por unidade produzida.<br>• Produto B -> 2 kg de matéria-prima por unidade produzida.<br>• Produto C -> 8 kg de matéria-prima por unidade produzida.<br>Outras informações levantadas em fevereiro de 2022:<br>• A pequena indústria produziu 1.000 unidades de cada produto e trabalhou com sua capacidade normal de produção;<br>• O total dos Custos Fixos Indiretos de fabricação foi de R$ 43.000,00. Esse valor foi assim rateado entre os produtos: 30% para o Produto A, 35% para o Produto B e 35% para o Produto C; e,<br>• O Custo Total da mão de obra direta para fabricação dos três produtos foi de R$ 40.000,00. Esse valor foi assim distribuído aos produtos: 25% para o Produto A, 30% para o Produto B e 45% para o Produto C.<br>Considerando única e exclusivamente as informações disponibilizadas, assinale a alternativa que evidencia o custo unitário de cada unidade do produto A, produto B e produto C, respectivamente.",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "R$ 22,90; R$ 27,05; R$ 33,05."
+      },
+      {
+        "letra": "B",
+        "texto": "R$ 24,90; R$ 19,05; R$ 31,05."
+      },
+      {
+        "letra": "C",
+        "texto": "R$ 34,90; R$ 16,00; R$ 49,05."
+      },
+      {
+        "letra": "D",
+        "texto": "R$ 34,90; R$ 31,05; R$ 49,05."
+      }
+    ],
+    "gabarito": "D",
+    "gabarito_texto": "R$ 34,90; R$ 31,05; R$ 49,05.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 20,
+    "ano": 2022,
+    "exame": "CFC 2022/2",
+    "banca": "Consulplan",
+    "disciplina": "Contabilidade de Custos",
+    "tags": [
+      "Métodos de Custeamento"
+    ],
+    "enunciado": [
+      {
+        "type": "p",
+        "content": "As informações seguintes foram coletadas na gerência de custos da Indústria A e se referem aos dados de produção e venda dos produtos Z e W no mês de fevereiro de 2022."
+      },
+      {
+        "type": "table",
+        "headerRows": [
+          [
+            "Itens",
+            {
+              "content": "Custos Diretos de Produção Variáveis / Total no mês",
+              "colspan": 2,
+              "rowspan": 1
+            }
+          ],
+          [
+            "",
+            "Z",
+            "W"
+          ]
+        ],
+        "bodyRows": [
+          [
+            "• Mão de obra",
+            "R$ 20.000,00",
+            "R$ 30.000,00"
+          ],
+          [
+            "• Matéria-prima consumida",
+            "R$ 28.000,00",
+            "R$ 42.000,00"
+          ],
+          [
+            "TOTAL:",
+            "R$ 48.000,00",
+            "R$ 72.000,00"
+          ]
+        ]
+      },
+      {
+        "type": "table",
+        "headerRows": [
+          [
+            "Itens",
+            "Custos Indiretos de Produção Fixos / Total no mês"
+          ]
+        ],
+        "bodyRows": [
+          [
+            "• Manutenção de instalações fabris",
+            "R$ 18.000,00"
+          ],
+          [
+            "• Outros custos indiretos",
+            "R$ 37.000,00"
+          ],
+          [
+            "TOTAL:",
+            "R$ 55.000,00"
+          ]
+        ]
+      },
+      {
+        "type": "table",
+        "headerRows": [
+          [
+            "Produtos",
+            "Produção Total (kg)",
+            "Preço de Venda por kg",
+            "Receita de Vendas"
+          ]
+        ],
+        "bodyRows": [
+          [
+            "• Produto Z",
+            "20.000",
+            "R$ 2,40",
+            "R$ 48.000,00"
+          ],
+          [
+            "• Produto W",
+            "30.000",
+            "R$ 0,80",
+            "R$ 24.000,00"
+          ]
+        ]
+      },
+      {
+        "type": "p",
+        "content": "Informações adicionais:<br>• A produção total de Z e W foi completamente vendida no mês;<br>• A indústria produz somente os produtos Z e W e trabalhou com sua capacidade normal de produção; e,<br>• A indústria utiliza os custos totais com mão de obra direta como critério de rateio dos custos indiretos da produção.<br>Considerando única e exclusivamente as informações disponibilizadas e empregando o sistema de custeio por absorção, assinale o Resultado Bruto apurado pela indústria com a venda de toda a produção de Z e W no mês de fevereiro de 2022."
+      }
+    ],
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "–R$ 48.000,00"
+      },
+      {
+        "letra": "B",
+        "texto": "R$ 72.000,00"
+      },
+      {
+        "letra": "C",
+        "texto": "–R$ 85.000,00"
+      },
+      {
+        "letra": "D",
+        "texto": "–R$ 103.000,00"
+      }
+    ],
+    "gabarito": "D",
+    "gabarito_texto": "–R$ 103.000,00",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 21,
+    "ano": 2022,
+    "exame": "CFC 2022/2",
+    "banca": "Consulplan",
+    "disciplina": "Contabilidade de Custos",
+    "tags": [
+      "Métodos de Custeamento"
+    ],
+    "enunciado": [
+      {
+        "type": "p",
+        "content": "Determinada empresa industrial, que produz dois tipos de produtos: chinelo azul e chinelo amarelo, está estruturada em três departamentos: Alfa, Beta e Gama. O departamento Gama não possui vínculo direto com a fabricação dos dois produtos, mas presta serviço aos outros dois departamentos. A empresa apresentou as seguintes informações:"
+      },
+      {
+        "type": "table",
+        "headerRows": [
+          [
+            "Departamento",
+            "Gasto por Departamento (R$)"
+          ]
+        ],
+        "bodyRows": [
+          [
+            "Alfa",
+            "3.000,00"
+          ],
+          [
+            "Beta",
+            "4.000,00"
+          ],
+          [
+            "Gama",
+            "9.000,00"
+          ]
+        ]
+      },
+      {
+        "type": "table",
+        "headerRows": [
+          [
+            "Departamento",
+            "% de horas de trabalho – chinelo azul",
+            "% de horas de trabalho – chinelo amarelo"
+          ]
+        ],
+        "bodyRows": [
+          [
+            "Alfa",
+            "60%",
+            "40%"
+          ],
+          [
+            "Beta",
+            "40%",
+            "60%"
+          ]
+        ]
+      },
+      {
+        "type": "table",
+        "headerRows": [
+          [
+            "Departamento",
+            "Quantitativo de serviços prestados pelo departamento Gama"
+          ]
+        ],
+        "bodyRows": [
+          [
+            "Alfa",
+            "200"
+          ],
+          [
+            "Beta",
+            "100"
+          ]
+        ]
+      },
+      {
+        "type": "p",
+        "content": "Considerando as informações disponibilizadas, assinale os custos a serem alocados à produção de chinelo azul e chinelo amarelo, respectivamente, empregando o critério do método de Custeio Baseado em Atividades (ABC) para rateio de custos indiretos."
+      }
+    ],
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "R$ 8.200,00; R$ 7.800,00"
+      },
+      {
+        "letra": "B",
+        "texto": "R$ 3.400,00; R$ 2.600,00"
+      },
+      {
+        "letra": "C",
+        "texto": "R$ 4.800,00; R$ 4.200,00"
+      },
+      {
+        "letra": "D",
+        "texto": "R$ 3.000,00; R$ 4.000,00"
+      }
+    ],
+    "gabarito": "A",
+    "gabarito_texto": "R$ 8.200,00; R$ 7.800,00",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 22,
+    "ano": 2022,
+    "exame": "CFC 2022/2",
+    "banca": "Consulplan",
+    "disciplina": "Contabilidade Aplicada ao Setor Público",
+    "tags": [
+      "Demonstrações Contábeis - Setor Público",
+      "Procedimentos Contábeis Específicos - Setor Público"
+    ],
+    "enunciado": [
+      {
+        "type": "p",
+        "content": "Determinada entidade do setor público registrou, no exercício de X1, um ativo no valor de R$ 120,00. Porém, o valor correto seria de R$ 90,00. Com isso, o superavit apurado foi maior que o superavit real, conforme apurado no Balanço Patrimonial do ano X1, na conta de Resultados Acumulados, como demonstrado a seguir:"
+      },
+      {
+        "type": "table",
+        "headerRows": [
+          [
+            {
+              "content": "Balanço Patrimonial – Ano X1 (R$)",
+              "colspan": 4,
+              "rowspan": 1
+            }
+          ],
+          [
+            {
+              "content": "Ativo",
+              "colspan": 2,
+              "rowspan": 1
+            },
+            {
+              "content": "Passivo",
+              "colspan": 2,
+              "rowspan": 1
+            }
+          ]
+        ],
+        "bodyRows": [
+          [
+            "Ativo Circulante",
+            "R$ 120,00",
+            "Passivo Circulante",
+            "R$ 100,00"
+          ],
+          [
+            "Ativo Não Circulante",
+            "R$ 300,00",
+            "Passivo Não Circulante",
+            "R$ 200,00"
+          ],
+          [
+            "",
+            "",
+            "Patrimônio Líquido",
+            ""
+          ],
+          [
+            "",
+            "",
+            "Resultados Acumulados",
+            "R$ 120,00"
+          ],
+          [
+            "Total",
+            "R$ 420,00",
+            "Total",
+            "R$ 420,00"
+          ]
+        ]
+      },
+      {
+        "type": "p",
+        "content": "No exercício seguinte (X2) foi identificado o erro. Neste exercício, antes do ajuste do erro, foi apurado o Balanço Patrimonial como demonstrado a seguir:"
+      },
+      {
+        "type": "table",
+        "headerRows": [
+          [
+            {
+              "content": "Balanço Patrimonial – Ano X2 (R$)",
+              "colspan": 4,
+              "rowspan": 1
+            }
+          ],
+          [
+            {
+              "content": "Ativo",
+              "colspan": 2,
+              "rowspan": 1
+            },
+            {
+              "content": "Passivo",
+              "colspan": 2,
+              "rowspan": 1
+            }
+          ]
+        ],
+        "bodyRows": [
+          [
+            "Ativo Circulante",
+            "R$ 180,00",
+            "Passivo Circulante",
+            "R$ 150,00"
+          ],
+          [
+            "Ativo Não Circulante",
+            "R$ 350,00",
+            "Passivo Não Circulante",
+            "R$ 250,00"
+          ],
+          [
+            "",
+            "",
+            "Patrimônio Líquido",
+            ""
+          ],
+          [
+            "",
+            "",
+            "Resultados Acumulados",
+            "R$ 130,00"
+          ],
+          [
+            "Total",
+            "R$ 530,00",
+            "Total",
+            "R$ 530,00"
+          ]
+        ]
+      },
+      {
+        "type": "p",
+        "content": "Considerando a ocorrência de apenas o erro relatado e, ainda, unicamente as informações disponibilizadas, assinale a alternativa correta sobre o Balanço Patrimonial em X2 após a realização do ajuste."
+      }
+    ],
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "O valor total do Ativo no Balanço Patrimonial em X2 ajustado é de R$ 560,00."
+      },
+      {
+        "letra": "B",
+        "texto": "O valor do Ativo Circulante no Balanço Patrimonial em X2 ajustado é de R$ 180,00."
+      },
+      {
+        "letra": "C",
+        "texto": "O valor do Passivo Circulante no Balanço Patrimonial em X2 ajustado é de R$ 250,00."
+      },
+      {
+        "letra": "D",
+        "texto": "O valor do Patrimônio Líquido no Balanço Patrimonial em X2 ajustado é de R$ 100,00."
+      }
+    ],
+    "gabarito": "D",
+    "gabarito_texto": "O valor do Patrimônio Líquido no Balanço Patrimonial em X2 ajustado é de R$ 100,00.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 23,
+    "ano": 2022,
+    "exame": "CFC 2022/2",
+    "banca": "Consulplan",
+    "disciplina": "Contabilidade Aplicada ao Setor Público",
+    "tags": [
+      "Plano de Contas - Setor Público"
+    ],
+    "enunciado": "O Plano de Contas Aplicado ao Setor Público (PCASP), que deve ser adotado por todos os entes da Federação, constitui um instrumento para a consolidação das contas nacionais, bem como para a adoção das normas internacionais de contabilidade. Em relação aos aspectos relacionados ao PCASP, assinale a afirmativa correta.",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "Nos lançamentos de natureza de controle, são debitadas e creditadas contas das classes 7 e 8."
+      },
+      {
+        "letra": "B",
+        "texto": "Para lançamentos da classe 1. ATIVO, utilizar-se-á uma conta da classe 5 (a crédito) e uma conta da classe 6 (a débito)."
+      },
+      {
+        "letra": "C",
+        "texto": "De acordo com a estrutura do código da conta contábil, na conta 1.1.0.0.0.00.00 – Ativo Circulante, o primeiro dígito, ou seja, 1º nível, representa o Título."
+      },
+      {
+        "letra": "D",
+        "texto": "Na conta 1.2.1.4.1.00.00 Estoques – Consolidação, o 4º nível é o mecanismo para a segregação dos valores das transações que serão incluídas ou excluídas na consolidação."
+      }
+    ],
+    "gabarito": "A",
+    "gabarito_texto": "Nos lançamentos de natureza de controle, são debitadas e creditadas contas das classes 7 e 8.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 24,
+    "ano": 2022,
+    "exame": "CFC 2022/2",
+    "banca": "Consulplan",
+    "disciplina": "Contabilidade Aplicada ao Setor Público",
+    "tags": [
+      "Princípios Orçamentários - Setor Público"
+    ],
+    "enunciado": "Paulo, professor de Contabilidade Pública, alertou seus alunos para estudarem a Lei nº 4.320/1964, a Lei Complementar nº 101/2000 e as Normas Brasileiras de Contabilidade Aplicadas ao Setor Público, principalmente em relação à classificação das receitas públicas, suas origens e detalhamento das categorias econômicas, com vistas a identificar a procedência das receitas no momento em que ingressam nos cofres públicos, informando ainda que:<br>• As Receitas Públicas Orçamentárias são disponibilidades de recursos financeiros que ingressam durante o exercício e que aumentam o saldo financeiro da instituição; e,<br>• A Lei nº 4.320/1964 classifica as Receitas Orçamentárias por Categoria Econômica em: Receitas Correntes e Receitas de Capital.<br>Considerando o exposto, assinale a alternativa que representa uma origem de Receita de Capital.",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "Alienação de Bens."
+      },
+      {
+        "letra": "B",
+        "texto": "Receita de Serviços."
+      },
+      {
+        "letra": "C",
+        "texto": "Receita Patrimonial."
+      },
+      {
+        "letra": "D",
+        "texto": "Impostos, Taxas e Contribuições de Melhoria."
+      }
+    ],
+    "gabarito": "A",
+    "gabarito_texto": "Alienação de Bens.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 25,
+    "ano": 2022,
+    "exame": "CFC 2022/2",
+    "banca": "Consulplan",
+    "disciplina": "Contabilidade de Custos",
+    "tags": [
+      "Métodos de Custeamento"
+    ],
+    "enunciado": [
+      {
+        "type": "p",
+        "content": "A empresa Aços Planos S/A produz dois produtos em um único departamento e utiliza o método de Custeio por Absorção para apuração do custo de produção e avaliação dos estoques. Para apuração do custo de produção do mês de dezembro de 2021, foram apuradas as seguintes informações:"
+      },
+      {
+        "type": "table",
+        "headerRows": [
+          [
+            {
+              "content": "Aços Planos S/A – Dezembro / 2021",
+              "colspan": 3,
+              "rowspan": 1
+            }
+          ],
+          [
+            {
+              "content": "Descrição",
+              "colspan": 1,
+              "rowspan": 2
+            },
+            {
+              "content": "Produtos",
+              "colspan": 2,
+              "rowspan": 1
+            }
+          ],
+          [
+            "A",
+            "B"
+          ]
+        ],
+        "bodyRows": [
+          [
+            "Mão de obra direta",
+            "R$ 10,00 / unidade",
+            "R$ 15,00 / unidade"
+          ],
+          [
+            "Matéria-prima",
+            "R$ 20,00 / unidade",
+            "R$ 25,00 / unidade"
+          ],
+          [
+            "Quantidade produzida",
+            "1.500",
+            "3.000"
+          ],
+          [
+            "Depreciação das máquinas",
+            "R$ 40.000,00",
+            "R$ 60.000,00"
+          ],
+          [
+            "Custo total das embalagens",
+            "R$ 7.500,00",
+            "R$ 22.500,00"
+          ]
+        ]
+      },
+      {
+        "type": "table",
+        "headerRows": [
+          [
+            {
+              "content": "Aços Planos S/A – Dezembro/2021",
+              "colspan": 3,
+              "rowspan": 1
+            }
+          ],
+          [
+            {
+              "content": "Rateio – Custos indiretos de fabricação",
+              "colspan": 1,
+              "rowspan": 2
+            },
+            {
+              "content": "Produtos",
+              "colspan": 2,
+              "rowspan": 1
+            }
+          ],
+          [
+            "A",
+            "B"
+          ]
+        ],
+        "bodyRows": [
+          [
+            "Aluguel da fábrica",
+            "R$ 3.000,00",
+            "R$ 6.000,00"
+          ],
+          [
+            "Energia elétrica",
+            "R$ 3.000,00",
+            "R$ 9.000,00"
+          ]
+        ]
+      },
+      {
+        "type": "p",
+        "content": "Os custos indiretos de fabricação do mês de dezembro/2021 foram devidamente rateados (alocados) aos produtos. Com base nessas informações e, ainda, considerando que não havia saldos iniciais e finais de produtos em elaboração no mês de dezembro/2021, os custos de produção dos produtos A e B foram, respectivamente:"
+      }
+    ],
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "R$ 58.500,00; R$ 157.500,00"
+      },
+      {
+        "letra": "B",
+        "texto": "R$ 98.500,00; R$ 217.500,00"
+      },
+      {
+        "letra": "C",
+        "texto": "R$ 91.000,00; R$ 191.500,00"
+      },
+      {
+        "letra": "D",
+        "texto": "R$ 95.500,00; R$ 208.500,00"
+      }
+    ],
+    "gabarito": "B",
+    "gabarito_texto": "R$ 98.500,00; R$ 217.500,00",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 26,
+    "ano": 2022,
+    "exame": "CFC 2022/2",
+    "banca": "Consulplan",
+    "disciplina": "Contabilidade Gerencial",
+    "tags": [
+      "Análise das Demonstrações Contábeis"
+    ],
+    "enunciado": [
+      {
+        "type": "p",
+        "content": "Uma empresa apresentou as seguintes informações extraídas de suas demonstrações contábeis do exercício findo em 31/12/2021:"
+      },
+      {
+        "type": "table",
+        "headerRows": [],
+        "bodyRows": [
+          [
+            "Caixa e equivalentes de caixa",
+            "R$ 20.000,00"
+          ],
+          [
+            "Ativo circulante",
+            "Equivalente a 60% do capital de terceiros"
+          ],
+          [
+            "Imobilizado",
+            "R$ 400.000,00"
+          ],
+          [
+            "Fornecedores",
+            "R$ 50.000,00"
+          ],
+          [
+            "Passivo circulante",
+            "R$ 200.000,00"
+          ],
+          [
+            "Passivo não circulante",
+            "R$ 300.000,00"
+          ],
+          [
+            "Patrimônio líquido",
+            "R$ 400.000,00"
+          ],
+          [
+            "Receita líquida de vendas",
+            "R$ 8.000.000,00"
+          ],
+          [
+            "Lucro líquido do exercício",
+            "R$ 70.000,00"
+          ],
+          [
+            "Margem bruta",
+            "25%"
+          ],
+          [
+            "Índice de liquidez seca",
+            "1,20"
+          ],
+          [
+            "Lucro Bruto",
+            "R$ 2.000.000,00"
+          ],
+          [
+            "Custo de Mercadorias Vendidas",
+            "R$ 6.000.000,00"
+          ]
+        ]
+      },
+      {
+        "type": "p",
+        "content": "Considerando exclusivamente as informações do quadro anterior, o saldo dos estoques e o prazo médio de renovação dos estoques são, respectivamente:"
+      }
+    ],
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "R$ 60.000,00; 3,6 dias."
+      },
+      {
+        "letra": "B",
+        "texto": "R$ 200.000,00; 12 dias."
+      },
+      {
+        "letra": "C",
+        "texto": "R$ 240.000,00; 14,4 dias."
+      },
+      {
+        "letra": "D",
+        "texto": "R$ 360.000,00; 21,6 dias."
+      }
+    ],
+    "gabarito": "A",
+    "gabarito_texto": "R$ 60.000,00; 3,6 dias.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 27,
+    "ano": 2022,
+    "exame": "CFC 2022/2",
+    "banca": "Consulplan",
+    "disciplina": "Controladoria",
+    "tags": [
+      "Gestão e Controladoria"
+    ],
+    "enunciado": "Considerando o processo de gestão de uma instituição é constituído por um conjunto de processos decisórios organizados por fases que visam garantir a missão, otimizar os resultados econômicos e a eficácia empresarial, relacione adequadamente as colunas a seguir.<br>1. Planejamento estratégico.<br>2. Planejamento operacional.<br>3. Planejamento tático.<br>( ) Elo entre operação e gestão. Possibilita que as operações da empresa flutuem, pois é flexível; o que dá capacidade de reação a imprevistos e mudanças.<br>( ) A premissa é assegurar o cumprimento da missão da empresa. Nessa fase, são identificadas as oportunidades e ameaças, pontos fortes e fracos.<br>( ) Foco de curto ou, no máximo, médio prazo, definindo ações departamentais e suas respectivas mensurações. É nessa etapa que os objetivos da empresa são desenhados em projetos e metas por setor.<br>( ) Busca-se identificar e escolher um plano de ação a ser implementado que otimize os resultados no curto, médio e longo prazo.<br>A sequência está correta em",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "3, 3, 2, 1."
+      },
+      {
+        "letra": "B",
+        "texto": "3, 1, 3, 2."
+      },
+      {
+        "letra": "C",
+        "texto": "2, 1, 3, 1."
+      },
+      {
+        "letra": "D",
+        "texto": "3, 2, 1, 1."
+      }
+    ],
+    "gabarito": "B",
+    "gabarito_texto": "3, 1, 3, 2.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 28,
+    "ano": 2022,
+    "exame": "CFC 2022/2",
+    "banca": "Consulplan",
+    "disciplina": "Contabilidade Geral e NBCs",
+    "tags": [
+      "Plano de Contas e Procedimentos de Escrituração"
+    ],
+    "enunciado": "Analise os excertos a seguir.<br>I. “As demonstrações contábeis nele devem ser transcritas, completando-se com as assinaturas do titular ou de representante legal da entidade e do profissional da contabilidade legalmente habilitado.”<br>II. “Nele devem ser lançadas, em ordem cronológica, com individualização, clareza e referência ao documento probante, todas as operações ocorridas, e quaisquer outros fatos que provoquem variações patrimoniais.”<br>Podemos afirmar que tais informações se referem ao seguinte livro contábil:",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "Livro Caixa."
+      },
+      {
+        "letra": "B",
+        "texto": "Livro Diário."
+      },
+      {
+        "letra": "C",
+        "texto": "Livro Razão."
+      },
+      {
+        "letra": "D",
+        "texto": "Livro de Registro de Inventário."
+      }
+    ],
+    "gabarito": "B",
+    "gabarito_texto": "Livro Diário.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 29,
+    "ano": 2022,
+    "exame": "CFC 2022/2",
+    "banca": "Consulplan",
+    "disciplina": "Noções de Direito e Legislação Aplicada",
+    "tags": [
+      "Legislação Tributária"
+    ],
+    "enunciado": "Em setembro de 2015, determinado contribuinte pagou, no vencimento, R$ 2.000,00 a título de tributo estadual. Poucos meses depois, ele tomou ciência que o valor pago era significativamente maior que o devido. Encontrando-se muito atarefado, ele deixou de tomar qualquer medida que viabilizasse a restituição do valor pago a maior. Em março de 2020, o contribuinte descobriu que possuía um débito tributário no montante de R$ 1.000,00 com a fazenda estadual pelo não pagamento de outro imposto. Visando regularizar sua situação com o Fisco, ele preencheu requisição administrativa para que a obrigação pendente fosse extinta através da compensação. O fisco, contudo, em 2022, responde negativamente ao pedido. Diante da negativa, o contribuinte deverá:",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "Aceitar a decisão, pois demorou tempo demais e seu direito prescreveu."
+      },
+      {
+        "letra": "B",
+        "texto": "Ajuizar ação para anular e desconstituir a decisão administrativa que negou o seu pedido."
+      },
+      {
+        "letra": "C",
+        "texto": "Fazer uma nova requisição administrativa no prazo máximo de três dias a contar da decisão do Fisco."
+      },
+      {
+        "letra": "D",
+        "texto": "Desistir de recuperar o valor pago a maior, pois o poder público, em nenhuma hipótese, efetua devoluções de valores tributários pagos a maior."
+      }
+    ],
+    "gabarito": "B",
+    "gabarito_texto": "Ajuizar ação para anular e desconstituir a decisão administrativa que negou o seu pedido.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 30,
+    "ano": 2022,
+    "exame": "CFC 2022/2",
+    "banca": "Consulplan",
+    "disciplina": "Contabilidade Geral e NBCs",
+    "tags": [
+      "Demonstração do Resultado"
+    ],
+    "enunciado": [
+      {
+        "type": "p",
+        "content": "Diversos aspectos de legislação e normativos tributários estão presentes no cotidiano daqueles que militam na área contábil. É necessário que o contador entenda os conceitos de fato gerador, bases de cálculo e alíquotas dos tributos incidentes sobre as diversas operações efetuadas pelas entidades. Nesse sentido, analise as contas contábeis de resultado demonstradas a seguir, extraídas do balancete de verificação de uma determinada Cia. (empresa do ramo industrial) em 31/12/2021."
+      },
+      {
+        "type": "table",
+        "headerRows": [],
+        "bodyRows": [
+          [
+            "PIS / COFINS sobre Faturamento",
+            "R$ 3.850,00"
+          ],
+          [
+            "Imposto sobre a Propriedade Territorial Urbana",
+            "R$ 2.125,00"
+          ],
+          [
+            "ICMS sobre vendas",
+            "R$ 11.295,00"
+          ],
+          [
+            "Perdas Estimadas com Créditos de Liquidação Duvidosa",
+            "R$ 1.945,00"
+          ],
+          [
+            "Faturamento Bruto de Vendas de Produtos",
+            "R$ 45.090,00"
+          ],
+          [
+            "INSS / FGTS",
+            "R$ 8.660,00"
+          ],
+          [
+            "Vendas Canceladas",
+            "R$ 2.320,00"
+          ],
+          [
+            "Descontos Financeiros Obtidos",
+            "R$ 1.105,00"
+          ],
+          [
+            "IRPJ Corrente",
+            "R$ 2.125,00"
+          ],
+          [
+            "PIS sobre a Folha de Pagamentos",
+            "R$ 975,00"
+          ],
+          [
+            "IOF – Imposto Sobre Operações Financeiras",
+            "R$ 390,00"
+          ],
+          [
+            "IPI sobre o Faturamento",
+            "R$ 4.215,00"
+          ],
+          [
+            "Comissões sobre Vendas",
+            "R$ 2.770,00"
+          ],
+          [
+            "CSLL Corrente",
+            "R$ 1.435,00"
+          ],
+          [
+            "Descontos Incondicionais Concedidos",
+            "R$ 1.200,00"
+          ]
+        ]
+      },
+      {
+        "type": "p",
+        "content": "Com base nos dados anteriores, assinale a alternativa que representa corretamente a Receita Líquida de Vendas da citada Cia. em 2021."
+      }
+    ],
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "R$ 19.440,00"
+      },
+      {
+        "letra": "B",
+        "texto": "R$ 20.265,00"
+      },
+      {
+        "letra": "C",
+        "texto": "R$ 21.235,00"
+      },
+      {
+        "letra": "D",
+        "texto": "R$ 22.210,00"
+      }
+    ],
+    "gabarito": "D",
+    "gabarito_texto": "R$ 22.210,00",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 31,
+    "ano": 2022,
+    "exame": "CFC 2022/2",
+    "banca": "Consulplan",
+    "disciplina": "Matemática Financeira e Estatística",
+    "tags": [
+      "Payback"
+    ],
+    "enunciado": [
+      {
+        "type": "p",
+        "content": "Em 2021, uma cadeia de lojas passou a avaliar a abertura de uma nova filial em 2022, cujo investimento inicial era R$ 50.000,00. Os contadores estimaram as receitas e as despesas, em reais, para os primeiros anos da filial, do seguinte modo:"
+      },
+      {
+        "type": "table",
+        "headerRows": [
+          [
+            "Ano",
+            "Receitas",
+            "Despesas"
+          ]
+        ],
+        "bodyRows": [
+          [
+            "2022",
+            "R$ 50.000,00",
+            "R$ 80.000,00"
+          ],
+          [
+            "2023",
+            "R$ 60.000,00",
+            "R$ 50.000,00"
+          ],
+          [
+            "2024",
+            "R$ 80.000,00",
+            "R$ 50.000,00"
+          ],
+          [
+            "2025",
+            "R$ 100.000,00",
+            "R$ 60.000,00"
+          ],
+          [
+            "2026",
+            "R$ 110.000,00",
+            "R$ 60.000,00"
+          ]
+        ]
+      },
+      {
+        "type": "p",
+        "content": "Assinale o ano da ocorrência do payback simples:"
+      }
+    ],
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "2023"
+      },
+      {
+        "letra": "B",
+        "texto": "2024"
+      },
+      {
+        "letra": "C",
+        "texto": "2025"
+      },
+      {
+        "letra": "D",
+        "texto": "2026"
+      }
+    ],
+    "gabarito": "C",
+    "gabarito_texto": "2025",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 32,
+    "ano": 2022,
+    "exame": "CFC 2022/2",
+    "banca": "Consulplan",
+    "disciplina": "Matemática Financeira e Estatística",
+    "tags": [
+      "Juros Simples"
+    ],
+    "enunciado": "Em 01/01/2021, uma empresa contraiu uma dívida com terceiros no valor de R$ 20.000,00. A empresa pagou toda a dívida em 31/10/2021. Na data, a soma do principal e dos juros foi de R$ 28.000,00. Considerando o regime de juros simples, qual a taxa de juros mensal paga pelo empréstimo?",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "3,63%"
+      },
+      {
+        "letra": "B",
+        "texto": "4,00%"
+      },
+      {
+        "letra": "C",
+        "texto": "4,40%"
+      },
+      {
+        "letra": "D",
+        "texto": "5,00%"
+      }
+    ],
+    "gabarito": "B",
+    "gabarito_texto": "4,00%",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 33,
+    "ano": 2022,
+    "exame": "CFC 2022/2",
+    "banca": "Consulplan",
+    "disciplina": "Contabilidade Geral e NBCs",
+    "tags": [
+      "Balanço Patrimonial"
+    ],
+    "enunciado": "Empresa brasileira fundada na década de 1949 atua em um mercado muito competitivo e dominado por grandes grupos multinacionais. Essa empresa precisa oferecer sempre soluções inovadoras e criativas a seus clientes, caso contrário, corre o risco de perder mercado e ser “engolida” por alguma gigante do setor. A Demonstração Financeira, elaborada pela citada empresa, que permite aos interessados visualizar sua posição financeira e patrimonial em determinada data trata-se de:",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "Balanço Patrimonial."
+      },
+      {
+        "letra": "B",
+        "texto": "Demonstração dos Fluxos de Caixa."
+      },
+      {
+        "letra": "C",
+        "texto": "Demonstração do Valor Adicionado."
+      },
+      {
+        "letra": "D",
+        "texto": "Demonstração dos Lucros e Prejuízos Acumulados."
+      }
+    ],
+    "gabarito": "A",
+    "gabarito_texto": "Balanço Patrimonial.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 34,
+    "ano": 2022,
+    "exame": "CFC 2022/2",
+    "banca": "Consulplan",
+    "disciplina": "Teoria da Contabilidade",
+    "tags": [
+      "Estrutura Conceitual para Relatório Financeiro"
+    ],
+    "enunciado": "Os elementos reconhecidos nas demonstrações contábeis são quantificados em termos monetários. Isso exige a seleção de uma base de mensuração. A base de mensuração é uma característica identificada de item sendo mensurado. Aplicar a base de mensuração a ativo ou passivo cria uma mensuração para esse ativo ou passivo e para as respectivas receitas e despesas. De acordo com o disposto na NBC TG – Estrutura Conceitual para relatório financeiro, NÃO é(são) considerado(s) como base de mensuração do Valor Atual de item a ser mensurado:",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "Valor justo."
+      },
+      {
+        "letra": "B",
+        "texto": "Custo histórico."
+      },
+      {
+        "letra": "C",
+        "texto": "Custo corrente."
+      },
+      {
+        "letra": "D",
+        "texto": "Valor em uso e Valor de Cumprimento."
+      }
+    ],
+    "gabarito": "B",
+    "gabarito_texto": "Custo histórico.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 35,
+    "ano": 2022,
+    "exame": "CFC 2022/2",
+    "banca": "Consulplan",
+    "disciplina": "Teoria da Contabilidade",
+    "tags": [
+      "Estrutura Conceitual para Relatório Financeiro"
+    ],
+    "enunciado": "Conhecer as normas que regem um negócio ou uma profissão é fundamental para o desenvolvimento, a valoração e a permanência da empresa e do profissional no mercado. O desconhecimento de normatizações e regulamentações pode prejudicar a empresa e, por isso, é muito importante que o profissional de contabilidade busque sua certificação e constante atualização. Considerando as definições constantes na NBC TG – Estrutura Conceitual para relatório financeiro, relacione adequadamente os termos apresentados aos seus respectivos significados.<br>1. Classificação.<br>2. Prudência.<br>3. Desreconhecimento.<br>4. Agregação.<br>5. Recurso econômico.<br>( ) Parte ou totalidade de determinado ativo ou passivo é apartada (retirada) do Balanço Patrimonial da entidade.<br>( ) Organização de itens que compõem os demonstrativos financeiros com base em características compartilhadas para fins de apresentação e divulgação.<br>( ) Soma de ativos, passivos, patrimônio líquido, receitas ou despesas que possuem características compartilhadas e são incluídas na mesma classificação.<br>( ) Direito que tem potencial de produzir benefícios econômicos.<br>( ) Exercício de cautela ao fazer julgamentos sob condições de incerteza.<br>A sequência está correta em",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "4, 2, 1, 5, 3."
+      },
+      {
+        "letra": "B",
+        "texto": "3, 4, 1, 2, 5."
+      },
+      {
+        "letra": "C",
+        "texto": "2, 5, 4, 3, 1."
+      },
+      {
+        "letra": "D",
+        "texto": "3, 1, 4, 5, 2."
+      }
+    ],
+    "gabarito": "D",
+    "gabarito_texto": "3, 1, 4, 5, 2.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 36,
+    "ano": 2022,
+    "exame": "CFC 2022/2",
+    "banca": "Consulplan",
+    "disciplina": "Teoria da Contabilidade",
+    "tags": [
+      "Estrutura Conceitual para Relatório Financeiro"
+    ],
+    "enunciado": "Considerando o processo e os critérios de reconhecimento e desreconhecimento, além de outras conceituações existentes na NBC TG – Estrutura Conceitual para relatório financeiro, marque V para as afirmativas verdadeiras e F para as falsas.<br>( ) Reconhecimento é o processo de captação para inclusão no balanço patrimonial e na demonstração do valor adicionado de item que não atenda à definição de um dos elementos das demonstrações contábeis.<br>( ) Reconhecimento de ativo ou passivo específico é apropriado se fornecer não apenas informações relevantes, mas também representação fidedigna desse ativo ou passivo e de quaisquer receitas, despesas ou mutações do patrimônio líquido resultantes.<br>( ) Somente itens que atendam à definição de ativo, passivo ou patrimônio líquido devem ser reconhecidos no Balanço Patrimonial. De igual forma, somente itens que atendam à definição de receitas ou despesas devem ser reconhecidos na Demonstração do Resultado e na Demonstração do Resultado Abrangente. Contudo, nem todos os itens que atendam à definição de um desses elementos devem ser reconhecidos.<br>( ) Não é possível definir precisamente quando o reconhecimento de um ativo ou passivo fornece informações úteis aos usuários das demonstrações contábeis, a um custo que não supere seus benefícios.<br>A sequência está correta em",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "V, F, F, V."
+      },
+      {
+        "letra": "B",
+        "texto": "F, V, V, V."
+      },
+      {
+        "letra": "C",
+        "texto": "V, V, F, F."
+      },
+      {
+        "letra": "D",
+        "texto": "F, V, F, V."
+      }
+    ],
+    "gabarito": "B",
+    "gabarito_texto": "F, V, V, V.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 37,
+    "ano": 2022,
+    "exame": "CFC 2022/2",
+    "banca": "Consulplan",
+    "disciplina": "Legislação e Ética Profissional",
+    "tags": [
+      "NBC PG 01",
+      "Ética Geral e Profissional"
+    ],
+    "enunciado": "Em uma reunião da diretoria de determinada empresa com o contador, chefe do departamento de contabilidade, o diretor financeiro questionou se poderia deixar de recolher os tributos devidos no ano de 2022, na expectativa de o governo conceder anistia de débitos tributários em decorrência da pandemia de Covid-19. O contador examinou as normas tributárias atuais e alertou a toda diretoria, oficialmente e por escrito, da existência de penalidades aplicáveis nos recolhimentos de tributos em atraso, e orientou que os tributos fossem recolhidos nos prazos estabelecidos na legislação então vigente. Considerando unicamente a situação descrita e com base no Código de Ética Profissional do Contador (NBC PG 01 de 07/02/2019), analise a conduta ética do profissional de contabilidade, marque V para as afirmativas verdadeiras e F para as falsas.<br>( ) Exerceu a profissão contábil com imprudência, já que existe a expectativa do governo conceder anistia de débitos tributários.<br>( ) Exerceu a profissão contábil com zelo, pois alertou sobre a existência de penalidades aplicáveis nos recolhimentos de tributos em atraso.<br>( ) Exerceu a profissão contábil com negligência, considerando que a sua orientação poderá ocasionar uma redução no patrimônio do cliente.<br>( ) Exerceu a profissão contábil com diligência, pois orientou que os tributos fossem recolhidos nos prazos estabelecidos na legislação vigente.<br>A sequência está correta em",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "F, V, V, V."
+      },
+      {
+        "letra": "B",
+        "texto": "V, F, F, V."
+      },
+      {
+        "letra": "C",
+        "texto": "V, F, V, F."
+      },
+      {
+        "letra": "D",
+        "texto": "F, V, F, V."
+      }
+    ],
+    "gabarito": "D",
+    "gabarito_texto": "F, V, F, V.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 38,
+    "ano": 2022,
+    "exame": "CFC 2022/2",
+    "banca": "Consulplan",
+    "disciplina": "Legislação e Ética Profissional",
+    "tags": [
+      "NBC PG 01",
+      "Ética Geral e Profissional"
+    ],
+    "enunciado": "De acordo com a NBC PG 01 de 2019 (Código de Ética Profissional do Contador), analise as afirmativas a seguir.<br>I. O contador pode indicar, em veículo de comunicação, os trabalhos realizados e a relação de clientes, quando por estes autorizado.<br>II. É vedado ao contador transferir, ainda que parcialmente, a execução de serviços a seu cargo a outro profissional.<br>III. Com a anuência por escrito do cliente, o contador pode transferir o contrato de serviços a seu cargo a outro profissional.<br>IV. Os profissionais de contabilidade poderão executar campanhas agressivas de marketing, estipulando honorários em valores irrisórios para angariação de grande quantidade de clientes.<br>Está correto o que se afirma apenas em",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "I e II."
+      },
+      {
+        "letra": "B",
+        "texto": "I e III."
+      },
+      {
+        "letra": "C",
+        "texto": "I e IV."
+      },
+      {
+        "letra": "D",
+        "texto": "II e III."
+      }
+    ],
+    "gabarito": "B",
+    "gabarito_texto": "I e III.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 39,
+    "ano": 2022,
+    "exame": "CFC 2022/2",
+    "banca": "Consulplan",
+    "disciplina": "Legislação e Ética Profissional",
+    "tags": [
+      "NBC PG 100",
+      "Ética Geral e Profissional"
+    ],
+    "enunciado": "O contador é o profissional que cuida de questões econômicas, financeiras, tributárias e patrimoniais de pessoas físicas e jurídicas e, por isso, a sua atuação deve ser sempre pautada pela conduta ética. De acordo com a NBC PG 100 (R1), relacione a conduta do profissional da Contabilidade descrita na afirmativa a seguir, com o respectivo princípio fundamental de ética.<br>1. Ser direto e honesto em todas as relações profissionais e comerciais.<br>2. Respeitar o sigilo das informações obtidas.<br>3. Cumprir as leis e os regulamentos pertinentes para evitar a conduta indevida.<br>4. Atuar de forma diligente e de acordo com os padrões técnicos e profissionais aplicáveis.<br>( ) Competência profissional e devido zelo.<br>( ) Comportamento profissional.<br>( ) Integridade.<br>( ) Confidencialidade.<br>A sequência está correta em",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "2, 3, 4, 1."
+      },
+      {
+        "letra": "B",
+        "texto": "3, 4, 2, 1."
+      },
+      {
+        "letra": "C",
+        "texto": "4, 3, 1, 2."
+      },
+      {
+        "letra": "D",
+        "texto": "3, 2, 1, 4."
+      }
+    ],
+    "gabarito": "C",
+    "gabarito_texto": "4, 3, 1, 2.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 40,
+    "ano": 2022,
+    "exame": "CFC 2022/2",
+    "banca": "Consulplan",
+    "disciplina": "Legislação e Ética Profissional",
+    "tags": [
+      "NBC PO 900"
+    ],
+    "enunciado": "Considerando a legislação sobre Ética Profissional, incluindo normas correlatas, especificamente no que se refere à NBC PO 900, que dispõe sobre a independência para trabalho de asseguração diferente de auditoria e revisão, analise as afirmativas a seguir.<br>I. Os trabalhos de asseguração devem ser, obrigatoriamente, baseados em afirmações ou em relatórios diretos, casos em que envolvem, unicamente, duas partes distintas: a firma e a parte responsável.<br>II. No trabalho de asseguração, a avaliação e, concomitantemente, a mensuração do objeto, devem ser realizadas, exclusivamente, pela firma.<br>III. A conclusão dos trabalhos de asseguração visa aumentar o nível de confiança da parte responsável.<br>Assinale a alternativa correta.",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "Apenas a afirmativa II está eivada de vícios que a invalidam."
+      },
+      {
+        "letra": "B",
+        "texto": "Todas as afirmativas estão corretas e de acordo com as normativas."
+      },
+      {
+        "letra": "C",
+        "texto": "As afirmativas I, II e III estão equivocadas e em desacordo com as normativas."
+      },
+      {
+        "letra": "D",
+        "texto": "Apenas a afirmativa III está equivocada, pois os trabalhos de asseguração podem aumentar a confiança de todos os envolvidos, inclusive da parte responsável."
+      }
+    ],
+    "gabarito": "C",
+    "gabarito_texto": "As afirmativas I, II e III estão equivocadas e em desacordo com as normativas.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 41,
+    "ano": 2022,
+    "exame": "CFC 2022/2",
+    "banca": "Consulplan",
+    "disciplina": "Contabilidade Geral e NBCs",
+    "tags": [
+      "Contabilidade para Pequenas e Médias Empresas",
+      "Ativo Intangível"
+    ],
+    "enunciado": [
+      {
+        "type": "p",
+        "content": "A contabilidade é atividade tradicional no meio corporativo. Toda empresa necessita de um profissional de contabilidade para organizar e registrar adequadamente suas atividades. Para que os profissionais da área atuem de modo adequado, é necessário seguir diretrizes éticas e técnicas específicas. Portanto, faz-se necessário que referido profissional tenha conhecimento das disposições das Normas Brasileiras de Contabilidade. Considerando os procedimentos e critérios estabelecidos na NBC TG 1000 (R1) – Contabilidade para Pequenas e Médias Empresas e as disposições do Pronunciamento Técnico CPC 04 (R1) – Ativo Intangível, analise as afirmativas a seguir."
+      },
+      {
+        "type": "p",
+        "content": "I. Ativo intangível é um ativo monetário não identificável e sem substância física.<br>II. Nos termos da NBC TG 1000 (R1) – Contabilidade para Pequenas e Médias Empresas, todos os ativos intangíveis devem ser considerados como tendo vida útil finita. Caso a vida útil do ativo intangível não puder ser estabelecida de forma confiável, a vida útil deve ser determinada com base na melhor estimativa da administração, mas não deve exceder a dez anos.<br>III. Nos termos do Pronunciamento Técnico CPC 04 (R1), Ativo Intangível com vida útil indefinida não deve ser amortizado.<br>IV. A vida útil de ativo intangível que não é amortizado não necessita ser revisada periodicamente."
+      },
+      {
+        "type": "p",
+        "content": "Está correto o que se afirma apenas em"
+      }
+    ],
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "I e III."
+      },
+      {
+        "letra": "B",
+        "texto": "II e III."
+      },
+      {
+        "letra": "C",
+        "texto": "I, II e III."
+      },
+      {
+        "letra": "D",
+        "texto": "I, II e IV."
+      }
+    ],
+    "gabarito": "B",
+    "gabarito_texto": "II e III.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 42,
+    "ano": 2022,
+    "exame": "CFC 2022/2",
+    "banca": "Consulplan",
+    "disciplina": "Contabilidade Aplicada ao Setor Público",
+    "tags": [
+      "NBC TSP Estrutura Conceitual"
+    ],
+    "enunciado": "O Conselho Federal de Contabilidade edita normas destinadas não apenas ao setor privado, mas também ao setor público e ao terceiro setor. Para regulamentar os registros de receitas e despesas no setor público, bem como a elaboração das Demonstrações Contábeis Aplicadas ao Setor Público, foram elaboradas as NBC TSP, em consonância com as normas internacionais. Com base na Norma Brasileira de Contabilidade aplicada ao Setor Público – Estrutura Conceitual, de 23/09/2016, assinale a afirmativa correta.",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "As Normas Brasileiras de Contabilidade Pública não se aplicam às empresas estatais dependentes."
+      },
+      {
+        "letra": "B",
+        "texto": "A obrigação que pode ser liquidada ou extinta sem a saída de recursos da entidade não é um passivo."
+      },
+      {
+        "letra": "C",
+        "texto": "Para usufruir plenamente do potencial de serviços ou da capacidade de gerar benefícios econômicos de um recurso, a entidade deve ter a propriedade legal deste recurso."
+      },
+      {
+        "letra": "D",
+        "texto": "A contabilidade aplicada ao setor público adota, no Brasil, um regime misto para registro das variações patrimoniais: de caixa para as variações aumentativas e de competência para as variações diminutivas."
+      }
+    ],
+    "gabarito": "B",
+    "gabarito_texto": "A obrigação que pode ser liquidada ou extinta sem a saída de recursos da entidade não é um passivo.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 43,
+    "ano": 2022,
+    "exame": "CFC 2022/2",
+    "banca": "Consulplan",
+    "disciplina": "Contabilidade Geral e NBCs",
+    "tags": [
+      "Provisões, Passivos Contingentes e Ativos Contingentes"
+    ],
+    "enunciado": [
+      {
+        "type": "p",
+        "content": "Em reunião com o departamento de contabilidade, o advogado de determinada empresa informa à chefia responsável, que, no último mês, a empresa foi notificada da existência de três ações judiciais, cujas características são:"
+      },
+      {
+        "type": "p",
+        "content": "I. Ação de natureza trabalhista, ajuizada por ex-funcionário que alega o não recebimento de verbas. O advogado julga provável que será necessário desembolsar, até o encerramento do exercício seguinte, o valor de R$ 15.000,00, baseado em decisões recentes de casos semelhantes.<br>II. Ação de natureza fiscal, no valor de R$ 9.000,00, ajuizada pela Prefeitura Municipal, que alega erro na base de cálculo do Imposto sobre Serviços recolhido pela empresa no último ano. O advogado afirma ser possível uma saída de recursos, mas não sabe estimar com confiança o prazo de sua ocorrência.<br>III. Ação de natureza ambiental, movida pela autarquia de água e esgoto do município, que alega descarte irregular de lixo da empresa, e solicita indenização de R$ 14.000,00. O advogado afirma que a probabilidade de saída de recursos em decorrência deste litígio é remota, quase nula."
+      },
+      {
+        "type": "p",
+        "content": "Considerando o exposto e com base na NBC TG 25 (R2) – Provisões, Passivos Contingentes e Ativos Contingentes, assinale a afirmativa correta."
+      }
+    ],
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "O contador deve proceder ao reconhecimento de um passivo exigível de R$ 15.000,00, além de constituir provisão no Passivo Não Circulante no valor de R$ 23.000,00."
+      },
+      {
+        "letra": "B",
+        "texto": "As ações judiciais descritas nos itens I, II e III configuram-se como passivos contingentes; portanto, não é necessária qualquer provisão ou divulgação em Notas Explicativas."
+      },
+      {
+        "letra": "C",
+        "texto": "O procedimento a ser adotado pelo contador, em conformidade com a Norma citada, é o reconhecimento imediato de provisão no Passivo Circulante, no valor total de R$ 38.000,00."
+      },
+      {
+        "letra": "D",
+        "texto": "A ação descrita no item I requer a constituição de uma provisão, no Passivo Circulante, no valor de R$ 15.000,00, enquanto as ações descritas nos itens II e III devem ser consideradas Passivos contingentes e, por isso, não devem ser reconhecidas. Contudo, há a necessidade de divulgação, em Notas Explicativas, da ação descrita no item II."
+      }
+    ],
+    "gabarito": "D",
+    "gabarito_texto": "A ação descrita no item I requer a constituição de uma provisão, no Passivo Circulante, no valor de R$ 15.000,00, enquanto as ações descritas nos itens II e III devem ser consideradas Passivos contingentes e, por isso, não devem ser reconhecidas. Contudo, há a necessidade de divulgação, em Notas Explicativas, da ação descrita no item II.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 44,
+    "ano": 2022,
+    "exame": "CFC 2022/2",
+    "banca": "Consulplan",
+    "disciplina": "Contabilidade Geral e NBCs",
+    "tags": [
+      "Contabilidade para Pequenas e Médias Empresas"
+    ],
+    "enunciado": "As NBC TG 1000 – Contabilidade para Pequenas e Médias Empresas foi emitida pelo CFC para aplicação às demonstrações contábeis para fins gerais de Pequena e Média Empresa (PME), conjunto composto por sociedades fechadas e que não sejam requeridas a fazer prestação pública de suas contas. Em relação às demonstrações contábeis da PME, assinale a afirmativa correta.",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "São dirigidas às necessidades comuns de usuários externos à entidade inclusive de acionistas."
+      },
+      {
+        "letra": "B",
+        "texto": "Estão inclusas aquelas que são apresentadas separadamente ou dentro de outro documento público como um relatório anual ou um prospecto."
+      },
+      {
+        "letra": "C",
+        "texto": "São direcionadas às necessidades de informação financeira gerais por parte de usuários que não estão em posição de exigir relatórios feitos sob medida para atender suas necessidades particulares de informação."
+      },
+      {
+        "letra": "D",
+        "texto": "Em regra geral são produzidas apenas para o uso de proprietários-administradores ou apenas para o uso de autoridades fiscais ou outras autoridades governamentais e, sendo apenas para esta finalidade, não são necessariamente demonstrações contábeis para fins gerais."
+      }
+    ],
+    "gabarito": "D",
+    "gabarito_texto": "Em regra geral são produzidas apenas para o uso de proprietários-administradores ou apenas para o uso de autoridades fiscais ou outras autoridades governamentais e, sendo apenas para esta finalidade, não são necessariamente demonstrações contábeis para fins gerais.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 45,
+    "ano": 2022,
+    "exame": "CFC 2022/2",
+    "banca": "Consulplan",
+    "disciplina": "Auditoria Contábil",
+    "tags": [
+      "Identificação E Avaliação Dos Riscos De Distorção Relevante Por Meio Do Entendimento Da Entidade E Do Seu Ambiente",
+      "Objetivos Gerais Do Auditor Independente"
+    ],
+    "enunciado": "No contexto da auditoria de demonstrações contábeis, o objetivo geral do auditor independente é obter segurança razoável de que as demonstrações contábeis como um todo estão livres de distorções relevantes. Para tanto, deverá estar atento a uma série de riscos potenciais, que devem ser identificados, avaliados e respondidos, de forma a minimizar eventuais impactos sobre o trabalho de auditoria. Sobre o tema e com base nas normas de auditoria vigentes no Brasil, assinale a afirmativa INCORRETA.",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "O risco de distorção relevante, composto pelo risco inerente e pelo risco de controle, é o risco da entidade e, portanto, sua existência independe da auditoria."
+      },
+      {
+        "letra": "B",
+        "texto": "O risco de auditoria é uma expressão utilizada para designar a possibilidade de o auditor expressar opinião inadequada quando as demonstrações contiverem distorção relevante."
+      },
+      {
+        "letra": "C",
+        "texto": "Ao aplicar os procedimentos de auditoria que julga necessários e conduzir seus trabalhos de acordo com as normas de auditoria, o auditor reduz o risco de auditoria a um nível aceitavelmente baixo."
+      },
+      {
+        "letra": "D",
+        "texto": "Denomina-se risco de detecção aquele relacionado à possibilidade de haver uma distorção relevante em um saldo contábil que poderia ter sido prevenida, detectada e corrigida tempestivamente pelo controle interno da entidade."
+      }
+    ],
+    "gabarito": "D",
+    "gabarito_texto": "Denomina-se risco de detecção aquele relacionado à possibilidade de haver uma distorção relevante em um saldo contábil que poderia ter sido prevenida, detectada e corrigida tempestivamente pelo controle interno da entidade.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 46,
+    "ano": 2022,
+    "exame": "CFC 2022/2",
+    "banca": "Consulplan",
+    "disciplina": "Auditoria Contábil",
+    "tags": [
+      "Formação Da Opinião E Emissão Do Relatório Do Auditor Independente Sobre As Demonstrações Contábeis",
+      "Outros Aspectos Relevantes"
+    ],
+    "enunciado": [
+      {
+        "type": "p",
+        "content": "Empresa brasileira, de capital aberto, com ações negociáveis em Bolsa de Valores, obteve um prejuízo operacional equivalente a R$ 130 milhões e um prejuízo líquido equivalente a R$ 160 milhões em 2021. Em consequência, o prejuízo diluído por ação foi equivalente a R$ 0,50. Preocupado com a repercussão desses números junto aos usuários das demonstrações contábeis, dentre eles os acionistas, os administradores solicitaram reunião com os auditores independentes a fim de esclarecer que os resultados da atividade econômica da empresa foram fortemente impactados pela pandemia Covid-19, exporem a preocupação em relação às incertezas quanto ao futuro da empresa e a melhor forma de divulgar as demonstrações contábeis. Os auditores independentes, no intuito de melhor informar os administradores, prestaram os seguintes esclarecimentos; analise-os."
+      },
+      {
+        "type": "p",
+        "content": "I. É recomendável e aconselhável que as companhias reportem os efeitos da pandemia nas demonstrações contábeis.<br>II. Em virtude de a atividade econômica ter sido impactada pela pandemia não é prudente divulgar ao mercado eventuais incertezas relativas à capacidade da empresa de continuar em operação.<br>III. A tarefa de julgar o resultado da empresa é dos usuários das demonstrações contábeis que, para tanto, precisam ter acesso a informações contábeis relevantes e tempestivas, neutras e livres de qualquer viés.<br>IV. As demonstrações financeiras devem ser preparadas no pressuposto da descontinuidade da companhia.<br>V. Se a administração tiver ciência de incertezas relevantes relacionadas com eventos ou condições que possam lançar dúvidas significativas a respeito da continuidade da companhia, não deve divulgá-las ao mercado."
+      },
+      {
+        "type": "p",
+        "content": "Está correto o que se afirma apenas em"
+      }
+    ],
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "I e III."
+      },
+      {
+        "letra": "B",
+        "texto": "II e IV."
+      },
+      {
+        "letra": "C",
+        "texto": "I, II e III."
+      },
+      {
+        "letra": "D",
+        "texto": "II, IV e V."
+      }
+    ],
+    "gabarito": "A",
+    "gabarito_texto": "I e III.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 47,
+    "ano": 2022,
+    "exame": "CFC 2022/2",
+    "banca": "Consulplan",
+    "disciplina": "Perícia Contábil",
+    "tags": [
+      "Aspectos Profissionais"
+    ],
+    "enunciado": "Os contadores João e Gabriel foram indicados para participar como peritos em um processo judicial, no qual é requerido conhecimento contábil para apurar o custo de produção e a margem de lucro de determinados produtos. João foi nomeado perito do juízo e Gabriel foi indicado por uma das partes para atuar como assistente técnico. Das quatro afirmativas a seguir que apresentam informações relacionadas à nomeação e atuação de João e de Gabriel, a afirmativa que NÃO contraria as diretrizes estabelecidas na NBC PP 01 (R1) – Perito Contábil é:",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "Para comprovar sua habilitação profissional, o perito João anexou a Certidão de Regularidade Profissional emitida pelo Conselho Regional de Contabilidade no primeiro ato de sua manifestação ao juízo."
+      },
+      {
+        "letra": "B",
+        "texto": "Gabriel foi indicado por uma das partes, pois já conhece os aspectos contábeis relacionados ao litígio, tendo atuado como consultor do contratante acerca do objeto da discussão, o que lhe concede todos os atributos técnicos e legais exigíveis para atuar como Assistente Técnico e torna dispensável a celebração de contrato de prestação de serviços com o seu cliente."
+      },
+      {
+        "letra": "C",
+        "texto": "João, perito do juízo, elaborou sua proposta de honorários, incluindo o plano de trabalho. O atendimento a quesitos suplementares/complementares é algo corriqueiro em perícias contábeis, tendo em vista que alguns assuntos são inerentemente complexos e podem ser de difícil compreensão. Assim, João julgou não ser necessário tratar desse assunto em sua proposta de honorários."
+      },
+      {
+        "letra": "D",
+        "texto": "Durante a realização dos trabalhos periciais, João identificou a necessidade de realização de diligências, para obtenção de elementos de prova e elucidação de dúvidas. Tendo em vista que todos os detalhes da diligência e que os elementos de prova serão devidamente consignados e descritos no laudo pericial, João julgou não ser necessário comunicar previamente ao assistente técnico Gabriel sobre a realização da diligência."
+      }
+    ],
+    "gabarito": "A",
+    "gabarito_texto": "Para comprovar sua habilitação profissional, o perito João anexou a Certidão de Regularidade Profissional emitida pelo Conselho Regional de Contabilidade no primeiro ato de sua manifestação ao juízo.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 48,
+    "ano": 2022,
+    "exame": "CFC 2022/2",
+    "banca": "Consulplan",
+    "disciplina": "Perícia Contábil",
+    "tags": [
+      "Legislação"
+    ],
+    "enunciado": "Considerando a legislação profissional vigente sobre perícia, bem como o Código de Processo Civil e a Lei nº 12.030/2009, que versa sobre perícias oficiais, assinale a afirmativa INCORRETA.",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "Em razão do exercício das atividades de perícia oficial de natureza criminal, os peritos de natureza criminal estão sujeitos a regime especial de trabalho, observada a legislação específica de cada ente a que se encontrem vinculados."
+      },
+      {
+        "letra": "B",
+        "texto": "No exercício da atividade de perícia oficial de natureza criminal, é assegurado autonomia técnica, científica e funcional, não sendo exigido concurso público, nem formação acadêmica específica, para o provimento do cargo de perito oficial."
+      },
+      {
+        "letra": "C",
+        "texto": "Observado o disposto na legislação específica de cada ente a que o perito se encontra vinculado, são considerados peritos de natureza criminal, inclusive os peritos criminais com formação superior específica detalhada em regulamento, de acordo com a necessidade de cada órgão e por área de atuação profissional."
+      },
+      {
+        "letra": "D",
+        "texto": "O profissional de contabilidade que atua como perito, ao prestar informações inverídicas, seja por dolo ou culpa, responderá pelos prejuízos que causar à parte e ficará inabilitado para atuar em outras perícias no prazo de dois a cinco anos, independentemente das demais sanções previstas em lei, devendo o juiz comunicar o fato ao respectivo órgão de classe para adoção das medidas que entender cabíveis."
+      }
+    ],
+    "gabarito": "B",
+    "gabarito_texto": "No exercício da atividade de perícia oficial de natureza criminal, é assegurado autonomia técnica, científica e funcional, não sendo exigido concurso público, nem formação acadêmica específica, para o provimento do cargo de perito oficial.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 49,
+    "ano": 2022,
+    "exame": "CFC 2022/2",
+    "banca": "Consulplan",
+    "disciplina": "Língua Portuguesa Aplicada",
+    "tags": [
+      "Língua Portuguesa"
+    ],
+    "enunciado": [
+      {
+        "type": "p",
+        "content": "O profissional de contabilidade tem à posição ideal para assistência à identificação antecipada de ilícitos pelo seu acesso à informação (Taylor & Thomas, 2012), lidando com decisões que podem resultar em julgamentos éticos e morais. Contudo, podem vivenciar o dilema de lealdade, que ocorre à uma pessoa que queira denunciar um malfeito referente à entidade na qual atua (Elliston, 1982), tendo historicamente, dentre seus deveres profissionais, o sigilo sobre o que souber no exercício profissional (Resolução CFC nº 80/1996). Argumentamos que é diante desse dilema, entre à cultura do sigilo e do potencial de denúncia, que as Lis (lógicas institucionais) socialmente construídas exercem poder, influenciando a reflexão do contador quanto à intenção de denúncia, em contraponto aos estudos atualmente desenvolvidos no país.<br>(AYRES, Rosângela Mesquita. SAUERBRONN, Fernanda Filgueira. FONSECA, Ana Carolina Pimentel Duarte da. Artigo Original. Rev. contab. finanç. 33 (89). May-Aug 2022. Disponível em: https://doi.org/10.1590/1808-057x202112830. Fragmento adaptado.)"
+      },
+      {
+        "type": "p",
+        "content": "O uso do sinal indicativo de crase refere-se, dentre outras possíveis situações, à relação estabelecida entre o termo regente e o termo regido. Dentre os fragmentos destacados a seguir, identifique aquele que exemplifica a relação exposta anteriormente em conformidade com a norma-padrão da Língua Portuguesa."
+      }
+    ],
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "“O profissional de contabilidade tem à posição ideal [...]”"
+      },
+      {
+        "letra": "B",
+        "texto": "“[...] que ocorre à uma pessoa que queira denunciar [...]”"
+      },
+      {
+        "letra": "C",
+        "texto": "“[...] entre à cultura do sigilo e do potencial de denúncia, [...]”"
+      },
+      {
+        "letra": "D",
+        "texto": "“[...] posição ideal para assistência à identificação antecipada de ilícitos [...]”"
+      }
+    ],
+    "gabarito": "D",
+    "gabarito_texto": "“[...] posição ideal para assistência à identificação antecipada de ilícitos [...]”",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 50,
+    "ano": 2022,
+    "exame": "CFC 2022/2",
+    "banca": "Consulplan",
+    "disciplina": "Língua Portuguesa Aplicada",
+    "tags": [
+      "Língua Portuguesa"
+    ],
+    "enunciado": [
+      {
+        "type": "p",
+        "content": "O profissional de contabilidade é visto como conservador, inflexível e técnico (Longo et al., 2014), mas percebido com integridade e responsabilidade social (Cardoso et al., 2006). Ao desempenhar seu papel, o profissional de contabilidade enfrenta regras formais, legais e morais de comportamento relacionadas às questões éticas. Compreende-se como ética a preocupação quanto aos julgamentos morais envolvidos na tomada de decisões sobre o que é moralmente certo ou errado ou, ainda, moralmente bom ou ruim, pressupondo-se a existência de padrões morais os quais afetam nosso bem-estar humano, não estabelecidos ou alterados por decisões de órgãos competentes, baseando-se em julgamentos imparciais que sobrepõem os próprios interesses (Riahi-Belkaoui, 2004).<br>(AYRES, Rosângela Mesquita. SAUERBRONN, Fernanda Filgueira. FONSECA, Ana Carolina Pimentel Duarte da. Artigo Original. Rev. contab. finanç. 33 (89). May-Aug 2022. Disponível em: https://doi.org/10.1590/1808-057x202112830.)"
+      },
+      {
+        "type": "p",
+        "content": "Considerando-se que o emprego dos sinais de pontuação é de fundamental importância para a adequada compreensão da mensagem e da intencionalidade do autor do texto, referente ao uso da pontuação assinale a alternativa correta."
+      }
+    ],
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "Em “O profissional de contabilidade é visto [...]”, a vírgula seria obrigatória após “contabilidade” caso o sujeito sofresse variação de número."
+      },
+      {
+        "letra": "B",
+        "texto": "O emprego da vírgula após a expressão “Ao desempenhar seu papel” tem como principal justificativa eliminar produção de possível ambiguidade."
+      },
+      {
+        "letra": "C",
+        "texto": "Imediatamente após o termo “conservador”, a vírgula foi empregada por inserção de segmento que interrompe uma sequência sintática direta."
+      },
+      {
+        "letra": "D",
+        "texto": "A vírgula que antecede o termo “mas”, no primeiro período do texto, poderia ser substituída por ponto e vírgula ressaltando-se o contraste expresso pela adversativa."
+      }
+    ],
+    "gabarito": "D",
+    "gabarito_texto": "A vírgula que antecede o termo “mas”, no primeiro período do texto, poderia ser substituída por ponto e vírgula ressaltando-se o contraste expresso pela adversativa.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  }
+]

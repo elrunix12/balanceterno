@@ -1,7 +1,41 @@
 # Changelog
 
-Todas as mudanças notáveis neste projeto serão documentadas neste arquivo.
-O formato é baseado em [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
+## [0.30] - 2026-01-20
+
+### Adicionado (Added)
+- **Automação de Diretórios:** O script Python agora cria automaticamente as pastas de input (`importar/exame`, `importar/gabarito`) se não existirem.
+- **Documentação do Backoffice:** Novo `man-generator` criado especificamente para a pasta `tools/`, explicando o uso do Gerador Manual.
+- **Campos no Schema JSON:** Adicionados campos padronizados `gabarito_texto`, `obsoleta` e `lancamentos` (lista vazia) no output do Python para paridade com o frontend.
+- **Gerador de questões:** Agora o gerador possui 4 funcões: gerar questão completa, apenas resolução, resolução e lançamento contábil, apenas lançamento.
+- **Sanitizador de tags:** O script cruza os dados da `ementa.json` com a edição do exame para verificar remover tags que não existem.
+- **Novas questões:** Adicionado todas as questões dos 2022 até 2024. Agora o projeto conta com 450 questões!
+
+### Modificado (Changed)
+- **Ordenação de Questões:** Aprimorada a lógica de sort no JSON para: Ano (Decrescente) > Exame (Decrescente) > ID (Crescente).
+- **Documentação Principal:** O `README.md` raiz foi reescrito.
+- **Refatoração:** Agora os arquivos .json são organizados por edição do exame. Isso permite a imutabilidade e uma maior facilidade de manutenção no longo prazo.
+- **Separação entre licença de conteúdo e do software:** Agora o conteúdo é licenciado com a Licença CC-BY-SA.
+- **Unificação dos enunciados:** `enunciado` e `enunciado_blocos` foram unificados em uma só função no index.js
+- **Nova distribuição de disciplinas**: Agora o site se aproxima da classificação proposta pelo conteúdo programático do edital oficial:
+    - Língua Portuguesa
+    - Matemática Financeira e Estatística
+    - Noções de Direito e Legislação Aplicada
+    - Legislação e Ética Profissional
+    - Teoria da Contabilidade
+    - Contabilidade Geral e NBCs
+    - Contabilidade de Custos
+    - Contabilidade Gerencial
+    - Contabilidade Aplicada ao Setor Público
+    - Controladoria
+    - Auditoria Contábil
+    - Perícia Contábil
+
+
+### Corrigido (Fixed)
+- **Renderização de Tabelas:** Confirmada a utilização de `.innerHTML` no frontend para suportar tabelas HTML vindas do JSON.
+
+### Removido
+- **Pipeline ETL Automatizado:** A ferramenta apresentou bugs em testes posteriores, por isso foi removida.
 
 ## [0.21] - 2025-12-01
 
@@ -13,7 +47,7 @@ O formato é baseado em [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 * **Padronização de Anuladas:** O script de importação agora identifica e padroniza automaticamente questões anuladas com base no gabarito, garantindo consistência visual em todo o site.
 * **Adição de questões:** Agora o projeto conta com todas as questões do Exame CFC 2025/1.
 
-### Alterado (Changed)
+### Modificado (Changed)
 * **Documentação (README):** O `README.md` principal foi reescrito para refletir a nova arquitetura híbrida (Site + Automação) e incluir instruções para quem deseja contribuir com código ou conteúdo.
 - **Comportamento do Filtro de Ementas:** A lista de tópicos (ementas) agora permanece **oculta por padrão** ao selecionar disciplinas ou utilizar a função "Marcar Todas". O usuário deve clicar manualmente em `[ Exibir ]` para visualizar as opções, prevenindo a poluição visual excessiva na interface quando muitas disciplinas são selecionadas simultaneamente.
 * **Documentação (README):** O `README.md` principal foi reescrito para refletir a nova arquitetura híbrida (Site + Automação) e incluir instruções para quem deseja contribuir com código ou conteúdo.
@@ -45,7 +79,7 @@ O formato é baseado em [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 * **Paleta de Cores Completa:** O `index.css` agora tem uma paleta de cores única e acessível para todas as 15 disciplinas.
 * **Adição de questões:** Agora o projeto conta com todas as questões do Exame CFC 2025/2.
 
-### Alterado (Changed)
+### Modificado (Changed)
 * **Migração de Questões:** Iniciado o processo de recatalogação de questões para as novas disciplinas. Questões que estavam em `Contabilidade Societária` por falta de uma categoria específica foram migradas. Por exemplo:
     * A questão `44 CFC 2025/2` (sobre DFC pública) foi migrada de `Contabilidade Societária` para `Contabilidade Pública`.
     * A questão `47 CFC 2025/2` (sobre evidência de auditoria) foi migrada de `Contabilidade Societária` para `Auditoria Contábil`.
@@ -120,7 +154,7 @@ O formato é baseado em [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 - **Busca de Ementas:** Adicionado um campo de texto (`Buscar ementa específica...`) que filtra a lista de ementas em tempo real.
 - **Ocultar/Exibir Ementas:** Adicionado um botão `[ Ocultar ] / [ Exibir ]` para economizar espaço na tela.
 
-### Alterado (Changed)
+### Modificado (Changed)
 - O botão "Marcar Todas (Ementas)" agora afeta apenas as ementas que estão visíveis (filtradas pela busca).
 
 ### Corrigido (Fixed)

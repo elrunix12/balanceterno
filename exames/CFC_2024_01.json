@@ -1,0 +1,2116 @@
+[
+  {
+    "tipo": "metadados_licenca",
+    "titulo": "Banco de Questões Comentadas - Balanceterno",
+    "autor": "Comunidade do Balanceterno",
+    "fonte": "https://github.com/elrunix12/Balanceterno",
+    "licenca": "Creative Commons Attribution-ShareAlike 4.0 International (CC-BY-SA 4.0)",
+    "licenca_url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.txt",
+    "aviso_legal": "As questões de exames e concursos públicos são de acesso público e pertencem às suas respectivas bancas organizadoras (como CFC, FGV, Consulplan, entre outras), não sendo de propriedade deste projeto. Este projeto utiliza tais questões exclusivamente para fins educacionais. As resoluções, lançamentos contábeis, comentários, explicações, compilações e a organização dos dados constituem criações originais da Comunidade do Balanceterno e são disponibilizadas sob a licença Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)."
+  },
+  {
+    "id": 1,
+    "ano": 2024,
+    "exame": "CFC 2024/1",
+    "banca": "FGV",
+    "disciplina": "Língua Portuguesa Aplicada",
+    "tags": [
+      "Língua Portuguesa"
+    ],
+    "enunciado": "O escritor Érico Veríssimo falou sobre o consumidor: <br>O objetivo do consumidor não é o de possuir coisas, mas de consumir cada vez mais e mais, a fim de com isso compensar seu vácuo interior, sua passividade, sua solidão, seu tédio e sua ansiedade. <br>Seguindo a opinião do autor, o consumidor inveterado",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "pretende possuir cada vez mais."
+      },
+      {
+        "letra": "B",
+        "texto": "procura compensar algumas deficiências."
+      },
+      {
+        "letra": "C",
+        "texto": "mostra tendência a economizar exageradamente."
+      },
+      {
+        "letra": "D",
+        "texto": "vive permanentemente com dificuldades econômicas."
+      }
+    ],
+    "gabarito": "B",
+    "gabarito_texto": "procura compensar algumas deficiências.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 2,
+    "ano": 2024,
+    "exame": "CFC 2024/1",
+    "banca": "FGV",
+    "disciplina": "Língua Portuguesa Aplicada",
+    "tags": [
+      "Língua Portuguesa"
+    ],
+    "enunciado": "Os adjetivos podem representar estados, características, qualidades ou relações. <br>Assinale a frase em que o adjetivo sublinhado indica um estado.",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "Profetizar o futuro não é difícil, mas é <u>perigoso</u>."
+      },
+      {
+        "letra": "B",
+        "texto": "Para o homem trabalhador, o tempo é <u>elástico</u>."
+      },
+      {
+        "letra": "C",
+        "texto": "Estamos sempre <u>preocupados</u> com o que vai acontecer."
+      },
+      {
+        "letra": "D",
+        "texto": "O futuro é a mais <u>valiosa</u> fonte de renda da imaginação."
+      }
+    ],
+    "gabarito": "C",
+    "gabarito_texto": "Estamos sempre <u>preocupados</u> com o que vai acontecer.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 3,
+    "ano": 2024,
+    "exame": "CFC 2024/1",
+    "banca": "FGV",
+    "disciplina": "Matemática Financeira e Estatística",
+    "tags": [
+      "Juros Compostos"
+    ],
+    "enunciado": "Um determinado investimento foi realizado em 31/12/20X1, sob o regime de juros compostos, cuja taxa era de 2% ao mês. O aporte inicial foi de R$ 12.000. <br>O valor total dos juros obtidos na operação, se ela for liquidada em 31/12/20X2, é de",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "R$ 15.218,90."
+      },
+      {
+        "letra": "B",
+        "texto": "R$ 14.880,00."
+      },
+      {
+        "letra": "C",
+        "texto": "R$ 3.218,90."
+      },
+      {
+        "letra": "D",
+        "texto": "R$ 2.880,00."
+      }
+    ],
+    "gabarito": "C",
+    "gabarito_texto": "R$ 3.218,90.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 4,
+    "ano": 2024,
+    "exame": "CFC 2024/1",
+    "banca": "FGV",
+    "disciplina": "Matemática Financeira e Estatística",
+    "tags": [
+      "Estatística Aplicada à Contabilidade"
+    ],
+    "enunciado": [
+      {
+        "type": "p",
+        "content": "Uma firma de auditoria foi contratada para realizar um trabalho em uma empresa do ramo automobilístico. Os auditores independentes definiram, em seu processo de amostragem, que irão selecionar a partir do método aleatório (disposto como um dos principais pela NBC TA 530 – Amostragem) apenas uma nota fiscal de venda por mês para sua posterior análise."
+      },
+      {
+        "type": "p",
+        "content": "Para o mês de novembro de 20X1, as notas fiscais de venda foram assim distribuídas:"
+      },
+      {
+        "type": "table",
+        "headerRows": [
+          [
+            "Cor do veículo / Tipo de câmbio",
+            "Câmbio manual",
+            "Câmbio automático"
+          ]
+        ],
+        "bodyRows": [
+          [
+            "Preto",
+            "5",
+            "7"
+          ],
+          [
+            "Prateado",
+            "7",
+            "6"
+          ]
+        ]
+      },
+      {
+        "type": "p",
+        "content": "Considerando o exposto, a probabilidade de que seja selecionada uma nota fiscal referente à venda de um veículo de cor preta e de câmbio manual na amostragem de novembro de 20X1 é igual a"
+      }
+    ],
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "5%."
+      },
+      {
+        "letra": "B",
+        "texto": "20%."
+      },
+      {
+        "letra": "C",
+        "texto": "25%."
+      },
+      {
+        "letra": "D",
+        "texto": "50%."
+      }
+    ],
+    "gabarito": "B",
+    "gabarito_texto": "20%.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 5,
+    "ano": 2024,
+    "exame": "CFC 2024/1",
+    "banca": "FGV",
+    "disciplina": "Noções de Direito e Legislação Aplicada",
+    "tags": [
+      "Noções De Direito Público e Privado"
+    ],
+    "enunciado": "João comunicou a Maria que: <br>I. a Lei nº X, editada pela União, disciplinou as situações em que poderia ocorrer a renúncia a determinada posição jurídica; <br>II. a renúncia, para ser válida, deveria observar os estritos termos legais; <br>III. Pedro renunciou a um direito que deixou de integrar a sua esfera jurídica e, automaticamente, passou a integrar a esfera jurídica de Maria. <br>Nas situações descritas por João em I, II e III, estamos perante, respectivamente, os denominados:",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "poder estatal, direito positivo e direito natural."
+      },
+      {
+        "letra": "B",
+        "texto": "direito objetivo, direito natural e faculdade jurídica."
+      },
+      {
+        "letra": "C",
+        "texto": "direito positivo, direito objetivo e direito subjetivo."
+      },
+      {
+        "letra": "D",
+        "texto": "direito subjetivo, direito natural e dinâmica relacional."
+      }
+    ],
+    "gabarito": "C",
+    "gabarito_texto": "direito positivo, direito objetivo e direito subjetivo.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 6,
+    "ano": 2024,
+    "exame": "CFC 2024/1",
+    "banca": "FGV",
+    "disciplina": "Noções de Direito e Legislação Aplicada",
+    "tags": [
+      "Direito Trabalhista e Legislação Social"
+    ],
+    "enunciado": "Pedro é empregado, há exatos três anos, da sociedade empresária Alfa, que cumpria todas as suas obrigações, a começar pelo rigoroso pagamento do salário mensal dos seus empregados. No entanto, Maria, sua superior hierárquica, decidiu que Pedro não vinha cumprindo a contento suas obrigações, logo, deveria ser demitido. <br>À luz desse quadro, Maria consultou o Departamento de Recursos Humanos em relação à concessão de aviso prévio a Pedro, sendo-lhe corretamente informado que",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "cabe a Alfa optar pela concessão de aviso prévio ou pela permanência de Pedro em casa, sem remuneração."
+      },
+      {
+        "letra": "B",
+        "texto": "o aviso prévio a ser dado a Pedro é de 30 (trinta) dias."
+      },
+      {
+        "letra": "C",
+        "texto": "é necessário o pagamento de indenização correspondente a um mês de trabalho."
+      },
+      {
+        "letra": "D",
+        "texto": "o aviso prévio a ser dado a Pedro é de 39 (trinta e nove) dias."
+      }
+    ],
+    "gabarito": "D",
+    "gabarito_texto": "o aviso prévio a ser dado a Pedro é de 39 (trinta e nove) dias.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 7,
+    "ano": 2024,
+    "exame": "CFC 2024/1",
+    "banca": "FGV",
+    "disciplina": "Noções de Direito e Legislação Aplicada",
+    "tags": [
+      "Legislação Tributária"
+    ],
+    "enunciado": "A sociedade empresária Delta acabou de ser constituída, o que foi feito com estrita observância da sistemática legal, tendo por objeto a venda de livros. No dia imediatamente anterior ao início de suas atividades, os sócios da Delta questionaram o seu contador sobre a respectiva carga tributária, mais especificamente a respeito dos tributos que Delta estava obrigada a recolher. <br>O contador respondeu corretamente que Delta, em razão do seu objeto social,",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "não recolheria nenhum tributo."
+      },
+      {
+        "letra": "B",
+        "texto": "somente recolheria impostos."
+      },
+      {
+        "letra": "C",
+        "texto": "recolheria taxas."
+      },
+      {
+        "letra": "D",
+        "texto": "somente recolheria contribuições de melhoria."
+      }
+    ],
+    "gabarito": "C",
+    "gabarito_texto": "recolheria taxas.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 8,
+    "ano": 2024,
+    "exame": "CFC 2024/1",
+    "banca": "FGV",
+    "disciplina": "Legislação e Ética Profissional",
+    "tags": [
+      "NBC PG 01",
+      "Ética Geral e Profissional"
+    ],
+    "enunciado": "Na aplicação das sanções éticas, avalie os itens a seguir: <br>I. A gravidade da infração. <br>II. A punição ética anterior transitada em julgado. <br>III. A aplicação de salvaguardas. <br>IV. A ação ou omissão que macule publicamente a imagem do contador. <br>Podem ser considerados agravantes os itens",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "I e II, apenas."
+      },
+      {
+        "letra": "B",
+        "texto": "I, II e III."
+      },
+      {
+        "letra": "C",
+        "texto": "I, II e IV."
+      },
+      {
+        "letra": "D",
+        "texto": "II, III e IV."
+      }
+    ],
+    "gabarito": "C",
+    "gabarito_texto": "I, II e IV.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 9,
+    "ano": 2024,
+    "exame": "CFC 2024/1",
+    "banca": "FGV",
+    "disciplina": "Legislação e Ética Profissional",
+    "tags": [
+      "NBC PG 01",
+      "Ética Geral e Profissional"
+    ],
+    "enunciado": "Avalie, com base no Código de Ética do contador, se os deveres do contador incluem, entre outros: <br>I. exercer a profissão com zelo, diligência, honestidade e capacidade técnica, observando as Normas Brasileiras de Contabilidade e a legislação vigente, resguardando o interesse público, os interesses de seus clientes ou empregadores, sem prejuízo da dignidade e independência profissionais; <br>II. recusar sua indicação em trabalho quando reconheça não se achar capacitado para a especialização requerida; <br>III. guardar sigilo sobre o que souber em razão do exercício profissional, inclusive no âmbito do serviço público, ressalvados os casos previstos em lei ou quando solicitado por autoridades competentes, entre estas os Conselhos Federal e Regionais de Contabilidade. <br>Está correto o que se afirma em:",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "I e II, apenas."
+      },
+      {
+        "letra": "B",
+        "texto": "I e III, apenas."
+      },
+      {
+        "letra": "C",
+        "texto": "II e III, apenas."
+      },
+      {
+        "letra": "D",
+        "texto": "I, II e III."
+      }
+    ],
+    "gabarito": "D",
+    "gabarito_texto": "I, II e III.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 10,
+    "ano": 2024,
+    "exame": "CFC 2024/1",
+    "banca": "FGV",
+    "disciplina": "Legislação e Ética Profissional",
+    "tags": [
+      "Ética Geral e Profissional"
+    ],
+    "enunciado": "A ética pode ser aplicada em praticamente todas as nossas ações. Em algumas, ela terá um peso maior que em outras e o importante é buscar agir de acordo com princípios morais e valores alinhados ao que consideramos mais justo para nós e para os outros. Isto é, pensar no que faz mais sentido para o contexto e a melhoria de todos e não apenas em nosso próprio ganho pessoal. <br>Com base na reflexão, avalie se as afirmativas a seguir são falsas (F) ou verdadeiras (V): <br>( ) No ambiente de trabalho, a ética é fundamental para garantir um ambiente saudável e produtivo entre as pessoas. <br>( ) Agir de forma ética pode ser ter uma postura respeitosa em relação aos colegas, clientes e fornecedores; manter a confidencialidade das informações e evitar conflitos de interesse. <br>( ) A ética envolve tomar decisões justas, cumprindo as leis e normas regulatórias e considerando o impacto de nossas ações em relação aos outros. <br>As afirmativas são, respectivamente,",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "V – V – V."
+      },
+      {
+        "letra": "B",
+        "texto": "V – F – F."
+      },
+      {
+        "letra": "C",
+        "texto": "F – V – V."
+      },
+      {
+        "letra": "D",
+        "texto": "F – F – F."
+      }
+    ],
+    "gabarito": "A",
+    "gabarito_texto": "V – V – V.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 11,
+    "ano": 2024,
+    "exame": "CFC 2024/1",
+    "banca": "FGV",
+    "disciplina": "Contabilidade Geral e NBCs",
+    "tags": [
+      "Ativo Imobilizado"
+    ],
+    "enunciado": "Desreconhecimento é a retirada de parte ou da totalidade de ativo ou passivo reconhecido do balanço patrimonial da entidade. O desreconhecimento normalmente ocorre quando esse item não atende mais à definição de ativo ou passivo, que expirou, foi consumido, recebido, executado ou transferido. <br>A máquina utilizada para a produção do principal produto de uma determinada entidade deve ser desreconhecida quando",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "perder todo o potencial de produzir benefícios econômicos para a entidade."
+      },
+      {
+        "letra": "B",
+        "texto": "estiver parcialmente depreciado."
+      },
+      {
+        "letra": "C",
+        "texto": "sofrer perda de valor recuperável."
+      },
+      {
+        "letra": "D",
+        "texto": "estiver sob controle da entidade."
+      }
+    ],
+    "gabarito": "A",
+    "gabarito_texto": "perder todo o potencial de produzir benefícios econômicos para a entidade.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 12,
+    "ano": 2024,
+    "exame": "CFC 2024/1",
+    "banca": "FGV",
+    "disciplina": "Teoria da Contabilidade",
+    "tags": [
+      "Estrutura Conceitual para Relatório Financeiro"
+    ],
+    "enunciado": "Conforme a NBC TG – ESTRUTURA CONCEITUAL, uma Receita reflete aumento nos ativos, ou redução nos passivos, que resultam em aumentos no patrimônio líquido, exceto aqueles referentes a contribuições de detentores de direitos sobre o patrimônio. <br>Avalie se são reconhecidos como Receita, nesse contexto, os seguintes itens: <br>I. Ganho de aplicação financeira. <br>II. Transferência de estoques a clientes. <br>III. Ganho na venda de imobilizado. <br>IV. Entrada de recursos pela emissão/venda de debêntures. <br>V. Entrada de recursos pela integralização do capital social. <br>VI. Ganho na venda de ações em tesouraria. <br>São considerados receitas os itens",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "IV, V e VI."
+      },
+      {
+        "letra": "B",
+        "texto": "II, III e VI."
+      },
+      {
+        "letra": "C",
+        "texto": "I, III e IV."
+      },
+      {
+        "letra": "D",
+        "texto": "I, II e III."
+      }
+    ],
+    "gabarito": "D",
+    "gabarito_texto": "I, II e III.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 13,
+    "ano": 2024,
+    "exame": "CFC 2024/1",
+    "banca": "FGV",
+    "disciplina": "Teoria da Contabilidade",
+    "tags": [
+      "Estrutura Conceitual para Relatório Financeiro"
+    ],
+    "enunciado": "O conceito de Capital é adotado pela maioria das entidades na elaboração das Demonstrações Contábeis. A seleção do conceito apropriado de Capital pela entidade deve ser baseada nas necessidades dos seus usuários, principalmente, os preocupados com a manutenção de capital nominal investido ou com o poder de compra do capital investido. <br>A manutenção do Capital em que o lucro é auferido somente se o montante dos ativos líquidos no final do período exceder o montante dos ativos líquidos no início do período, após excluir quaisquer distribuições para, e contribuições de, sócios durante o período, é a Manutenção do",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "Capital Físico."
+      },
+      {
+        "letra": "B",
+        "texto": "Capital Financeiro."
+      },
+      {
+        "letra": "C",
+        "texto": "Capital Social."
+      },
+      {
+        "letra": "D",
+        "texto": "Capital Integralizado."
+      }
+    ],
+    "gabarito": "B",
+    "gabarito_texto": "Capital Financeiro.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 14,
+    "ano": 2024,
+    "exame": "CFC 2024/1",
+    "banca": "FGV",
+    "disciplina": "Teoria da Contabilidade",
+    "tags": [
+      "Estrutura Conceitual para Relatório Financeiro"
+    ],
+    "enunciado": "As demonstrações contábeis são normalmente elaboradas com base na suposição de que a entidade que reporta está em continuidade operacional. <br>Desse modo, presume-se que a entidade não tem a intenção e nem a necessidade de",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "tornar-se internacional."
+      },
+      {
+        "letra": "B",
+        "texto": "modificar a sua atividade-fim."
+      },
+      {
+        "letra": "C",
+        "texto": "entrar em liquidação ou deixar de negociar."
+      },
+      {
+        "letra": "D",
+        "texto": "expandir os seus negócios para outras localidades."
+      }
+    ],
+    "gabarito": "C",
+    "gabarito_texto": "entrar em liquidação ou deixar de negociar.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 15,
+    "ano": 2024,
+    "exame": "CFC 2024/1",
+    "banca": "FGV",
+    "disciplina": "Contabilidade Geral e NBCs",
+    "tags": [
+      "Ativo Intangível"
+    ],
+    "enunciado": "Conforme a NBC TG 04 (R4) – ATIVO INTANGÍVEL, não são exemplos de gastos a serem reconhecidos como despesa aqueles incorridos com",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "atividades pré-operacionais destinadas a constituir a empresa."
+      },
+      {
+        "letra": "B",
+        "texto": "treinamento do pessoal próprio."
+      },
+      {
+        "letra": "C",
+        "texto": "publicidade e atividades promocionais."
+      },
+      {
+        "letra": "D",
+        "texto": "o desenvolvimento de ativos intangíveis gerados internamente."
+      }
+    ],
+    "gabarito": "D",
+    "gabarito_texto": "o desenvolvimento de ativos intangíveis gerados internamente.",
+    "resolucao": "Conforme a NBC TG 04 (Ativo Intangível), os gastos com publicidade (C), treinamento (B) e atividades pré-operacionais (A) são reconhecidos como despesa quando incorridos. Gastos na fase de desenvolvimento (D), se atenderem aos critérios de capitalização, são reconhecidos como ativo intangível.",
+    "autor_resolucao": "elrunix12",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 16,
+    "ano": 2024,
+    "exame": "CFC 2024/1",
+    "banca": "FGV",
+    "disciplina": "Contabilidade Geral e NBCs",
+    "tags": [
+      "Investimento em Coligada e em Empreendimento Controlado em Conjunto"
+    ],
+    "enunciado": "A Sociedade A possui 65% de ações com direito a voto sobre a Sociedade B, cujo Patrimônio Líquido equivale a R$2.000.000. Com essa participação a Sociedade A exerce o controle da sociedade B. Durante o exercício de 2023, a Sociedade “B” apresentou um lucro de R$200.000. <br>Diante dos dados apresentados, e de acordo com a NBC TG 18 (R3) – INVESTIMENTO EM COLIGADA, em Controlada e em Empreendimento Controlado em Conjunto, a Sociedade A efetuará, em suas demonstrações contábeis individuais, um registro de",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "débito em Caixa e crédito em Investimentos na Sociedade B no valor de R$130.000."
+      },
+      {
+        "letra": "B",
+        "texto": "débito em Investimentos na Sociedade B e crédito em Receita de equivalência patrimonial no valor de R$200.000."
+      },
+      {
+        "letra": "C",
+        "texto": "débito em Receita de equivalência patrimonial e crédito em Investimentos na Sociedade B no valor de R$200.000."
+      },
+      {
+        "letra": "D",
+        "texto": "débito em Investimentos na Sociedade B e crédito em Receita de equivalência patrimonial no valor de R$130.000."
+      }
+    ],
+    "gabarito": "D",
+    "gabarito_texto": "débito em Investimentos na Sociedade B e crédito em Receita de equivalência patrimonial no valor de R$130.000.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 17,
+    "ano": 2024,
+    "exame": "CFC 2024/1",
+    "banca": "FGV",
+    "disciplina": "Contabilidade Geral e NBCs",
+    "tags": [
+      "Instrumentos Financeiros"
+    ],
+    "enunciado": "Sem observar as exceções previstas no item 4.1.5 da NBC TG 48 – INSTRUMENTOS FINANCEIROS, um ativo financeiro que, para a entidade que reporta a informação, é mantido dentro de modelo de negócios, cujo objetivo seja atingido tanto pelo recebimento de fluxos de caixa contratuais quanto pela venda de ativos financeiros, e se os termos contratuais do ativo financeiro derem origem, em datas especificadas, a fluxos de caixa que constituam exclusivamente pagamentos de principal e juros sobre o valor do principal em aberto, deve ser mensurado no momento subsequente ao",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "Custo Amortizado."
+      },
+      {
+        "letra": "B",
+        "texto": "Valor Justo Por Meio de Outros Resultados Abrangentes."
+      },
+      {
+        "letra": "C",
+        "texto": "Valor Justo Por Meio de Resultado."
+      },
+      {
+        "letra": "D",
+        "texto": "Valor Realizável Líquido."
+      }
+    ],
+    "gabarito": "B",
+    "gabarito_texto": "Valor Justo Por Meio de Outros Resultados Abrangentes.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 18,
+    "ano": 2024,
+    "exame": "CFC 2024/1",
+    "banca": "FGV",
+    "disciplina": "Contabilidade Geral e NBCs",
+    "tags": [
+      "Evento Subsequente",
+      "Provisões, Passivos Contingentes e Ativos Contingentes"
+    ],
+    "enunciado": "No ano de 2023, a Sociedade Empresária XXX foi autuada por um órgão fiscal que alegava o não recolhimento de determinado imposto no valor de R$7.000.000. Com base na análise de seu departamento jurídico, a Sociedade Empresária constituiu uma provisão no valor de R$5.000.000 nas demonstrações de 2023 e impetrou recurso administrativo ao referido órgão. Em 15/03/2024, o recurso da Sociedade Empresária foi julgado e o órgão fiscal determinou que a Sociedade Empresária recolhesse a quantia de R$6.000.000. A Sociedade Empresária optou por não recorrer da decisão. <br>A elaboração das demonstrações contábeis foi finalizada pelo Departamento Contábil em 28/02/2024 e o Conselho de Administração autorizou a emissão de tais demonstrações em 25/03/2024. Instado a decidir se a Sociedade Empresária XXX deve ajustar as Demonstrações Contábeis de 2023 e por qual valor, você declara, corretamente, que a Sociedade Empresária XXX",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "deve ajustar as Demonstrações Contábeis de 2023, reduzindo o lucro do período e aumentando o passivo em R$1.000.000."
+      },
+      {
+        "letra": "B",
+        "texto": "deve ajustar as Demonstrações Contábeis de 2023, reduzindo o lucro do período e aumentando o passivo em R$2.000.000."
+      },
+      {
+        "letra": "C",
+        "texto": "não deve ajustar as Demonstrações Contábeis de 2023, sendo a determinação do órgão fiscal ocorrida depois de 31/12/2023."
+      },
+      {
+        "letra": "D",
+        "texto": "não deve ajustar as Demonstrações Contábeis de 2023, sendo a determinação do órgão fiscal ocorrida depois da data de finalização das Demonstrações Contábeis por parte do Departamento Contábil."
+      }
+    ],
+    "gabarito": "A",
+    "gabarito_texto": "deve ajustar as Demonstrações Contábeis de 2023, reduzindo o lucro do período e aumentando o passivo em R$1.000.000.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 19,
+    "ano": 2024,
+    "exame": "CFC 2024/1",
+    "banca": "FGV",
+    "disciplina": "Contabilidade Geral e NBCs",
+    "tags": [
+      "Resultado por Ação"
+    ],
+    "enunciado": [
+      {
+        "type": "p",
+        "content": "Em 31/12/2022, uma companhia tinha seu capital social dividido em 40.000 ações ordinárias (ON). Naquela data, todas estavam em poder dos acionistas."
+      },
+      {
+        "type": "p",
+        "content": "As seguintes operações com ações foram registradas durante o exercício de 2023:"
+      },
+      {
+        "type": "table",
+        "headerRows": [
+          [
+            "Data",
+            "Operação"
+          ]
+        ],
+        "bodyRows": [
+          [
+            "30/04/2023",
+            "Emissão de 1.000 novas ações ON, imediatamente subscritas e integralizadas pelos acionistas."
+          ],
+          [
+            "30/09/2023",
+            "Recompra de 2.000 ações, mantidas em tesouraria."
+          ],
+          [
+            "30/11/2023",
+            "Venda de 1.000 ações que estavam em tesouraria."
+          ]
+        ]
+      },
+      {
+        "type": "p",
+        "content": "Ao final do exercício de 2023, a companhia apurou Lucro Líquido de R$202.110. Os valores do Resultado Básico por ação e do Resultado Diluído por ação, a serem divulgados pela companhia, são, respectivamente,"
+      }
+    ],
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "5,05275 e 5,02137."
+      },
+      {
+        "letra": "B",
+        "texto": "5,02137 e 5,02137."
+      },
+      {
+        "letra": "C",
+        "texto": "5,05275 e 4,92951."
+      },
+      {
+        "letra": "D",
+        "texto": "5,05275 e 5,0275."
+      }
+    ],
+    "gabarito": "B",
+    "gabarito_texto": "5,02137 e 5,02137.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 20,
+    "ano": 2024,
+    "exame": "CFC 2024/1",
+    "banca": "FGV",
+    "disciplina": "Contabilidade Geral e NBCs",
+    "tags": [
+      "Estoques (NBC TG 16)"
+    ],
+    "enunciado": "A Sociedade Empresária A possui estoque de um mix de mercadorias para revenda e deseja mensurar as mercadorias da categoria b de acordo com a NORMA BRASILEIRA DE CONTABILIDADE NBC TG 16 (R2) – ESTOQUES. Em termos unitários, o valor de custo das mercadorias dessa categoria é de R$20; o valor realizável líquido é de R$15 e o preço de venda é de R$30. <br>Considerando a quantidade de mil unidades, o seguinte valor dessas mercadorias deve ser apresentado no balanço patrimonial:",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "R$15."
+      },
+      {
+        "letra": "B",
+        "texto": "R$15.000."
+      },
+      {
+        "letra": "C",
+        "texto": "R$20.000."
+      },
+      {
+        "letra": "D",
+        "texto": "R$30.000."
+      }
+    ],
+    "gabarito": "B",
+    "gabarito_texto": "R$15.000.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 21,
+    "ano": 2024,
+    "exame": "CFC 2024/1",
+    "banca": "FGV",
+    "disciplina": "Contabilidade Geral e NBCs",
+    "tags": [
+      "Receita de Contrato com Cliente"
+    ],
+    "enunciado": "Em janeiro de 2024, uma companhia aérea anunciou uma promoção especial de Dia das Mães e vendeu, em fevereiro, 200 passagens aéreas do Rio de Janeiro para Porto Alegre, por R$300 cada, recebidos à vista. <br>Em maio de 2024, os aeroportos de Porto Alegre foram fechados, de modo que a companhia aérea comunicou aos clientes que as passagens poderiam ser utilizadas em junho, sem pagamento de taxas e penalidades. Suponha que todos os clientes viajem em junho de 2024. <br>Nesse caso, de acordo com a NBC TG 47 – Receita de Contratos com Clientes, a receita da companhia aérea relativa à venda das 200 passagens deve ser reconhecida no mês de",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "janeiro."
+      },
+      {
+        "letra": "B",
+        "texto": "fevereiro."
+      },
+      {
+        "letra": "C",
+        "texto": "maio."
+      },
+      {
+        "letra": "D",
+        "texto": "junho."
+      }
+    ],
+    "gabarito": "D",
+    "gabarito_texto": "junho.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 22,
+    "ano": 2024,
+    "exame": "CFC 2024/1",
+    "banca": "FGV",
+    "disciplina": "Contabilidade Geral e NBCs",
+    "tags": [
+      "Ativo Imobilizado",
+      "Políticas Contábeis, Mudança de Estimativa e Retificação de Erro"
+    ],
+    "enunciado": "Em 01/07/2021, uma loja de roupas adquiriu uma máquina de costura por R$840. Na data, estimou que iria usar a máquina durante 4 anos e vendê-la pelo equivalente à vista de R$200 após esse período. <br>Em 01/01/2023, a loja constatou que poderia utilizar a máquina por mais 3 anos, a partir dessa data, mas seu valor residual seria zero. <br>Assinale a opção que indica o valor contábil da máquina de costura em 31/12/2023, conforme a NBC TG 27 – Ativo Imobilizado.",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "R$400."
+      },
+      {
+        "letra": "B",
+        "texto": "R$440."
+      },
+      {
+        "letra": "C",
+        "texto": "R$320."
+      },
+      {
+        "letra": "D",
+        "texto": "R$210."
+      }
+    ],
+    "gabarito": "A",
+    "gabarito_texto": "R$400.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 23,
+    "ano": 2024,
+    "exame": "CFC 2024/1",
+    "banca": "FGV",
+    "disciplina": "Contabilidade Geral e NBCs",
+    "tags": [
+      "Impairment"
+    ],
+    "enunciado": "Em 01/01/2022, uma fábrica de cosméticos adquiriu, por R$180.000, um terreno para a construção de um estacionamento para seus empregados. <br>Em 31/12/2022, a fábrica realizou o teste de recuperabilidade desse terreno e constatou que seu valor em uso era de R$170.000, enquanto o seu valor justo era de R$190.000. Para vender o terreno, a fábrica deveria incorrer em despesas legais de alienação no valor de R$15.000. <br>Assinale o valor do terreno no balanço patrimonial da fábrica após o teste de recuperabilidade, conforme a NBC TG 01 – REDUÇÃO AO VALOR RECUPERÁVEL DE ATIVOS.",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "R$170.000."
+      },
+      {
+        "letra": "B",
+        "texto": "R$175.000."
+      },
+      {
+        "letra": "C",
+        "texto": "R$180.000."
+      },
+      {
+        "letra": "D",
+        "texto": "R$190.000."
+      }
+    ],
+    "gabarito": "B",
+    "gabarito_texto": "R$175.000.",
+    "resolucao": "Teste de Recuperabilidade (Impairment - NBC TG 01):\n1. Valor Contábil: R$ 180.000 (terreno não deprecia)\n2. Valor Recuperável: É o *maior* entre o Valor em Uso e o Valor Justo Líquido.\n   - Valor em Uso: R$ 170.000\n   - Valor Justo Líquido: R$ 190.000 (Valor Justo) - R$ 15.000 (Desp. Venda) = R$ 175.000\n   - Valor Recuperável = R$ 175.000\n3. Comparação: O Valor Contábil (R$ 180.000) está *maior* que o Valor Recuperável (R$ 175.000). Deve-se reconhecer uma perda por impairment.\n4. Lançamento da Perda: R$ 180.000 - R$ 175.000 = R$ 5.000\n5. Novo Valor Contábil: R$ 180.000 - R$ 5.000 = R$ 175.000.",
+    "autor_resolucao": "elrunix12",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 24,
+    "ano": 2024,
+    "exame": "CFC 2024/1",
+    "banca": "FGV",
+    "disciplina": "Contabilidade Geral e NBCs",
+    "tags": [
+      "Lei n.º 6.404/76",
+      "Patrimônio e Variações Patrimoniais"
+    ],
+    "enunciado": "De acordo com a Lei nº 6.404/76, em uma sociedade empresária, as Reservas de Capital poderão ser utilizadas para absorver prejuízos quando",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "não houver ações em tesouraria."
+      },
+      {
+        "letra": "B",
+        "texto": "estes estiverem acumulados há no mínimo três exercícios sociais."
+      },
+      {
+        "letra": "C",
+        "texto": "estes ultrapassarem os lucros acumulados e as reservas de lucros."
+      },
+      {
+        "letra": "D",
+        "texto": "houver garantia de que os dividendos mínimos obrigatórios serão pagos em conformidade."
+      }
+    ],
+    "gabarito": "C",
+    "gabarito_texto": "estes ultrapassarem os lucros acumulados e as reservas de lucros.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 25,
+    "ano": 2024,
+    "exame": "CFC 2024/1",
+    "banca": "FGV",
+    "disciplina": "Contabilidade Geral e NBCs",
+    "tags": [
+      "Demonstração dos Fluxos de Caixa"
+    ],
+    "enunciado": "Em dezembro de 2023, uma empresa de consultoria comprou, à vista, aparelhos de ar condicionado, para o seu escritório, por R$6.000. Na data, pagou o frete no valor de R$200 e a instalação no valor de R$2.000. <br>Os caixas consumidos, reconhecidos na Demonstração dos Fluxos de Caixa da empresa, elaborada pelo método direto, pelas atividades operacional e de investimento, de acordo com a NBCTG 03 (R3) – DEMONSTRAÇÕES DOS FLUXOS DE CAIXA, ATIVIDADES DE INVESTIMENTOS, são, respectivamente:",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "zero e R$8.200."
+      },
+      {
+        "letra": "B",
+        "texto": "R$200 e R$8.000."
+      },
+      {
+        "letra": "C",
+        "texto": "R$2.000 e R$6.200."
+      },
+      {
+        "letra": "D",
+        "texto": "R$2.200 e R$6.000."
+      }
+    ],
+    "gabarito": "A",
+    "gabarito_texto": "zero e R$8.200.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 26,
+    "ano": 2024,
+    "exame": "CFC 2024/1",
+    "banca": "FGV",
+    "disciplina": "Contabilidade Geral e NBCs",
+    "tags": [
+      "Demonstração do Valor Adicionado (DVA)"
+    ],
+    "enunciado": "Uma joalheria reconheceu as seguintes receitas em 2023 com: <br>• vendas de mercadorias: R$800.000; <br>• financeira: R$400.000; <br>• equivalência patrimonial: R$200.000; <br>• venda de ativo imobilizado: R$170.000; <br>• aluguel de imóvel a terceiros: R$120.000. <br>De acordo cm a NBC TG 09 (R1) – DEMONSTRAÇÃO DO VALOR ADICIONADO, na Demonstração do Valor Adicionado da joalheria, em 31/12/2023, o valor adicionado recebido em transferência apresenta o seguinte montante:",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "R$490.000."
+      },
+      {
+        "letra": "B",
+        "texto": "R$600.000."
+      },
+      {
+        "letra": "C",
+        "texto": "R$720.000."
+      },
+      {
+        "letra": "D",
+        "texto": "R$890.000."
+      }
+    ],
+    "gabarito": "C",
+    "gabarito_texto": "R$720.000.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 27,
+    "ano": 2024,
+    "exame": "CFC 2024/1",
+    "banca": "FGV",
+    "disciplina": "Contabilidade Geral e NBCs",
+    "tags": [
+      "Notas Explicativas",
+      "Lei n.º 6.404/76"
+    ],
+    "enunciado": "Uma sociedade empresária apresenta a seus usuários externos as informações sobre a base de preparação das demonstrações financeiras e das práticas contábeis específicas selecionadas e aplicadas para negócios e eventos significativos. <br>Conforme a Lei nº 6.404/76, essa informação deve ser incluída",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "nas Notas Explicativas."
+      },
+      {
+        "letra": "B",
+        "texto": "no Relatório do Auditor."
+      },
+      {
+        "letra": "C",
+        "texto": "no Relatório da Administração."
+      },
+      {
+        "letra": "D",
+        "texto": "na Carta de Responsabilidade da Administração."
+      }
+    ],
+    "gabarito": "A",
+    "gabarito_texto": "nas Notas Explicativas.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 28,
+    "ano": 2024,
+    "exame": "CFC 2024/1",
+    "banca": "FGV",
+    "disciplina": "Contabilidade Geral e NBCs",
+    "tags": [
+      "Efeitos das mudanças nas taxas de câmbio e conversão de demonstrações contábeis"
+    ],
+    "enunciado": "De acordo com a NBC TG 02 (R3) – EFEITOS DAS MUDANÇAS NAS TAXAS DE CÂMBIO E CONVERSÃO DE DEMONSTRAÇÕES CONTÁBEIS, os elementos do balanço patrimonial podem ser classificados como monetários e não monetários. <br>Assinale a opção que indica um ativo classificado como ativo não monetário em uma papelaria.",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "Estoques."
+      },
+      {
+        "letra": "B",
+        "texto": "Contas a receber."
+      },
+      {
+        "letra": "C",
+        "texto": "Aplicações financeiras."
+      },
+      {
+        "letra": "D",
+        "texto": "Adiantamento de clientes."
+      }
+    ],
+    "gabarito": "A",
+    "gabarito_texto": "Estoques.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 29,
+    "ano": 2024,
+    "exame": "CFC 2024/1",
+    "banca": "FGV",
+    "disciplina": "Contabilidade Geral e NBCs",
+    "tags": [
+      "Balanço Patrimonial",
+      "Lei n.º 6.404/76"
+    ],
+    "enunciado": "Conforme a Lei nº 6.404/76, no Balanço Patrimonial, as contas do ativo são apresentadas de acordo com a ordem decrescente de grau de",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "liquidez."
+      },
+      {
+        "letra": "B",
+        "texto": "relevância."
+      },
+      {
+        "letra": "C",
+        "texto": "objetividade."
+      },
+      {
+        "letra": "D",
+        "texto": "valor monetário."
+      }
+    ],
+    "gabarito": "A",
+    "gabarito_texto": "liquidez.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 30,
+    "ano": 2024,
+    "exame": "CFC 2024/1",
+    "banca": "FGV",
+    "disciplina": "Contabilidade Geral e NBCs",
+    "tags": [
+      "Demonstração do Resultado"
+    ],
+    "enunciado": "Em 2023, a Demonstração do Resultado do Exercício de uma entidade apresentou Receita Líquida de R$200.000 e Lucro Bruto de R$150.000. <br>Pode-se constatar que, na demonstração, a seguinte conta apresenta saldo de R$50.000:",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "despesas de vendas."
+      },
+      {
+        "letra": "B",
+        "texto": "despesas operacionais."
+      },
+      {
+        "letra": "C",
+        "texto": "deduções da receita."
+      },
+      {
+        "letra": "D",
+        "texto": "custo das mercadorias vendidas."
+      }
+    ],
+    "gabarito": "D",
+    "gabarito_texto": "custo das mercadorias vendidas.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 31,
+    "ano": 2024,
+    "exame": "CFC 2024/1",
+    "banca": "FGV",
+    "disciplina": "Contabilidade Geral e NBCs",
+    "tags": [
+      "Estoques (NBC TG 16)"
+    ],
+    "enunciado": "Uma livraria utiliza o critério PEPS (Primeiro a Entrar, Primeiro a Sair) para mensurar os seus estoques. <br>Em 01/01/2024, havia 20 livros de Contabilidade Avançada em estoque, que foram comprados por R$100 cada. Em 05/01/2024, a livraria adquiriu mais 30 unidades desse mesmo título, por R$120 cada. Já em 10/01/2024, a livraria vendeu 35 exemplares desse livro a um grupo de estudantes, por R$200 cada. <br>De acordo com a NBC TG 16 (R2) – ESTOQUES, o custo das mercadorias vendidas reconhecido em janeiro foi de",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "R$3.500."
+      },
+      {
+        "letra": "B",
+        "texto": "R$3.800."
+      },
+      {
+        "letra": "C",
+        "texto": "R$4.100."
+      },
+      {
+        "letra": "D",
+        "texto": "R$4.200."
+      }
+    ],
+    "gabarito": "B",
+    "gabarito_texto": "R$3.800.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 32,
+    "ano": 2024,
+    "exame": "CFC 2024/1",
+    "banca": "FGV",
+    "disciplina": "Contabilidade Geral e NBCs",
+    "tags": [
+      "Balanço Patrimonial",
+      "Mensuração e Reconhecimento de Operações"
+    ],
+    "enunciado": "Uma sociedade empresária apresenta saldo de R$80.000 na conta “Despesas antecipadas”. <br>Nas Demonstrações contábeis, essa conta é apresentada como",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "ativo, no balanço patrimonial."
+      },
+      {
+        "letra": "B",
+        "texto": "passivo, no balanço patrimonial."
+      },
+      {
+        "letra": "C",
+        "texto": "outras despesas, na demonstração do resultado do exercício."
+      },
+      {
+        "letra": "D",
+        "texto": "despesas operacionais, na demonstração do resultado do exercício."
+      }
+    ],
+    "gabarito": "A",
+    "gabarito_texto": "ativo, no balanço patrimonial.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 33,
+    "ano": 2024,
+    "exame": "CFC 2024/1",
+    "banca": "FGV",
+    "disciplina": "Contabilidade Geral e NBCs",
+    "tags": [
+      "Patrimônio e Variações Patrimoniais",
+      "Mensuração e Reconhecimento de Operações"
+    ],
+    "enunciado": "Em abril de 2024, uma empresa de consultoria adquiriu 10 cadeiras para seus funcionários por R$400 cada. Metade do valor foi pago à vista e o restante tem pagamento previsto para junho do mesmo ano. <br>No momento da compra, observam-se as seguintes modificações nos saldos de seus elementos patrimoniais:",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "aumento de R$2.000 no ativo e no passivo."
+      },
+      {
+        "letra": "B",
+        "texto": "aumento de R$4.000 no ativo e no passivo."
+      },
+      {
+        "letra": "C",
+        "texto": "aumento de R$4.000 no ativo e no patrimônio líquido."
+      },
+      {
+        "letra": "D",
+        "texto": "diminuição de R$2.000 no ativo, aumento de R$2.000 no passivo e diminuição de R$4.000 no patrimônio líquido."
+      }
+    ],
+    "gabarito": "A",
+    "gabarito_texto": "aumento de R$2.000 no ativo e no passivo.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 34,
+    "ano": 2024,
+    "exame": "CFC 2024/1",
+    "banca": "FGV",
+    "disciplina": "Contabilidade Geral e NBCs",
+    "tags": [
+      "Ativo Imobilizado"
+    ],
+    "enunciado": "Uma sociedade empresária oferece serviços de entrega de documentos. Para realizar as entregas, possui cinco motos, sendo que cada uma apresentava, em 31/12/2023, valor contábil de R$30.000. Além disso, a sociedade empresária possui duas motos que são utilizadas exclusivamente para a locomoção de seus diretores. Cada uma dessas motos apresentava, em 31/12/2023, valor contábil de R$50.000. <br>Assinale a opção que indica a apresentação das motos no balanço patrimonial da sociedade empresária em 31/12/2023.",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "Investimentos: R$250.000."
+      },
+      {
+        "letra": "B",
+        "texto": "Ativo Imobilizado: R$250.000."
+      },
+      {
+        "letra": "C",
+        "texto": "Investimentos: R$100.000 e Ativo Imobilizado: R$150.000."
+      },
+      {
+        "letra": "D",
+        "texto": "Investimentos: R$150.000 e Ativo Imobilizado: R$100.000."
+      }
+    ],
+    "gabarito": "B",
+    "gabarito_texto": "Ativo Imobilizado: R$250.000.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 35,
+    "ano": 2024,
+    "exame": "CFC 2024/1",
+    "banca": "FGV",
+    "disciplina": "Teoria da Contabilidade",
+    "tags": [
+      "Elementos Contábeis Patrimoniais"
+    ],
+    "enunciado": "Considere os seguintes elementos das demonstrações contábeis: <br>I. Ativo. <br>II. Despesa. <br>III. Receita. <br>IV. Passivo. <br>V. Patrimônio Líquido. <br>Desses elementos os que apresentam natureza devedora são:",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "I e II, apenas."
+      },
+      {
+        "letra": "B",
+        "texto": "I e III, apenas."
+      },
+      {
+        "letra": "C",
+        "texto": "II e IV, apenas."
+      },
+      {
+        "letra": "D",
+        "texto": "I, III e V, apenas."
+      }
+    ],
+    "gabarito": "A",
+    "gabarito_texto": "I e II, apenas.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 36,
+    "ano": 2024,
+    "exame": "CFC 2024/1",
+    "banca": "FGV",
+    "disciplina": "Contabilidade Geral e NBCs",
+    "tags": [
+      "Balanço Patrimonial"
+    ],
+    "enunciado": "Uma farmácia apresentava os seguintes saldos em seu ativo, em 31/12/2023: <br>• Aplicação financeira com vencimento em 380 dias: R$200.000; <br>• Clientes com recebimento previsto para 180 dias: R$140.000; <br>• Disponibilidades: R$50.000; <br>• Estoque com venda prevista para até 60 dias: R$120.000; <br>• Imóvel onde funciona a farmácia: R$600.000; <br>• Móveis e utensílios utilizados em suas lojas: R$300.000. <br>O ativo circulante da farmácia em 31/12/2023 foi de",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "R$170.000."
+      },
+      {
+        "letra": "B",
+        "texto": "R$190.000."
+      },
+      {
+        "letra": "C",
+        "texto": "R$310.000."
+      },
+      {
+        "letra": "D",
+        "texto": "R$510.000."
+      }
+    ],
+    "gabarito": "C",
+    "gabarito_texto": "R$310.000.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 37,
+    "ano": 2024,
+    "exame": "CFC 2024/1",
+    "banca": "FGV",
+    "disciplina": "Contabilidade Gerencial",
+    "tags": [
+      "Custos para Controle"
+    ],
+    "enunciado": [
+      {
+        "type": "p",
+        "content": "A Euza Batista Modas é uma indústria têxtil que confecciona apenas calças. No mês de maio de 2024, apresentou os seguintes dados a respeito da sua produção:"
+      },
+      {
+        "type": "table",
+        "headerRows": [
+          [
+            "Descrição",
+            "Custo Padrão",
+            "Custo Padrão",
+            "Custo Padrão",
+            "Custo Real",
+            "Custo Real",
+            "Custo Real"
+          ],
+          [
+            "",
+            "Quantidade",
+            "Custo Unitário",
+            "Custo Total",
+            "Quantidade",
+            "Custo Unitário",
+            "Custo Total"
+          ]
+        ],
+        "bodyRows": [
+          [
+            "Tecido Jeans",
+            "1,50",
+            "45,00",
+            "67,50",
+            "2,00",
+            "55,00",
+            "110,00"
+          ],
+          [
+            "Botão",
+            "3,00",
+            "6,55",
+            "19,65",
+            "6,00",
+            "5,47",
+            "32,82"
+          ],
+          [
+            "Linha",
+            "220,00",
+            "0,15",
+            "33,00",
+            "290,00",
+            "0,11",
+            "31,90"
+          ]
+        ]
+      },
+      {
+        "type": "p",
+        "content": "A gestora da companhia tem por costume utilizar o método de custo padrão para tomar suas decisões. <br>A partir dos dados apresentados, assinale a principal conclusão a respeito da variação dos insumos de produção."
+      }
+    ],
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "Todas as variações foram desfavoráveis."
+      },
+      {
+        "letra": "B",
+        "texto": "Todas as variações de quantidade foram desfavoráveis."
+      },
+      {
+        "letra": "C",
+        "texto": "As variações de custo unitário dos itens botão e linha foram desfavoráveis."
+      },
+      {
+        "letra": "D",
+        "texto": "O tecido jeans foi o único insumo da produção que teve variações favoráveis."
+      }
+    ],
+    "gabarito": "B",
+    "gabarito_texto": "Todas as variações de quantidade foram desfavoráveis.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 38,
+    "ano": 2024,
+    "exame": "CFC 2024/1",
+    "banca": "FGV",
+    "disciplina": "Contabilidade Gerencial",
+    "tags": [
+      "Custos para Decisão"
+    ],
+    "enunciado": "Observe a seguinte definição: <br>Conceito fundamental de finanças e economia que diz respeito aos benefícios que podem ser perdidos quando uma opção é escolhida em detrimento de outra; em outras palavras, ele representa o valor da melhor opção a ser considerada após a tomada de decisão. <br>A definição é referente a",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "Custo Controlável."
+      },
+      {
+        "letra": "B",
+        "texto": "Custo de Oportunidade."
+      },
+      {
+        "letra": "C",
+        "texto": "Custo Perdido."
+      },
+      {
+        "letra": "D",
+        "texto": "Custos Imputados."
+      }
+    ],
+    "gabarito": "B",
+    "gabarito_texto": "Custo de Oportunidade.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 39,
+    "ano": 2024,
+    "exame": "CFC 2024/1",
+    "banca": "FGV",
+    "disciplina": "Contabilidade Gerencial",
+    "tags": [
+      "Análise das Demonstrações Contábeis"
+    ],
+    "enunciado": [
+      {
+        "type": "p",
+        "content": "A Sociedade Empresária Alegria Alegria Ltda. apresentou o seguinte Balanço Patrimonial em 31/12/20X1:"
+      },
+      {
+        "type": "table",
+        "headerRows": [
+          [
+            {
+            "content": "Balanço Patrimonial – ALEGRIA ALEGRIA Ltda.",
+            "colspan": "6"
+            }
+          ],
+          [
+            {
+              "content": "31/12/20X1",
+              "colspan": "6"
+            } 
+          ]
+        ],
+        "bodyRows": [
+          [
+            "Ativo",
+            "31/12/20X1",
+            "31/12/20X0",
+            "Passivo",
+            "31/12/20X1",
+            "31/12/20X0"
+          ],
+          [
+            "Circulante",
+            "145.000,00",
+            "290.000,00",
+            "Circulante",
+            "34.000,00",
+            "68.000,00"
+          ],
+          [
+            "Banco",
+            "25.000,00",
+            "50.000,00",
+            "Fornecedores",
+            "12.000,00",
+            "24.000,00"
+          ],
+          [
+            "Caixa",
+            "40.000,00",
+            "80.000,00",
+            "Duplicatas a pagar",
+            "22.000,00",
+            "44.000,00"
+          ],
+          [
+            "Estoque",
+            "80.000,00",
+            "160.000,00",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "Não Circulante",
+            "270.000,00",
+            "540.000,00",
+            "Não Circulante",
+            "145.000,00",
+            "290.000,00"
+          ],
+          [
+            "Realizável a Longo Prazo",
+            "35.000,00",
+            "70.000,00",
+            "",
+            "",
+            ""
+          ],
+          [
+            "Imobilizado",
+            "145.000,00",
+            "290.000,00",
+            "Patrimônio Líquido",
+            "236.000,00",
+            "472.000,00"
+          ],
+          [
+            "Investimentos",
+            "55.000,00",
+            "110.000,00",
+            "Capital Social",
+            "236.000,00",
+            "472.000,00"
+          ],
+          [
+            "Intangível",
+            "35.000,00",
+            "70.000,00",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "Total Ativo",
+            "415.000,00",
+            "830.000,00",
+            "Total Passivo",
+            "415.000,00",
+            "830.000,00"
+          ]
+        ]
+      },
+      {
+        "type": "p",
+        "content": "A partir dos dados apresentados é correto afirmar que"
+      }
+    ],
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "o percentual dos ativos financiados por capital de terceiros corresponde a 8,19% em 20X1."
+      },
+      {
+        "letra": "B",
+        "texto": "a liquidez corrente em 20X1 é 111.000,00 e em 20X0 é -68.000,00."
+      },
+      {
+        "letra": "C",
+        "texto": "a empresa não tem capacidade de pagamento a curto prazo em 20X0 e em 20X1, sem considerar os seus estoques."
+      },
+      {
+        "letra": "D",
+        "texto": "a empresa possui mais que 50% dos seus recursos aplicados no ativo não circulante em 20X0."
+      }
+    ],
+    "gabarito": "D",
+    "gabarito_texto": "a empresa possui mais que 50% dos seus recursos aplicados no ativo não circulante em 20X0.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 40,
+    "ano": 2024,
+    "exame": "CFC 2024/1",
+    "banca": "FGV",
+    "disciplina": "Contabilidade Gerencial",
+    "tags": [
+      "Custos para Decisão"
+    ],
+    "enunciado": [
+      {
+        "type": "p",
+        "content": "Uma fábrica de brinquedos produz dois tipos de carrinhos: com quatro portas e com duas portas. A demanda mensal de cada tipo de carrinho é de 200 e de 250 unidades, respectivamente. Além disso, o preço de venda e o custo variável unitário de cada tipo de carrinho são os seguintes:"
+      },
+      {
+        "type": "table",
+        "headerRows": [
+          [
+            "Tipo de carrinho",
+            "Preço de venda",
+            "Custo variável"
+          ]
+        ],
+        "bodyRows": [
+          [
+            "Quatro portas",
+            "100",
+            "40"
+          ],
+          [
+            "Duas portas",
+            "70",
+            "30"
+          ]
+        ]
+      },
+      {
+        "type": "p",
+        "content": "Em janeiro de 2024, a fábrica tinha 900 portas para a produção dos carrinhos que seriam vendidos em fevereiro e não era possível realizar compras adicionais. <br>Com o objetivo de maximização do resultado, assinale a opção que indica, respectivamente, o número de carrinhos de quatro e de duas portas que devem ser produzidos."
+      }
+    ],
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "100 e 250."
+      },
+      {
+        "letra": "B",
+        "texto": "200 e 250."
+      },
+      {
+        "letra": "C",
+        "texto": "225 e zero."
+      },
+      {
+        "letra": "D",
+        "texto": "800 e 50."
+      }
+    ],
+    "gabarito": "A",
+    "gabarito_texto": "100 e 250.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 41,
+    "ano": 2024,
+    "exame": "CFC 2024/1",
+    "banca": "FGV",
+    "disciplina": "Contabilidade Gerencial",
+    "tags": [
+      "Análise das Demonstrações Contábeis"
+    ],
+    "enunciado": "Um contador realizou uma análise completa das demonstrações contábeis de uma empresa, efetuando as análises horizontal, vertical e por indicadores. <br>O contador constatou que as seguintes metodologias de análise traziam o mesmo resultado:",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "análise vertical do Balanço Patrimonial e indicadores de prazos médios."
+      },
+      {
+        "letra": "B",
+        "texto": "análise horizontal do Balanço Patrimonial e indicadores de liquidez."
+      },
+      {
+        "letra": "C",
+        "texto": "análise vertical da Demonstração do Resultado do Exercício e indicadores de lucratividade."
+      },
+      {
+        "letra": "D",
+        "texto": "análise horizontal da Demonstração do Resultado do Exercício e indicadores de rentabilidade."
+      }
+    ],
+    "gabarito": "C",
+    "gabarito_texto": "análise vertical da Demonstração do Resultado do Exercício e indicadores de lucratividade.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 42,
+    "ano": 2024,
+    "exame": "CFC 2024/1",
+    "banca": "FGV",
+    "disciplina": "Contabilidade Gerencial",
+    "tags": [
+      "Análise das Demonstrações Contábeis"
+    ],
+    "enunciado": "Uma sociedade empresária apresentou os seguintes saldos em seu Balanço Patrimonial em 31/12/2023: <br>• Capital Social: 180.000; <br>• Disponibilidades: 80.000; <br>• Empréstimos a pagar a Longo Prazo: 150.000; <br>• Estoques: 20.000; <br>• Fornecedores a pagar: 70.000; <br>• Imobilizado: 130.000; <br>• Realizável a Longo Prazo: 170.000. <br>Considerando apenas os saldos dessas contas, a liquidez corrente aproximada da sociedade empresária em 31/12/2023 foi",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "1,14."
+      },
+      {
+        "letra": "B",
+        "texto": "1,23."
+      },
+      {
+        "letra": "C",
+        "texto": "1,43."
+      },
+      {
+        "letra": "D",
+        "texto": "1,82."
+      }
+    ],
+    "gabarito": "C",
+    "gabarito_texto": "1,43.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 43,
+    "ano": 2024,
+    "exame": "CFC 2024/1",
+    "banca": "FGV",
+    "disciplina": "Contabilidade Aplicada ao Setor Público",
+    "tags": [
+      "Reflexo Patrimonial das Despesas de Exercícios Anteriores"
+    ],
+    "enunciado": "O setor de contabilidade de um determinado ente público estadual identificou que, em janeiro de 2024, parte dos benefícios a serem pagos aos servidores ativos não foram processados em época própria, quando foi observado o direito ao recebimento, em outubro de 2023. <br>Ao proceder com a emissão de empenho, considerando que o orçamento do referido ano consignava crédito próprio, com saldo suficiente para atendê-los, os benefícios foram classificados contabilmente como",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "despesa corrente."
+      },
+      {
+        "letra": "B",
+        "texto": "despesa de capital."
+      },
+      {
+        "letra": "C",
+        "texto": "despesa de exercícios anteriores."
+      },
+      {
+        "letra": "D",
+        "texto": "despesa extraordinária."
+      }
+    ],
+    "gabarito": "C",
+    "gabarito_texto": "despesa de exercícios anteriores.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 44,
+    "ano": 2024,
+    "exame": "CFC 2024/1",
+    "banca": "FGV",
+    "disciplina": "Contabilidade Aplicada ao Setor Público",
+    "tags": [
+      "Receita de Transação com Contraprestação"
+    ],
+    "enunciado": "Nas eleições realizadas em outubro de 2022, uma escola do setor público funcionou como seção eleitoral para a realização da votação. A escola geralmente recebe R$5.000 ao ceder o seu espaço para a realização de outras atividades, no entanto, como se tratava de eleições, a escola cobrou R$4.500. <br>Em outubro de 2022, a escola reconheceu uma receita",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "com contraprestração de R$4.500."
+      },
+      {
+        "letra": "B",
+        "texto": "com contraprestração de R$5.000."
+      },
+      {
+        "letra": "C",
+        "texto": "sem contraprestração de R$4.500."
+      },
+      {
+        "letra": "D",
+        "texto": "sem contraprestração de R$5.000."
+      }
+    ],
+    "gabarito": "A",
+    "gabarito_texto": "com contraprestração de R$4.500.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 45,
+    "ano": 2024,
+    "exame": "CFC 2024/1",
+    "banca": "FGV",
+    "disciplina": "Contabilidade Aplicada ao Setor Público",
+    "tags": [
+      "Princípios Orçamentários - Setor Público"
+    ],
+    "enunciado": "Em relação às despesas orçamentárias, avalie se as despesas a seguir são classificadas como despesas correntes: <br>I. Despesas de custeio. <br>II. Investimentos. <br>III. Inversões Financeiras. <br>Está correto o que se apresenta em",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "I, apenas."
+      },
+      {
+        "letra": "B",
+        "texto": "I e II, apenas."
+      },
+      {
+        "letra": "C",
+        "texto": "I e III, apenas."
+      },
+      {
+        "letra": "D",
+        "texto": "II e III, apenas."
+      }
+    ],
+    "gabarito": "A",
+    "gabarito_texto": "I, apenas.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 46,
+    "ano": 2024,
+    "exame": "CFC 2024/1",
+    "banca": "FGV",
+    "disciplina": "Controladoria",
+    "tags": [
+      "Compliance",
+      "Gestão e Controladoria"
+    ],
+    "enunciado": "No ambiente empresarial, é cada vez mais relevante a criação de regras claras e de consciência sobre a importância do combate às irregularidades e aos desvios de conduta. Uma cultura de integridade é pautada por ética e transparência nos negócios e nas relações de trabalho e se baseia em um conjunto de regras, normas, políticas, processos e ferramentas voltado a prevenir, detectar e corrigir eventuais desvios. Além disso, deve-se incentivar a implantação de boas práticas de governança, programas de compliance, mecanismos de gerenciamento de riscos e controles internos. <br>Em relação ao tema, analise as afirmativas a seguir e assinale (V) para a verdadeira e (F) para a falsa. <br>( ) A governança corporativa se resume em mitigar prejuízos causados pelos conflitos de interesses entre acionistas e gestores. <br>( ) O compliance é o instrumento de comprovação de aderência a normas e requerimentos estabelecidos, tanto o alinhamento a regras internas como o atendimento a normas externas decorrentes de leis e regulamentos. <br>( ) Risco de compliance é o risco de sanções legais ou regulatórias, perdas financeiras ou danos reputacionais, medidas administrativas ou criminais aplicadas à empresa, decorrentes da falta de cumprimento de disposições legais, regulamentares, normas, autorregulações, padrões técnicos ou códigos de conduta. <br>( ) Assédios, bullying, discriminação, conduta trabalhista ilícita e outros tipos de comportamentos abusivos não causam danos à reputação da empresa, ao clima organizacional e aos colaboradores, nem geram impacto nos resultados. <br>As afirmativas são, respectivamente,",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "V – F – F – F."
+      },
+      {
+        "letra": "B",
+        "texto": "F – V – V – V."
+      },
+      {
+        "letra": "C",
+        "texto": "F – F – V – V."
+      },
+      {
+        "letra": "D",
+        "texto": "F – V – V – F."
+      }
+    ],
+    "gabarito": "D",
+    "gabarito_texto": "F – V – V – F.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 47,
+    "ano": 2024,
+    "exame": "CFC 2024/1",
+    "banca": "FGV",
+    "disciplina": "Auditoria Contábil",
+    "tags": [
+      "Outros Aspectos Relevantes"
+    ],
+    "enunciado": "Joaquim, auditor renomado, foi consultado pela firma de auditoria Novos Auditores ABC, com a seguinte problemática: ao realizarem a análise do Balanço Patrimonial de um de seus clientes, foi constatado um valor substancial de Fornecedores em seu Passivo em todos os meses, caracterizando um acordo firmado de maneira recorrente; apesar disso, não foi encontrado na documentação de seu cliente o contrato que assegurasse essa relação contratual. <br>De acordo com a NBC TA 500 - EVIDÊNCIA DE AUDITORIA, nessa situação hipotética, assinale o procedimento mais adequado que Joaquim deveria indicar à firma Novos Auditores ABC, para que eles confirmassem tal relação.",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "Observação."
+      },
+      {
+        "letra": "B",
+        "texto": "Recálculo."
+      },
+      {
+        "letra": "C",
+        "texto": "Análise Recombinante."
+      },
+      {
+        "letra": "D",
+        "texto": "Confirmação Externa."
+      }
+    ],
+    "gabarito": "D",
+    "gabarito_texto": "Confirmação Externa.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 48,
+    "ano": 2024,
+    "exame": "CFC 2024/1",
+    "banca": "FGV",
+    "disciplina": "Auditoria Contábil",
+    "tags": [
+      "Modificações Na Opinião Do Auditor Independente"
+    ],
+    "enunciado": "Com base na NBC TA 705 – MODIFICAÇÕES NA OPINIÃO DO AUDITOR INDEPENDENTE, o tipo de parecer que o Auditor deve emitir quando, tendo obtido evidência de auditoria apropriada e suficiente, conclui que as distorções, individualmente ou em conjunto, são relevantes e generalizadas para as demonstrações contábeis é",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "a opinião com ressalva."
+      },
+      {
+        "letra": "B",
+        "texto": "a opinião adversa."
+      },
+      {
+        "letra": "C",
+        "texto": "a abstenção de opinião."
+      },
+      {
+        "letra": "D",
+        "texto": "o parágrafo de ênfase."
+      }
+    ],
+    "gabarito": "B",
+    "gabarito_texto": "a opinião adversa.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 49,
+    "ano": 2024,
+    "exame": "CFC 2024/1",
+    "banca": "FGV",
+    "disciplina": "Perícia Contábil",
+    "tags": [
+      "Aspectos Técnicos"
+    ],
+    "enunciado": "Acerca dos procedimentos periciais, julgue as afirmativas a seguir, considerando as disposições da NBC TP 01 (R1) – PERÍCIA CONTÁBIL: <br>I. Indagação é a busca de informações mediante entrevista com conhecedores do objeto ou de fato relacionado à perícia. <br>II. Arbitramento é a determinação de valores e quantidades ou a solução de controvérsia por critério técnico-científico. <br>III. Vistoria é a análise de livros, registros de transações e documentos. <br>Está correto apenas o que se afirma em",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "II."
+      },
+      {
+        "letra": "B",
+        "texto": "I e III."
+      },
+      {
+        "letra": "C",
+        "texto": "III."
+      },
+      {
+        "letra": "D",
+        "texto": "I e II."
+      }
+    ],
+    "gabarito": "D",
+    "gabarito_texto": "I e II.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  },
+  {
+    "id": 50,
+    "ano": 2024,
+    "exame": "CFC 2024/1",
+    "banca": "FGV",
+    "disciplina": "Perícia Contábil",
+    "tags": [
+      "Aspectos Profissionais"
+    ],
+    "enunciado": "No que tange ao conceito de honorários da perícia contábil, é correto afirmar, com base na NBC PP 01 (R1) – PERITO CONTÁBIL, que",
+    "opcoes": [
+      {
+        "letra": "A",
+        "texto": "os honorários periciais fixados ou arbitrados e não quitados podem ser executados, judicialmente, pelo perito em conformidade com os dispositivos do Código de Processo Civil."
+      },
+      {
+        "letra": "B",
+        "texto": "ainda que a perícia seja considerada inconclusiva ou ineficiente, não há hipótese prevista em lei que determine a devolução parcial ou total dos valores recebidos."
+      },
+      {
+        "letra": "C",
+        "texto": "o perito nomeado pode requerer a liberação de até 30% dos honorários depositados, quando julgar necessário para o custeio antes do início dos trabalhos."
+      },
+      {
+        "letra": "D",
+        "texto": "na elaboração da proposta de honorários, o perito deve considerar, entre outros fatores: quem será o magistrado da causa; quem são as partes da causa; a complexidade da matéria e o prazo estabelecido para o recebimento dos honorários."
+      }
+    ],
+    "gabarito": "A",
+    "gabarito_texto": "os honorários periciais fixados ou arbitrados e não quitados podem ser executados, judicialmente, pelo perito em conformidade com os dispositivos do Código de Processo Civil.",
+    "resolucao": "",
+    "autor_resolucao": "",
+    "obsoleta": false,
+    "anulada": false,
+    "lancamentos": []
+  }
+]

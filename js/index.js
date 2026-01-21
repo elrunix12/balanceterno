@@ -22,110 +22,55 @@
  */
 
 // -------------------------------------------------------------------
-//   Configuração Global de Disciplinas e Variáveis
+//   Configuração Global e Variáveis
 // -------------------------------------------------------------------
 
 /**
- * Configuração central das disciplinas.
- * - 'arquivo': Caminho para o JSON da disciplina.
- * - 'questoes': Array (inicialmente vazio) que armazenará as questões carregadas.
- * - 'allTags': Set (inicialmente vazio) que armazenará todas as ementas (tags) da disciplina.
- * - 'className': Classe CSS usada para estilizar os cards e filtros da disciplina.
+ * LISTA DE ARQUIVOS DE EXAME
+ * Nota: Como estamos rodando no cliente (browser), não podemos escanear pastas.
+ * Você deve listar os arquivos gerados aqui ou criar um 'index.json' no Python.
  */
-const configDisciplinas = {
-    "Contabilidade Societária": {
-        arquivo: 'disciplinas/contabilidade-societaria.json',
-        questoes: [],
-        allTags: new Set(),
-        className: 'disciplina-societaria'
-    },
-    "Contabilidade Gerencial": {
-        arquivo: 'disciplinas/contabilidade-gerencial.json',
-        questoes: [],
-        allTags: new Set(),
-        className: 'disciplina-gerencial'
-    },
-    "Contabilidade Geral e Teoria": {
-        arquivo: 'disciplinas/contabilidade-geral.json',
-        questoes: [],
-        allTags: new Set(),
-        className: 'disciplina-geral'
-    },
-    "Língua Portuguesa": {
-        arquivo: 'disciplinas/lingua-portuguesa.json',
-        questoes: [],
-        allTags: new Set(),
-        className: 'disciplina-portugues'
-    },
-    "Matemática e Estatística": {
-        arquivo: 'disciplinas/mat-financeira-estatistica.json',
-        questoes: [],
-        allTags: new Set(),
-        className: 'disciplina-exatas'
-    },
-    "Elaborações das Demonstrações Contábeis": {
-        arquivo: 'disciplinas/elaboracoes-dc.json',
-        questoes: [],
-        allTags: new Set(),
-        className: 'disciplina-elaboracoes-dc'
-    },
-    "Legislação e Ética Profissional": {
-        arquivo: 'disciplinas/etica.json',
-        questoes: [],
-        allTags: new Set(),
-        className: 'disciplina-etica'
-    },
-    "Noções de Direito e Legislação Aplicada": {
-        arquivo: 'disciplinas/direito.json',
-        questoes: [],
-        allTags: new Set(),
-        className: 'disciplina-direito'
-    },
-    "Contabilidade de Custos": {
-        arquivo: 'disciplinas/contabilidade-custos.json',
-        questoes: [],
-        allTags: new Set(),
-        className: 'disciplina-custos'
-    },
-    "Análise das demonstrações Contábeis": {
-        arquivo: 'disciplinas/analise-dc.json',
-        questoes: [],
-        allTags: new Set(),
-        className: 'disciplina-analise-dc'
-    },
-    "Contabilidade Pública": {
-        arquivo: 'disciplinas/contabilidade-publica.json',
-        questoes: [],
-        allTags: new Set(),
-        className: 'disciplina-publica'
-    },
-    "Auditoria Contábil": {
-        arquivo: 'disciplinas/auditoria.json',
-        questoes: [],
-        allTags: new Set(),
-        className: 'disciplina-auditoria'
-    },
-    "Controladoria": {
-        arquivo: 'disciplinas/controladoria.json',
-        questoes: [],
-        allTags: new Set(),
-        className: 'disciplina-controladoria'
-    },
-    "Perícia Contábil": {
-        arquivo: 'disciplinas/pericia.json',
-        questoes: [],
-        allTags: new Set(),
-        className: 'disciplina-pericia'
-    },
-    "Contabilidade Tributária": {
-        arquivo: 'disciplinas/cont-tributaria.json',
-        questoes: [],
-        allTags: new Set(),
-        className: 'disciplina-tributaria'
-    },
+const ARQUIVOS_EXAMES = [
+    // 'exames/CFC_2025_02.json',
+    'exames/CFC_2022_01.json',
+    'exames/CFC_2022_02.json',
+    'exames/CFC_2023_01.json',
+    'exames/CFC_2023_02.json',
+    'exames/CFC_2024_01.json',
+    'exames/CFC_2024_01_RS.json',
+    'exames/CFC_2024_02.json',
+    'exames/CFC_2025_01.json',
+    'exames/CFC_2025_02.json',
+    //'exames/CFC_2025_01.json',
+    //'exames/CFC_2024_02.json',
+    // Adicione os novos arquivos aqui conforme forem gerados...
+];
+
+/**
+ * Mapeamento visual para manter as cores das disciplinas.
+ * (De-Para: Nome no JSON -> Classe CSS)
+ */
+const MAPA_CLASSES_CSS = {
+    "Língua Portuguesa": "disciplina-portugues",
+    "Matemática Financeira e Estatística": "disciplina-exatas",
+    "Noções de Direito e Legislação Aplicada": "disciplina-direito",
+    "Legislação e Ética Profissional": "disciplina-etica",
+    "Teoria da Contabilidade": "disciplina-geral", // Pode usar a cor de Geral ou criar uma nova CSS
+    "Contabilidade Geral e NBCs": "disciplina-societaria",
+    "Contabilidade de Custos": "disciplina-custos",
+    "Contabilidade Gerencial": "disciplina-gerencial",
+    "Contabilidade Aplicada ao Setor Público": "disciplina-publica",
+    "Controladoria": "disciplina-controladoria",
+    "Auditoria Contábil": "disciplina-auditoria",
+    "Perícia Contábil": "disciplina-pericia",
 };
 
-// Referências aos elementos do HTML
+// --- Estado Global ---
+let todasAsQuestoes = []; // Armazena TODAS as questões carregadas (Flat List)
+let ementaGlobal = {};    // Armazena a estrutura do ementa.json
+let cpcData = {};         // Armazena dados dos CPCs
+
+// --- Referências ao DOM ---
 const disciplinaCheckContainer = document.getElementById('disciplina-checkbox-container');
 const checkContainer = document.getElementById('checkbox-container'); // Ementas
 const questoesContainer = document.getElementById('questoes-container');
@@ -138,15 +83,12 @@ const initialPrompt = document.getElementById('initial-prompt');
 const btnCheckAllDisciplinas = document.getElementById('btn-check-all-disciplinas');
 const btnCheckAllEmentas = document.getElementById('btn-check-all-ementas');
 const contributorsListContainer = document.getElementById('contributors-list');
-let cpcData = {};
 
-// Variáveis para o Lazy Loading (Scroll Infinito)
+// --- Lazy Loading (Scroll Infinito) ---
 let observer = null;
 let listaCompletaFiltrada = [];
 let indiceAtual = 0;
-const TAMANHO_LOTE = 20; // Quantas questões carregar por vez
-
-// Cria a "sentinela" que vamos observar no final da página
+const TAMANHO_LOTE = 20; 
 const sentinela = document.createElement('div');
 sentinela.id = 'sentinela-lazy-load';
 
@@ -155,13 +97,26 @@ sentinela.id = 'sentinela-lazy-load';
 //   LÓGICA DA PÁGINA (Inicialização e Funções)
 // -------------------------------------------------------------------
 
-/**
- * Ponto de entrada principal.
- * Aguarda o HTML ser carregado para iniciar a lógica da aplicação.
- */
 document.addEventListener('DOMContentLoaded', () => {
 
-    // --- LÓGICA DAS TABS (com load-on-demand) ---
+    // --- TABS E INTERFACE ---
+    setupTabs();
+    setupEmentaToggle();
+    setupMobileTooltips();
+
+    // --- CARREGAMENTO DE DADOS ---
+    carregarDados();
+    carregarContribuidores();
+
+    // --- LISTENERS GERAIS ---
+    setupListeners();
+});
+
+// -------------------------------------------------------------------
+//   FUNÇÕES DE SETUP (Organização)
+// -------------------------------------------------------------------
+
+function setupTabs() {
     const tabButtons = document.querySelectorAll('.tab-button');
     const tabPanels = document.querySelectorAll('.tab-panel');
     let changelogCarregado = false;
@@ -169,140 +124,111 @@ document.addEventListener('DOMContentLoaded', () => {
     tabButtons.forEach(button => {
         button.addEventListener('click', () => {
             const targetId = button.getAttribute('data-target');
-
-            // Carrega o changelog sob demanda (só na primeira vez)
             if (targetId === 'tab-changelog' && !changelogCarregado) {
                 carregarChangelog();
                 changelogCarregado = true;
             }
-
             const targetPanel = document.getElementById(targetId);
-
             tabButtons.forEach(btn => btn.classList.remove('active'));
             tabPanels.forEach(panel => panel.classList.remove('active'));
-
             button.classList.add('active');
-            if (targetPanel) {
-                targetPanel.classList.add('active');
-            }
+            if (targetPanel) targetPanel.classList.add('active');
         });
     });
 
-    // --- LÓGICA PARA LINKS INTERNOS DAS TABS ---
-    const inlineTabLinks = document.querySelectorAll('.inline-tab-link');
-    inlineTabLinks.forEach(link => {
+    // Links Internos
+    document.querySelectorAll('.inline-tab-link').forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
             const targetTabId = link.getAttribute('data-target-tab');
             if (!targetTabId) return;
-
             const targetButton = document.querySelector(`.tab-button[data-target="${targetTabId}"]`);
-
             if (targetButton) {
                 targetButton.click();
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             }
         });
     });
+}
 
-    // --- LÓGICA DE OCULTAR E FILTRAR EMENTAS ---
+function setupEmentaToggle() {
     const btnToggleEmentas = document.getElementById('btn-toggle-ementas');
     const searchEmentasInput = document.getElementById('search-ementas-input');
     const ementasWrapper = document.getElementById('ementas-toggle-wrapper');
     
+    if(!btnToggleEmentas) return;
+
     ementasWrapper.style.display = 'none';
     btnToggleEmentas.dataset.visible = 'false';
-    btnToggleEmentas.textContent = '[ Exibir ]'
+    btnToggleEmentas.textContent = '[ Exibir ]';
 
     btnToggleEmentas.addEventListener('click', () => {
-        const wrapper = document.getElementById('ementas-toggle-wrapper');
         const isVisible = btnToggleEmentas.dataset.visible === 'true';
-
         if (isVisible) {
-            wrapper.style.display = 'none';
+            ementasWrapper.style.display = 'none';
             btnToggleEmentas.dataset.visible = 'false';
             btnToggleEmentas.textContent = '[ Exibir ]';
         } else {
-            wrapper.style.display = 'block';
+            ementasWrapper.style.display = 'block';
             btnToggleEmentas.dataset.visible = 'true';
             btnToggleEmentas.textContent = '[ Ocultar ]';
         }
     });
     searchEmentasInput.addEventListener('input', filtrarEmentasPorTexto);
+}
 
-    // --- LÓGICA PARA TOOLTIP DE QUESTÕES OBSOLETAS (MOBILE) ---
+function setupMobileTooltips() {
     const obsoletaTooltip = document.getElementById('obsoleta-tooltip-trigger');
     if (obsoletaTooltip) {
         obsoletaTooltip.addEventListener('click', (e) => {
             e.preventDefault();
             e.stopPropagation();
-            const message = obsoletaTooltip.getAttribute('title');
-            if (message) {
-                alert(message);
-            }
+            alert(obsoletaTooltip.getAttribute('title'));
         });
     }
+}
 
-    // --- CARREGAMENTO INICIAL DOS DADOS ---
-    carregarDados();
-    carregarContribuidores();
-
-
-    // --- LISTENERS DOS FILTROS PRINCIPAIS ---
+function setupListeners() {
+    // Botão Limpar Filtros
     btnClear.addEventListener('click', () => {
-        disciplinaCheckContainer.querySelectorAll('input[type="checkbox"]').forEach(check => {
-            check.checked = false;
-        });
-        checkContainer.querySelectorAll('input[type="checkbox"]').forEach(check => {
-            check.checked = false;
-        });
-        exameCheckContainer.querySelectorAll('input[type="checkbox"]').forEach(check => {
-            check.checked = false;
-        });
+        document.querySelectorAll('input[type="checkbox"]').forEach(c => c.checked = false);
         document.getElementById('filter-resolucao').checked = false;
         sortAnoDropdown.value = 'decrescente';
         searchInput.value = '';
         document.getElementById('obsoleta-sim').checked = true;
 
-        renderizarFiltrosDeEmenta(); // Atualiza ementas (vai mostrar o aviso)
-        renderizarQuestoes(); // Atualiza questões (vai mostrar o prompt inicial)
-        atualizarBotaoDisciplinas(); // Sincroniza o botão "Marcar Todas"
-
-        document.getElementById('ementas-toggle-wrapper').style.display = 'none';
-        btnToggleEmentas.dataset.visible = 'false';
-        btnToggleEmentas.textContent = '[ Exibir ]';
-        searchEmentasInput.value = '';
+        renderizarFiltrosDeEmenta(); 
+        renderizarQuestoes(); 
+        atualizarBotaoDisciplinas();
+        
+        // Reseta UI de Ementas
+        const btnToggle = document.getElementById('btn-toggle-ementas');
+        const wrapper = document.getElementById('ementas-toggle-wrapper');
+        const searchInputEmenta = document.getElementById('search-ementas-input');
+        if (btnToggle && wrapper) {
+            wrapper.style.display = 'none';
+            btnToggle.dataset.visible = 'false';
+            btnToggle.textContent = '[ Exibir ]';
+            searchInputEmenta.value = '';
+        }
     });
 
-        // Expande e limpa o filtro de ementas
-        document.getElementById('ementas-toggle-wrapper').style.display = 'block';
-        btnToggleEmentas.dataset.visible = 'true';
-        btnToggleEmentas.textContent = '[ Ocultar ]';
-        searchEmentasInput.value = '';
-    });
-
+    // Botões Marcar Todas
     btnCheckAllDisciplinas.addEventListener('click', () => {
         const newState = btnCheckAllDisciplinas.dataset.checked === 'false';
-        disciplinaCheckContainer.querySelectorAll('input[type="checkbox"]').forEach(check => {
-            check.checked = newState;
-        });
-        // Atualiza o estado do botão
+        disciplinaCheckContainer.querySelectorAll('input[type="checkbox"]').forEach(c => c.checked = newState);
         btnCheckAllDisciplinas.dataset.checked = newState;
         btnCheckAllDisciplinas.textContent = newState ? "Desmarcar Todas" : "Marcar Todas";
-
         renderizarFiltrosDeEmenta();
         renderizarQuestoes();
     });
 
     btnCheckAllEmentas.addEventListener('click', () => {
         const newState = btnCheckAllEmentas.dataset.checked === 'false';
-        // Seleciona apenas os checkboxes visíveis (não filtrados pelo texto)
         checkContainer.querySelectorAll('.ementa-group-grid label').forEach(label => {
             if (label.style.display !== 'none') {
                 const check = label.querySelector('input[type="checkbox"]');
-                if (check) {
-                    check.checked = newState;
-                }
+                if (check) check.checked = newState;
             }
         });
         btnCheckAllEmentas.dataset.checked = newState;
@@ -310,843 +236,643 @@ document.addEventListener('DOMContentLoaded', () => {
         renderizarQuestoes();
     });
 
-    // Listeners que disparam a re-renderização das questões
+    // Filtros reativos
     sortAnoDropdown.addEventListener('change', renderizarQuestoes);
     searchInput.addEventListener('input', renderizarQuestoes);
-    document.querySelectorAll('input[name="obsoleta-filter"]').forEach(radio => {
-        radio.addEventListener('change', renderizarQuestoes);
-    });
+    document.querySelectorAll('input[name="obsoleta-filter"]').forEach(r => r.addEventListener('change', renderizarQuestoes));
     document.getElementById('filter-resolucao').addEventListener('change', renderizarQuestoes);
 
+    // Modal de Lançamentos
+    setupModalLancamentos();
+}
 
-    // -------------------------------------------------------------------
-    //   Definição de Funções da Aplicação
-    // -------------------------------------------------------------------
+// -------------------------------------------------------------------
+//   FUNÇÕES DE DADOS (Core)
+// -------------------------------------------------------------------
 
-    /**
-     * Carrega todos os arquivos JSON de disciplinas e normas (CPCs)
-     * e, ao finalizar, renderiza os filtros e as questões.
-     */
-    async function carregarDados() {
-        const promessas = Object.entries(configDisciplinas).map(async ([nome, config]) => {
+/**
+ * Carrega Ementa, CPCs e Questões (agrupadas por Exame)
+ */
+async function carregarDados() {
+    try {
+        // 1. Carrega a Ementa (Define as disciplinas e tags)
+        try {
+            const respEmenta = await fetch('etl/ementa.json');
+            if (respEmenta.ok) ementaGlobal = await respEmenta.json();
+            else console.warn("Aviso: etl/ementa.json não encontrado ou inválido.");
+        } catch (e) { console.warn("Erro ao carregar ementa:", e); }
+
+        // 2. Carrega CPCs
+        try {
+            const respCpc = await fetch('normas/cpcs.json');
+            if (respCpc.ok) cpcData = await respCpc.json();
+        } catch (e) { cpcData = {}; }
+
+        // 3. Carrega Questões dos Arquivos de Exame
+        const promessasExames = ARQUIVOS_EXAMES.map(async (caminho) => {
             try {
-                const response = await fetch(config.arquivo);
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status} para ${config.arquivo}`);
-                }
-                const data = await response.json();
+                const resp = await fetch(caminho);
+                if (!resp.ok) throw new Error(resp.statusText);
+                
+                let dados = await resp.json();
 
-                // Armazena os dados carregados na configuração global
-                config.questoes = data;
-                data.forEach(q => {
-                    q.disciplina = nome; // Injeta o nome da disciplina em cada questão
-                    if (q.tags && Array.isArray(q.tags)) {
-                        q.tags.forEach(tag => config.allTags.add(tag));
-                    }
-                });
+                // REMOVE A LICENÇA (filtra metadados)
+                dados = dados.filter(item => item.tipo !== 'metadados_licenca');
 
-            } catch (error) {
-                console.error(`Erro ao carregar a disciplina "${nome}" (${config.arquivo}):`, error);
+                // Adiciona ao array global
+                todasAsQuestoes.push(...dados);
+            } catch (err) {
+                console.error(`Erro ao carregar ${caminho}:`, err);
             }
         });
 
-        // Aguarda todas as disciplinas carregarem
-        await Promise.all(promessas);
+        await Promise.all(promessasExames);
+        console.log(`Carregadas ${todasAsQuestoes.length} questões no total.`);
 
-        // Carrega os dados das normas (CPCs)
-        try {
-            const response = await fetch('normas/cpcs.json');
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status} para cpcs.json`);
-            }
-            cpcData = await response.json();
-        } catch (error) {
-            console.error('Erro ao carregar cpcs.json:', error);
-            cpcData = {}; // Garante que cpcData é um objeto e não falha
-        }
-
-        // Renderiza os filtros na tela
+        // 4. Renderiza Interface
         renderizarFiltrosDeDisciplina();
         renderizarFiltrosDeExame();
         renderizarFiltrosDeEmenta();
-        renderizarQuestoes(); // Renderiza o estado inicial (prompt)
+        renderizarQuestoes(); // Estado inicial (Prompt)
+
+    } catch (error) {
+        console.error("Erro fatal no carregamento:", error);
+        infoSpan.textContent = "Erro ao carregar dados. Verifique o console.";
     }
+}
 
-    /**
-     * Função auxiliar para remover acentos e normalizar texto para buscas.
-     * @param {string} text - O texto a ser normalizado.
-     * @returns {string} - O texto sem acentos.
-     */
-    function normalizeText(text) {
-        if (typeof text !== 'string') return '';
-        return text.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+/**
+ * Renderiza checkboxes de disciplinas baseado no ementaGlobal
+ * ou fallback para o que existir nas questões.
+ */
+function renderizarFiltrosDeDisciplina() {
+    let filterHTML = '';
+    
+    // Tenta pegar nomes da ementa, se não tiver, varre as questões
+    let nomesDisciplinas = Object.keys(ementaGlobal);
+    if (nomesDisciplinas.length === 0) {
+        const setDisc = new Set(todasAsQuestoes.map(q => q.disciplina));
+        nomesDisciplinas = Array.from(setDisc);
     }
+    
+    nomesDisciplinas.sort((a, b) => a.localeCompare(b, 'pt-BR'));
 
-    /**
-     * Cria e renderiza os checkboxes de filtro para as DISCIPLINAS.
-     */
-    function renderizarFiltrosDeDisciplina() {
-        let filterHTML = '';
-        const nomesDisciplinas = Object.keys(configDisciplinas).sort((a, b) => a.localeCompare(b, 'pt-BR'));
+    nomesDisciplinas.forEach(nome => {
+        // Conta quantas questões existem dessa disciplina
+        const count = todasAsQuestoes.filter(q => q.disciplina === nome).length;
+        
+        // Define classe CSS
+        let className = MAPA_CLASSES_CSS[nome] || 'disciplina-padrao';
+        if(className === 'disciplina-padrao' && nome.toLowerCase().includes('geral')) className = 'disciplina-geral';
 
-        nomesDisciplinas.forEach(nome => {
-            const config = configDisciplinas[nome];
-            const count = config.questoes.length;
-            const className = config.className || '';
+        filterHTML += `
+            <label class="${className}">
+                <input type="checkbox" class="disciplina-filter-check" value="${nome}">
+                ${nome} (${count})
+            </label>
+        `;
+    });
+    
+    disciplinaCheckContainer.innerHTML = filterHTML;
 
-            filterHTML += `
-                <label class="${className}">
-                    <input type="checkbox" class="disciplina-filter-check" value="${nome}">
-                    ${nome} (${count})
-                </label>
-            `;
+    // Listeners
+    disciplinaCheckContainer.querySelectorAll('.disciplina-filter-check').forEach(check => {
+        check.addEventListener('change', () => {
+            renderizarFiltrosDeEmenta();
+            renderizarQuestoes();
+            atualizarBotaoDisciplinas();
         });
-        disciplinaCheckContainer.innerHTML = filterHTML;
+    });
+    atualizarBotaoDisciplinas();
+}
 
-        // Adiciona listeners aos novos checkboxes
-        disciplinaCheckContainer.querySelectorAll('.disciplina-filter-check').forEach(check => {
-            check.addEventListener('change', () => {
-                renderizarFiltrosDeEmenta();
-                renderizarQuestoes();
-                atualizarBotaoDisciplinas(); // Sincroniza o botão "Marcar Todas"
-            });
-        });
-        
-        // Garante que o botão "Marcar Todas" esteja no estado correto
-        atualizarBotaoDisciplinas();
+/**
+ * Renderiza checkboxes de Ementas (Tags), agrupados por disciplina selecionada.
+ */
+function renderizarFiltrosDeEmenta() {
+    // Preserva seleção anterior
+    const ementasMarcadasAnteriormente = new Set(
+        Array.from(checkContainer.querySelectorAll('.filter-check:checked')).map(c => c.value)
+    );
+    
+    const disciplinasSelecionadas = Array.from(
+        disciplinaCheckContainer.querySelectorAll('.disciplina-filter-check:checked')
+    ).map(c => c.value);
+
+    // Controle de exibição do container
+    const wrapper = document.getElementById('ementas-toggle-wrapper');
+    const btnToggle = document.getElementById('btn-toggle-ementas');
+    
+    wrapper.style.display = 'none'; 
+    if (btnToggle) {
+        btnToggle.dataset.visible = 'false';
+        btnToggle.textContent = '[ Exibir ]';
     }
 
-    /**
-     * Cria e renderiza os checkboxes de filtro para as EMENTAS (tags).
-     * Esta função é reativa: só mostra ementas das disciplinas selecionadas.
-     */
-    function renderizarFiltrosDeEmenta() {
-        // Salva as ementas que já estavam marcadas
-        const ementasMarcadasAnteriormente = new Set(
-            Array.from(checkContainer.querySelectorAll('.filter-check:checked'))
-                .map(check => check.value)
-        );
+    if (disciplinasSelecionadas.length === 0) {
+        checkContainer.innerHTML = '<p style="font-size: 0.9em; color: #777; margin: 0;">(Selecione uma disciplina para ver as ementas)</p>';
+        btnCheckAllEmentas.style.display = 'none';
+        document.getElementById('search-ementas-input').parentElement.style.display = 'none';
         
-        const disciplinasSelecionadas = Array.from(
-            disciplinaCheckContainer.querySelectorAll('.disciplina-filter-check:checked')
-        ).map(check => check.value);
-
-        // Força o contêiner de ementas a ficar oculto por padrão ao renderizar
-        const wrapper = document.getElementById('ementas-toggle-wrapper');
-        const btnToggle = document.getElementById('btn-toggle-ementas');
-        
-        wrapper.style.display = 'none'; // Oculta a lista
+        // Força mostrar o container vazio para o aviso aparecer
+        wrapper.style.display = 'block';
         if (btnToggle) {
-            btnToggle.dataset.visible = 'false';
-            btnToggle.textContent = '[ Exibir ]'; // Reseta o texto do botão
+            btnToggle.dataset.visible = 'true';
+            btnToggle.textContent = '[ Ocultar ]';
         }
-
-        // Se nenhuma disciplina estiver marcada, mostra um aviso
-        if (disciplinasSelecionadas.length === 0) {
-            checkContainer.innerHTML = '<p style="font-size: 0.9em; color: #777; margin: 0;">(Selecione uma disciplina para ver as ementas)</p>';
-            btnCheckAllEmentas.style.display = 'none';
-            document.getElementById('ementas-toggle-wrapper').style.display = 'block';
-            document.getElementById('search-ementas-input').parentElement.style.display = 'none';
-
-            const btnToggleEmentas = document.getElementById('btn-toggle-ementas');
-            if (btnToggleEmentas) {
-                btnToggleEmentas.dataset.visible = 'true';
-                btnToggleEmentas.textContent = '[ Ocultar ]';
-            }
-            return;
-        }
-
-        // Mostra os controles de ementa
-        btnCheckAllEmentas.style.display = 'inline-block';
-        document.getElementById('search-ementas-input').parentElement.style.display = 'block';
-
-        let finalHTML = '';
-        disciplinasSelecionadas.sort((a, b) => a.localeCompare(b, 'pt-BR'));
-
-        // Agrupa as ementas por disciplina
-        disciplinasSelecionadas.forEach(nomeDisciplina => {
-            const tagsDaDisciplina = Array.from(configDisciplinas[nomeDisciplina].allTags).sort();
-            if (tagsDaDisciplina.length === 0) return;
-
-            let groupCheckboxHTML = '';
-            tagsDaDisciplina.forEach(tag => {
-                // Remarca as ementas que já estavam selecionadas
-                const isChecked = ementasMarcadasAnteriormente.has(tag) ? 'checked' : '';
-                groupCheckboxHTML += `
-                    <label>
-                        <input type="checkbox" class="filter-check" value="${tag}" ${isChecked}>
-                        ${tag}
-                    </label>
-                `;
-            });
-
-            finalHTML += `
-                <div class="ementa-group">
-                    <p class="ementa-group-label">${nomeDisciplina}</p>
-                    <div class="ementa-group-grid">
-                        ${groupCheckboxHTML}
-                    </div>
-                </div>
-            `;
-        });
-
-        checkContainer.innerHTML = finalHTML;
-
-        // Adiciona listeners aos novos checkboxes
-        checkContainer.querySelectorAll('.filter-check').forEach(check => {
-            check.addEventListener('change', renderizarQuestoes);
-        });
-
-        // Reseta o botão "Marcar Todas"
-        btnCheckAllEmentas.dataset.checked = 'false';
-        btnCheckAllEmentas.textContent = 'Marcar Todas';
-
-        // Aplica o filtro de texto (caso haja algo digitado)
-        filtrarEmentasPorTexto();
+        return;
     }
 
+    btnCheckAllEmentas.style.display = 'inline-block';
+    document.getElementById('search-ementas-input').parentElement.style.display = 'block';
 
-    /**
-     * Cria e renderiza os checkboxes de filtro para os EXAMES (Ano/Parte).
-     */
-    function renderizarFiltrosDeExame() {
-        // Coleta todos os nomes de exames únicos de todas as disciplinas
-        const masterExameSet = new Set();
-        Object.values(configDisciplinas).forEach(config => {
-            config.questoes.forEach(q => masterExameSet.add(q.exame));
-        });
+    let finalHTML = '';
+    disciplinasSelecionadas.sort((a, b) => a.localeCompare(b, 'pt-BR'));
 
-        const exames = Array.from(masterExameSet);
+    disciplinasSelecionadas.forEach(nomeDisciplina => {
+        // Tenta pegar tags da ementaGlobal
+        let tags = ementaGlobal[nomeDisciplina] || [];
+        
+        // Fallback: Varre questões se não tiver na ementaGlobal
+        if (tags.length === 0) {
+            const tempSet = new Set();
+            todasAsQuestoes.filter(q => q.disciplina === nomeDisciplina).forEach(q => {
+                if(q.tags) q.tags.forEach(t => tempSet.add(t));
+            });
+            tags = Array.from(tempSet);
+        }
 
-        // Helper para ordenar os exames (ex: 2025/2, 2025/1, 2024/2...)
-        const parseExame = (exameStr) => {
-            const matchComParte = exameStr.match(/(\d{4})\/(\d)/);
-            const matchRS = exameStr.match(/(\d{4})\/1 RS/);
-            const matchAno = exameStr.match(/(\d{4})/);
+        if (tags.length === 0) return;
 
-            if (matchRS) return { ano: parseInt(matchRS[1]), parte: 1.5 }; // Trata "RS" como "1.5" para ordenar
-            if (matchComParte) return { ano: parseInt(matchComParte[1]), parte: parseInt(matchComParte[2]) };
-            if (matchAno) return { ano: parseInt(matchAno[1]), parte: 0 };
-            return { ano: 0, parte: 0 };
-        };
-        exames.sort((a, b) => {
-            const parsedA = parseExame(a);
-            const parsedB = parseExame(b);
-            if (parsedB.ano !== parsedA.ano) return parsedB.ano - parsedA.ano; // Ano decrescente
-            if (parsedB.parte !== parsedA.parte) return parsedB.parte - parsedA.parte; // Parte decrescente
-            return a.localeCompare(b);
-        });
-
-        let exameFilterHTML = '';
-        exames.forEach(exame => {
-            exameFilterHTML += `
+        let groupCheckboxHTML = '';
+        tags.sort().forEach(tag => {
+            const isChecked = ementasMarcadasAnteriormente.has(tag) ? 'checked' : '';
+            groupCheckboxHTML += `
                 <label>
-                    <input type="checkbox" class="exame-filter-check" value="${exame}">
-                    ${exame}
+                    <input type="checkbox" class="filter-check" value="${tag}" ${isChecked}>
+                    ${tag}
                 </label>
             `;
         });
-        exameCheckContainer.innerHTML = exameFilterHTML;
 
-        // Adiciona listeners aos novos checkboxes
-        exameCheckContainer.querySelectorAll('.exame-filter-check').forEach(check => {
-            check.addEventListener('change', renderizarQuestoes);
-        });
+        finalHTML += `
+            <div class="ementa-group">
+                <p class="ementa-group-label">${nomeDisciplina}</p>
+                <div class="ementa-group-grid">
+                    ${groupCheckboxHTML}
+                </div>
+            </div>
+        `;
+    });
+
+    checkContainer.innerHTML = finalHTML;
+
+    // Listeners
+    checkContainer.querySelectorAll('.filter-check').forEach(check => {
+        check.addEventListener('change', renderizarQuestoes);
+    });
+
+    btnCheckAllEmentas.dataset.checked = 'false';
+    btnCheckAllEmentas.textContent = 'Marcar Todas';
+    filtrarEmentasPorTexto();
+}
+
+/**
+ * Renderiza filtros de Exame com base no que existe em `todasAsQuestoes`.
+ */
+function renderizarFiltrosDeExame() {
+    const masterExameSet = new Set(todasAsQuestoes.map(q => q.exame));
+    const exames = Array.from(masterExameSet);
+
+    // Ordenação (Ano/Parte)
+    const parseExame = (exameStr) => {
+        const matchComParte = exameStr.match(/(\d{4})\/(\d)/);
+        const matchRS = exameStr.match(/(\d{4})\/1 RS/);
+        const matchAno = exameStr.match(/(\d{4})/);
+        if (matchRS) return { ano: parseInt(matchRS[1]), parte: 1.5 };
+        if (matchComParte) return { ano: parseInt(matchComParte[1]), parte: parseInt(matchComParte[2]) };
+        if (matchAno) return { ano: parseInt(matchAno[1]), parte: 0 };
+        return { ano: 0, parte: 0 };
+    };
+
+    exames.sort((a, b) => {
+        const parsedA = parseExame(a);
+        const parsedB = parseExame(b);
+        if (parsedB.ano !== parsedA.ano) return parsedB.ano - parsedA.ano;
+        if (parsedB.parte !== parsedA.parte) return parsedB.parte - parsedA.parte;
+        return a.localeCompare(b);
+    });
+
+    let exameFilterHTML = '';
+    exames.forEach(exame => {
+        exameFilterHTML += `
+            <label>
+                <input type="checkbox" class="exame-filter-check" value="${exame}">
+                ${exame}
+            </label>
+        `;
+    });
+    exameCheckContainer.innerHTML = exameFilterHTML;
+
+    exameCheckContainer.querySelectorAll('.exame-filter-check').forEach(check => {
+        check.addEventListener('change', renderizarQuestoes);
+    });
+}
+
+/**
+ * Função Mestre: Filtra, Ordena e Inicia Renderização
+ */
+function renderizarQuestoes() {
+    if (observer) observer.disconnect();
+    questoesContainer.innerHTML = '';
+
+    // 1. Filtro Obrigatório: Disciplina
+    const filtrosDisciplina = Array.from(
+        disciplinaCheckContainer.querySelectorAll('.disciplina-filter-check:checked')
+    ).map(c => c.value);
+
+    if (filtrosDisciplina.length === 0) {
+        questoesContainer.style.display = 'none';
+        initialPrompt.style.display = 'block';
+        infoSpan.textContent = '';
+        return;
     }
 
-    /**
-     * Helper para renderizar enunciados.
-     * Suporta o formato antigo (string `enunciado`) e o novo (array `enunciado_blocos`).
-     * @param {object} questao - O objeto da questão.
-     * @returns {string} - O HTML do enunciado.
-     */
-    function renderizarEnunciado(questao) {
-        // Se 'enunciado_blocos' existir, usa o renderizador estruturado
-        if (questao.enunciado_blocos && Array.isArray(questao.enunciado_blocos)) {
-            let html = '';
-            questao.enunciado_blocos.forEach(bloco => {
+    questoesContainer.style.display = 'block';
+    initialPrompt.style.display = 'none';
 
-                if (bloco.type === 'p') {
-                    // Renderiza um parágrafo
-                    html += `<p>${bloco.content}</p>`;
+    // 2. Coleta outros filtros
+    const filtrosEmenta = Array.from(checkContainer.querySelectorAll('.filter-check:checked')).map(c => c.value);
+    const examesSelecionados = Array.from(exameCheckContainer.querySelectorAll('.exame-filter-check:checked')).map(c => c.value);
+    const searchTerm = normalizeText(searchInput.value.toLowerCase().trim());
+    const mostrarObsoletas = document.querySelector('input[name="obsoleta-filter"]:checked').value;
+    const apenasComResolucao = document.getElementById('filter-resolucao').checked;
+    const sortOrder = sortAnoDropdown.value;
 
-                } else if (bloco.type === 'table') {
-                    // Renderiza uma tabela (com wrapper para rolagem mobile)
-                    html += '<div class="table-wrapper">';
-                    html += '<table class="enunciado-table">';
+    // 3. Aplica Filtros em Memória
+    let filtradas = todasAsQuestoes.filter(q => {
+        if (!filtrosDisciplina.includes(q.disciplina)) return false;
+        if (mostrarObsoletas === 'nao' && q.obsoleta) return false;
+        if (apenasComResolucao && (!q.resolucao || q.resolucao.trim() === '')) return false;
+        if (examesSelecionados.length > 0 && !examesSelecionados.includes(q.exame)) return false;
+        
+        if (filtrosEmenta.length > 0) {
+            if (!q.tags) return false;
+            if (!filtrosEmenta.some(tag => q.tags.includes(tag))) return false;
+        }
 
-                    // Renderiza o cabeçalho complexo (thead)
-                    if (bloco.headerRows && bloco.headerRows.length > 0) {
-                        html += '<thead>';
-                        bloco.headerRows.forEach(rowArray => {
-                            html += '<tr>';
-                            rowArray.forEach(cellObj => {
-                                // Pula a renderização de 'th' se for uma célula vazia (para rowspan)
-                                if (cellObj.isEmpty) {
-                                    // Não renderiza nada
-                                } else {
-                                    const colspan = cellObj.colspan ? ` colspan="${cellObj.colspan}"` : '';
-                                    const rowspan = cellObj.rowspan ? ` rowspan="${cellObj.rowspan}"` : '';
-                                    html += `<th${colspan}${rowspan}>${cellObj.content}</th>`;
-                                }
-                            });
-                            html += '</tr>';
-                        });
-                        html += '</thead>';
-                    }
+        if (searchTerm.length > 0) {
+            // 1. Normalização para Busca
+            let arrayParaBusca = [];
 
-                    // Renderiza o corpo da tabela (tbody)
-                    html += '<tbody>';
-                    if (bloco.bodyRows && bloco.bodyRows.length > 0) {
-                        bloco.bodyRows.forEach(rowArray => {
-                            html += '<tr>';
-                            rowArray.forEach(cellContent => {
-                                html += `<td>${cellContent}</td>`;
-                            });
-                            html += '</tr>';
-                        });
-                    }
-                    html += '</tbody></table>';
-                    html += '</div>'; // Fecha o .table-wrapper
+            if (Array.isArray(q.enunciado)) {
+                arrayParaBusca = q.enunciado;
+            } else if (typeof q.enunciado === 'string') {
+                // Transforma string simples em bloco 'p'
+                arrayParaBusca = [{ type: 'p', content: q.enunciado }];
+            }
+
+            // 2. Extração do Texto
+            const rawEnunciado = arrayParaBusca.map(bloco => {
+                if (bloco.type === 'p' || !bloco.type) return bloco.content || bloco;
+                
+                if (bloco.type === 'table') {
+                    const hText = bloco.headerRows ? bloco.headerRows.flat().map(c => c.content || c).join(" ") : "";
+                    const bText = bloco.bodyRows ? bloco.bodyRows.flat().join(" ") : "";
+                    return hText + " " + bText;
+                }
+                return "";
+            }).join(" ");
+
+            const enunciado = normalizeText(rawEnunciado.toLowerCase());
+            
+            // Proteção extra para opções (caso alguma venha vazia)
+            const textoOpcoes = q.opcoes ? q.opcoes.map(o => o.texto).join(' ') : '';
+            const opcoes = normalizeText(textoOpcoes.toLowerCase());
+            
+            const resolucao = normalizeText((q.resolucao || '').toLowerCase());
+
+            return enunciado.includes(searchTerm) || opcoes.includes(searchTerm) || resolucao.includes(searchTerm);
+        }
+        return true;
+    });
+
+    // 4. Ordenação
+    const parseExameParaSort = (exameStr) => {
+        const matchComParte = exameStr.match(/(\d{4})\/(\d)/);
+        const matchRS = exameStr.match(/(\d{4})\/1 RS/);
+        const matchAno = exameStr.match(/(\d{4})/);
+        if (matchRS) return { ano: parseInt(matchRS[1]), parte: 1.5 };
+        if (matchComParte) return { ano: parseInt(matchComParte[1]), parte: parseInt(matchComParte[2]) };
+        if (matchAno) return { ano: parseInt(matchAno[1]), parte: 0 };
+        return { ano: 0, parte: 0 };
+    };
+
+    filtradas.sort((a, b) => {
+        const parsedA = parseExameParaSort(a.exame);
+        const parsedB = parseExameParaSort(b.exame);
+        if (sortOrder === 'crescente') {
+            if (parsedA.ano !== parsedB.ano) return parsedA.ano - parsedB.ano;
+            if (parsedA.parte !== parsedB.parte) return parsedA.parte - parsedB.parte;
+            return a.id - b.id;
+        } else { // decrescente
+            if (parsedB.ano !== parsedA.ano) return parsedB.ano - parsedA.ano;
+            if (parsedB.parte !== parsedA.parte) return parsedB.parte - parsedA.parte;
+            return b.id - a.id;
+        }
+    });
+
+    // 5. Atualiza UI
+    infoSpan.textContent = `Exibindo ${filtradas.length} questões.`;
+    listaCompletaFiltrada = filtradas;
+    indiceAtual = 0;
+
+    if (listaCompletaFiltrada.length === 0) {
+        questoesContainer.innerHTML = '<p style="text-align: center; padding: 20px;">Nenhuma questão encontrada.</p>';
+        return;
+    }
+
+    renderizarLoteDeQuestoes();
+    configurarObserver();
+}
+
+/**
+ * Renderiza um lote (Lazy Loading)
+ */
+function renderizarLoteDeQuestoes() {
+    const fim = Math.min(indiceAtual + TAMANHO_LOTE, listaCompletaFiltrada.length);
+    const lote = listaCompletaFiltrada.slice(indiceAtual, fim);
+
+    if (lote.length === 0) {
+        if (observer) observer.disconnect();
+        return;
+    }
+
+    let batchHTML = '';
+    lote.forEach(questao => {
+        let opcoesHTML = '';
+        questao.opcoes.forEach(opcao => {
+            opcoesHTML += `<li class="opcao-clicavel" data-letra="${opcao.letra}"><strong>(${opcao.letra})</strong> ${opcao.texto}</li>`;
+        });
+
+        const safeExameId = questao.exame.replace(/[^a-zA-Z0-9]/g, '-');
+        const uniqueID = `resposta-${safeExameId}-${questao.id}`;
+        const obsoletaTagHTML = questao.obsoleta ? '<span class="tag-obsoleta">Questão Obsoleta</span>' : '';
+        const anuladaTagHTML = questao.anulada ? '<span class="tag-anulada">Questão Anulada</span>' : '';
+
+        // Estilo via Mapa
+        const disciplinaClassName = MAPA_CLASSES_CSS[questao.disciplina] || 'disciplina-padrao';
+        const disciplinaTagHTML = `<span class="disciplina ${disciplinaClassName}">${questao.disciplina}</span>`;
+
+        let ementasTagsHTML = '';
+        if (questao.tags && Array.isArray(questao.tags)) {
+            questao.tags.sort().forEach(tag => {
+                ementasTagsHTML += `<span class="ementa-tag">${tag}</span>`;
+            });
+        }
+
+        let resolucaoHTML = '';
+        if (questao.resolucao && questao.resolucao.trim() !== '') {
+            resolucaoHTML = `<div class="resolucao-texto"><strong>Resolução Comentada:</strong><br>${questao.resolucao}</div>`;
+        } else {
+            resolucaoHTML = `<div class="sem-resolucao">Esta questão ainda não possui uma resolução comentada. Gostaria de ajudar a construí-la? Acesse a aba "Sobre".</div>`;
+        }
+
+        let autorHTML = '';
+        if (questao.autor_resolucao && questao.autor_resolucao.trim() !== '') {
+            autorHTML = `<details class="autor-resolucao"><summary>Autor da Resolução</summary><p>${questao.autor_resolucao}</p></details>`;
+        }
+
+        let cpcHTML = '';
+        let cpcLinks = '';
+        if (questao.tags && cpcData) {
+            questao.tags.forEach(tag => {
+                const cpcInfo = cpcData[tag];
+                if (cpcInfo) {
+                    cpcLinks += `<li><a href="${cpcInfo.url}" target="_blank" rel="noopener noreferrer">${cpcInfo.cpc} - ${tag}</a></li>`;
                 }
             });
-            return `<div class="enunciado">${html}</div>`;
+        }
+        if (cpcLinks) {
+            cpcHTML = `<details class="cpc-referencia"><summary>Normas (CPCs) Relacionadas</summary><ul>${cpcLinks}</ul></details>`;
         }
 
-        // Fallback: Se 'enunciado_blocos' não existir, usa o 'enunciado' antigo
-        if (questao.enunciado) {
-            return `<p class="enunciado">${questao.enunciado}</p>`;
+        let botaoLancamentosHTML = '';
+        if (questao.lancamentos && Array.isArray(questao.lancamentos) && questao.lancamentos.length > 0) {
+            const lancamentosJSON = JSON.stringify(questao.lancamentos).replace(/"/g, '&quot;');
+            botaoLancamentosHTML = `<button class="btn-ver-lancamentos" data-lancamentos="${lancamentosJSON}">Lançamentos Contábeis</button>`;
         }
 
+        const cardHTML = `
+            <div class="questao-card" data-gabarito="${questao.gabarito}">
+                <div class="questao-header">
+                    <h4>Questão ${questao.id}</h4>
+                    <div class="questao-meta">
+                        <span>${questao.exame}</span> 
+                        <span class="banca">${questao.banca}</span> 
+                        ${obsoletaTagHTML}
+                        ${anuladaTagHTML} 
+                    </div>
+                </div>
+                <div class="questao-disciplina-container">
+                    ${disciplinaTagHTML}
+                    ${ementasTagsHTML}
+                </div>
+                ${renderizarEnunciado(questao)}
+                <div class="opcoes">
+                    <ul class="opcoes-lista" data-target-id="${uniqueID}">
+                        ${opcoesHTML}
+                    </ul>
+                </div>
+                <small class="quiz-hint">Clique em uma das opções acima para ver o gabarito.</small>
+                <div class="resposta-correta" id="${uniqueID}">
+                    <div class="gabarito-texto">
+                        <strong>Gabarito: (${questao.gabarito})</strong> ${questao.gabarito_texto}
+                    </div>
+                    ${botaoLancamentosHTML} ${resolucaoHTML} 
+                    ${autorHTML} 
+                    ${cpcHTML}
+                </div>
+            </div>
+        `;
+        batchHTML += cardHTML;
+    });
+
+    questoesContainer.insertAdjacentHTML('beforeend', batchHTML);
+    indiceAtual = fim;
+    adicionarEventosQuiz();
+    questoesContainer.appendChild(sentinela);
+
+    if (indiceAtual >= listaCompletaFiltrada.length) {
+        if (observer) observer.disconnect();
+        sentinela.remove();
+    }
+}
+
+// -------------------------------------------------------------------
+//   HELPERS E UTILITÁRIOS
+// -------------------------------------------------------------------
+
+function normalizeText(text) {
+    if (typeof text !== 'string') return '';
+    return text.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+}
+
+function handleIntersect(entries) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) renderizarLoteDeQuestoes();
+    });
+}
+
+function configurarObserver() {
+    const options = { root: null, rootMargin: '200px', threshold: 0 };
+    observer = new IntersectionObserver(handleIntersect, options);
+    observer.observe(sentinela);
+}
+
+function renderizarEnunciado(questao) {
+    // 1. Proteção contra null/undefined
+    if (!questao.enunciado) {
         return '<p class="enunciado" style="color:red;">Erro: Enunciado não encontrado.</p>';
     }
 
-    /**
-     * Função mestre que aplica filtros e ordenação e INICIA o processo de
-     * renderização com lazy loading.
-     */
-    function renderizarQuestoes() {
+    // 2. NORMALIZAÇÃO (O "Pulo do Gato")
+    // Se for Array (blocos), usa como está.
+    // Se for String (texto simples), cria um array com um único bloco tipo 'p'
+    const blocos = Array.isArray(questao.enunciado) 
+        ? questao.enunciado 
+        : [{ type: 'p', content: questao.enunciado }];
 
-        // 1. Limpa o estado anterior
-        if (observer) {
-            observer.disconnect(); // Para o "scroll infinito" anterior
-        }
-        questoesContainer.innerHTML = ''; // Limpa os cards da tela
+    let html = '';
 
-        // 2. Coleta o filtro de Disciplina (o principal)
-        const filtrosDisciplina = Array.from(
-            disciplinaCheckContainer.querySelectorAll('.disciplina-filter-check:checked')
-        ).map(check => check.value);
-
-        // Se nenhuma disciplina estiver selecionada, mostra o prompt inicial e para
-        if (filtrosDisciplina.length === 0) {
-            questoesContainer.style.display = 'none';
-            initialPrompt.style.display = 'block';
-            infoSpan.textContent = '';
-            return;
-        }
-
-        // Oculta o prompt inicial e mostra o container de questões
-        questoesContainer.style.display = 'block';
-        initialPrompt.style.display = 'none';
-
-        // 3. Coleta todos os outros filtros
-        const filtrosEmenta = Array.from(
-            checkContainer.querySelectorAll('.filter-check:checked')
-        ).map(check => check.value);
-        const examesSelecionados = Array.from(
-            exameCheckContainer.querySelectorAll('.exame-filter-check:checked')
-        ).map(check => check.value);
-        const sortOrder = sortAnoDropdown.value;
-        const searchTerm = normalizeText(searchInput.value.toLowerCase().trim());
-        const mostrarObsoletas = document.querySelector('input[name="obsoleta-filter"]:checked').value;
-        const apenasComResolucao = document.getElementById('filter-resolucao').checked;
-
-
-        // 4. Aplica os filtros para criar a lista de questões
-        let questoesParaFiltrar = [];
-        filtrosDisciplina.forEach(nome => {
-            questoesParaFiltrar.push(...configDisciplinas[nome].questoes);
-        });
-        const totalQuestoesDasDisciplinas = questoesParaFiltrar.length;
-
-        // Aplica filtro de OBESOLETAS
-        if (mostrarObsoletas === 'nao') {
-            questoesParaFiltrar = questoesParaFiltrar.filter(questao => !questao.obsoleta);
-        }
-        // Aplica filtro de RESOLUÇÃO
-        if (apenasComResolucao) {
-            questoesParaFiltrar = questoesParaFiltrar.filter(questao =>
-                questao.resolucao && questao.resolucao.trim() !== ''
-            );
-        }
-        // Aplica filtro de EMENTA
-        if (filtrosEmenta.length > 0) {
-            questoesParaFiltrar = questoesParaFiltrar.filter(questao => {
-                return filtrosEmenta.some(filtro => questao.tags && questao.tags.includes(filtro));
-            });
-        }
-        // Aplica filtro de EXAME
-        if (examesSelecionados.length > 0) {
-            questoesParaFiltrar = questoesParaFiltrar.filter(questao => {
-                return examesSelecionados.includes(questao.exame);
-            });
-        }
-        // Aplica filtro de PALAVRA-CHAVE
-        if (searchTerm.length > 0) {
-            questoesParaFiltrar = questoesParaFiltrar.filter(questao => {
-                const enunciadoLower = normalizeText(questao.enunciado.toLowerCase());
-                const opcoesLower = normalizeText(questao.opcoes.map(op => op.texto.toLowerCase()).join(' '));
-                const resolucaoLower = normalizeText((questao.resolucao || '').toLowerCase());
-
-                return enunciadoLower.includes(searchTerm) ||
-                       opcoesLower.includes(searchTerm) ||
-                       resolucaoLower.includes(searchTerm);
-            });
-        }
-
-        // 5. Aplica a ORDENAÇÃO
-        const parseExameParaSort = (exameStr) => {
-            const matchComParte = exameStr.match(/(\d{4})\/(\d)/);
-            const matchRS = exameStr.match(/(\d{4})\/1 RS/);
-            const matchAno = exameStr.match(/(\d{4})/);
-
-            if (matchRS) return { ano: parseInt(matchRS[1]), parte: 1.5 };
-            if (matchComParte) return { ano: parseInt(matchComParte[1]), parte: parseInt(matchComParte[2]) };
-            if (matchAno) return { ano: parseInt(matchAno[1]), parte: 0 };
-            return { ano: 0, parte: 0 };
-        };
-        questoesParaFiltrar.sort((a, b) => {
-            const parsedA = parseExameParaSort(a.exame);
-            const parsedB = parseExameParaSort(b.exame);
-            if (sortOrder === 'crescente') {
-                if (parsedA.ano !== parsedB.ano) return parsedA.ano - parsedB.ano;
-                if (parsedA.parte !== parsedB.parte) return parsedA.parte - parsedB.parte;
-                return a.id - b.id;
-            } else { // decrescente
-                if (parsedB.ano !== parsedA.ano) return parsedB.ano - parsedA.ano;
-                if (parsedB.parte !== parsedA.parte) return parsedB.parte - parsedA.parte; // <-- Bug de ordenação corrigido
-                return b.id - a.id;
-            }
-        });
-
-        // 6. Atualiza o contador de questões
-        const totalMostrando = questoesParaFiltrar.length;
-        if (totalMostrando === totalQuestoesDasDisciplinas && totalMostrando > 0) {
-            infoSpan.textContent = `Exibindo todas as ${totalQuestoesDasDisciplinas} questões das disciplinas selecionadas.`;
-        } else {
-            infoSpan.textContent = `Exibindo ${totalMostrando} de ${totalQuestoesDasDisciplinas} questões (das disciplinas selecionadas).`;
-        }
-
-        // 7. Prepara o Lazy Loading
-        listaCompletaFiltrada = questoesParaFiltrar; // Salva a lista filtrada
-        indiceAtual = 0; // Reseta o contador
-
-        // Se a lista filtrada estiver vazia, mostra aviso e para
-        if (listaCompletaFiltrada.length === 0) {
-            questoesContainer.innerHTML = '<p style="text-align: center; padding: 20px;">Nenhuma questão encontrada com os filtros selecionados.</p>';
-            return;
-        }
-
-        // 8. Inicia o processo de renderização
-        renderizarLoteDeQuestoes(); // Renderiza o primeiro lote
-        configurarObserver(); // Configura o "scroll infinito" para carregar o resto
-    }
-
-    /**
-     * Renderiza um "lote" de questões (ex: 20) na tela.
-     * Esta função é chamada pela `renderizarQuestoes` (para o primeiro lote)
-     * e pelo `handleIntersect` (para os lotes seguintes).
-     */
-    function renderizarLoteDeQuestoes() {
-        // Define o início e o fim do lote
-        const fim = Math.min(indiceAtual + TAMANHO_LOTE, listaCompletaFiltrada.length);
-        const lote = listaCompletaFiltrada.slice(indiceAtual, fim);
-
-        // Se o lote estiver vazio, não há mais nada a carregar
-        if (lote.length === 0) {
-            if (observer) observer.disconnect();
-            return;
-        }
-
-        let batchHTML = ''; // String para o HTML do lote
-
-        // Cria o HTML para cada questão no lote
-        lote.forEach(questao => {
-            let opcoesHTML = '';
-            questao.opcoes.forEach(opcao => {
-                opcoesHTML += `<li class="opcao-clicavel" data-letra="${opcao.letra}"><strong>(${opcao.letra})</strong> ${opcao.texto}</li>`;
-            });
-
-            const safeExameId = questao.exame.replace(/[^a-zA-Z0-9]/g, '-');
-            const uniqueID = `resposta-${safeExameId}-${questao.id}`;
-            const obsoletaTagHTML = questao.obsoleta ? '<span class="tag-obsoleta">Questão Obsoleta</span>' : '';
-            const anuladaTagHTML = questao.anulada ? '<span class="tag-anulada">Questão Anulada</span>' : '';
-
-            const config = configDisciplinas[questao.disciplina];
-            const disciplinaClassName = (config && config.className) ? config.className : '';
-            const disciplinaTagHTML = `<span class="disciplina ${disciplinaClassName}">${questao.disciplina}</span>`;
-
-            let ementasTagsHTML = '';
-            if (questao.tags && Array.isArray(questao.tags)) {
-                const sortedTags = [...questao.tags].sort();
-                sortedTags.forEach(tag => {
-                    ementasTagsHTML += `<span class="ementa-tag">${tag}</span>`;
+    // 3. Agora o código sempre trabalha com lista, não importa o que veio no JSON
+    blocos.forEach(bloco => {
+        // Bloco de Texto (Parágrafo)
+        if (bloco.type === 'p' || !bloco.type) {
+             // O "content" pode ser o próprio bloco se for string antiga, ou a propriedade content
+             const texto = bloco.content || bloco; 
+             html += `<div class="enunciado-texto">${texto}</div>`;
+        } 
+        // Bloco de Tabela
+        else if (bloco.type === 'table') {
+            html += '<div class="table-wrapper"><table class="enunciado-table">';
+            
+            // Renderiza Cabeçalho
+            if (bloco.headerRows) {
+                html += '<thead>';
+                bloco.headerRows.forEach(r => {
+                    html += '<tr>';
+                    r.forEach(c => {
+                        // Suporte a objeto {content, colspan} ou string simples
+                        const cellContent = c.content || c;
+                        const colspan = c.colspan ? ` colspan="${c.colspan}"` : '';
+                        const rowspan = c.rowspan ? ` rowspan="${c.rowspan}"` : '';
+                        html += `<th${colspan}${rowspan}>${cellContent}</th>`;
+                    });
+                    html += '</tr>';
                 });
+                html += '</thead>';
             }
 
-            let resolucaoHTML = '';
-            if (questao.resolucao && questao.resolucao.trim() !== '') {
-                resolucaoHTML = `<div class="resolucao-texto"><strong>Resolução Comentada:</strong><br>${questao.resolucao}</div>`;
+            // Renderiza Corpo
+            if (bloco.bodyRows) {
+                html += '<tbody>';
+                bloco.bodyRows.forEach(r => {
+                    html += '<tr>';
+                    r.forEach(c => html += `<td>${c}</td>`);
+                    html += '</tr>';
+                });
+                html += '</tbody>';
+            }
+            html += '</table></div>';
+        }
+    });
+
+    return `<div class="enunciado">${html}</div>`;
+}
+
+function adicionarEventosQuiz() {
+    const listasOpcoes = document.querySelectorAll('.opcoes-lista:not([data-listener-added])');
+    listasOpcoes.forEach(ul => {
+        ul.dataset.listenerAdded = 'true';
+        ul.addEventListener('click', (e) => {
+            const liClicado = e.target.closest('li.opcao-clicavel');
+            if (!liClicado) return;
+
+            const letraClicada = liClicado.getAttribute('data-letra');
+            const card = ul.closest('.questao-card');
+            const gabarito = card.getAttribute('data-gabarito');
+            const targetId = ul.getAttribute('data-target-id');
+            const respostaDiv = document.getElementById(targetId);
+            const hint = card.querySelector('.quiz-hint');
+            const isAlreadyActive = liClicado.classList.contains('opcao-correta') || liClicado.classList.contains('opcao-incorreta');
+
+            ul.querySelectorAll('li.opcao-clicavel').forEach(li => li.classList.remove('opcao-correta', 'opcao-incorreta'));
+
+            if (isAlreadyActive) {
+                respostaDiv.style.display = 'none';
+                if (hint) hint.style.display = 'block';
             } else {
-                resolucaoHTML = `<div class="sem-resolucao">Esta questão ainda não possui uma resolução comentada. Gostaria de ajudar a construí-la? Acesse a aba "Sobre" e saiba como!</div>`;
-            }
-
-            let autorHTML = '';
-            if (questao.autor_resolucao && questao.autor_resolucao.trim() !== '') {
-                autorHTML = `
-                    <details class="autor-resolucao">
-                        <summary>Autor da Resolução</summary>
-                        <p>${questao.autor_resolucao}</p>
-                    </details>
-                `;
-            }
-
-            let cpcHTML = '';
-            let cpcLinks = '';
-            if (questao.tags && cpcData) {
-                questao.tags.forEach(tag => {
-                    const cpcInfo = cpcData[tag];
-                    if (cpcInfo) {
-                        cpcLinks += `<li><a href="${cpcInfo.url}" target="_blank" rel="noopener noreferrer">${cpcInfo.cpc} - ${tag}</a></li>`;
-                    }
-                });
-            }
-            if (cpcLinks) {
-                cpcHTML = `
-                    <details class="cpc-referencia">
-                        <summary>Normas (CPCs) Relacionadas</summary>
-                        <ul>${cpcLinks}</ul>
-                    </details>
-                `;
-            }
-
-            // --- BOTÃO DE LANÇAMENTOS ---
-            let botaoLancamentosHTML = '';
-            if (questao.lancamentos && Array.isArray(questao.lancamentos) && questao.lancamentos.length > 0) {
-                // Prepara o JSON para ser guardado no botão (escapa as aspas)
-                const lancamentosJSON = JSON.stringify(questao.lancamentos).replace(/"/g, '&quot;');
-                botaoLancamentosHTML = `
-                    <button class="btn-ver-lancamentos" data-lancamentos="${lancamentosJSON}">
-                        Lançamentos Contábeis
-                    </button>
-                `;
-            }
-
-            const cardHTML = `
-                <div class="questao-card" data-gabarito="${questao.gabarito}">
-                    <div class="questao-header">
-                        <h4>Questão ${questao.id}</h4>
-                        <div class="questao-meta">
-                            <span>${questao.exame}</span> 
-                            <span class="banca">${questao.banca}</span> 
-                            ${obsoletaTagHTML}
-                            ${anuladaTagHTML} 
-                        </div>
-                    </div>
-                    <div class="questao-disciplina-container">
-                        ${disciplinaTagHTML}
-                        ${ementasTagsHTML}
-                    </div>
-                    ${renderizarEnunciado(questao)}
-                    <div class="opcoes">
-                        <ul class="opcoes-lista" data-target-id="${uniqueID}">
-                            ${opcoesHTML}
-                        </ul>
-                    </div>
-                    <small class="quiz-hint">Clique em uma das opções acima para ver o gabarito.</small>
-                    <div class="resposta-correta" id="${uniqueID}">
-                        <div class="gabarito-texto">
-                            <strong>Gabarito: (${questao.gabarito})</strong> ${questao.gabarito_texto}
-                        </div>
-                        ${botaoLancamentosHTML} ${resolucaoHTML} 
-                        ${autorHTML} 
-                        ${cpcHTML}
-                    </div>
-                </div>
-            `;
-            batchHTML += cardHTML;
-        });
-
-        // Adiciona o HTML do lote ao final do container (sem apagar o anterior)
-        questoesContainer.insertAdjacentHTML('beforeend', batchHTML);
-
-        // Atualiza o índice para o próximo lote
-        indiceAtual = fim;
-
-        // Adiciona os eventos de clique APENAS nos novos cards
-        adicionarEventosQuiz();
-
-        // Move a sentinela para o final do novo lote
-        questoesContainer.appendChild(sentinela);
-
-        // Se já carregamos tudo, remove a sentinela e desliga o observer
-        if (indiceAtual >= listaCompletaFiltrada.length) {
-            if (observer) observer.disconnect();
-            sentinela.remove();
-        }
-    }
-
-    /**
-     * Callback que o IntersectionObserver chama quando a sentinela
-     * entra ou sai da tela.
-     */
-    function handleIntersect(entries) {
-        entries.forEach(entry => {
-            // Se a sentinela está visível (intersecting)
-            if (entry.isIntersecting) {
-                // Carrega o próximo lote de questões
-                renderizarLoteDeQuestoes();
+                respostaDiv.style.display = 'block';
+                if (hint) hint.style.display = 'none';
+                if (letraClicada === gabarito) liClicado.classList.add('opcao-correta');
+                else liClicado.classList.add('opcao-incorreta');
             }
         });
-    }
+    });
+}
 
-    /**
-     * Configura e inicia o IntersectionObserver para vigiar a sentinela.
-     */
-    function configurarObserver() {
-        const options = {
-            root: null, // Observa em relação ao viewport
-            rootMargin: '200px', // Carrega 200px ANTES de chegar no fim
-            threshold: 0
-        };
+function filtrarEmentasPorTexto() {
+    const searchTerm = normalizeText(document.getElementById('search-ementas-input').value.toLowerCase());
+    const grupos = document.querySelectorAll('#checkbox-container .ementa-group');
 
-        observer = new IntersectionObserver(handleIntersect, options);
-        observer.observe(sentinela);
-    }
-
-    /**
-     * Adiciona os eventos de clique (modo quiz) às opções.
-     * Esta função é "idempotente": ela só adiciona listeners
-     * a elementos que ainda não foram processados.
-     */
-    function adicionarEventosQuiz() {
-        // Seleciona apenas as listas que AINDA NÃO têm o listener
-        const listasOpcoes = document.querySelectorAll('.opcoes-lista:not([data-listener-added])');
-
-        listasOpcoes.forEach(ul => {
-            // Marca a lista como "processada"
-            ul.dataset.listenerAdded = 'true';
-
-            // Adiciona o listener de clique (delegação de evento)
-            ul.addEventListener('click', (e) => {
-                const liClicado = e.target.closest('li.opcao-clicavel');
-                if (!liClicado) { return; }
-
-                const letraClicada = liClicado.getAttribute('data-letra');
-                const card = ul.closest('.questao-card');
-                const gabarito = card.getAttribute('data-gabarito');
-                const targetId = ul.getAttribute('data-target-id');
-                const respostaDiv = document.getElementById(targetId);
-                const hint = card.querySelector('.quiz-hint');
-
-                // Verifica se o usuário está clicando na opção já selecionada (para desmarcar)
-                const isAlreadyActive = liClicado.classList.contains('opcao-correta') || liClicado.classList.contains('opcao-incorreta');
-
-                // Limpa todas as marcações
-                ul.querySelectorAll('li.opcao-clicavel').forEach(li => {
-                    li.classList.remove('opcao-correta', 'opcao-incorreta');
-                });
-
-                // Lógica de toggle: se clicou na ativa, esconde; senão, mostra
-                if (isAlreadyActive) {
-                    respostaDiv.style.display = 'none';
-                    if (hint) hint.style.display = 'block';
-                } else {
-                    respostaDiv.style.display = 'block';
-                    if (hint) hint.style.display = 'none';
-
-                    // Marca como correta ou incorreta
-                    if (letraClicada === gabarito) {
-                        liClicado.classList.add('opcao-correta');
-                    } else {
-                        liClicado.classList.add('opcao-incorreta');
-                    }
-                }
-            });
-        });
-    }
-
-    /**
-     * Filtra a lista de EMENTAS com base no texto digitado no
-     * campo de busca de ementas.
-     */
-    function filtrarEmentasPorTexto() {
-        const searchTerm = normalizeText(document.getElementById('search-ementas-input').value.toLowerCase());
-        const grupos = document.querySelectorAll('#checkbox-container .ementa-group');
-
-        grupos.forEach(grupo => {
-            let visiveisNoGrupo = 0;
-            const labels = grupo.querySelectorAll('.ementa-group-grid label');
-
-            labels.forEach(label => {
-                const labelText = normalizeText(label.textContent.toLowerCase());
-                
-                // Mostra a label se o texto bater com a busca
-                if (labelText.includes(searchTerm)) {
-                    label.style.display = 'flex';
-                    visiveisNoGrupo++;
-                } else {
-                    label.style.display = 'none';
-                }
-            });
-
-            // Esconde o grupo inteiro se nenhuma ementa dele bater com a busca
-            if (visiveisNoGrupo > 0) {
-                grupo.style.display = 'block';
+    grupos.forEach(grupo => {
+        let visiveisNoGrupo = 0;
+        grupo.querySelectorAll('.ementa-group-grid label').forEach(label => {
+            if (normalizeText(label.textContent.toLowerCase()).includes(searchTerm)) {
+                label.style.display = 'flex';
+                visiveisNoGrupo++;
             } else {
-                grupo.style.display = 'none';
+                label.style.display = 'none';
             }
         });
+        grupo.style.display = visiveisNoGrupo > 0 ? 'block' : 'none';
+    });
+}
+
+function atualizarBotaoDisciplinas() {
+    const checks = disciplinaCheckContainer.querySelectorAll('input[type="checkbox"]');
+    if (!checks || checks.length === 0) {
+        btnCheckAllDisciplinas.dataset.checked = 'false';
+        btnCheckAllDisciplinas.textContent = "Marcar Todas";
+        return;
     }
+    const marcados = disciplinaCheckContainer.querySelectorAll('input[type="checkbox"]:checked').length;
+    const newState = (checks.length > 0 && checks.length === marcados);
+    btnCheckAllDisciplinas.dataset.checked = newState ? 'true' : 'false';
+    btnCheckAllDisciplinas.textContent = newState ? "Desmarcar Todas" : "Marcar Todas";
+}
 
-
-    /**
-     * Carrega o arquivo CHANGELOG.md e o renderiza como HTML
-     * na aba "Novidades".
-     */
-    async function carregarChangelog() {
-        const container = document.getElementById('changelog-content');
-        if (!container) return;
-
-        try {
-            const response = await fetch('CHANGELOG.md');
-            if (!response.ok) {
-                throw new Error(`HTTP ${response.status} - Não foi possível encontrar o arquivo CHANGELOG.md`);
-            }
-            const markdownText = await response.text();
-
-            if (typeof marked === 'undefined') {
-                throw new Error("Biblioteca 'marked.js' não foi carregada.");
-            }
-
-            // Converte o Markdown para HTML
-            const html = marked.parse(markdownText);
-            container.innerHTML = html;
-
-        } catch (error) {
-            console.error('Erro ao carregar o changelog:', error);
-            container.innerHTML = `<p style="color: red;">Erro ao carregar o changelog. Verifique se o arquivo <code>CHANGELOG.md</code> existe na raiz do projeto.</p>`;
-        }
-    }
-
-    /**
-     * Carrega a lista de contribuidores do JSON
-     * e a insere na aba "Sobre".
-     */
-    async function carregarContribuidores() {
-        if (!contributorsListContainer) return;
-
-        contributorsListContainer.innerHTML = '<li>Carregando...</li>';
-
-        try {
-            const response = await fetch('contributors.json');
-            if (!response.ok) {
-                throw new Error(`HTTP ${response.status} - Não foi possível encontrar contributors.json`);
-            }
-            const data = await response.json();
-
-            // Lógica de Ordenação Híbrida:
-            // 1. Separa os contribuidores em grupos
-            const creators = data.filter(c =>
-                c.roles.includes('Criador e mantenedor')
-            );
-            const placeholder = data.filter(c =>
-                c.roles.includes('pode aparecer aqui se você contribuir!')
-            );
-            const otherContributors = data.filter(c =>
-                !c.roles.includes('Criador e mantenedor') &&
-                !c.roles.includes('pode aparecer aqui se você contribuir!')
-            );
-
-            // 2. Ordena alfabeticamente
-            creators.sort((a, b) => a.name.localeCompare(b.name, 'pt-BR'));
-            otherContributors.sort((a, b) => a.name.localeCompare(b.name, 'pt-BR'));
-
-            // 3. Junta as listas na ordem desejada
-            const sortedList = [...creators, ...otherContributors, ...placeholder];
-
-            let html = '';
-            sortedList.forEach(contrib => {
-                html += `<li>`;
-                html += `<strong>${contrib.name}</strong> (${contrib.roles.join(', ')})`;
-                if (contrib.link && contrib.link.url && contrib.link.text) {
-                    html += ` - [<a href="${contrib.link.url}" target="_blank" rel="noopener noreferrer">${contrib.link.text}</a>]`;
-                }
-                html += `</li>`;
-            });
-
-            contributorsListContainer.innerHTML = html;
-
-        } catch (error) {
-            console.error('Erro ao carregar contribuidores:', error);
-            contributorsListContainer.innerHTML = '<li style="color: red;">Erro ao carregar lista.</li>';
-        }
-    }
-    
-    /**
-     * Sincroniza o estado (texto e data-checked) do botão
-     * "Marcar Todas" das DISCIPLINAS, com base nos checkboxes.
-     */
-    function atualizarBotaoDisciplinas() {
-        const checks = disciplinaCheckContainer.querySelectorAll('input[type="checkbox"]');
-        if (!checks || checks.length === 0) {
-             btnCheckAllDisciplinas.dataset.checked = 'false';
-             btnCheckAllDisciplinas.textContent = "Marcar Todas";
-            return;
-        }
-        
-        const total = checks.length;
-        const marcados = disciplinaCheckContainer.querySelectorAll('input[type="checkbox"]:checked').length;
-
-        if (total > 0 && total === marcados) {
-            // Se todas estão marcadas
-            btnCheckAllDisciplinas.dataset.checked = 'true';
-            btnCheckAllDisciplinas.textContent = "Desmarcar Todas";
-        } else {
-            // Se pelo menos uma não está marcada
-            btnCheckAllDisciplinas.dataset.checked = 'false';
-            btnCheckAllDisciplinas.textContent = "Marcar Todas";
-        }
-    }
-
-    // --- LÓGICA DO MODAL DE LANÇAMENTOS ---
+function setupModalLancamentos() {
     const modalLancamentos = document.getElementById('modal-lancamentos');
     const modalBody = document.getElementById('modal-body');
     const btnFecharModal = document.getElementById('btn-fechar-modal');
 
-    // Fechar modal
     if(btnFecharModal) btnFecharModal.addEventListener('click', () => modalLancamentos.style.display = 'none');
-    if(modalLancamentos) {
-        modalLancamentos.addEventListener('click', (e) => {
-            if (e.target === modalLancamentos) modalLancamentos.style.display = 'none';
-        });
-    }
+    if(modalLancamentos) modalLancamentos.addEventListener('click', (e) => {
+        if (e.target === modalLancamentos) modalLancamentos.style.display = 'none';
+    });
 
-    // Abrir modal (Delegação de evento nos botões dinâmicos)
     questoesContainer.addEventListener('click', (e) => {
         const btn = e.target.closest('.btn-ver-lancamentos');
         if (!btn) return;
-
         try {
             const lista = JSON.parse(btn.getAttribute('data-lancamentos'));
             let html = '';
-            
             lista.forEach(lanc => {
                 let linhas = '';
                 if (lanc.debitos) lanc.debitos.forEach(d => linhas += `<div class="linha-contabil"><span class="conta-debito"><strong>D</strong> - ${d.conta}</span><span class="valor-contabil">${d.valor}</span></div>`);
                 if (lanc.creditos) lanc.creditos.forEach(c => linhas += `<div class="linha-contabil"><span class="conta-credito"><strong>C</strong> - ${c.conta}</span><span class="valor-contabil">${c.valor}</span></div>`);
-                
                 html += `
                     <div class="lancamento-card">
                         <div class="lancamento-meta"><span>${lanc.titulo || 'Lançamento'}</span><span>${lanc.data || ''}</span></div>
@@ -1154,8 +880,50 @@ document.addEventListener('DOMContentLoaded', () => {
                         <div class="historico-contabil">(${lanc.historico || 'Sem histórico'})</div>
                     </div>`;
             });
-            
             modalBody.innerHTML = html;
             modalLancamentos.style.display = 'flex';
         } catch (err) { console.error(err); }
-    }); // Fim do DOMContentLoaded
+    });
+}
+
+async function carregarChangelog() {
+    const container = document.getElementById('changelog-content');
+    if (!container) return;
+    try {
+        const response = await fetch('CHANGELOG.md');
+        if (!response.ok) throw new Error("CHANGELOG.md não encontrado");
+        const markdownText = await response.text();
+        if (typeof marked !== 'undefined') container.innerHTML = marked.parse(markdownText);
+    } catch (error) {
+        console.error(error);
+        container.innerHTML = `<p style="color: red;">Erro ao carregar o changelog.</p>`;
+    }
+}
+
+async function carregarContribuidores() {
+    if (!contributorsListContainer) return;
+    contributorsListContainer.innerHTML = '<li>Carregando...</li>';
+    try {
+        const response = await fetch('contributors.json');
+        if (!response.ok) throw new Error("contributors.json não encontrado");
+        const data = await response.json();
+        
+        const creators = data.filter(c => c.roles.includes('Criador e mantenedor'));
+        const placeholder = data.filter(c => c.roles.includes('pode aparecer aqui se você contribuir!'));
+        const others = data.filter(c => !c.roles.includes('Criador e mantenedor') && !c.roles.includes('pode aparecer aqui se você contribuir!'));
+        
+        creators.sort((a, b) => a.name.localeCompare(b.name, 'pt-BR'));
+        others.sort((a, b) => a.name.localeCompare(b.name, 'pt-BR'));
+        
+        const sortedList = [...creators, ...others, ...placeholder];
+        let html = '';
+        sortedList.forEach(contrib => {
+            html += `<li><strong>${contrib.name}</strong> (${contrib.roles.join(', ')})`;
+            if (contrib.link && contrib.link.url) html += ` - [<a href="${contrib.link.url}" target="_blank">${contrib.link.text}</a>]`;
+            html += `</li>`;
+        });
+        contributorsListContainer.innerHTML = html;
+    } catch (error) {
+        contributorsListContainer.innerHTML = '<li style="color: red;">Erro ao carregar lista.</li>';
+    }
+}

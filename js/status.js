@@ -15,64 +15,18 @@
 
 // --- 1. CONFIGURAÇÃO ---
 
-const configDisciplinas = {
-    "Contabilidade Societária": {
-        // (MODIFICADO) Caminho relativo à raiz
-        arquivo: 'disciplinas/contabilidade-societaria.json' 
-    },
-    "Contabilidade Gerencial": {
-        // (MODIFICADO) Caminho relativo à raiz
-        arquivo: 'disciplinas/contabilidade-gerencial.json'
-    },
-    "Contabilidade Geral e Teoria": {
-        arquivo: 'disciplinas/contabilidade-geral.json' 
-    },
-    "Língua Portuguesa": {
-        arquivo: 'disciplinas/lingua-portuguesa.json' 
-    },
-    "Matemática e Estatística": {
-        arquivo: 'disciplinas/mat-financeira-estatistica.json', 
-    },
-    "Elaborações das Demonstrações Contábeis": {
-        arquivo: 'disciplinas/elaboracoes-dc.json'        
-    },
-    "Ética Geral e Profissional": {
-        arquivo: 'disciplinas/etica.json', 
-    },
-    "Noções de Direito e Legislação Aplicada": {
-        arquivo: 'disciplinas/direito.json',       
-    },
-    "Contabilidade de Custos": {
-        arquivo: 'disciplinas/contabilidade-custos.json' 
-    },
-    "Análise das demonstrações Contábeis": {
-        arquivo: 'disciplinas/analise-dc.json'
-    },
-    "Contabilidade Pública": {
-        arquivo: 'disciplinas/contabilidade-publica.json'
-    },
-    "Auditoria Contábil": {
-        arquivo: 'disciplinas/auditoria.json',
-    },
-    "Controladoria": {
-        arquivo: 'disciplinas/controladoria.json',
-    },
-    "Perícia Contábil": {
-        arquivo: 'disciplinas/pericia.json',
-    },
-    "Contabilidade Tributária": {
-        arquivo: 'disciplinas/cont-tributaria.json',
-    },
-    /*
-    ,
-    "Contabilidade de Custos": {
-        arquivo: 'disciplinas/db_custos.json'
-    },
-    "Auditoria": {
-        arquivo: 'disciplinas/db_auditoria.json'
-    }
-    */
-};
+// (NOVO) Lista de arquivos por edição de exame
+const ARQUIVOS_EXAMES = [
+    'exames/CFC_2022_01.json',
+    'exames/CFC_2022_02.json',
+    'exames/CFC_2023_01.json',
+    'exames/CFC_2023_02.json',
+    'exames/CFC_2024_01.json',
+    'exames/CFC_2024_01_RS.json',
+    'exames/CFC_2024_02.json',
+    'exames/CFC_2025_01.json',
+    'exames/CFC_2025_02.json',
+];
 
 const QUESTIONS_PER_EXAM = 50;
 
@@ -138,11 +92,13 @@ document.addEventListener('DOMContentLoaded', async () => {
  * Passo 1: Carrega todos os JSONs
  */
 async function loadAllData() {
-    const promessas = Object.values(configDisciplinas).map(async (config) => {
+    // ALTERAÇÃO AQUI: Usar ARQUIVOS_EXAMES diretamente
+    const promessas = ARQUIVOS_EXAMES.map(async (caminhoArquivo) => {
         try {
-            const response = await fetch(config.arquivo);
+            // ALTERAÇÃO AQUI: fetch recebe a string direto, não config.arquivo
+            const response = await fetch(caminhoArquivo);
             if (!response.ok) {
-                throw new Error(`Falha ao carregar ${config.arquivo}: ${response.statusText}`);
+                throw new Error(`Falha ao carregar ${caminhoArquivo}: ${response.statusText}`);
             }
             return await response.json();
         } catch (error) {
@@ -156,8 +112,16 @@ async function loadAllData() {
     questionMap.clear();
     todosOsArraysDeQuestoes.forEach(disciplina => {
         disciplina.forEach(questao => {
-            const uniqueID = `${questao.exame}-${questao.id}`;
-            questionMap.set(uniqueID, questao);
+            // 1. Se for o objeto de metadados, ignora e pula para o próximo
+            if (questao.tipo === 'metadados_licenca') {
+                return; 
+            }
+
+            // 2. Verificação de segurança: só processa se tiver 'exame' e 'id'
+            if (questao.exame && questao.id) {
+                const uniqueID = `${questao.exame}-${questao.id}`;
+                questionMap.set(uniqueID, questao);
+            }
         });
     });
 
