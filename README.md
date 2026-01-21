@@ -60,7 +60,7 @@ O Balanceterno possui uma ferramenta de ingestão de dados:
 
 Ideal para criar questões inéditas ou ajustar tabelas muito complexas. Para checar o manual acesse [man-generator](tools/man-generator.md)
 
-1.  Abra o arquivo `tools/generator.html` no seu navegador, ou acesse (Gerador de questões)[https://elrunix12.github.io/balanceterno/tools/generator.html]
+1.  Abra o arquivo `tools/generator.html` no seu navegador, ou acesse [Gerador de questões](https://elrunix12.github.io/balanceterno/tools/generator.html)
 2.  Utilize a interface visual para preencher Enunciado, Opções e Lançamentos.
 3.  O sistema gera o JSON validado.
 4.  Edite o arquivo `etl/ementas.json` caso você precise alterar disciplinas ou as *tags*.
