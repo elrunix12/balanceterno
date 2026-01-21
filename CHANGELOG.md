@@ -8,7 +8,7 @@
 - **Campos no Schema JSON:** Adicionados campos padronizados `gabarito_texto`, `obsoleta` e `lancamentos` (lista vazia) no output do Python para paridade com o frontend.
 - **Gerador de questões:** Agora o gerador possui 4 funcões: gerar questão completa, apenas resolução, resolução e lançamento contábil, apenas lançamento.
 - **Sanitizador de tags:** O script cruza os dados da `ementa.json` com a edição do exame para verificar remover tags que não existem.
-- **Novas questões:** Adicionado todas as questões dos 2022 até 2024. Agora o projeto conta com 450 questões!
+- **Novas questões:** Adicionado todas as questões dos ano 2022 até 2024. Agora o projeto conta com 450 questões!
 
 ### Modificado (Changed)
 - **Ordenação de Questões:** Aprimorada a lógica de sort no JSON para: Ano (Decrescente) > Exame (Decrescente) > ID (Crescente).
