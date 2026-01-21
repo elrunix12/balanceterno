@@ -1,7 +1,7 @@
 # 🗺️ Roadmap - Balanceterno
 
 ## 📅 Atualização do Roadmap
-Última revisão: **11 de novembro de 2025**
+Última revisão: **20 de dezembro de 2026**
 
 Este documento apresenta o **planejamento futuro** do projeto.  
 As tarefas aqui descritas representam objetivos de curto e médio prazo.  
@@ -11,7 +11,7 @@ Mudanças já concluídas são movidas para o [`CHANGELOG.md`](CHANGELOG.md).
 
 ## Próxima versão [0.31]:
 
-- Correção de bugs
+- [ ] Correção de bugs
 
 ## 🐞 Bugs Conhecidos
 
