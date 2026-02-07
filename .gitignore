@@ -44,6 +44,7 @@ node_modules/
 /blob-report/
 /playwright/.cache/
 /playwright/.auth/
+docs/playwright-report/
 
 # --- DEBUGGING NODE/NPM ---
 npm-debug.log*
