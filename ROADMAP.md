@@ -9,9 +9,10 @@ Mudanças já concluídas são movidas para o [`CHANGELOG.md`](CHANGELOG.md).
 
 ---
 
-## Próxima versão [0.31]:
+## Próxima versão [0.35]:
 
 - [ ] Correção de bugs
+- [ ] Modo simulado
 
 ## 🐞 Bugs Conhecidos
 
