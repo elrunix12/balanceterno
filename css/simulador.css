@@ -1,0 +1,458 @@
+/* =========================================
+   1. ESTRUTURA GERAL E LAYOUT
+   ========================================= */
+
+.painel-simulado {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.btn-iniciar {
+    background-color: #004a91;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s;
+}
+
+.btn-iniciar:hover { background-color: #003366; }
+
+.botoes-finais {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* =========================================
+   2. MENU INICIAL (CARDS)
+   ========================================= */
+
+.grid-modos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.card-modo {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    background-color: #fafafa;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.card-modo:hover {
+    transform: translateY(-2px);
+    border-color: #004a91;
+}
+
+@media (max-width: 600px) {
+    .grid-modos { grid-template-columns: 1fr; }
+}
+
+/* =========================================
+   3. ÁREA DA QUESTÃO E QUIZ
+   ========================================= */
+
+.tag-disciplina {
+    background-color: #e6f7ff;
+    color: #004a91;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.85em;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.enunciado-texto {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* Tabelas dentro do enunciado */
+.table-responsive {
+    overflow-x: auto;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.enunciado-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9em;
+}
+
+.enunciado-table th, .enunciado-table td {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.enunciado-table th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+}
+
+/* Opções de Resposta */
+.opcao-container {
+    display: flex;
+    align-items: flex-start;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.opcao-container:hover { background-color: #f0f8ff; }
+
+.opcao-container.selecionada {
+    background-color: #d1e7dd;
+    border-color: #0f5132;
+    font-weight: 500;
+}
+
+.letra-opcao {
+    background: #eee;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-right: 15px;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.opcao-container.selecionada .letra-opcao {
+    background: #0f5132;
+    color: white;
+}
+
+/* Barra de Progresso e Timer */
+.barra-infos {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #666;
+}
+
+.barra-progresso-fundo {
+    width: 100%;
+    height: 8px;
+    background-color: #eee;
+    border-radius: 4px;
+    margin-bottom: 25px;
+    overflow: hidden;
+}
+
+#barra-progresso-fill {
+    height: 100%;
+    background-color: #28a745;
+    width: 0%;
+    transition: width 0.3s ease;
+}
+
+.controles-quiz {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+/* =========================================
+   4. RELATÓRIO DE RESULTADO
+   ========================================= */
+
+/* Cabeçalho do Relatório (escondido na tela normal) */
+.cabecalho-relatorio {
+    display: none;
+    text-align: center;
+    border-bottom: 2px solid #333;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+/* Card da Questão no Resultado */
+.gabarito-item {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* Status das Bordas */
+.gabarito-item.acertou { border-left: 5px solid #28a745; }
+.gabarito-item.errou { border-left: 5px solid #dc3545; }
+.gabarito-item.nao-respondida { border-left: 5px solid #6c757d; }
+.gabarito-item.anulada { border-left: 5px solid #ffc107; background-color: #fffbf2; }
+
+/* Badges e Títulos do Card */
+.cabecalho-questao-relatorio {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.badge-id {
+    background: #eee;
+    color: #555;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.8em;
+    margin-left: 10px;
+}
+
+.badge-exame {
+    background: #e6f7ff;
+    color: #004a91;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.8em;
+    margin-left: 5px;
+    font-weight: bold;
+}
+
+.gabarito-item.anulada .status-badge {
+    color: #856404;
+    font-weight: bold;
+    background: #fff3cd;
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+.disciplina-relatorio {
+    font-size: 0.9em;
+    color: #666;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.enunciado-relatorio {
+    margin-bottom: 20px;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+/* Opções dentro do Relatório */
+.opcao-relatorio {
+    display: flex;
+    padding: 10px;
+    border: 1px solid #eee;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    font-size: 0.95em;
+}
+
+.letra-bd { font-weight: bold; width: 30px; }
+.texto-bd { flex: 1; }
+.icone-bd { font-weight: bold; margin-left: 10px;}
+
+/* Cores das Respostas no Relatório */
+.op-correta {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    color: #155724;
+}
+
+.op-errada {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    color: #721c24;
+    text-decoration: line-through;
+}
+
+.op-selecionada { border-width: 2px; }
+
+/* =========================================
+   5. ESTATÍSTICAS E RESOLUÇÃO
+   ========================================= */
+
+/* Box de Resolução Comentada */
+.box-resolucao {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f1f8ff;
+    border-left: 4px solid #004a91;
+    border-radius: 4px;
+    font-size: 0.95em;
+    color: #333;
+}
+
+.box-resolucao h4 {
+    margin: 0 0 10px 0;
+    color: #004a91;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.autor-resolucao {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.85em;
+    color: #666;
+    font-style: italic;
+    text-align: right;
+}
+
+/* Tabela de Estatísticas */
+.box-stats {
+    margin: 30px 0;
+    overflow-x: auto;
+}
+
+.tabela-stats {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9em;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.tabela-stats th, .tabela-stats td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.tabela-stats th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+    color: #555;
+}
+
+.col-barra { width: 40%; min-width: 100px; }
+
+.progress-track {
+    background-color: #eee;
+    border-radius: 10px;
+    height: 8px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    border-radius: 10px;
+    transition: width 0.5s ease;
+}
+
+.fill-ruim { background-color: #dc3545; }
+.fill-medio { background-color: #ffc107; }
+.fill-bom { background-color: #28a745; }
+
+/* =========================================
+   6. MODO DE IMPRESSÃO (PDF)
+   ========================================= */
+
+@media print {
+    /* Esconde tudo que não é essencial */
+    header, 
+    #tela-inicial, 
+    #tela-quiz, 
+    .no-print, 
+    .titulo-tela-resultado,
+    .btn-iniciar { 
+        display: none !important; 
+    }
+    .site-footer {
+        display: none !important; 
+    }
+
+    /* Ajusta o container para ocupar a folha toda */
+    body, .container, .painel-simulado {
+        background: white !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        box-shadow: none !important;
+        border: none !important;
+    }
+
+    /* Mostra o cabeçalho e data oficial */
+    .cabecalho-relatorio { display: block !important; }
+    
+    #data-hora-resultado {
+        display: block !important;
+        margin-bottom: 30px !important;
+        color: #000 !important;
+    }
+
+    /* Ajustes dos Cards de Questão */
+    .gabarito-item {
+        page-break-inside: avoid;
+        border: 1px solid #ccc !important;
+        box-shadow: none !important;
+        margin-bottom: 20px !important;
+        border-left-width: 4px !important;
+    }
+
+    /* Força a impressão das cores de fundo */
+    * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
+    .op-correta, .op-errada, .progress-fill {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
+    /* Tabela e Resolução na impressão */
+    .box-stats { display: block !important; page-break-inside: avoid; }
+    .progress-track { border: 1px solid #ccc; }
+    
+    .box-resolucao {
+        background-color: #fff !important;
+        border: 1px solid #ccc !important;
+        border-left: 4px solid #000 !important;
+    }
+
+    body { font-size: 12px; }
+    h1, h2, h3 { color: #000 !important; }
+}
+
+/* Aviso de Cálculo (Nota sobre anuladas) */
+.aviso-calculo {
+    text-align: center;
+    color: #555;
+    background-color: #f8f9fa;
+    border: 1px solid #eee;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 0.85em;
+    margin-bottom: 20px;
+}
+
+@media print {
+    .aviso-calculo {
+        border: none;
+        font-style: italic;
+    }
+}

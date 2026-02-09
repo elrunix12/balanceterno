@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulado CFC | Balanceterno</title>
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧮</text></svg>">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/simulador.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Simulado Exame de Suficiência</h1>
+            <p><a href="index.html" style="color: white; text-decoration: underline;">← Voltar para o site principal</a></p>
+        </header>
+
+        <div id="tela-inicial" class="painel-simulado">
+            <h2>Escolha o modo de estudo</h2>
+            <div class="grid-modos">
+                
+                <div class="card-modo">
+                    <h3>⚡ Modo Rápido</h3>
+                    <p>16 questões aleatórias.</p>
+                    <p><small>5 de Geral e NBCs + 1 de cada disciplina.</small></p>
+                    <button class="btn-iniciar" onclick="Simulador.iniciarModoRapido()">Iniciar Rápido</button>
+                </div>
+
+                <div class="card-modo">
+                    <h3>📅 Modo Prova Real</h3>
+                    <p>Simule uma edição completa.</p>
+                    <select id="select-edicao">
+                        <option value="">Carregando edições...</option>
+                    </select>
+                    <br><br>
+                    <button class="btn-iniciar" onclick="Simulador.iniciarModoReal()">Iniciar Prova</button>
+                </div>
+            </div>
+            
+            <p style="text-align: center; margin-top: 20px; color: #666; font-size: 0.9em;">
+                <small>Nota: Seu progresso é salvo automaticamente caso feche o navegador.</small>
+            </p>
+        </div>
+
+        <div id="tela-quiz" class="painel-simulado" style="display: none;">
+            <div class="barra-infos">
+                <span id="progresso-texto">Questão 1 de 16</span>
+                <span id="timer">Tempo: 00:00</span>
+            </div>
+            
+            <div class="barra-progresso-fundo">
+                <div id="barra-progresso-fill"></div>
+            </div>
+
+            <div id="area-questao"></div>
+
+            <div class="controles-quiz">
+                <button id="btn-anterior" onclick="Simulador.anterior()" disabled>Anterior</button>
+                <button id="btn-proximo" onclick="Simulador.proximo()">Próximo</button>
+                <button id="btn-finalizar" onclick="Simulador.finalizar()" style="display: none; background-color: #28a745;">Entregar Simulado</button>
+            </div>
+        </div>
+
+        <div id="tela-resultado" class="painel-simulado" style="display: none;">
+            
+            <div class="cabecalho-relatorio">
+                <h2>Relatório de Desempenho - Simulado CFC</h2>
+            </div>
+
+            <h2 class="titulo-tela-resultado">Resultado do Simulado</h2>
+            
+            <p id="data-hora-resultado" style="text-align: center; color: #666; margin-bottom: 25px; font-size: 0.9em;"></p>
+            
+            <div class="placar-final">
+                <div class="score-box">
+                    <span class="score-numero" id="score-acertos">0</span>
+                    <span class="score-label">Acertos Válidos</span>
+                </div>
+                <div class="score-box">
+                    <span class="score-numero" id="score-percentual">0%</span>
+                    <span class="score-label">Aproveitamento</span>
+                </div>
+            </div>
+
+            <div id="stats-container" class="box-stats"></div>
+
+            <div class="aviso-calculo">
+                ℹ️ <strong>Nota:</strong> Questões anuladas não são contabilizadas no cálculo de desempenho geral ou por disciplina.
+            </div>
+
+            <div id="mensagem-final" class="no-print"></div>
+
+            <h3>Gabarito Detalhado:</h3>
+            <div id="lista-gabarito"></div>
+
+            <div class="botoes-finais no-print">
+                <button class="btn-iniciar" onclick="window.print()">🖨️ Imprimir / Salvar PDF</button>
+                <button class="btn-iniciar" onclick="location.reload()" style="background-color: #666;">Novo Simulado</button>
+            </div>
+        </div>
+
+        <footer class="site-footer">
+            <p>Carregando rodapé...</p>
+        </footer>
+
+    </div>
+
+    </div> <script src="js/shared.js"></script>
+    <script src="js/simulador.js"></script>
+</body>
+</html>

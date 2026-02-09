@@ -1,5 +1,23 @@
 # Changelog
 
+## [0.35 - beta] - 2026-02-08
+
+### Adicionado (Added)
+- **Módulo Simulado:** Criação de um ambiente de prova completo e independente (`simulador.html`), focado na experiência do usuário e treino prático.
+    - **Modos de Estudo:** Implementação de duas estratégias de simulado:
+        - *Modo Rápido:* Gera uma prova de 15 questões aleatórias com pesos balanceados (5 de Geral + 1 de cada disciplina restante), excluindo automaticamente questões anuladas.
+        - *Modo Prova Real:* Permite realizar uma edição completa do exame (ex: 2024/1) com as 50 questões originais.
+    - **Persistência de Sessão:** O sistema agora salva automaticamente o progresso (respostas marcadas e tempo decorrido) no navegador. O aluno pode fechar a aba e retomar o simulado de onde parou.
+    - **Relatório de Desempenho:** Ao finalizar, o aluno recebe um boletim detalhado com:
+        - Score geral e status de aprovação.
+        - Estatísticas por disciplina com barras de progresso visuais.
+        - Gabarito comentado (incluindo renderização de tabelas e resoluções).
+    - **Tratamento de Anuladas:** Implementada lógica que exibe questões anuladas no "Modo Real" para fidelidade histórica, mas as exclui matematicamente do cálculo da nota final.
+    - **Modo de Impressão:** Folha de estilos exclusiva (`@media print`) que transforma o resultado da tela em um relatório formal limpo para salvar em PDF.
+
+### Modificado (Changed)
+- **Interface Principal:** Adicionado botão de destaque "Simulado" no cabeçalho e um link de acesso rápido na barra de abas do site.
+
 ## [0.30] - 2026-01-20
 
 ### Adicionado (Added)
