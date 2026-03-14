@@ -20,6 +20,7 @@ O **Balanceterno** é uma plataforma projetada para centralizar, organizar e fac
   * **Renderização Avançada:** Suporte nativo a **Tabelas Contábeis** complexas no enunciado.
   * **Módulo de Lançamentos:** Visualizador interativo de partidas dobradas (Débito e Crédito) para entender a mecânica contábil.
   * **Modo Foco:** Oculte automaticamente questões anuladas ou baseadas em legislação obsoleta.
+  * **Modo Simulado:** Simule como seria uma prova real, ou treine rapidamente com uma amostra aleatória de 16 questões.
 
 -----
 

@@ -1,6 +1,6 @@
 # Changelog
 
-## [0.35 - beta] - 2026-02-08
+## [0.35] - 2026-03-14
 
 ### Adicionado (Added)
 - **Módulo Simulado:** Criação de um ambiente de prova completo e independente (`simulador.html`), focado na experiência do usuário e treino prático.
