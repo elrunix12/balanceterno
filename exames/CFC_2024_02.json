@@ -1290,8 +1290,8 @@
     ],
     "gabarito": "C",
     "gabarito_texto": "consumiu fluxo líquido de caixa no montante de R$ 15.000.",
-    "resolucao": "",
-    "autor_resolucao": "",
+    "resolucao": "Essa questão trata-se de fluxo de caixa pelo método direto. Primeiramente, vamos classificar:\n\n• Venda, à vista, de todo o estoque por R$ 80.000; | Operacional\n\n• Recebimento do saldo dos clientes; | Operacional. Perceba que foi recebido todo o saldo de clientes -> 20.000\n\n• Venda, à vista, dos equipamentos de informática por R$ 60.000; Investimento, pois equipamentos de informática é imobilizado.\n\n• Pagamento dos salários do ano anterior; Operacional. Perceba que foi pago o saldo total de salários -> 15.000\n\n• Pagamento do empréstimo bancário contraído; Financiamento. Perceba que aqui não foi pago juros. Segundo o item 34A, os juros do empréstimo recomenda-se classificar como operacional, mas o principal (o valor do empréstimo) dever ser classificado como financiamento.\n\n• Reconhecimento e pagamento de despesas gerais por R$ 100.000. Operacional\n\n\n-> Prejuízos acumulados NÃO são Resultado do Exercício, portanto vamos fazer pelo método direto:\n\nDemonstração do Fluxo de caixa - Método Direto\nFluxo de caixa das atividades operacionais\n\n(+) Venda de estoque: 80.000\n(+) Recebimento de saldo dos clientes: 20.000\n(-) Pagamento de salários: (15.000)\n(-) Pagamento de despesas gerais: (100.000)\n\nCaixa líquido consumido pelas atividades operacionais: (15.000).\n\nComo o saldo é negativo, afirmasse que o caixa líquido foi consumido.",
+    "autor_resolucao": "elrunix12",
     "obsoleta": false,
     "anulada": false,
     "lancamentos": []

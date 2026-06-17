@@ -1258,8 +1258,8 @@
     ],
     "gabarito": "C",
     "gabarito_texto": "R$ 60.000,00.",
-    "resolucao": "",
-    "autor_resolucao": "",
+    "resolucao": "Primeiramente, devemos classificar de acordo com a atividade (Operacional, Investimento, Financiamento) para cada uma das transações:\n\n• Integralização de capital social em dinheiro: R$ 300.000,00. | Atividade de Financiamento, porque a empresa está financiando suas operações com capital próprio.\n\n• Compra à vista de móveis e utensílios para a loja: R$ 40.000,00. | Investimento, porque móveis e utensílios é imobilizado.\n\n• Compra à vista de estoque para revenda: R$ 80.000,00. | Operacional\n\n• Pagamento do aluguel do semestre: R$ 30.000,00. | Operacional\n\n• Pagamento antecipado do aluguel do primeiro trimestre de 2025: R$ 18.000,00. | Operacional\n\n• Venda de todo o estoque por R$ 400.000,00, sendo que metade do valor já foi recebido e o restante deverá ser recebido no primeiro semestre de 2025. A loja estima inadimplência de 5%. | Operacional. \n\n-> ATENÇÃO: O valor da PECLD (os 5%) NÃO deve ser diluída do preço de Venda. Além disso, perceba que apenas metade do valor de fato entrou no caixa, portanto o valor a ser usado será 200.000.\n\n• Reconhecimento e pagamento de despesas diversas: R$ 12.000,00. | Operacional\n\n• Reconhecimento da despesa de depreciação: R$ 4.000,00. | Depreciação NÃO entra nas Demonstrações do Fluxo de Caixa pelo método DIRETO. Ela só vai entrar no cálculo do lucro ajustado.\n\nPerceba que a questão não menciona lucro ou resultado líquido, portanto vamos calcular pelo método DIRETO:\n\nDemonstração do FLuxo de Caixa\nAtividades Operacionais\n\n(+) Venda de estoque 200.000\n(-) Compra de estoque (80.000)\n(-) Pagamento de aluguel (30.000)\n(-) Pagamento antecipado de aluguel (18.000)\n(-) Despesas diversas (12.000)\n\nCaixa gerado pelas atividades operacionais: 60.000",
+    "autor_resolucao": "elrunix12",
     "obsoleta": false,
     "anulada": false,
     "lancamentos": []
