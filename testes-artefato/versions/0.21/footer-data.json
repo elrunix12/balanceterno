@@ -1,0 +1,19 @@
+{
+  "projectName": "Anonymous Author",
+  "currentYear": 2025,
+  "version": "0.21 - Em Desenvolvimento",
+  "github": {
+    "text": "Código-fonte no GitHub",
+    "url": "https://github.com/Anonymous Author/Anonymous Author"
+  },
+  "disclaimer": "Este é um projeto educacional independente, desenvolvido para ajudar estudantes e profissionais da contabilidade. Não possuímos qualquer vínculo ou afiliação com o Conselho Federal de Contabilidade.",
+  "license": {
+    "prefix": "Distribuído sob a",
+    "text": "Licença AGPL-3.0",
+    "url": "https://www.gnu.org/licenses/agpl-3.0.html"
+  },
+  "adminLink": {
+    "text": "Gerador de Questões (para desenvolvedores)",
+    "url": "tools/generator.html"
+  }
+}

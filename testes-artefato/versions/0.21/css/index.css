@@ -1,0 +1,961 @@
+/*
+ * Anonymous Author - Plataforma de Estudos para o Exame de Suficiência
+ * Copyright (C) 2025  Anonymous Author (Anonymous Author)
+ *
+ * Este programa é um software livre: você pode redistribuí-lo e/ou modificá-lo
+ * sob os termos da GNU Affero General Public License, versão 3 (AGPLv3),
+ * conforme publicada pela Free Software Foundation.
+ *
+ * Este programa é distribuído na esperança de que seja útil,
+ * mas SEM NENHUMA GARANTIA; sem mesmo a garantia implícita de
+ * COMERCIALIZAÇÃO ou ADEQUAÇÃO A UM DETERMINADO PROPÓSITO.
+ *
+ * Veja o arquivo LICENSE para mais detalhes.
+ */
+
+/* --- (MODIFICADO) Cores das 15 Disciplinas --- */
+:root {
+    /* Cores Padrão */
+    --cor-default-bg: #f0f2f5;
+    --cor-default-border: #ddd;
+    --cor-default-text: #333;
+
+    /* Societária (Azul Claro) - MANTIDO */
+    --cor-societaria-bg: #e6f7ff;
+    --cor-societaria-border: #b3e0ff;
+    --cor-societaria-text: #004a91;
+    
+    /* Gerencial (Verde) */
+    --cor-gerencial-bg: #e6ffed;
+    --cor-gerencial-border: #b3f0c8;
+    --cor-gerencial-text: #218838;
+    
+    /* Geral e Teoria (Neutro / Pedra) */
+    --cor-geral-bg: #f5f5f5;
+    --cor-geral-border: #e0e0e0;
+    --cor-geral-text: #5d5d5d;
+
+    /* Português (Roxo / Violeta) */
+    --cor-portugues-bg: #f3e5f5;
+    --cor-portugues-border: #e1bee7;
+    --cor-portugues-text: #4a148c;
+
+    /* Exatas (Laranja) */
+    --cor-exatas-bg: #fff3e0;
+    --cor-exatas-border: #ffe0b2;
+    --cor-exatas-text: #e65100;
+
+    /* Elaborações DC (Ciano) */
+    --cor-elaboracoes-dc-bg: #e0f7fa;
+    --cor-elaboracoes-dc-border: #b2ebf2;
+    --cor-elaboracoes-dc-text: #006064;
+
+    /* Ética (Índigo / Azul Escuro) */
+    --cor-etica-bg: #e8eaf6;
+    --cor-etica-border: #c5cae9;
+    --cor-etica-text: #1a237e;
+
+    /* Direito (Marrom / Bronze) - (Era Vermelho) */
+    --cor-direito-bg: #fdfbeA;
+    --cor-direito-border: #f5eecb;
+    --cor-direito-text: #5D4037;
+
+    /* Custos (Amarelo / Ouro) */
+    --cor-custos-bg: #fffde7;
+    --cor-custos-border: #fff9c4;
+    --cor-custos-text: #f57f17;
+
+    /* Análise DC (Cinza / Ardósia) */
+    --cor-analise-dc-bg: #eceff1;
+    --cor-analise-dc-border: #cfd8dc;
+    --cor-analise-dc-text: #37474f;
+
+    /* Pública (Azul Médio) */
+    --cor-publica-bg: #e3f2fd;
+    --cor-publica-border: #bbdefb;
+    --cor-publica-text: #000000;
+
+    /* Auditoria (Verde Oliva) */
+    --cor-auditoria-bg: #f1f8e9;
+    --cor-auditoria-border: #dcedc8;
+    --cor-auditoria-text: #33691e;
+
+    /* Controladoria (Rosa / Magenta) */
+    --cor-controladoria-bg: #fce4ec;
+    --cor-controladoria-border: #f8bbd0;
+    --cor-controladoria-text: #880e4f;
+
+    /* Perícia (Laranja Queimado / Ferrugem) */
+    --cor-pericia-bg: #fbe9e7;
+    --cor-pericia-border: #ffccbc;
+    --cor-pericia-text: #bf360c;
+
+    /* Tributária (Verde Água / Teal) */
+    --cor-tributaria-bg: #e0f2f1;
+    --cor-tributaria-border: #b2dfdb;
+    --cor-tributaria-text: #004d40;
+}
+
+/* --- Estilos das Tabs --- */
+.tab-nav {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ddd;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.tab-button {
+    padding: 10px 5px;
+    font-size: 1.1em;
+    font-weight: 500;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    color: #555;
+    border-bottom: 3px solid transparent;
+    transition: border-color 0.2s, color 0.2s;
+}
+.tab-button:hover { color: #004a91; }
+.tab-button.active {
+    color: #004a91;
+    font-weight: 600;
+    border-bottom: 3px solid #004a91;
+}
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
+
+/* Estilo genérico para abas de texto */
+#tab-sobre, #tab-termos, #tab-privacidade, #tab-changelog {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+#tab-sobre h3, #tab-termos h3, #tab-privacidade h3, #tab-changelog h3 {
+    margin-top: 0; color: #004a91; border-bottom: 1px solid #ddd; padding-bottom: 10px;
+}
+
+.inline-tab-link {
+    color: #004a91;
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight: 500;
+}
+.inline-tab-link:hover {
+    color: #003366;
+}
+
+/* Estilos para o conteúdo do Changelog */
+#changelog-content {
+    line-height: 1.7;
+}
+#changelog-content h2 {
+    font-size: 1.4em;
+    color: #004a91;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+    margin-top: 25px;
+}
+#changelog-content h3 {
+    font-size: 1.2em;
+    color: #333;
+    margin-top: 20px;
+    border: none;
+}
+#changelog-content ul, #changelog-content li {
+    margin-bottom: 8px;
+}
+#changelog-content code {
+    background-color: #e4e6eb;
+    padding: 2px 5px;
+    border-radius: 4px;
+    font-family: monospace;
+}
+
+
+/* --- Área de Filtros --- */
+.filter-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+.filter-container h3 {
+    margin-top: 0;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    color: #004a91;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.filter-container h3 > span {
+    display: flex;
+    gap: 8px; 
+    align-items: center;
+}
+.filter-container h3 button {
+    font-size: 0.8em;
+    font-weight: normal;
+    padding: 4px 8px;
+    border: 1px solid #004a91;
+    background-color: #f0f2f5;
+    color: #004a91;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.filter-container h3 button:hover { background-color: #e4e6eb; }
+
+
+/* --- (MODIFICADO) Filtro de Disciplina (com Cores) --- */
+#disciplina-checkbox-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 10px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+/* Estilo base do label (sem cor) */
+#disciplina-checkbox-container label {
+    display: flex;
+    align-items: center;
+    padding: 10px 14px;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    background-color: var(--cor-default-bg);
+    border: 1px solid var(--cor-default-border);
+}
+#disciplina-checkbox-container label:hover { 
+    background-color: #e4e6eb; /* Hover genérico */
+}
+#disciplina-checkbox-container input { 
+    margin-right: 10px; 
+}
+
+/* Aplica as cores por classe */
+#disciplina-checkbox-container label.disciplina-societaria {
+    background-color: var(--cor-societaria-bg);
+    border-color: var(--cor-societaria-border);
+}
+#disciplina-checkbox-container label.disciplina-societaria:hover {
+    background-color: #d0ebff;
+}
+
+#disciplina-checkbox-container label.disciplina-gerencial {
+    background-color: var(--cor-gerencial-bg);
+    border-color: var(--cor-gerencial-border);
+}
+#disciplina-checkbox-container label.disciplina-gerencial:hover {
+    background-color: #d0f5d9;
+}
+
+#disciplina-checkbox-container label.disciplina-geral {
+    background-color: var(--cor-geral-bg);
+    border-color: var(--cor-geral-border);
+}
+#disciplina-checkbox-container label.disciplina-geral:hover {
+    background-color: #e8e8e8;
+}
+
+#disciplina-checkbox-container label.disciplina-portugues {
+    background-color: var(--cor-portugues-bg);
+    border-color: var(--cor-portugues-border);
+}
+#disciplina-checkbox-container label.disciplina-portugues:hover {
+    background-color: #eadef0;
+}
+
+#disciplina-checkbox-container label.disciplina-exatas {
+    background-color: var(--cor-exatas-bg);
+    border-color: var(--cor-exatas-border);
+}
+#disciplina-checkbox-container label.disciplina-exatas:hover {
+    background-color: #ffeccf;
+}
+
+#disciplina-checkbox-container label.disciplina-elaboracoes-dc {
+    background-color: var(--cor-elaboracoes-dc-bg);
+    border-color: var(--cor-elaboracoes-dc-border);
+}
+#disciplina-checkbox-container label.disciplina-elaboracoes-dc:hover {
+    background-color: #cbeef2;
+}
+
+#disciplina-checkbox-container label.disciplina-etica {
+    background-color: var(--cor-etica-bg);
+    border-color: var(--cor-etica-border);
+}
+#disciplina-checkbox-container label.disciplina-etica:hover {
+    background-color: #d7dae8;
+}
+
+#disciplina-checkbox-container label.disciplina-direito {
+    background-color: var(--cor-direito-bg);
+    border-color: var(--cor-direito-border);
+}
+#disciplina-checkbox-container label.disciplina-direito:hover {
+    background-color: #f2efe0;
+}
+
+#disciplina-checkbox-container label.disciplina-custos {
+    background-color: var(--cor-custos-bg);
+    border-color: var(--cor-custos-border);
+}
+#disciplina-checkbox-container label.disciplina-custos:hover {
+    background-color: #fff9e0;
+}
+
+#disciplina-checkbox-container label.disciplina-analise-dc {
+    background-color: var(--cor-analise-dc-bg);
+    border-color: var(--cor-analise-dc-border);
+}
+#disciplina-checkbox-container label.disciplina-analise-dc:hover {
+    background-color: #dde3e6;
+}
+
+#disciplina-checkbox-container label.disciplina-publica {
+    background-color: var(--cor-publica-bg);
+    border-color: var(--cor-publica-border);
+}
+#disciplina-checkbox-container label.disciplina-publica:hover {
+    background-color: #d1e6fa;
+}
+
+#disciplina-checkbox-container label.disciplina-auditoria {
+    background-color: var(--cor-auditoria-bg);
+    border-color: var(--cor-auditoria-border);
+}
+#disciplina-checkbox-container label.disciplina-auditoria:hover {
+    background-color: #e6f0e0;
+}
+
+#disciplina-checkbox-container label.disciplina-controladoria {
+    background-color: var(--cor-controladoria-bg);
+    border-color: var(--cor-controladoria-border);
+}
+#disciplina-checkbox-container label.disciplina-controladoria:hover {
+    background-color: #f7d9e4;
+}
+
+#disciplina-checkbox-container label.disciplina-pericia {
+    background-color: var(--cor-pericia-bg);
+    border-color: var(--cor-pericia-border);
+}
+#disciplina-checkbox-container label.disciplina-pericia:hover {
+    background-color: #fbe0da;
+}
+
+#disciplina-checkbox-container label.disciplina-tributaria {
+    background-color: var(--cor-tributaria-bg);
+    border-color: var(--cor-tributaria-border);
+}
+#disciplina-checkbox-container label.disciplina-tributaria:hover {
+    background-color: #ccebe8;
+}
+
+
+/* --- Filtro de Exame/Ano --- */
+.ano-filter-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+    align-items: start;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+}
+.form-group { display: flex; flex-direction: column; }
+.form-group label { font-weight: 600; margin-bottom: 5px; font-size: 0.9em; }
+.form-group select {
+    padding: 10px; font-size: 0.95em; border: 1px solid #ccc; border-radius: 5px; background-color: #fff;
+}
+#exame-checkbox-container {
+    display: flex; flex-wrap: wrap; gap: 10px; align-items: center;
+}
+#exame-checkbox-container label {
+    display: flex; align-items: center; background-color: #f0f2f5; padding: 8px 12px;
+    border-radius: 5px; font-size: 0.9em; cursor: pointer; transition: background-color 0.2s; margin: 0;
+}
+#exame-checkbox-container label:hover { background-color: #e4e6eb; }
+#exame-checkbox-container input { margin-right: 8px; }
+
+/* Campo de pesquisa */
+#search-input {
+    width: 100%; padding: 10px; font-size: 0.95em; border: 1px solid #ccc;
+    border-radius: 5px; background-color: #fff; box-sizing: border-box; 
+}
+
+/* --- Estilo para o campo de busca de ementas --- */
+.ementa-search-container {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+#search-ementas-input {
+    width: 100%;
+    padding: 8px 12px;
+    font-size: 0.95em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; 
+}
+
+/* --- Filtro de Ementa --- */
+#checkbox-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.ementa-group-label {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #004a91;
+    margin: 0 0 10px 0;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #ddd;
+}
+.ementa-group-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 10px;
+}
+.ementa-group-grid label {
+    display: flex; align-items: center; background-color: #f0f2f5; padding: 8px 12px;
+    border-radius: 5px; font-size: 0.9em; cursor: pointer; transition: background-color 0.2s;
+}
+.ementa-group-grid label:hover { background-color: #e4e6eb; }
+.ementa-group-grid input { margin-right: 8px; }
+
+#btn-clear-filters {
+    background-color: #6c757d; color: white; border: none; padding: 10px 15px;
+    border-radius: 5px; cursor: pointer; font-size: 0.9em; margin-right: 10px;
+}
+#btn-clear-filters:hover { background-color: #5a6268; }
+
+#filter-info {
+    display: inline-block; font-size: 0.9em; color: #555; font-style: italic;
+}
+
+/* --- Aviso inicial --- */
+#initial-prompt {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+#initial-prompt p {
+    font-size: 1.2em;
+    color: #004a91;
+    margin: 0;
+    font-weight: 500;
+}
+
+/* --- Área das Questões --- */
+.questao-card {
+    background-color: #ffffff; border: 1px solid #ddd; border-radius: 8px;
+    padding: 25px; margin-bottom: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.questao-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.questao-header h4 {
+    font-size: 1.1em;
+    color: #004a91;
+    margin: 0;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.questao-meta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 8px;
+    align-items: center;
+}
+
+/* --- (MODIFICADO) Container de Tags (Disciplina + Ementas) --- */
+.questao-disciplina-container {
+    margin-top: -10px;
+    margin-bottom: 15px;
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 6px; 
+    align-items: center; 
+}
+
+/* --- (MODIFICADO) Tags de Disciplina (com Cores) --- */
+.disciplina {
+    font-size: 0.9em;
+    font-weight: bold;
+    padding: 3px 8px;
+    border-radius: 4px;
+    /* Estilo Padrão */
+    background-color: var(--cor-default-bg);
+    color: var(--cor-default-text);
+}
+/* --- (NOVO) Estilo para Tags de Ementa no Card --- */
+.ementa-tag {
+    font-size: 0.8em; /* <-- Mais compacto */
+    font-weight: 500;
+    padding: 2px 6px; /* <-- Mais compacto */
+    border-radius: 4px;
+    background-color: #f0f2f5; /* <-- Cor neutra (fundo do body) */
+    color: #555; /* <-- Cor de texto neutra */
+    border: 1px solid #ddd; /* <-- Borda sutil */
+    white-space: normal; /* Permite que o texto da tag quebre a linha */
+    overflow-wrap: break-word; /* Força a quebra de palavras muito longas */
+}
+
+/* Aplica cores por classe */
+.disciplina.disciplina-societaria {
+    background-color: var(--cor-societaria-bg);
+    color: var(--cor-societaria-text);
+}
+.disciplina.disciplina-gerencial {
+    background-color: var(--cor-gerencial-bg);
+    color: var(--cor-gerencial-text);
+}
+.disciplina.disciplina-geral {
+    background-color: var(--cor-geral-bg);
+    color: var(--cor-geral-text);
+}
+.disciplina.disciplina-portugues {
+    background-color: var(--cor-portugues-bg);
+    color: var(--cor-portugues-text);
+}
+.disciplina.disciplina-exatas {
+    background-color: var(--cor-exatas-bg);
+    color: var(--cor-exatas-text);
+}
+.disciplina.disciplina-elaboracoes-dc {
+    background-color: var(--cor-elaboracoes-dc-bg);
+    color: var(--cor-elaboracoes-dc-text);
+}
+.disciplina.disciplina-etica {
+    background-color: var(--cor-etica-bg);
+    color: var(--cor-etica-text);
+}
+.disciplina.disciplina-direito {
+    background-color: var(--cor-direito-bg);
+    color: var(--cor-direito-text);
+}
+.disciplina.disciplina-custos {
+    background-color: var(--cor-custos-bg);
+    color: var(--cor-custos-text);
+}
+.disciplina.disciplina-analise-dc {
+    background-color: var(--cor-analise-dc-bg);
+    color: var(--cor-analise-dc-text);
+}
+.disciplina.disciplina-publica {
+    background-color: var(--cor-publica-bg);
+    color: var(--cor-publica-text);
+}
+.disciplina.disciplina-auditoria {
+    background-color: var(--cor-auditoria-bg);
+    color: var(--cor-auditoria-text);
+}
+.disciplina.disciplina-controladoria {
+    background-color: var(--cor-controladoria-bg);
+    color: var(--cor-controladoria-text);
+}
+.disciplina.disciplina-pericia {
+    background-color: var(--cor-pericia-bg);
+    color: var(--cor-pericia-text);
+}
+.disciplina.disciplina-tributaria {
+    background-color: var(--cor-tributaria-bg);
+    color: var(--cor-tributaria-text);
+}
+
+
+.questao-header span {
+    font-size: 0.9em; font-weight: bold; color: #444; white-space: nowrap;
+}
+.questao-header .banca {
+    font-size: 0.85em; font-weight: normal; color: #667; background-color: #eee;
+    padding: 2px 6px; border-radius: 4px; 
+}
+.questao-header .tag-obsoleta {
+    font-size: 0.8em; font-weight: bold; color: #d9534f; background-color: #fcf8e3;
+    border: 1px solid #d9534f; padding: 2px 6px; border-radius: 4px; 
+    white-space: nowrap;
+}
+
+/* Estilo base para ambos os tipos de enunciado */
+.enunciado {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+/* Mantém o pre-wrap APENAS para enunciados antigos (em <p>) */
+p.enunciado {
+    white-space: pre-wrap;
+}
+
+/* Ajusta parágrafos dentro de um enunciado estruturado (em <div>) */
+div.enunciado p {
+    margin-top: 0;
+    margin-bottom: 1em;
+}
+.opcoes ul { list-style-type: none; padding: 0; margin: 0; }
+
+.opcoes li {
+    padding: 12px; border: 1px solid #eee; margin-bottom: 8px; border-radius: 5px;
+    white-space: pre-wrap; cursor: pointer; transition: background-color 0.2s, border-color 0.2s;
+}
+.opcoes-lista .opcao-clicavel:hover { background-color: #f0f2f5; border-color: #004a91; }
+.opcao-incorreta {
+    background-color: #fff0f0; border-color: #d9534f; color: #d9534f; font-weight: bold;
+}
+.opcao-correta {
+    background-color: #e6ffed; border-color: #28a745; color: #218838; font-weight: bold;
+}
+.quiz-hint {
+    display: block; font-style: italic; color: #555; font-size: 0.9em;
+    margin-top: 15px; text-align: center;
+}
+
+.resposta-correta {
+    display: none; margin-top: 15px; padding: 15px; background-color: #e6ffed;
+    border: 1px solid #28a745; border-radius: 5px;
+}
+.resposta-correta .gabarito-texto {
+     white-space: pre-wrap; font-weight: bold; color: #218838;
+}
+.resposta-correta .resolucao-texto {
+    margin-top: 15px; padding-top: 15px; border-top: 1px dashed #aaa;
+    font-weight: normal; color: #333; white-space: pre-wrap;
+}
+.resposta-correta .sem-resolucao {
+    margin-top: 15px; padding-top: 15px; border-top: 1px dashed #aaa;
+    font-weight: normal; font-style: italic; color: #555;
+}
+
+/* --- (NOVO) Estilo para Autor da Resolução --- */
+details.autor-resolucao {
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px dashed #aaa;
+    font-size: 0.9em;
+    color: #333;
+}
+details.autor-resolucao summary {
+    cursor: pointer;
+    font-weight: bold;
+    color: #555;
+    list-style: none; /* Remove a seta padrão em alguns navegadores */
+}
+/* Adiciona um marcador '+' e '-' */
+details.autor-resolucao summary::before {
+    content: '+';
+    margin-right: 8px;
+    font-weight: bold;
+    display: inline-block;
+    width: 10px;
+}
+details[open].autor-resolucao summary::before {
+    content: '−';
+}
+details.autor-resolucao p {
+    margin: 8px 0 0 0;
+    padding-left: 18px; /* Alinha com o texto do summary */
+}
+/* --- Fim: Estilo do Autor --- */
+
+
+/* Ajustes Responsivos */
+@media (max-width: 700px) {
+    .ano-filter-grid { grid-template-columns: 1fr; }
+    #exame-checkbox-container { border-top: 1px solid #eee; padding-top: 15px; }
+}
+
+/* --- (ATUALIZADO) Estilo para Tabelas no Enunciado --- */
+.enunciado-table {
+    /* width: 100%; (REMOVIDO para auto-ajuste de conteúdo) */
+    border-collapse: collapse;
+    margin: 0;
+    font-size: 0.9em; /* <-- Fonte levemente reduzida */
+    background-color: #fdfdfd;
+    border: 1px solid #ddd;
+}
+
+.enunciado-table th, 
+.enunciado-table td {
+    border: 1px solid #ddd;
+    padding: 6px 8px; /* <-- Padding reduzido para compactar */
+    text-align: left;
+    vertical-align: top;
+}
+
+/* As regras anteriores para ".enunciado-table td:first-child" 
+   e ".enunciado-table td:nth-child(2)" foram REMOVIDAS 
+   para permitir o auto-ajuste das colunas.
+*/
+/* --- (ATUALIZADO) Wrapper para Tabela Responsiva --- */
+.table-wrapper {
+    overflow-x: auto; /* Permite rolagem horizontal */
+    margin: 1em 0;
+    padding-bottom: 5px; /* Adiciona espaço para a barra de rolagem */
+}
+
+/* (NOVO) Aplica o "fade" APENAS em telas pequenas */
+@media (max-width: 768px) {
+    .table-wrapper {
+        /* Um pequeno "fade" na direita para indicar que há mais conteúdo */
+        -webkit-mask-image: linear-gradient(to right, black 95%, transparent 100%);
+        mask-image: linear-gradient(to right, black 95%, transparent 100%);
+    }
+}
+
+/* --- (NOVO) Estilo para Referências CPC --- */
+/* (Este estilo é uma cópia do .autor-resolucao, 
+   adaptado para uma lista <ul>) 
+*/
+details.cpc-referencia {
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px dashed #aaa;
+    font-size: 0.9em;
+    color: #333;
+}
+details.cpc-referencia summary {
+    cursor: pointer;
+    font-weight: bold;
+    color: #555;
+    list-style: none; /* Remove a seta padrão */
+}
+/* Adiciona um marcador '+' e '-' */
+details.cpc-referencia summary::before {
+    content: '+';
+    margin-right: 8px;
+    font-weight: bold;
+    display: inline-block;
+    width: 10px;
+}
+details[open].cpc-referencia summary::before {
+    content: '−';
+}
+/* Estiliza a lista de links */
+details.cpc-referencia ul {
+    margin: 8px 0 0 0;
+    padding-left: 30px; /* Alinha com o texto do summary + ícone */
+}
+details.cpc-referencia li {
+    margin-bottom: 5px;
+}
+details.cpc-referencia a {
+    color: var(--cor-societaria-text, #004a91); /* Usa a cor principal */
+    text-decoration: none;
+}
+details.cpc-referencia a:hover {
+    text-decoration: underline;
+}
+
+.tag-anulada {
+    background-color: #ffcdd2; /* Vermelho claro */
+    color: #b71c1c;           /* Vermelho escuro */
+    font-size: 0.8em;
+    font-weight: 600;
+    padding: 3px 6px;
+    border-radius: 4px;
+    margin-left: 8px;
+}
+
+/* --- MODAL DE LANÇAMENTOS (Visual Atualizado) --- */
+.modal-overlay {
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(2px);
+    animation: fadeInOverlay 0.2s ease-out; /* Animação suave de entrada */
+}
+
+.modal-content {
+    background-color: #fff;
+    width: 90%;
+    max-width: 700px;
+    max-height: 90vh;
+    /* Cantos arredondados iguais aos cards (8px) */
+    border-radius: 8px; 
+    box-shadow: 0 5px 25px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    /* IMPORTANTE: overflow: hidden garante que o cabeçalho azul
+       não "vaze" para fora dos cantos arredondados superiores */
+    overflow: hidden; 
+    animation: scaleInModal 0.2s ease-out; /* Animação de "pop" */
+}
+
+/* Cabeçalho Azul para combinar com o site */
+.modal-header {
+    padding: 15px 20px;
+    background-color: #004a91; /* Azul da marca */
+    /* border-bottom: 1px solid #ddd; <- Removido pois não combina com fundo azul */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.modal-header h3 {
+    margin: 0;
+    color: white; /* Texto branco */
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+/* Botão de fechar 'X' branco */
+.modal-close {
+    color: rgba(255, 255, 255, 0.8); /* Branco ligeiramente transparente */
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 1;
+    transition: color 0.2s;
+}
+
+.modal-close:hover {
+    color: white; /* Branco total ao passar o mouse */
+}
+
+.modal-body {
+    padding: 20px;
+    
+    /* Garante que o corpo ocupe todo o espaço sobrando para o scroll funcionar */
+    flex: 1; 
+    
+    /* Scroll no eixo Y */
+    overflow-y: auto; 
+    
+    /* --- SEGREDO DO IPHONE --- */
+    /* Ativa a rolagem "com inércia" (aquela que desliza suave) no iOS */
+    -webkit-overflow-scrolling: touch; 
+    
+    background-color: #f9f9f9; 
+}
+
+/* Animações de entrada (Opcional, mas fica mais bonito) */
+@keyframes fadeInOverlay {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes scaleInModal {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* Estilo do Card de Lançamento (Pequeno ajuste para destacar no fundo novo) */
+.lancamento-card {
+    background-color: #fff; /* Fundo branco para destacar do modal-body cinza */
+    border: 1px solid #eee;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 6px; /* Cantos levemente arredondados nos lançamentos tb */
+    border-left: 4px solid #004a91;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+/* ... (O resto do CSS de .lancamento-meta, .linha-contabil, etc., permanece igual) ... */
+.lancamento-meta {
+    font-family: 'Segoe UI', sans-serif; font-weight: bold; color: #555;
+    margin-bottom: 10px; padding-bottom: 5px; border-bottom: 1px dashed #ccc;
+    display: flex; justify-content: space-between;
+}
+.linha-contabil { display: flex; justify-content: space-between; padding: 3px 0; font-size: 0.95em; }
+.conta-debito { color: #c62828; }
+.conta-credito { color: #2e7d32; padding-left: 40px; }
+.valor-contabil { font-weight: bold; color: #333; font-family: 'Consolas', monospace; }
+.historico-contabil {
+    margin-top: 10px; font-style: italic; color: #666; font-size: 0.9em; font-family: 'Segoe UI', sans-serif;
+}
+
+/* --- Botão Texto Minimalista (Direita) --- */
+.btn-ver-lancamentos {
+    /* Aparência: Apenas texto */
+    background: transparent;
+    border: none;
+    color: #155724; /* Verde Escuro */
+
+    /* Tipografia */
+    font-size: 0.9em;
+    font-weight: 700;
+    font-family: 'Segoe UI', sans-serif;
+    
+    /* Estilo do Link */
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+
+    /* Posicionamento (Desktop: Linha única na direita) */
+    display: block;        /* Comporta-se como bloco para aceitar margens/largura */
+    width: fit-content;    /* Tamanho exato do texto */
+    margin: 10px 0;
+    margin-left: auto;     /* Joga para a direita */
+    
+    /* Alinhamento do texto */
+    text-align: right;     /* Garante que, se quebrar, alinha pela direita */
+
+    /* Interação */
+    cursor: pointer;
+    opacity: 0.85;
+    transition: all 0.2s ease;
+}
+
+/* Hover */
+.btn-ver-lancamentos:hover {
+    opacity: 1;
+    color: #000;
+    transform: translateX(-2px);
+}
+
+/* --- VERSÃO MOBILE (Quebra o texto em 2 linhas) --- */
+@media (max-width: 600px) {
+    .btn-ver-lancamentos {
+        /* O Pulo do Gato: força a largura ser a da menor palavra possível,
+           o que obriga "Lançamentos" e "Contábeis" a ficarem um em cima do outro */
+        width: min-content; 
+        
+        line-height: 1.3;   /* Altura de linha confortável */
+        margin-top: 15px;   /* Um pouco mais de espaço do gabarito */
+    }
+}
+
+/* Ajuste para telas pequenas */
+@media (max-width: 600px) {
+    .modal-content {
+        width: 95%; /* Aproveita mais a largura da tela */
+        max-height: 85vh; /* Evita ficar muito colado nas barras do navegador mobile */
+    }
+    .linha-contabil {
+        font-size: 0.85em; /* Reduz um tiquinho para não quebrar linha fácil */
+    }
+    .conta-credito {
+        padding-left: 20px; /* Reduz o recuo para caber na tela */
+    }
+}

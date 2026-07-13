@@ -1,0 +1,66 @@
+<!--
+  Parte do projeto Anonymous Author © 2025 Anonymous Author
+  Licenciado sob AGPLv3 – veja LICENSE
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Status de Contribuição - Questões CFC</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/status.css">
+
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Status de Contribuição das Questões</h1>
+        </header>
+
+        <main> 
+            <section id="progress-section">
+                <div id="progress-label">
+                    <span>Questões Disponíveis:</span>
+                    <span id="progress-percentage" class="percentage">Calculando...</span>
+                </div>
+                <div class="progress-bar-background">
+                    <div id="progress-bar-fill"></div>
+                </div>
+                <div id="progress-sublabel">
+                    Calculando...
+                </div>
+            </section>
+
+            <div id="loading-message">
+                <p>Carregando e processando arquivos JSON...</p>
+            </div>
+
+            <table id="status-table" style="display: none;">
+                <thead>
+                    <tr>
+                        <th data-sort="disponivel">Disponível?</th>
+                        <th data-sort="edicao">Edição do Exame</th>
+                        
+                        <th>Nº da Questão</th> 
+                        
+                        <th data-sort="resolucao">Resolução Comentada?</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+                    </tbody>
+            </table>
+        </main>
+        
+        <footer class="site-footer">
+            <p>Carregando rodapé...</p>
+        </footer>
+        
+    </div> <button id="btn-back-to-top" title="Voltar ao topo">&#8593;</button>
+    <script src="js/shared.js"></script>
+    <script src="js/status.js"></script>
+
+</body>
+</html>

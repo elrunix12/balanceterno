@@ -1,117 +1,78 @@
-
-# ⚖️ Balanceterno - Plataforma de Estudos Contábeis
-
-> **Democratizando o acesso ao conhecimento contábil com tecnologia aberta.**
-
-O **Balanceterno** é uma plataforma projetada para centralizar, organizar e facilitar o estudo para o Exame de Suficiência do CFC.
+# Repositório do Artigo
 
 
-🔗 **[Acesse a versão online aqui](https://elrunix12.github.io/balanceterno/)**
+## Seja Bem-vindo
 
------
+Esse repositório foi criado para armazenar os testes do artigo "DEMOCRATIZAÇÃO DO ENSINO: UM ARTEFATO EDUCACIONAL BASEADO EM TECNOLOGIAS ABERTAS PARA A PREPARAÇÃO AO EXAME DE SUFICIÊNCIA".
 
-## ✨ Funcionalidades
 
-### 🎓 Para o Estudante (Frontend)
+## Cálculo da média de reprovação
 
-  * **Banco de Questões Unificado:** Questões organizadas por disciplina, ano e banca (FGV/Consulplan).
-  * **Filtros Cumulativos:** Combine filtros para estudos específicos (ex: "Contabilidade de Custos" + "2024").
-  * **Busca Semântica:** Pesquise termos em enunciados, opções ou resoluções.
-  * **Renderização Avançada:** Suporte nativo a **Tabelas Contábeis** complexas no enunciado.
-  * **Módulo de Lançamentos:** Visualizador interativo de partidas dobradas (Débito e Crédito) para entender a mecânica contábil.
-  * **Modo Foco:** Oculte automaticamente questões anuladas ou baseadas em legislação obsoleta.
-  * **Modo Simulado:** Simule como seria uma prova real, ou treine rapidamente com uma amostra aleatória de 16 questões.
+[...] "a média de reprovação foi de 73,79% em relação aos candidatos presentes, com 2023 entregando o pior resultado, de 82,65%".
 
------
+Você pode encontrar o cálculo da média de reprovação, abordada no tópico 2.1 do trecho acima, [neste arquivo](<testes-artefato/docs/Cálculo aprovação no Exame.xlsx>).
 
-## 📂 Estrutura do Repositório (Monorepo)
+## Versões do site
 
-O projeto é modular para facilitar a manutenção e a contribuição:
+A versão 0.21 citada no artigo da Plataforma Online está disponível na pasta [testes-artefato/versions](testes-artefato/versions).
 
-| Pasta | Descrição |
-| :--- | :--- |
-| **`/` (Raiz)** | **Frontend:** O site em si (`index.html`, `js/`, `css/`). HTML5 e JS Puro. |
-| **`/exames`** | **Data Lake:** Arquivos JSON contendo o banco de questões já processado e pronto para uso. |
-| **`/etl`** | **Automação de inserção de gabarito:** Scripts Python para mineração de dados. [Leia a documentação técnica aqui](/etl/README.md). |
-| **`/tools`** | **Backoffice:** Ferramentas utilitárias, como o Gerador Manual de JSON para curadoria fina. |
+## Prompts
 
------
+- O prompt utilizado para Extração e Classificação das questões pode ser encontrado em [Prompt Extração e Classificação.md](<testes-artefato/docs/Prompts/Prompt Extração e Classificação.md>).
 
-## 🚀 Como Rodar Localmente
+- O prompt utilizado para a Persona Contábil pode ser acessado em [Persona Contábil](<testes-artefato/docs/Prompts/Persona Contábil.md>).
 
-### 1\. Clonar o Repositório
+- A pasta [testes-artefato/Google AI Studio](<testes-artefato/Google AI Studio>) contém a saída do Gemini e sua parametrização na [Persona](<testes-artefato/Google AI Studio/Persona>) e na [etapa 3 - Transformação dos Dados](<testes-artefato/Google AI Studio/Transformação dos dados>).
 
-```bash
-git clone https://github.com/elrunix12/balanceterno.git
-cd balanceterno
-```
+## Script de sanitização presente no Artefato 1
 
-### 2\. Rodar o Site (Frontend)
+- Versão 0.21: Essa versão possui a API do Google relatado no tópico 4.1 Projeção e Desenvolvimento do Artefato. Acesse [aqui](testes-artefato/versions/0.21/etl/main.py). Verifique o [manual](testes-artefato/versions/0.21/etl/README.md).
 
-Devido às políticas de segurança dos navegadores (CORS), o site não consegue ler os arquivos JSON se aberto diretamente. Você precisa de um servidor HTTP simples.
+- Versão 0.35: A última versão do script de sanitização de tags pode ser encontrado [aqui](etl/main.py). Verifique o [manual](etl/README.md).
 
-  * **Via VS Code (Recomendado):** Instale a extensão **Live Server**, clique com o botão direito no `index.html` e escolha "Open with Live Server".
-  * **Via Python:** Rode `python -m http.server` e acesse `localhost:8000`.
+## Resultados da Avaliação do Artefato
 
------
+### Artefato 1
 
-## 🛠️ Alimentando o Banco de Dados
+- O arquivo [relatório_geral](<testes-artefato/docs/Avaliação do Artefato/Artefato 1/relatorio_geral_comparativo.csv>) refere-se ao arquivo "Quantidade de questões extraídas e oficiais por disciplina". Este é uma das saídas do Artefato 1 e representa a quantidade de questões no relatório estatístico oficial e as que foram extraídas. Importante notar que as edições 2024/2 e 2025/2 foram inseridas manualmente no arquivo [avaliação analítica](<testes-artefato/docs/Avaliação do Artefato/Artefato 1/avaliação analítica.xlsx>), pois os dados foram divulgados após o relatório geral estar pronto.
 
-O Balanceterno possui uma ferramenta de ingestão de dados:
+- Tabela 5 Índices de aderência da Classificação Temática do Artefato 1 e a diferença  em relação aos dados oficiais do CFC (2022-2025): É possível acessar a planilha com os cálculos em [avaliação analítica](<testes-artefato/docs/Avaliação do Artefato/Artefato 1/avaliação analítica.xlsx>).
 
-Ideal para criar questões inéditas ou ajustar tabelas muito complexas. Para checar o manual acesse [man-generator](tools/man-generator.md)
+- Para a saída do *Script* Python, o [anexo_auditoria_etl](<testes-artefato/docs/Avaliação do Artefato/Artefato 1/anexo_auditoria_etl.txt>).
 
-1.  Abra o arquivo `tools/generator.html` no seu navegador, ou acesse [Gerador de questões](https://elrunix12.github.io/balanceterno/tools/generator.html)
-2.  Utilize a interface visual para preencher Enunciado, Opções e Lançamentos.
-3.  O sistema gera o JSON validado.
-4.  Edite o arquivo `etl/ementas.json` caso você precise alterar disciplinas ou as *tags*.
+### Artefato 2
 
-Dica: Você pode usar uma LLM de sua preferência para classificar e extrair para o formato .json e inserir o gabarito com nosso script em python (Leia a documentação [aqui](/etl/README.md)). O prompt está disponível [aqui](/etl/prompt_ia.md).
+- Para o teste funcional, acesse [Teste Funcional](<testes-artefato/docs/Avaliação do Artefato/Artefato 2/Teste Funcional.pdf>).
 
------
+- Para o módulo simulado, acesse a pasta [Simulado](<testes-artefato/docs/Avaliação do Artefato/Artefato 2/Simulado>).
 
-## 🧩 Schema dos Dados (JSON)
+# Capturas de tela do site na versão 0.35
 
-Para garantir a interoperabilidade, todas as questões geradas pelo sistema seguem estritamente este formato:
+### Ponto de interação inicial
 
-```json
-{
-  "id": 47,
-  "ano": 2025,
-  "exame": "CFC 2025/1",
-  "banca": "FGV",
-  "disciplina": "Auditoria",
-  "tags": ["Auditoria", "NBC TA 620"],
-  "enunciado": "Uma empresa de auditoria independente... <table class='enunciado-table'>...</table>",
-  "opcoes": [
-    { "letra": "A", "texto": "O auditor tem sua responsabilidade..." },
-    { "letra": "B", "texto": "O auditor é o único responsável..." }
-  ],
-  "gabarito": "B",
-  "gabarito_texto": "O auditor é o único responsável por expressar opinião...",
-  "resolucao": "A norma NBC TA 620 define que...",
-  "autor_resolucao": "Prof. Contabilidade",
-  "obsoleta": false,
-  "anulada": false,
-  "lancamentos": []
-}
-```
+![home](src/home.png)
 
------
+### Rodapé informando a licença
 
-## 🤝 Como Contribuir
+![rodapé](src/rodapé.png)
 
-Este é um projeto comunitário\!
+### Resultado da aplicação de filtros
 
-  * **Conteúdo:** Encontrou um erro ou quer enviar uma resolução? Use nosso [Formulário de Contribuição](https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAYAAF_bnDZUODNHWlVVRFNBNlgwUDlXTUU1VEQ2MEJNRS4u).
+![filtros](src/filtros.png)
 
------
+### Resolução comentada
 
-## 📄 Licença
+![resolucao](src/resolucao.png)
 
-Este projeto é distribuído sob a **Licença GNU AGPLv3**. O Conteúdo (resoluções, lançamentos contábeis, comentários, explicações, compilações e a organização dos dados) é licenciado sob CC BY-SA 4.0.
-Isso garante que o Balanceterno (e qualquer derivado dele) permaneça livre e aberto para sempre. Veja o arquivo [LICENSE](LICENSE) para mais detalhes da licença de software. Veja [LICENSE_CONTENT](LICENSE_CONTENT) para a licença de conteúdo.
+### Lançamentos Contábeis
 
------
+![lancamentos](src/lancamentos.png)
 
-*Desenvolvido inicialmente por [elrunix12] e otimizado com o auxílo de IA. Sem afiliação com o CFC.*
+### Modo Simulado
+
+![simulado](src/simulado.png)
+
+# Protótipo
+
+![prototipo](src/prototipo.png)
+

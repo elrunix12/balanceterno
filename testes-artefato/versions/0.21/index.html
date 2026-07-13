@@ -1,0 +1,373 @@
+<!--
+  Parte do projeto Anonymous Author © 2025 Anonymous Author
+  Licenciado sob AGPLv3 – veja LICENSE
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anonymous Author | Questões do Exame de Suficiência</title>
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧮</text></svg>">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index.css">
+    
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Questões do Exame de Suficiência de Contabilidade</h1>
+            </header>
+
+        <nav class="tab-nav">
+            <button class="tab-button active" data-target="tab-questoes">Questões</button>
+            <button class="tab-button" data-target="tab-sobre">Sobre</button>
+            <button class="tab-button" data-target="tab-termos">Termos de Uso</button>
+            <button class="tab-button" data-target="tab-privacidade">Política de Privacidade</button>
+            <button class="tab-button" data-target="tab-changelog">Novidades</button>
+        </nav>
+
+        <div class="tab-content">
+        
+            <div id="tab-questoes" class="tab-panel active">
+                <section class="filter-container">
+                    
+                    <h3>
+                        Filtrar por Disciplina:
+                        <button id="btn-check-all-disciplinas" data-checked="false">Marcar Todas</button>
+                    </h3>
+                    <div id="disciplina-checkbox-container">
+                        </div>
+
+                    <div class="ano-filter-grid">
+                        <div class="form-group">
+                            <label for="sort-ano">Ordenar por Ano:</label>
+                            <select id="sort-ano">
+                                <option value="decrescente">Mais Recentes (Decrescente)</option>
+                                <option value="crescente">Mais Antigos (Crescente)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Selecionar Exames Específicos:</label>
+                            <div id="exame-checkbox-container">
+                                </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group" style="margin-bottom: 20px; border-top: 1px solid #eee; padding-top: 20px;">
+                        <label style="margin-bottom: 8px;">
+                            Mostrar questões obsoletas? 
+                            <span id="obsoleta-tooltip-trigger" title="Questões obsoletas são aquelas cujo gabarito pode ter sido alterado por novas normas ou revogações. Elas são úteis para entender a evolução da banca, mas não para fixar o conteúdo atual." style="font-weight: normal; font-size: 0.9em; cursor: help; color: #004a91; border: 1px solid #004a91; border-radius: 50%; padding: 0px 5px;">?</span>
+                        </label>
+                        <div id="obsoleta-radio-container">
+                            <label for="obsoleta-sim" style="font-weight: normal; margin: 0; cursor: pointer;">
+                                <input type="radio" id="obsoleta-sim" name="obsoleta-filter" value="sim" checked style="margin-right: 5px;">
+                                Sim (Padrão)
+                            </label>
+                            <label for="obsoleta-nao" style="font-weight: normal; margin: 0 0 0 20px; cursor: pointer;">
+                                <input type="radio" id="obsoleta-nao" name="obsoleta-filter" value="nao" style="margin-right: 5px;">
+                                Não (Ocultar obsoletas)
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group" style="margin-bottom: 20px; border-top: 1px solid #eee; padding-top: 20px;">
+                        <label for="filter-resolucao" style="font-weight: 600; cursor: pointer; display: flex; align-items: center;">
+                            <input type="checkbox" id="filter-resolucao" style="margin-right: 10px; width: 18px; height: 18px;">
+                            Mostrar apenas questões com resolução comentada
+                        </label>
+                    </div>
+                    
+                    <div class="form-group" style="margin-bottom: 20px;">
+                        <label for="search-input">Pesquisar por Palavra-Chave:</label>
+                        <input type="text" id="search-input" placeholder="Digite um termo (ex: imposto, veiculo, NBC TG 27)...">
+                    </div>
+
+                    <h3>
+                        Filtrar por Ementa (Tópico):
+                        <span> <button id="btn-toggle-ementas" data-visible="true" title="Ocultar/Exibir Ementas">[ Ocultar ]</button>
+                            <button id="btn-check-all-ementas" data-checked="false">Marcar Todas</button>
+                        </span>
+                    </h3>
+                    
+                    <div id="ementas-toggle-wrapper"> 
+                    
+                        <div class="ementa-search-container">
+                            <input type="text" id="search-ementas-input" placeholder="Buscar ementa específica...">
+                        </div>
+                    
+                        <div id="checkbox-container">
+                            </div>
+                        
+                    </div>
+                    <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
+
+                    <button id="btn-clear-filters">Limpar Todos os Filtros</button>
+                    <span id="filter-info"></span>
+                </section>
+
+                <div id="initial-prompt">
+                    <p>&#8593; Por favor, selecione uma ou mais disciplinas acima para começar.</p>
+                </div>
+
+                <main id="questoes-container" style="display: none;">
+                    </main>
+            </div>
+            
+            <div id="tab-sobre" class="tab-panel">
+                <h3>Sobre o Projeto</h3>
+                <p>
+                    O Anonymous Author é um projeto educacional independente, criado para centralizar
+                    e facilitar o estudo para o Exame de Suficiência (CFC).
+                </p>
+
+                <p style="font-weight: 500; background-color: #f0f2f5; padding: 10px 15px; border-radius: 5px; border-left: 4px solid #004a91;">
+                    <strong>Aviso Importante:</strong> Este é um projeto 
+                    <strong>independente</strong>, mantido pela comunidade, e 
+                    <strong>não possui nenhum vínculo oficial</strong> 
+                    com o Conselho Federal de Contabilidade (CFC) ou qualquer banca organizadora.
+                </p>
+                <p>
+                    Todo o conteúdo é disponibilizado de forma gratuita e o projeto é mantido
+                    com a licença <strong>AGPL-3.0</strong>, o que significa que é um software livre.
+                    Você pode copiar, modificar e distribuir sua própria versão, desde que mantenha
+                    a mesma licença.
+                </p>
+
+                <h4>Contribuidores</h4>
+                <p>
+                    Obrigado a todos que ajudaram a construir e revisar este banco de questões!
+                </p>
+                <ul id="contributors-list">
+                    </ul>
+
+                <h4>Como Contribuir?</h4>
+                <p>
+                    Sua ajuda é muito bem-vinda! Encontrou um erro, tem uma sugestão de melhoria
+                    ou quer adicionar uma resolução comentada? Siga estes passos:
+                </p>
+                
+                <p style="font-weight: 600; margin-bottom: 5px; margin-top: 20px;">Passo 1: Verifique o que já sabemos</p>
+                <ul style="margin-top: 0;">
+                    <li>
+                        <strong>Para Sugestões ou Bugs:</strong> 
+                        Por favor, 
+                        <a href="https://github.com/Anonymous Author/Anonymous Author/blob/main/ROADMAP.md" target="_blank" rel="noopener noreferrer">
+                            <strong>confira nosso Roadmap</strong>
+                        </a>
+                        para ver se sua ideia ou o bug já foi reportado.
+                    </li>
+                    <li>
+                        <strong>Para adicionar nova resolução em uma questão:</strong> 
+                        <a href="status.html" target="_blank" rel="noopener noreferrer">
+                            <strong>Veja o Status das Questões</strong>
+                        </a>
+                        para conferir quais exames e resoluções estão faltando.
+                    </li>
+                </ul>
+
+                <p style="font-weight: 600; margin-bottom: 5px; margin-top: 20px;">Passo 2: Envie sua contribuição</p>
+                <ul style="margin-top: 0;">
+                    <li>
+                        <strong>(Preferencial)</strong> 
+                        <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAYAAF_bnDZUODNHWlVVRFNBNlgwUDlXTUU1VEQ2MEJNRS4u" target="_blank" rel="noopener noreferrer">
+                            Preencha nosso formulário de contribuição
+                        </a>
+                    </li>
+                    <li>
+                        <strong>(Técnico)</strong> Para contribuições de código, visite o 
+                        <a href="https://github.com/Anonymous Author/Anonymous Author" target="_blank" rel="noopener noreferrer">
+                            repositório do projeto no GitHub
+                        </a>.
+                    </li>
+                    <li>
+                        <strong>(Importante)</strong> Antes de enviar, por favor, leia nossos 
+                        <a href="#" class="inline-tab-link" data-target-tab="tab-termos">Termos de Uso</a> (seção 5)
+                        e nossa 
+                        <a href="#" class="inline-tab-link" data-target-tab="tab-privacidade">Política de Privacidade</a>.
+                    </li>
+                </ul>
+
+                <h4>Créditos e Inspirações</h4>
+                <p>
+                    O <strong>Anonymous Author</strong> existe graças à filosofia do <strong>software livre</strong>.
+                    Somos profundamente gratos à comunidade <strong>GNU/Linux</strong> e a todos os projetos que abriram
+                    o caminho para que conhecimento e tecnologia fossem compartilhados de forma livre, ética e colaborativa.
+                </p>
+                <p>
+                Também agradecemos a todos os <strong>professores e professoras</strong> que,
+                com paciência e dedicação, compartilham conhecimento e inspiram estudantes todos os dias.
+                Este projeto é, em parte, uma homenagem ao trabalho de quem ensina e acredita no poder da educação.
+                </p>
+
+                </div>
+            
+            <div id="tab-termos" class="tab-panel">
+                <h3>Termos de Uso</h3>
+                <p>Última atualização: 18 de novembro de 2025</p>
+
+                <p style="font-style: italic; background-color: #f0f2f5; padding: 15px; border-radius: 5px;">
+                Bem-vindo(a) ao Anonymous Author! Estes são os Termos de Uso que regem sua utilização 
+                deste site. Nós somos um projeto educacional gratuito e independente, criado 
+                para ajudar estudantes.
+                </p>
+                <p style="font-style: italic; background-color: #f0f2f5; padding: 15px; border-radius: 5px;">
+                Ao continuar, você concorda com estas regras. Pedimos que leia com especial 
+                atenção a <strong>Seção 2</strong> (que explica que não temos vínculo oficial 
+                com o CFC) e a <strong>Seção 4</strong> (que explica que o site é fornecido 
+                "como está" e para fins de estudo).
+                </p>
+
+                <h4>1. Aceitação dos Termos</h4>
+                <p>Ao utilizar este serviço, você confirma que leu, entendeu e concordou com estes Termos e com nossa <a href="#" class="inline-tab-link" data-target-tab="tab-privacidade">Política de Privacidade</a>. Se você não concorda, não utilize este site.</p>
+
+                <h4>2. Descrição do Serviço</h4>
+                <p>Este site é um <strong>projeto educacional independente</strong>, sem fins lucrativos, criado para auxiliar estudantes de contabilidade.</p>
+                <p><strong>Nós NÃO possuímos nenhum vínculo ou afiliação oficial</strong> com o Conselho Federal de Contabilidade (CFC), com a FGV, com a Consulplan ou com qualquer outra entidade organizadora do Exame de Suficiência.</p>
+
+                <h4>3. Propriedade Intelectual e Licença de Uso</h4>
+                <p>Este é um projeto de software livre.</p>
+                <ul>
+                    <li><strong>Licença do Software:</strong> O código-fonte do site (incluindo HTML, CSS e JavaScript) é disponibilizado sob a <strong>Licença AGPL-3.0</strong>.</li>
+                    <li><strong>Licença do Conteúdo:</strong> 
+                        <ul>
+                            <li><strong>Questões de Exames:</strong> As questões utilizadas são de acesso público, originadas das respectivas bancas (CFC, FGV, Consulplan, etc.) e <strong>não são propriedade deste projeto</strong>.</li>
+                            <li><strong>Resoluções e Compilação de Dados:</strong> As resoluções, comentários e a compilação de dados (por exemplo, o arquivo <code>contabilidade-societaria.json</code>) são criações do projeto e disponibilizadas sob a <strong>Licença AGPL-3.0</strong> como parte integrante do software.</li>
+                        </ul>
+                    </li>
+                </ul>
+                <p>Isso significa que você é livre para copiar, modificar, distribuir e usar este projeto, desde que você também disponibilize suas modificações sob a mesma licença AGPL-3.0.</p>
+
+                <h4>4. Isenção de Garantias e Limitação de Responsabilidade</h4>
+                <p><strong>O site é fornecido "COMO ESTÁ"</strong>: O serviço é oferecido sem qualquer tipo de garantia, expressa ou implícita.</p>
+                <p><strong>Precisão do Conteúdo</strong>: Nós nos esforçamos para que as informações (gabaritos, resoluções, enunciados) estejam corretas, mas <strong>NÃO garantimos a precisão</strong>, integridade ou atualidade do conteúdo. O material pode conter erros, estar desatualizado (devido a novas normas) ou incompleto.</p>
+                <p><strong>Uso por Sua Conta e Risco</strong>: Todo o conteúdo é disponibilizado <strong>apenas para fins de estudo</strong>. Você é o único responsável por verificar a precisão das informações e por como as utiliza. Não nos responsabilizamos por quaisquer decisões tomadas com base no conteúdo do site.</p>
+                <p><strong>Nenhuma Garantia de Aprovação</strong>: O uso desta ferramenta de estudo <strong>NÃO garante sua aprovação</strong> no Exame de Suficiência ou em qualquer outra prova.</p>
+
+                <h4>5. Contribuições do Usuário (Feedback)</h4>
+                <p>Nós incentivamos o envio de feedback, correções e sugestões através dos nossos formulários (Google Forms, Microsoft Forms).</p>
+                <ul>
+                    <li><strong>Licença de Contribuição:</strong> Ao nos enviar feedback ou sugestões, você nos concede uma licença perpétua, irrevogável e gratuita para usar, modificar e incorporar essa informação ao projeto sem obrigação de compensação financeira, exceto pelo crédito opcional conforme descrito abaixo.</li>
+                    
+                    <li><strong>Créditos Públicos (Opcional):</strong> Se você optar por fornecer seu <strong>nome/apelido e/ou um link profissional</strong> (ex: Lattes, LinkedIn) no formulário, você nos dá consentimento explícito para <strong>exibir publicamente</strong> essa informação em nosso site (na lista de "Contribuidores" e/ou junto ao conteúdo que você forneceu). Você pode solicitar a remoção de suas informações a qualquer momento.</li>
+                    
+                    <li><strong>Nomes ou Links Inadequados:</strong> Reservamo-nos o direito de recusar ou remover <strong>nomes e/ou links</strong> de contribuidores que contenham linguagem ofensiva, discriminatória, difamatória, promocional, política ou qualquer conteúdo considerado inapropriado. A lista de contribuidores destina-se apenas a reconhecer colaborações de forma respeitosa e positiva.</li>
+                    
+                    <li><strong>Originalidade e Responsabilidade pelo Conteúdo Enviado:</strong> O contribuidor declara que todo o material enviado (como comentários, resoluções, explicações ou sugestões) é de sua <strong>autoria original</strong> e <strong>não infringe direitos autorais de terceiros</strong>. Você <strong>não deve copiar</strong> textos, imagens ou resoluções de outros sites, livros, apostilas ou cursos pagos sem autorização expressa dos respectivos detentores de direitos. Ao enviar uma contribuição, o usuário:</li>
+                        <ul>
+                            <li>Garante que possui os direitos necessários sobre o conteúdo enviado;</li>
+                            <li>Concorda que será o <strong>único responsável</strong> por eventuais reclamações ou disputas relacionadas à originalidade do material;</li>
+                            <li>Autoriza o projeto a <strong>remover, editar ou rejeitar</strong> qualquer conteúdo que pareça violar direitos autorais, sem aviso prévio;</li>
+                            <li>Reconhece que o projeto <strong>não se responsabiliza</strong> por conteúdo enviado por usuários ou colaboradores externos.</li>
+                        </ul>
+                </ul>
+
+                <h4>6. Links de Terceiros</h4>
+                <p>O site contém links para serviços de terceiros que não são de nossa propriedade ou controle. Isso inclui, mas não se limita a:</p>
+                <ul>
+                    <li>Formulários de feedback (como Google Forms ou Microsoft Forms);</li>
+                    <li>Links de referência para normas e pronunciamentos (como o site cpc.org.br).</li>
+                </ul>
+                <p>Não somos responsáveis pelo conteúdo, pelas práticas de privacidade ou pela disponibilidade desses sites de terceiros. Recomendamos que você leia os termos e políticas de privacidade de qualquer site que visitar.</p>
+
+                <h4>7. Alterações nos Termos</h4>
+                <p>Reservamo-nos o direito de modificar estes Termos a qualquer momento. A data da "Última atualização" no topo desta página indicará a versão mais recente.</p>
+
+                <h4>8. Disponibilidade do Serviço</h4>
+                <p>Este projeto é mantido de forma independente e voluntária. Embora nossa intenção seja mantê-lo acessível e atualizado, reservamo-nos o direito de modificar, suspender ou descontinuar o site (ou parte dele) a qualquer momento, sem aviso prévio e sem obrigação de manutenção contínua.</p>
+                <p>O código-fonte e o conteúdo permanecem disponíveis no repositório público do GitHub, onde a comunidade pode livremente copiar, modificar e continuar o desenvolvimento sob a mesma licença AGPL-3.0.</p>
+
+                <h4>9. Contato</h4>
+                <p>Dúvidas sobre estes Termos de Uso? Entre em contato conosco através do <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAYAAF_bnDZUODNHWlVVRFNBNlgwUDlXTUU1VEQ2MEJNRS4u" target="_blank" rel="noopener noreferrer">nosso formulário</a>.</p>
+            </div>
+            
+            <div id="tab-privacidade" class="tab-panel">
+                <h3>Política de Privacidade</h3>
+                <p>Última atualização: 02 de novembro de 2025</p>
+
+                <p>Esta Política de Privacidade explica quais informações são (ou não são) coletadas quando você utiliza este site (Anonymous Author).</p>
+                <p>Nosso princípio fundamental é a privacidade. O uso da ferramenta de estudo (filtrar questões, responder ao quiz, ler as resoluções) é 100% privado e não é rastreado ou armazenado.</p>
+                <p>As únicas informações que coletamos são aquelas que você <strong>voluntariamente</strong> decide nos enviar através de nossos formulários de feedback.</p>
+
+                <h4>1. Informações que Coletamos (e Por Quê)</h4>
+                <p>Este site trata dados pessoais apenas com base no consentimento do usuário, conforme a Lei Geral de Proteção de Dados (Lei nº 13.709/2018).</p>
+                <p>Temos duas formas de coleta de dados, ambas opcionais e baseadas no seu consentimento:</p>
+
+                <h5>A) Feedback sobre o Projeto (via Formulários de Terceiros)</h5>
+                <ul>
+                    <li>Para melhorar este site, podemos disponibilizar links para formulários de feedback (criados em plataformas como Google Forms ou Microsoft Forms).</li>
+                    <li>Ao clicar nesses links, você será redirecionado para um site de terceiros. Esse site coletará as respostas que você digitar (sugestões, correções de bugs, etc.).</li>
+                    <li><strong>Aviso Importante:</strong> Esses serviços (Google/Microsoft) possuem suas próprias políticas de privacidade e podem coletar dados adicionais, como seu endereço IP ou informações da sua conta, independentemente do nosso controle. Recomendamos que você revise as políticas de privacidade deles.</li>
+                </ul>
+
+                <h5>B) Informações para Contribuidores (Opcional)</h5>
+                <ul>
+                    <li>Em nosso formulário de feedback, você terá a <strong>opção</strong> de fornecer um nome/apelido e, também opcionalmente, um <strong>link público</strong> (ex: seu Lattes, LinkedIn, GitHub, etc.).</li>
+                    <li><strong>Propósito:</strong> O propósito de pedir seu nome e/ou link é para dar o devido crédito público a você na nossa página "Sobre" como um contribuidor do projeto, <strong>e também para associar seu nome/apelido diretamente às contribuições específicas que você fornecer (como resoluções comentadas de questões).</strong></li>
+                    <li><strong>Uso (Consentimento):</strong> Ao fornecer seu nome e/ou seu link, você <strong>consente explicitamente</strong> que eles sejam exibidos publicamente em nosso site (na página "Sobre" e/ou junto ao conteúdo que você contribuiu).</li>
+                    <li>O nome e o link fornecidos devem ser adequados e respeitosos. Nomes ou links com linguagem ofensiva, discriminatória, política, comercial ou inapropriada poderão ser recusados ou removidos a qualquer momento.</li>
+                    <li>Se você não preencher estes campos, seu feedback será enviado de forma anônima.</li>
+                </ul>
+
+                <h4>2. O que NÃO Coletamos (Sua Atividade de Estudo)</h4>
+                <p>Este site <strong>NÃO</strong> coleta, rastreia ou armazena qualquer informação sobre sua atividade de estudo. Nós não sabemos:</p>
+                <ul>
+                    <li>Quais filtros você usa;</li>
+                    <li>Quais termos você pesquisa;</li>
+                    <li>Quais respostas você marca (corretas ou incorretas);</li>
+                    <li>Quanto tempo você passa em cada questão.</li>
+                </ul>
+
+                <h4>3. Cookies e Armazenamento Local (localStorage)</h4>
+                <p>Este site <strong>NÃO</strong> utiliza cookies ou Armazenamento Local (<code>localStorage</code>) para rastrear você ou sua atividade de estudo.</p>
+
+                <h4>4. Rastreadores e Scripts de Terceiros</h4>
+                <p>Este site <strong>NÃO</strong> utiliza ferramentas de análise (como Google Analytics) ou pixels de publicidade. O núcleo do site (a ferramenta de questões) é livre de rastreadores.</p>
+
+                <h4>5. Seus Direitos (Remoção de Nome)</h4>
+                <p>Se você forneceu seu nome para a lista de contribuidores e, a qualquer momento, desejar que ele seja removido da página "Sobre", por favor, entre em contato conosco. Seu nome será removido prontamente, sem perguntas.</p>
+
+                <h4>6. Contato</h4>
+                <p>Se você tiver qualquer dúvida sobre esta Política de Privacidade, sinta-se à vontade para entrar em contato através do <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAYAAF_bnDZUODNHWlVVRFNBNlgwUDlXTUU1VEQ2MEJNRS4u" target="_blank" rel="noopener noreferrer">nosso formulário</a>.</p>
+            </div>
+            
+            <div id="tab-changelog" class="tab-panel">
+                <h3>Novidades (Histórico de Versões)</h3>
+                <div id="changelog-content">
+                    <p>Carregando histórico...</p>
+                </div>
+            </div>
+            
+        </div>
+        
+        <footer class="site-footer">
+            <p>Carregando rodapé...</p>
+        </footer>
+
+    </div> 
+    
+    <button id="btn-back-to-top" title="Voltar ao topo">&#8593;</button>
+
+    <div id="modal-lancamentos" class="modal-overlay" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>📑 Lançamentos Contábeis</h3>
+                <span class="modal-close" id="btn-fechar-modal">&times;</span>
+            </div>
+            <div id="modal-body" class="modal-body">
+                </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+    <script src="js/shared.js"></script>
+    
+    <script src="js/index.js"></script>
+
+</body>
+</html>
