@@ -40,6 +40,10 @@ A versão 0.21 citada no artigo da Plataforma Online está disponível na pasta 
 
 - Para a saída do *Script* Python, o [anexo_auditoria_etl](<testes-artefato/docs/Avaliação do Artefato/Artefato 1/anexo_auditoria_etl.txt>).
 
+- Para o calcular Kappa, cheque o script [kappa.R](<testes-artefato/docs/Avaliação do Artefato/Artefato 1/kappa.R>). O arquivo [disciplinas.csv](<testes-artefato/docs/Avaliação do Artefato/Artefato 1/disciplinas.csv>) é responsável por listar as questões em ordem e qual eixo temático ela pertence. 
+
+    > Obs.: Classificação remapeada se refere a junção de Contabilidade Geral e Princípios de Contabilidade e Normas Brasileiras de Contabilidade.
+
 ### Artefato 2
 
 - Para o teste funcional, acesse [Teste Funcional](<testes-artefato/docs/Avaliação do Artefato/Artefato 2/Teste Funcional.pdf>).
