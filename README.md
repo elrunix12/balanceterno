@@ -1,82 +1,81 @@
-# Repositório do Artigo
+# Article Repository
 
+#### Portuguese version [README-pt-br.md](README-pt-br.md)
 
-## Seja Bem-vindo
+## Welcome
 
-Esse repositório foi criado para armazenar os testes do artigo "DEMOCRATIZAÇÃO DO ENSINO: UM ARTEFATO EDUCACIONAL BASEADO EM TECNOLOGIAS ABERTAS PARA A PREPARAÇÃO AO EXAME DE SUFICIÊNCIA".
+This repository was created to store the tests for the article "Accounting education: An educational artifact based on open technologies for preparation for the Sufficiency Examination".
 
+## Failure rate average calculation
 
-## Cálculo da média de reprovação
+[...] "the average failure rate was 73.79% in relation to the candidates present, with 2023 delivering the worst result, at 82.65%".
 
-[...] "a média de reprovação foi de 73,79% em relação aos candidatos presentes, com 2023 entregando o pior resultado, de 82,65%".
+You can find the failure rate average calculation, addressed in topic 2.1 of the excerpt above, [in this file](<testes-artefato/docs/Cálculo aprovação no Exame.xlsx>).
 
-Você pode encontrar o cálculo da média de reprovação, abordada no tópico 2.1 do trecho acima, [neste arquivo](<testes-artefato/docs/Cálculo aprovação no Exame.xlsx>).
+## Website versions
 
-## Versões do site
-
-A versão 0.21 citada no artigo da Plataforma Online está disponível na pasta [testes-artefato/versions](testes-artefato/versions).
+Version 0.21, cited in the article's Online Platform section, is available in the [testes-artefato/versions](testes-artefato/versions) folder.
 
 ## Prompts
 
-- O prompt utilizado para Extração e Classificação das questões pode ser encontrado em [Prompt Extração e Classificação.md](<testes-artefato/docs/Prompts/Prompt Extração e Classificação.md>).
+- The prompt used for Extraction and Classification of the questions can be found at [Prompt Extração e Classificação.md](<testes-artefato/docs/Prompts/Prompt Extração e Classificação.md>).
 
-- O prompt utilizado para a Persona Contábil pode ser acessado em [Persona Contábil](<testes-artefato/docs/Prompts/Persona Contábil.md>).
+- The prompt used for the Accounting Persona can be accessed at [Persona Contábil](<testes-artefato/docs/Prompts/Persona Contábil.md>).
 
-- A pasta [testes-artefato/Google AI Studio](<testes-artefato/Google AI Studio>) contém a saída do Gemini e sua parametrização na [Persona](<testes-artefato/Google AI Studio/Persona>) e na [etapa 3 - Transformação dos Dados](<testes-artefato/Google AI Studio/Transformação dos dados>).
+- The folder [testes-artefato/Google AI Studio](<testes-artefato/Google AI Studio>) contains Gemini's output and its parameterization in the [Persona](<testes-artefato/Google AI Studio/Persona>) and in [step 3 - Data Transformation](<testes-artefato/Google AI Studio/Transformação dos dados>).
 
-## Script de sanitização presente no Artefato 1
+## Sanitization script used in Artifact 1
 
-- Versão 0.21: Essa versão possui a API do Google relatado no tópico 4.1 Projeção e Desenvolvimento do Artefato. Acesse [aqui](testes-artefato/versions/0.21/etl/main.py). Verifique o [manual](testes-artefato/versions/0.21/etl/README.md).
+- Version 0.21: This version uses the Google API mentioned in topic 4.1 Artifact Design and Development. Access it [here](testes-artefato/versions/0.21/etl/main.py). Check the [manual](testes-artefato/versions/0.21/etl/README.md).
 
-- Versão 0.35: A última versão do script de sanitização de tags pode ser encontrado [aqui](etl/main.py). Verifique o [manual](etl/README.md).
+- Version 0.35: The latest version of the tag sanitization script can be found [here](etl/main.py). Check the [manual](etl/README.md).
 
-## Resultados da Avaliação do Artefato
+## Artifact Evaluation Results
 
-### Artefato 1
+### Artifact 1
 
-- O arquivo [relatório_geral](<testes-artefato/docs/Avaliação do Artefato/Artefato 1/relatorio_geral_comparativo.csv>) refere-se ao arquivo "Quantidade de questões extraídas e oficiais por disciplina". Este é uma das saídas do Artefato 1 e representa a quantidade de questões no relatório estatístico oficial e as que foram extraídas. Importante notar que as edições 2024/2 e 2025/2 foram inseridas manualmente no arquivo [avaliação analítica](<testes-artefato/docs/Avaliação do Artefato/Artefato 1/avaliação analítica.xlsx>), pois os dados foram divulgados após o relatório geral estar pronto.
+- The file [relatório_geral](<testes-artefato/docs/Avaliação do Artefato/Artefato 1/relatorio_geral_comparativo.csv>) refers to the file "Number of questions extracted and official questions by subject". This is one of the outputs of Artifact 1 and represents the number of questions in the official statistical report versus those that were extracted. It's important to note that the 2024/2 and 2025/2 editions were entered manually into the [analytical evaluation](<testes-artefato/docs/Avaliação do Artefato/Artefato 1/avaliação analítica.xlsx>) file, since the data was released after the general report was already finished.
 
-- Tabela 5 Índices de aderência da Classificação Temática do Artefato 1 e a diferença  em relação aos dados oficiais do CFC (2022-2025): É possível acessar a planilha com os cálculos em [avaliação analítica](<testes-artefato/docs/Avaliação do Artefato/Artefato 1/avaliação analítica.xlsx>).
+- Table 5, Thematic Classification adherence indices of Artifact 1 and the difference relative to official CFC data (2022-2025): the spreadsheet with the calculations can be accessed at [avaliação analítica](<testes-artefato/docs/Avaliação do Artefato/Artefato 1/avaliação analítica.xlsx>).
 
-- Para a saída do *Script* Python, o [anexo_auditoria_etl](<testes-artefato/docs/Avaliação do Artefato/Artefato 1/anexo_auditoria_etl.txt>).
+- For the Python *Script* output, see [anexo_auditoria_etl](<testes-artefato/docs/Avaliação do Artefato/Artefato 1/anexo_auditoria_etl.txt>).
 
-- Para o calcular Kappa, cheque o script [kappa.R](<testes-artefato/docs/Avaliação do Artefato/Artefato 1/kappa.R>). O arquivo [disciplinas.csv](<testes-artefato/docs/Avaliação do Artefato/Artefato 1/disciplinas.csv>) é responsável por listar as questões em ordem e qual eixo temático ela pertence. 
+- To calculate Kappa, check the [kappa.R](<testes-artefato/docs/Avaliação do Artefato/Artefato 1/kappa.R>) script. The file [disciplinas.csv](<testes-artefato/docs/Avaliação do Artefato/Artefato 1/disciplinas.csv>) is responsible for listing the questions in order and which thematic axis each one belongs to.
 
-    > Obs.: Classificação remapeada se refere a junção de Contabilidade Geral e Princípios de Contabilidade e Normas Brasileiras de Contabilidade.
+    > Note: "Remapped classification" refers to the merging of General Accounting and Accounting Principles and Brazilian Accounting Standards.
 
-### Artefato 2
+### Artifact 2
 
-- Para o teste funcional, acesse [Teste Funcional](<testes-artefato/docs/Avaliação do Artefato/Artefato 2/Teste Funcional.pdf>).
+- For the functional test, access [Teste Funcional](<testes-artefato/docs/Avaliação do Artefato/Artefato 2/Teste Funcional.pdf>).
 
-- Para o módulo simulado, acesse a pasta [Simulado](<testes-artefato/docs/Avaliação do Artefato/Artefato 2/Simulado>).
+- For the simulated exam module, access the [Simulado](<testes-artefato/docs/Avaliação do Artefato/Artefato 2/Simulado>) folder.
 
-# Capturas de tela do site na versão 0.35
+# Screenshots of the website (version 0.35)
 
-### Ponto de interação inicial
+### Initial interaction point
 
 ![home](src/home.png)
 
-### Rodapé informando a licença
+### Footer with license information
 
 ![rodapé](src/rodapé.png)
 
-### Resultado da aplicação de filtros
+### Result of applying filters
 
 ![filtros](src/filtros.png)
 
-### Resolução comentada
+### Commented resolution
 
 ![resolucao](src/resolucao.png)
 
-### Lançamentos Contábeis
+### Accounting Entries
 
 ![lancamentos](src/lancamentos.png)
 
-### Modo Simulado
+### Simulated Mode
 
 ![simulado](src/simulado.png)
 
-# Protótipo
+# Prototype
 
 ![prototipo](src/prototipo.png)
-
