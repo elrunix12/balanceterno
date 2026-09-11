@@ -1,6 +1,11 @@
 # Article Repository
 
 #### Portuguese version [README-pt-br.md](README-pt-br.md)
+ 
+> Looking for the application code instead? See [README-original.md](README-original.md).
+ 
+> If you are accessing this via Anonymous GitHub, some links may be broken due to blind review.
+
 
 ## Welcome
 

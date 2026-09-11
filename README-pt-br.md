@@ -2,6 +2,10 @@
 
 #### Versão em inglês [README.md](README.md)
 
+> Procurando pelo código da aplicação? Veja o [README-original.md](README-original.md).
+
+> Se você estiver acessando pelo Anonymous GitHub, alguns links podem estar quebrados, por causa do blind review.
+
 ## Seja Bem-vindo
 
 Esse repositório foi criado para armazenar os testes do artigo "Accounting education: An educational artifact based on open technologies for preparation for the Sufficiency Examination".
