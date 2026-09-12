@@ -39,9 +39,9 @@ Version 0.21, cited in the article's Online Platform section, is available in th
 
 ### Artifact 1
 
-- The file [relatório_geral](<testes-artefato/docs/Avaliação do Artefato/Artefato 1/relatorio_geral_comparativo.csv>) refers to the file "Number of questions extracted and official questions by subject". This is one of the outputs of Artifact 1 and represents the number of questions in the official statistical report versus those that were extracted. It's important to note that the 2024/2 and 2025/2 editions were entered manually into the [analytical evaluation](<testes-artefato/docs/Avaliação do Artefato/Artefato 1/avaliação analítica.xlsx>) file, since the data was released after the general report was already finished.
+- The file [relatório_geral](<testes-artefato/docs/Avaliação do Artefato/Artefato 1/relatorio_geral_comparativo.csv>) refers to the file "Number of questions extracted and official questions by subject". This is one of the outputs of Artifact 1 and represents the number of questions in the official statistical report versus those that were extracted. It's important to note that the 2024/2 and 2025/2 editions were entered manually into the [avaliação analítica](<testes-artefato/docs/Avaliação do Artefato/Artefato 1/avaliação analítica.xlsx>) file, since the data was released after the general report was already finished.
 
-- Table 5, Thematic Classification adherence indices of Artifact 1 and the difference relative to official CFC data (2022-2025): the spreadsheet with the calculations can be accessed at [avaliação analítica](<testes-artefato/docs/Avaliação do Artefato/Artefato 1/avaliação analítica.xlsx>).
+- Table 5, Adherence Indices of the Thematic Classification of Artifact 1 and Difference in Relation to Official CFC Data (2022–2025): the spreadsheet with the calculations can be accessed at [avaliação analítica](<testes-artefato/docs/Avaliação do Artefato/Artefato 1/avaliação analítica.xlsx>).
 
 - For the Python *Script* output, see [anexo_auditoria_etl](<testes-artefato/docs/Avaliação do Artefato/Artefato 1/anexo_auditoria_etl.txt>).
 
