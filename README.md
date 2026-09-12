@@ -47,7 +47,7 @@ Version 0.21, cited in the article's Online Platform section, is available in th
 
 - To calculate Kappa, check the [kappa.R](<testes-artefato/docs/Avaliação do Artefato/Artefato 1/kappa.R>) script. The file [disciplinas.csv](<testes-artefato/docs/Avaliação do Artefato/Artefato 1/disciplinas.csv>) is responsible for listing the questions in order and which thematic axis each one belongs to.
 
-    > Note: "Remapped classification" refers to the merging of General Accounting and Accounting Principles and Brazilian Accounting Standards.
+    > Note: "Remapped classification" refers to the merging of Financial Accounting (*Contabilidade Geral*) and Accounting Principles and NBCs (*Princípios de Contabilidade e Normas Brasileiras de Contabilidade*).
 
 ### Artifact 2
 
